@@ -1,0 +1,20 @@
+@GenModel(editDirectory="/io.opensemantics.semiotics.search.model.edit/src")
+package io.opensemantics.semiotics.search.model
+
+class Searches
+{
+  contains Search[] searches
+}
+
+class Search
+{
+  ExpressionType expressionType
+  String expression
+}
+
+enum ExpressionType
+{
+  eclipse
+  eclipse_regex
+  other
+}

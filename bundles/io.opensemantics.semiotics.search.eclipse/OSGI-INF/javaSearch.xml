@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="io.opensemantics.semiotics.search.java">
+   <implementation class="io.opensemantics.semiotics.search.core.internal.eclipse.EclipseJavaSearchServiceImpl"/>
+   <service>
+      <provide interface="io.opensemantics.semiotics.search.spi.JavaSearchService"/>
+   </service>
+</scr:component>

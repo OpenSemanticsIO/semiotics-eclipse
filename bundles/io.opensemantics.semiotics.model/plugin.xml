@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension
+         point="org.eclipse.emf.ecp.core.filters">
+      <FilterProvider
+            class="io.opensemantics.semiotics.search.ECPFilterProvider">
+      </FilterProvider>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Model -->
+      <package
+            uri="io.opensemantics.semiotics.search"
+            class="io.opensemantics.semiotics.search.SearchPackage"
+            genModel="model/searchModel.xcore"/>
+   </extension>
+
+</plugin>

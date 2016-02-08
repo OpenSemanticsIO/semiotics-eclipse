@@ -1,0 +1,153 @@
+@GenModel(editDirectory="/io.opensemantics.semiotics.search.edit/src-gen")
+package io.opensemantics.semiotics.search
+
+import org.eclipse.emf.ecore.EDiagnosticChain
+import org.eclipse.emf.ecore.EMap
+
+
+enum TriBool
+{
+  Unknown
+  True
+  False
+}
+
+class Application
+{
+  String name
+  refers Project[] projects opposite applications
+}
+
+class Project
+{
+  String name
+  refers Application[] applications opposite projects
+}
+
+
+/* Fully inspired by Ed Merks' YouTube tutorial
+ * @link https://www.youtube.com/watch?v=zjluqfxx6B8
+ */
+abstract class Node
+{
+  contains Node[] children opposite parent
+  container Node parent opposite children
+  derived NodeKind nodeKind get
+  {
+    if (parent == null)
+      if (children.empty) NodeKind::SINGLETON else NodeKind::ROOT
+    else
+      if (children.empty) NodeKind::LEAF else NodeKind::INTERMEDIATE
+  }
+}
+
+enum NodeKind
+{
+  Singleton
+  Root
+  Intermediate
+  Leaf
+}
+
+// TODO: better name
+class SearchLibrary
+{
+  String description
+  contains Search[] searchs opposite library
+}
+
+abstract class Search extends Node
+{
+  String description
+  container SearchLibrary library opposite searchs
+
+  /* Invariant: children need to be Search
+   * This isn't performant when adding to the search. Adding is a manual
+   * process so this performance impact should be negligible.
+   * TODO: measure performance impact
+   */
+  op boolean childenSearches(EDiagnosticChain diagnostics, EMap<Object, Object> context)
+  {
+    if (children != null)
+      for (Node child : children)
+        // Child needs to be a Search
+        if (!(child instanceof Search)) return false
+    return true
+  }
+}
+
+/* Semantically AND, OR, or NOT this searches sub-searches
+ * NOT is special case:
+ *   it can only occur as a child of an AND search
+ *   it cannot be the first child, otherwise it returns potentially near everything
+ */
+class OperatorSearch extends Search
+{
+  SearchOperator operator
+  /* Invariant: NOT has to have an AND as parent and not be the first child */
+  op boolean not(EDiagnosticChain diagnostics, EMap<Object, Object> context)
+  {
+    if (operator != null)
+      if (operator == SearchOperator::NOT)
+        if ((nodeKind == NodeKind::LEAF) || (nodeKind == NodeKind::INTERMEDIATE))
+          if (parent instanceof OperatorSearch)
+          {
+            val OperatorSearch parentOp = parent as OperatorSearch
+            if (parentOp.operator != null)
+              if (parentOp.operator == SearchOperator::AND)
+                // children needs to exist (this node is a Leaf or Intermediate)
+                // Cannot be the first operator
+                return (parentOp.children.indexOf(this) > 0)
+              else
+                // Parent needs to be an AND
+                return false
+          }
+          else
+            // Parent needs to be an OperatorSearch
+            return false
+        else
+          // NOT node cannot be root or singleton node
+          return false
+    return true
+  }
+}
+
+class CalleeSearch extends Search
+{
+}
+
+class CallerSearch extends Search
+{
+}
+
+class CallsiteSearch extends Search
+{
+  contains CalleeSearch callee
+  contains CallerSearch caller
+}
+
+class JavaSearch extends Search
+{
+}
+
+enum SearchOperator
+{
+  Unset
+  And
+  Or
+  Not
+}
+
+
+class SearchResults
+{
+  contains SearchResult[] searchResults opposite parent
+}
+
+abstract class SearchResult
+{
+  String description
+  container SearchResults parent opposite searchResults
+  refers Search search
+}
+
