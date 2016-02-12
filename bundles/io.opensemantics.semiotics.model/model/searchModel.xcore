@@ -62,15 +62,14 @@ enum SearchLanguageType
   Python
 }
 
-interface SearchLanguage
-{
-  SearchLanguageType language
-}
-
-abstract class Search extends Node, SearchLanguage
+abstract class Search extends Node
 {
   String description
   container SearchLibrary library opposite searchs
+  // Limitation in Xcore is that a subclass cannot override a super-class
+  // value. Will need to do it when setting up the object or
+  // '@generate not' the code
+  SearchLanguageType language = "None"
 
   /* Invariant: children need to be Search
    * This isn't performant when adding to the search. Adding is a manual
@@ -84,11 +83,6 @@ abstract class Search extends Node, SearchLanguage
         // Child needs to be a Search
         if (!(child instanceof Search)) return false
     return true
-  }
-  
-  op SearchLanguageType language()
-  {
-    return SearchLanguageType::NONE
   }
 }
 

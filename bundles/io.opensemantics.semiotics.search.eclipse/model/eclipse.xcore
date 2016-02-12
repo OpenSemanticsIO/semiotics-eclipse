@@ -23,10 +23,6 @@ class EclipseJavaSearch extends Search
   SearchForNature searchFor
   LimitTo limitTo
   LimitToFineGrain[] limitToFineGrains
-  op SearchLanguageType language()
-  {
-    return SearchLanguageType::JAVA
-  }  
 }
 
 enum MatchRule
