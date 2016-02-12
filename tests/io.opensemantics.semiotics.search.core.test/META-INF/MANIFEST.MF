@@ -8,3 +8,4 @@ Fragment-Host: io.opensemantics.semiotics.search.core;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Import-Package: org.junit;version="4.0.0",
  org.osgi.framework;version="1.8.0"
+Require-Bundle: io.opensemantics.semiotics.org.mockito;bundle-version="1.10.19"

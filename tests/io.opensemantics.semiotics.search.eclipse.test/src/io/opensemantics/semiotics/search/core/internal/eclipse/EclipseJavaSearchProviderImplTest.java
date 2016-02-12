@@ -1,6 +1,7 @@
 package io.opensemantics.semiotics.search.core.internal.eclipse;
 
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.After;
 import org.junit.Before;
@@ -9,20 +10,22 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.FrameworkUtil;
 import org.osgi.framework.ServiceReference;
 
-import io.opensemantics.semiotics.search.spi.JavaSearchService;
+import io.opensemantics.semiotics.search.eclipse.internal.EclipseJavaSearchProviderImpl;
+import io.opensemantics.semiotics.search.spi.SearchProvider;
 
-public class EclipseJavaSearchServiceImplTest {
+public class EclipseJavaSearchProviderImplTest {
 
-  private JavaSearchService javaService;
+  private SearchProvider provider;
 
   @Before
   public void setUp() throws Exception {
     // Test the service
     final BundleContext ctx = FrameworkUtil.getBundle(this.getClass()).getBundleContext();
-    final ServiceReference<JavaSearchService> svcRef = ctx.getServiceReference(JavaSearchService.class);
+    final ServiceReference<SearchProvider> svcRef = ctx.getServiceReference(SearchProvider.class);
     assertNotNull("No service reference", svcRef);
-    javaService = ctx.getService(svcRef);
-    assertNotNull("JavaSearchService is null", javaService);
+    provider = ctx.getService(svcRef);
+    assertNotNull("SearchProvider is null", provider);
+    assertTrue(provider instanceof EclipseJavaSearchProviderImpl);
   }
 
   @After

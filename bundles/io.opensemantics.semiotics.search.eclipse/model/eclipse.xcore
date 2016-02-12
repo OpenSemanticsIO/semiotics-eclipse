@@ -1,14 +1,15 @@
 @GenModel(editDirectory="/io.opensemantics.semiotics.search.eclipse.edit/src-gen")
 package io.opensemantics.semiotics.search.eclipse
 
-import io.opensemantics.semiotics.search.JavaSearch
+import io.opensemantics.semiotics.search.Search
 import io.opensemantics.semiotics.search.SearchResult
 import org.eclipse.jdt.core.IJavaElement
+import io.opensemantics.semiotics.search.SearchLanguageType
 
 type IJavaElement wraps IJavaElement
 
 /* @see org.eclipse.jdt.core.search.SearchPattern */
-class EclipseJavaSearch extends JavaSearch
+class EclipseJavaSearch extends Search
 {
   String pattern
   // TODO: FP/FN annotation
@@ -22,6 +23,10 @@ class EclipseJavaSearch extends JavaSearch
   SearchForNature searchFor
   LimitTo limitTo
   LimitToFineGrain[] limitToFineGrains
+  op SearchLanguageType language()
+  {
+    return SearchLanguageType::JAVA
+  }  
 }
 
 enum MatchRule

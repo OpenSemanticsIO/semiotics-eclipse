@@ -14,21 +14,22 @@ import org.eclipse.jdt.core.search.SearchPattern;
 import org.eclipse.jdt.core.search.SearchRequestor;
 
 import io.opensemantics.semiotics.search.Search;
+import io.opensemantics.semiotics.search.SearchLanguageType;
 import io.opensemantics.semiotics.search.SearchResult;
 import io.opensemantics.semiotics.search.eclipse.EclipseJavaSearch;
-import io.opensemantics.semiotics.search.spi.JavaSearchService;
+import io.opensemantics.semiotics.search.spi.SearchProvider;
 
 /**
  * @author jonpasski
  *
  */
 // TODO : move to Eclipse-specific classes to separate impls from this bundle
-public class EclipseJavaSearchServiceImpl implements JavaSearchService {
+public class EclipseJavaSearchProviderImpl implements SearchProvider {
 
   /**
    * 
    */
-  public EclipseJavaSearchServiceImpl() {
+  public EclipseJavaSearchProviderImpl() {
     // TODO Auto-generated constructor stub
   }
 
@@ -42,7 +43,7 @@ public class EclipseJavaSearchServiceImpl implements JavaSearchService {
   @Override
   public List<SearchResult> search(Search search, List<SearchResult> prior) {
     List<SearchResult> results = new ArrayList<>();
-    if (search instanceof EclipseJavaSearch) {
+    if (supports(search)) {
       EclipseJavaSearch eclipseSearch = (EclipseJavaSearch) search;
       SearchPattern pattern = SearchPatternAdapter.toPattern(eclipseSearch);
       IJavaSearchScope scope = SearchScopeAdapter.toSearchScope(prior);
@@ -57,6 +58,11 @@ public class EclipseJavaSearchServiceImpl implements JavaSearchService {
       }
     }
     return results;
+  }
+
+  @Override
+  public boolean supports(Search search) {
+    return (search.getLanguage().equals(SearchLanguageType.JAVA) && search instanceof EclipseJavaSearch);
   }
 
 }

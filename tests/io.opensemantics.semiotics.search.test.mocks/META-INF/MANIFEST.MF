@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Search Mocks
+Bundle-SymbolicName: io.opensemantics.semiotics.search.test.mocks
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: io.opensemantics.semiotics.search.test.mocks.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: org.osgi.framework;version="1.3.0"
+Bundle-ActivationPolicy: lazy
+Service-Component: OSGI-INF/mockProvider.xml
+Require-Bundle: io.opensemantics.semiotics.search;bundle-version="0.1.0"

@@ -4,7 +4,6 @@ package io.opensemantics.semiotics.search
 import org.eclipse.emf.ecore.EDiagnosticChain
 import org.eclipse.emf.ecore.EMap
 
-
 enum TriBool
 {
   Unknown
@@ -56,7 +55,19 @@ class SearchLibrary
   contains Search[] searchs opposite library
 }
 
-abstract class Search extends Node
+enum SearchLanguageType
+{
+  None
+  Java
+  Python
+}
+
+interface SearchLanguage
+{
+  SearchLanguageType language
+}
+
+abstract class Search extends Node, SearchLanguage
 {
   String description
   container SearchLibrary library opposite searchs
@@ -73,6 +84,11 @@ abstract class Search extends Node
         // Child needs to be a Search
         if (!(child instanceof Search)) return false
     return true
+  }
+  
+  op SearchLanguageType language()
+  {
+    return SearchLanguageType::NONE
   }
 }
 
@@ -112,22 +128,18 @@ class OperatorSearch extends Search
   }
 }
 
-class CalleeSearch extends Search
+abstract class CalleeSearch extends Search
 {
 }
 
-class CallerSearch extends Search
+abstract class CallerSearch extends Search
 {
 }
 
-class CallsiteSearch extends Search
+abstract class CallsiteSearch extends Search
 {
   contains CalleeSearch callee
   contains CallerSearch caller
-}
-
-class JavaSearch extends Search
-{
 }
 
 enum SearchOperator

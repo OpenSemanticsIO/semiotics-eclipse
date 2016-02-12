@@ -3,12 +3,13 @@
  */
 package io.opensemantics.semiotics.search.core.internal;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
-import io.opensemantics.semiotics.search.JavaSearch;
 import io.opensemantics.semiotics.search.Search;
 import io.opensemantics.semiotics.search.SearchResult;
-import io.opensemantics.semiotics.search.spi.JavaSearchService;
+import io.opensemantics.semiotics.search.spi.SearchProvider;
 import io.opensemantics.semiotics.search.spi.SearchService;
 
 /**
@@ -17,32 +18,31 @@ import io.opensemantics.semiotics.search.spi.SearchService;
  */
 public class SearchServiceImpl implements SearchService {
 
-  private JavaSearchService javaService;
+  private CopyOnWriteArrayList<SearchProvider> providers;
 
-  /**
-   * 
-   */
   public SearchServiceImpl() {
-    // TODO Auto-generated constructor stub
+    providers = new CopyOnWriteArrayList<>();
   }
 
-  /*
-   * (non-Javadoc)
-   * 
-   * @see
-   * io.opensemantics.semiotics.search.spi.SearchService#search(io.opensemantics
-   * .semiotics.search.Search, io.opensemantics.semiotics.search.SearchResult[])
-   */
   @Override
-  public List<SearchResult> search(Search search, List<SearchResult> prior) {
-    // TODO : rework to not be type dependent
-    if (search instanceof JavaSearch) {
-      return javaService.search((JavaSearch) search, prior);
+  public List<SearchResult> search(Search search, List<SearchResult> previous) {
+    List<SearchResult> results = new ArrayList<>(previous);
+    for (SearchProvider provider : providers) {
+      if (provider.supports(search)) {
+        List<SearchResult> tempResults = provider.search(search, results);
+        if (tempResults != null) {
+          results.addAll(tempResults);
+        }
+      }
     }
-    return null;
+    return results;
   }
 
-  public void bindJavaService(JavaSearchService service) {
-    this.javaService = service;
+  protected void bindProvider(SearchProvider provider) {
+    this.providers.add(provider);
+  }
+
+  protected void unbindProvider(SearchProvider provider) {
+    this.providers.remove(provider);
   }
 }
