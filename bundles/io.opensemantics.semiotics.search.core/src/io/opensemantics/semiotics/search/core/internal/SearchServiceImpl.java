@@ -26,7 +26,13 @@ public class SearchServiceImpl implements SearchService {
 
   @Override
   public List<SearchResult> search(Search search, List<SearchResult> previous) {
-    List<SearchResult> results = new ArrayList<>(previous);
+
+    final List<SearchResult> results;
+    if (previous == null) {
+      results = new ArrayList<>();
+    } else {
+      results = new ArrayList<>(previous);
+    }
     for (SearchProvider provider : providers) {
       if (provider.supports(search)) {
         List<SearchResult> tempResults = provider.search(search, results);

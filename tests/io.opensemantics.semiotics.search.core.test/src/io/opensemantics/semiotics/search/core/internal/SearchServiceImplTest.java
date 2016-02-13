@@ -50,7 +50,19 @@ public class SearchServiceImplTest {
     SearchResult result = Mockito.mock(SearchResult.class);
     List<SearchResult> results = new ArrayList<>();
     results.add(result);
+
     List<SearchResult> newResults = service.search(search, results);
     assertTrue(newResults.contains(result));
+  }
+
+  @Test
+  public void shouldSearchWithNullPrevious() {
+    Search search = Mockito.mock(Search.class);
+    when(search.getLanguage()).thenReturn(SearchLanguageType.JAVA);
+    when(search.getDescription()).thenReturn("MOCKED");
+
+    List<SearchResult> newResults = service.search(search, null);
+    assertTrue(newResults.isEmpty());
+
   }
 }
