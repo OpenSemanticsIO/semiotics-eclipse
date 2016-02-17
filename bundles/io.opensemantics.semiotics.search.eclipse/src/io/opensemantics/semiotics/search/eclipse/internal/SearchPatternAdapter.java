@@ -19,7 +19,7 @@ public class SearchPatternAdapter {
    * @see org.eclipse.jdt.core.search.SearchPattern.createPattern
    */
   public static SearchPattern toPattern(EclipseJavaSearch search) {
-    return SearchPattern.createPattern(search.getPattern(), toSearchFor(search), toLimitTo(search),
+    return SearchPattern.createPattern(search.getDescription(), toSearchFor(search), toLimitTo(search),
         toMatchRule(search));
   }
 
