@@ -3,8 +3,6 @@
  */
 package io.opensemantics.semiotics.search.core.internal;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import io.opensemantics.semiotics.search.Search;
@@ -25,23 +23,13 @@ public class SearchServiceImpl implements SearchService {
   }
 
   @Override
-  public List<SearchResult> search(Search search, List<SearchResult> previous) {
+  public void search(Search search, SearchResult result) {
 
-    final List<SearchResult> results;
-    if (previous == null) {
-      results = new ArrayList<>();
-    } else {
-      results = new ArrayList<>(previous);
-    }
     for (SearchProvider provider : providers) {
       if (provider.supports(search)) {
-        List<SearchResult> tempResults = provider.search(search, results);
-        if (tempResults != null) {
-          results.addAll(tempResults);
-        }
+        provider.search(search, result);
       }
     }
-    return results;
   }
 
   protected void bindProvider(SearchProvider provider) {

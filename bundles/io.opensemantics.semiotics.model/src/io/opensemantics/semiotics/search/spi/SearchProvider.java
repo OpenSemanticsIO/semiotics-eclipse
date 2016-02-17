@@ -1,7 +1,5 @@
 package io.opensemantics.semiotics.search.spi;
 
-import java.util.List;
-
 import io.opensemantics.semiotics.search.Search;
 import io.opensemantics.semiotics.search.SearchResult;
 
@@ -10,12 +8,11 @@ public interface SearchProvider {
   /**
    * 
    * @param search
-   *          The item to be searched
+   *          The search graph
    * @param previous
-   *          Previous search results or null
-   * @return A list of search results or null
+   *          A result whose matches are updated directly by the provider
    */
-  List<SearchResult> search(Search search, List<SearchResult> previous);
+  void search(Search search, SearchResult result);
 
   /**
    * 
