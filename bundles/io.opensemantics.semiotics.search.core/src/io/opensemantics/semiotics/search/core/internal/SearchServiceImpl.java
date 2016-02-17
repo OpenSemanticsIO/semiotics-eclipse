@@ -6,7 +6,6 @@ package io.opensemantics.semiotics.search.core.internal;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import io.opensemantics.semiotics.search.Search;
-import io.opensemantics.semiotics.search.SearchResult;
 import io.opensemantics.semiotics.search.spi.SearchProvider;
 import io.opensemantics.semiotics.search.spi.SearchService;
 
@@ -23,11 +22,11 @@ public class SearchServiceImpl implements SearchService {
   }
 
   @Override
-  public void search(Search search, SearchResult result) {
+  public void search(Search search) {
 
     for (SearchProvider provider : providers) {
       if (provider.supports(search)) {
-        provider.search(search, result);
+        provider.search(search);
       }
     }
   }

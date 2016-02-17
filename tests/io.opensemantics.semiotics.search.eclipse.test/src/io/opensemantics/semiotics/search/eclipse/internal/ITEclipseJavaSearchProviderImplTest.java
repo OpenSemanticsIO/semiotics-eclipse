@@ -7,13 +7,11 @@ import org.junit.Before;
 import org.junit.Test;
 
 import io.opensemantics.semiotics.search.SearchLanguageType;
-import io.opensemantics.semiotics.search.SearchResult;
 import io.opensemantics.semiotics.search.eclipse.EclipseFactory;
 import io.opensemantics.semiotics.search.eclipse.EclipseJavaSearch;
 import io.opensemantics.semiotics.search.eclipse.LimitTo;
 import io.opensemantics.semiotics.search.eclipse.SearchForNature;
 import io.opensemantics.semiotics.search.eclipse.test.util.ProjectImporter;
-import io.opensemantics.semiotics.search.mock.MockFactory;
 
 public class ITEclipseJavaSearchProviderImplTest {
 
@@ -39,11 +37,10 @@ public class ITEclipseJavaSearchProviderImplTest {
     javaSearch.setSearchFor(SearchForNature.METHOD);
     javaSearch.setLimitTo(LimitTo.REFERENCES);
 
-    SearchResult result = MockFactory.eINSTANCE.createMockSearchResult();
     EclipseJavaSearchProviderImpl searchImpl = new EclipseJavaSearchProviderImpl();
-    searchImpl.search(javaSearch, result);
-    assertTrue(!result.getMatches().isEmpty());
-    assertTrue(result.getDescription().equals(javaSearch.getDescription()));
+    searchImpl.search(javaSearch);
+    assertTrue(!javaSearch.getResult().getMatches().isEmpty());
+    assertTrue(javaSearch.getResult().getDescription().equals(javaSearch.getDescription()));
   }
 
 }

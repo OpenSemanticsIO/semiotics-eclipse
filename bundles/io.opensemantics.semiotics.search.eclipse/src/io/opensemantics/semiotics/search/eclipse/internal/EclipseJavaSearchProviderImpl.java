@@ -12,7 +12,6 @@ import org.eclipse.jdt.core.search.SearchRequestor;
 
 import io.opensemantics.semiotics.search.Search;
 import io.opensemantics.semiotics.search.SearchLanguageType;
-import io.opensemantics.semiotics.search.SearchResult;
 import io.opensemantics.semiotics.search.eclipse.EclipseJavaSearch;
 import io.opensemantics.semiotics.search.spi.SearchProvider;
 
@@ -38,12 +37,13 @@ public class EclipseJavaSearchProviderImpl implements SearchProvider {
    * io.opensemantics.semiotics.search.SearchResult[])
    */
   @Override
-  public void search(Search search, SearchResult result) {
+  public void search(Search search) {
     if (supports(search)) {
       EclipseJavaSearch eclipseSearch = (EclipseJavaSearch) search;
+
       SearchPattern pattern = SearchPatternAdapter.toPattern(eclipseSearch);
-      IJavaSearchScope scope = SearchScopeAdapter.toSearchScope(result);
-      SearchRequestor requestor = new SearchRequestorAdapter(eclipseSearch, result);
+      IJavaSearchScope scope = SearchScopeAdapter.toSearchScope(eclipseSearch);
+      SearchRequestor requestor = new SearchRequestorAdapter(eclipseSearch);
       SearchEngine engine = new SearchEngine();
       try {
         engine.search(pattern, new SearchParticipant[] { SearchEngine.getDefaultSearchParticipant() }, scope, requestor,

@@ -1,7 +1,6 @@
 package io.opensemantics.semiotics.search.spi;
 
 import io.opensemantics.semiotics.search.Search;
-import io.opensemantics.semiotics.search.SearchResult;
 
 public interface SearchProvider {
 
@@ -12,7 +11,7 @@ public interface SearchProvider {
    * @param previous
    *          A result whose matches are updated directly by the provider
    */
-  void search(Search search, SearchResult result);
+  void search(Search search);
 
   /**
    * 

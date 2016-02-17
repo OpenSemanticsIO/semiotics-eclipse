@@ -3,8 +3,6 @@
  */
 package io.opensemantics.semiotics.search.ui;
 
-import java.util.List;
-
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.OperationCanceledException;
@@ -13,7 +11,6 @@ import org.eclipse.search.ui.ISearchQuery;
 import org.eclipse.search.ui.ISearchResult;
 
 import io.opensemantics.semiotics.search.Search;
-import io.opensemantics.semiotics.search.SearchResult;
 import io.opensemantics.semiotics.search.spi.SearchService;
 
 /**
@@ -88,7 +85,7 @@ public class ModelSearchQuery implements ISearchQuery {
     IStatus result;
     SearchService searchService = Activator.getSearchService();
     if (searchService != null) {
-      List<SearchResult> searchResults = searchService.search(search, null);
+      searchService.search(search);
       result = Status.OK_STATUS;
     } else {
       result = new Status(Status.WARNING, Activator.PLUGIN_ID, "SearchService not initialized");

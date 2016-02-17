@@ -4,19 +4,18 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.jdt.core.search.SearchMatch;
 import org.eclipse.jdt.core.search.SearchRequestor;
 
-import io.opensemantics.semiotics.search.SearchResult;
+import io.opensemantics.semiotics.search.eclipse.EclipseFactory;
 import io.opensemantics.semiotics.search.eclipse.EclipseJavaSearch;
+import io.opensemantics.semiotics.search.eclipse.EclipseJavaSearchResult;
 
 public class SearchRequestorAdapter extends SearchRequestor {
 
-  private final SearchResult result;
-  private final EclipseJavaSearch search;
+  private final EclipseJavaSearchResult result;
 
-  public SearchRequestorAdapter(EclipseJavaSearch search, SearchResult result) {
+  public SearchRequestorAdapter(EclipseJavaSearch search) {
     super();
+    result = EclipseFactory.eINSTANCE.createEclipseJavaSearchResult();
     result.setSearch(search);
-    this.search = search;
-    this.result = result;
   }
 
   /*

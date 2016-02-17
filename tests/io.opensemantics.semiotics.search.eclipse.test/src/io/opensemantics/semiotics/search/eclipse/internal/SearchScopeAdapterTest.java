@@ -7,9 +7,9 @@ import org.eclipse.jdt.core.search.IJavaSearchScope;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mockito;
 
-import io.opensemantics.semiotics.search.SearchResult;
+import io.opensemantics.semiotics.search.eclipse.EclipseFactory;
+import io.opensemantics.semiotics.search.eclipse.EclipseJavaSearch;
 import io.opensemantics.semiotics.search.eclipse.test.util.ProjectImporter;
 
 public class SearchScopeAdapterTest extends SearchScopeAdapter {
@@ -33,8 +33,8 @@ public class SearchScopeAdapterTest extends SearchScopeAdapter {
 
   @Test
   public void testWorkspaceScope() {
-    SearchResult result = Mockito.mock(SearchResult.class);
-    IJavaSearchScope scope = SearchScopeAdapter.toSearchScope(result);
+    EclipseJavaSearch search = EclipseFactory.eINSTANCE.createEclipseJavaSearch();
+    IJavaSearchScope scope = SearchScopeAdapter.toSearchScope(search);
     boolean found = false;
     for (IPath path : scope.enclosingProjectsAndJars()) {
       if (path.lastSegment().equals(PROJECT)) {

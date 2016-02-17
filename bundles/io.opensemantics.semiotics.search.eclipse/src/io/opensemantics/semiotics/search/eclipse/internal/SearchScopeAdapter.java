@@ -3,7 +3,7 @@ package io.opensemantics.semiotics.search.eclipse.internal;
 import org.eclipse.jdt.core.search.IJavaSearchScope;
 import org.eclipse.jdt.core.search.SearchEngine;
 
-import io.opensemantics.semiotics.search.SearchResult;
+import io.opensemantics.semiotics.search.eclipse.EclipseJavaSearch;
 
 public class SearchScopeAdapter {
 
@@ -11,7 +11,7 @@ public class SearchScopeAdapter {
     // TODO Auto-generated constructor stub
   }
 
-  public static IJavaSearchScope toSearchScope(SearchResult result) {
+  public static IJavaSearchScope toSearchScope(EclipseJavaSearch search) {
     return SearchEngine.createWorkspaceScope();
   }
 }
