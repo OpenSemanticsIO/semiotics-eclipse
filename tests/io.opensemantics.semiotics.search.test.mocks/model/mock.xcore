@@ -1,0 +1,9 @@
+package io.opensemantics.semiotics.search.mock
+
+import io.opensemantics.semiotics.search.SearchResult
+
+class MockSearchResult extends SearchResult
+{
+  
+}
+
