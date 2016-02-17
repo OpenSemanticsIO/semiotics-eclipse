@@ -3,8 +3,6 @@
  */
 package io.opensemantics.semiotics.search.test.mocks;
 
-import java.util.List;
-
 import io.opensemantics.semiotics.search.Search;
 import io.opensemantics.semiotics.search.SearchLanguageType;
 import io.opensemantics.semiotics.search.SearchResult;
@@ -29,8 +27,7 @@ public class MockSearchProvider implements SearchProvider {
    * opensemantics.semiotics.search.Search, java.util.List)
    */
   @Override
-  public List<SearchResult> search(Search search, List<SearchResult> previous) {
-    return previous;
+  public void search(Search search, SearchResult result) {
   }
 
   /*

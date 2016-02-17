@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Search UI
+Bundle-SymbolicName: io.opensemantics.semiotics.search.ui
+Bundle-Version: 0.0.1.qualifier
+Bundle-Activator: io.opensemantics.semiotics.search.ui.Activator
+Bundle-Vendor: OpenSemantics.io
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.search,
+ io.opensemantics.semiotics.search
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Service-Component: OSGI-INF/activator.xml
