@@ -34,7 +34,7 @@ public class ITEclipseJavaSearchProviderImplTest {
   @Test
   public void shouldSearch() {
     EclipseJavaSearch javaSearch = EclipseFactory.eINSTANCE.createEclipseJavaSearch();
-    javaSearch.setPattern("io.opensemantics.semiotics.search.eclipse.itest.Callee.called()");
+    javaSearch.setDescription("io.opensemantics.semiotics.search.eclipse.itest.Callee.called()");
     javaSearch.setLanguage(SearchLanguageType.JAVA);
     javaSearch.setSearchFor(SearchForNature.METHOD);
     javaSearch.setLimitTo(LimitTo.REFERENCES);
@@ -43,7 +43,7 @@ public class ITEclipseJavaSearchProviderImplTest {
     EclipseJavaSearchProviderImpl searchImpl = new EclipseJavaSearchProviderImpl();
     searchImpl.search(javaSearch, result);
     assertTrue(!result.getMatches().isEmpty());
-    assertTrue(result.getDescription().equals(javaSearch.getPattern()));
+    assertTrue(result.getDescription().equals(javaSearch.getDescription()));
   }
 
 }

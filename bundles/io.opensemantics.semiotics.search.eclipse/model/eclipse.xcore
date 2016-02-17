@@ -4,7 +4,6 @@ package io.opensemantics.semiotics.search.eclipse
 import io.opensemantics.semiotics.search.Search
 import io.opensemantics.semiotics.search.SearchResult
 import org.eclipse.jdt.core.IJavaElement
-import io.opensemantics.semiotics.search.SearchLanguageType
 import io.opensemantics.semiotics.search.SearchMatch
 
 type IJavaElement wraps IJavaElement
@@ -12,7 +11,6 @@ type IJavaElement wraps IJavaElement
 /* @see org.eclipse.jdt.core.search.SearchPattern */
 class EclipseJavaSearch extends Search
 {
-  String pattern
   // TODO: FP/FN annotation
   /* FN-prone : true
    * FP-prone : false
