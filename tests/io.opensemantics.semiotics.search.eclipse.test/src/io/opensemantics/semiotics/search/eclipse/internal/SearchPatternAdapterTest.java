@@ -49,7 +49,7 @@ public class SearchPatternAdapterTest {
   public void testSearchPatterns() {
     final SearchPattern patternA = SearchPattern.createPattern(pattern, searchFor, limitTo, matchRule);
     final EclipseJavaSearch eclipseSearch = EclipseFactory.eINSTANCE.createEclipseJavaSearch();
-    eclipseSearch.setPattern(pattern);
+    eclipseSearch.setDescription(pattern);
     eclipseSearch.setSearchFor(SearchForNature.TYPE);
     eclipseSearch.setLimitTo(LimitTo.REFERENCES);
     eclipseSearch.setMatchRule(MatchRule.PATTERN);
