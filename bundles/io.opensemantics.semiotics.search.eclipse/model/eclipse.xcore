@@ -5,6 +5,7 @@ import io.opensemantics.semiotics.search.Search
 import io.opensemantics.semiotics.search.SearchResult
 import org.eclipse.jdt.core.IJavaElement
 import io.opensemantics.semiotics.search.SearchLanguageType
+import io.opensemantics.semiotics.search.SearchMatch
 
 type IJavaElement wraps IJavaElement
 
@@ -138,6 +139,14 @@ enum LimitToFineGrain
 
 
 class EclipseJavaSearchResult extends SearchResult
+{
+  transient IJavaElement element
+  boolean accurate
+  int length
+  int offset
+}
+
+class EclipseJavaSearchMatch extends SearchMatch
 {
   transient IJavaElement element
   boolean accurate

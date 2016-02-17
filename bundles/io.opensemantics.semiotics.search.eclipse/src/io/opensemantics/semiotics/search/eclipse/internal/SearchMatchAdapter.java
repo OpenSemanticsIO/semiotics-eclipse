@@ -3,9 +3,8 @@ package io.opensemantics.semiotics.search.eclipse.internal;
 import org.eclipse.jdt.core.IJavaElement;
 import org.eclipse.jdt.core.search.SearchMatch;
 
-import io.opensemantics.semiotics.search.SearchResult;
 import io.opensemantics.semiotics.search.eclipse.EclipseFactory;
-import io.opensemantics.semiotics.search.eclipse.EclipseJavaSearchResult;
+import io.opensemantics.semiotics.search.eclipse.EclipseJavaSearchMatch;
 
 public class SearchMatchAdapter {
 
@@ -13,15 +12,15 @@ public class SearchMatchAdapter {
     // TODO Auto-generated constructor stub
   }
 
-  public static SearchResult toSearchResult(SearchMatch match) {
-    final EclipseJavaSearchResult result = EclipseFactory.eINSTANCE.createEclipseJavaSearchResult();
+  public static io.opensemantics.semiotics.search.SearchMatch toSearchMatch(SearchMatch match) {
+    final EclipseJavaSearchMatch modelSearchMatch = EclipseFactory.eINSTANCE.createEclipseJavaSearchMatch();
     final Object element = match.getElement();
     if ((element != null) && (element instanceof IJavaElement)) {
       IJavaElement javaElement = (IJavaElement) element;
-      result.setElement(javaElement);
+      modelSearchMatch.setElement(javaElement);
     }
-    result.setLength(match.getLength());
-    result.setOffset(match.getOffset());
+    modelSearchMatch.setLength(match.getLength());
+    modelSearchMatch.setOffset(match.getOffset());
 
     final boolean accuracy;
     switch (match.getAccuracy()) {
@@ -34,8 +33,8 @@ public class SearchMatchAdapter {
     default:
       throw new RuntimeException("SearchMatch accuracy is unknown value: " + match.getAccuracy());
     }
-    result.setAccurate(accuracy);
+    modelSearchMatch.setAccurate(accuracy);
 
-    return result;
+    return modelSearchMatch;
   }
 }

@@ -10,8 +10,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import io.opensemantics.semiotics.search.SearchResult;
-import io.opensemantics.semiotics.search.eclipse.EclipseJavaSearchResult;
+import io.opensemantics.semiotics.search.eclipse.EclipseJavaSearchMatch;
 
 public class SearchMatchAdapterTest {
 
@@ -29,13 +28,13 @@ public class SearchMatchAdapterTest {
     final int offset = 5;
     IJavaElement javaElement = Mockito.mock(IJavaElement.class);
     SearchMatch match = new SearchMatch(javaElement, SearchMatch.A_ACCURATE, offset, length, null, null);
-    SearchResult adapted = SearchMatchAdapter.toSearchResult(match);
-    assertTrue(adapted instanceof EclipseJavaSearchResult);
-    EclipseJavaSearchResult eclipseResult = (EclipseJavaSearchResult) adapted;
-    assertEquals(eclipseResult.getLength(), length);
-    assertEquals(eclipseResult.getOffset(), offset);
-    assertTrue(eclipseResult.isAccurate());
-    assertEquals(eclipseResult.getElement(), javaElement);
+    io.opensemantics.semiotics.search.SearchMatch adapted = SearchMatchAdapter.toSearchMatch(match);
+    assertTrue(adapted instanceof EclipseJavaSearchMatch);
+    EclipseJavaSearchMatch eclipseMatch = (EclipseJavaSearchMatch) adapted;
+    assertEquals(eclipseMatch.getLength(), length);
+    assertEquals(eclipseMatch.getOffset(), offset);
+    assertTrue(eclipseMatch.isAccurate());
+    assertEquals(eclipseMatch.getElement(), javaElement);
   }
 
 }

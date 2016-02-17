@@ -2,14 +2,12 @@ package io.opensemantics.semiotics.search.eclipse.internal;
 
 import static org.junit.Assert.assertTrue;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.jdt.core.search.IJavaSearchScope;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
 
 import io.opensemantics.semiotics.search.SearchResult;
 import io.opensemantics.semiotics.search.eclipse.test.util.ProjectImporter;
@@ -35,8 +33,8 @@ public class SearchScopeAdapterTest extends SearchScopeAdapter {
 
   @Test
   public void testWorkspaceScope() {
-    List<SearchResult> prior = new ArrayList<>();
-    IJavaSearchScope scope = SearchScopeAdapter.toSearchScope(prior);
+    SearchResult result = Mockito.mock(SearchResult.class);
+    IJavaSearchScope scope = SearchScopeAdapter.toSearchScope(result);
     boolean found = false;
     for (IPath path : scope.enclosingProjectsAndJars()) {
       if (path.lastSegment().equals(PROJECT)) {

@@ -1,7 +1,5 @@
 package io.opensemantics.semiotics.search.eclipse.internal;
 
-import java.util.List;
-
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.jdt.core.search.SearchMatch;
 import org.eclipse.jdt.core.search.SearchRequestor;
@@ -11,13 +9,14 @@ import io.opensemantics.semiotics.search.eclipse.EclipseJavaSearch;
 
 public class SearchRequestorAdapter extends SearchRequestor {
 
-  private final List<SearchResult> results;
+  private final SearchResult result;
   private final EclipseJavaSearch search;
 
-  public SearchRequestorAdapter(EclipseJavaSearch search, List<SearchResult> results) {
+  public SearchRequestorAdapter(EclipseJavaSearch search, SearchResult result) {
     super();
+    result.setSearch(search);
     this.search = search;
-    this.results = results;
+    this.result = result;
   }
 
   /*
@@ -43,7 +42,7 @@ public class SearchRequestorAdapter extends SearchRequestor {
   }
 
   /*
-   * Create a SearchResult based upon a SearchMatch
+   * Update matches based upon a match
    * 
    * @see
    * org.eclipse.jdt.core.search.SearchRequestor#acceptSearchMatch(org.eclipse.
@@ -51,10 +50,8 @@ public class SearchRequestorAdapter extends SearchRequestor {
    */
   @Override
   public void acceptSearchMatch(SearchMatch match) throws CoreException {
-    SearchResult result = SearchMatchAdapter.toSearchResult(match);
-    result.setDescription(search.getDescription());
-    result.setSearch(search);
-    results.add(result);
+    io.opensemantics.semiotics.search.SearchMatch otherMatch = SearchMatchAdapter.toSearchMatch(match);
+    result.getMatches().add(otherMatch);
   }
 
 }

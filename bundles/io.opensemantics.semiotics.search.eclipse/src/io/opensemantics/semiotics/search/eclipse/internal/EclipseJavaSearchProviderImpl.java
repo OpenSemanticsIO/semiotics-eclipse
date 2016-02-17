@@ -3,9 +3,6 @@
  */
 package io.opensemantics.semiotics.search.eclipse.internal;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.jdt.core.search.IJavaSearchScope;
 import org.eclipse.jdt.core.search.SearchEngine;
@@ -41,13 +38,12 @@ public class EclipseJavaSearchProviderImpl implements SearchProvider {
    * io.opensemantics.semiotics.search.SearchResult[])
    */
   @Override
-  public List<SearchResult> search(Search search, List<SearchResult> prior) {
-    List<SearchResult> results = new ArrayList<>();
+  public void search(Search search, SearchResult result) {
     if (supports(search)) {
       EclipseJavaSearch eclipseSearch = (EclipseJavaSearch) search;
       SearchPattern pattern = SearchPatternAdapter.toPattern(eclipseSearch);
-      IJavaSearchScope scope = SearchScopeAdapter.toSearchScope(prior);
-      SearchRequestor requestor = new SearchRequestorAdapter(eclipseSearch, results);
+      IJavaSearchScope scope = SearchScopeAdapter.toSearchScope(result);
+      SearchRequestor requestor = new SearchRequestorAdapter(eclipseSearch, result);
       SearchEngine engine = new SearchEngine();
       try {
         engine.search(pattern, new SearchParticipant[] { SearchEngine.getDefaultSearchParticipant() }, scope, requestor,
@@ -57,7 +53,6 @@ public class EclipseJavaSearchProviderImpl implements SearchProvider {
         e.printStackTrace();
       }
     }
-    return results;
   }
 
   @Override
