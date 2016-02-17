@@ -150,10 +150,24 @@ class SearchResults
   contains SearchResult[] searchResults opposite parent
 }
 
+abstract class SearchMatch
+{
+  container SearchResult result opposite matches
+  derived String description get
+  {
+    if (result != null) result.description
+  }
+}
+
 abstract class SearchResult
 {
-  String description
+  
+  contains SearchMatch[] matches opposite result
   container SearchResults parent opposite searchResults
   refers Search search
+  derived String description get
+  {
+    if (search != null) search.description
+  }
 }
 
