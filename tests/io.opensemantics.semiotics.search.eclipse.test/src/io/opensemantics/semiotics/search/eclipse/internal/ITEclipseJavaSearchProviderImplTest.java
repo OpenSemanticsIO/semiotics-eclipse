@@ -43,7 +43,7 @@ public class ITEclipseJavaSearchProviderImplTest {
     EclipseJavaSearchProviderImpl searchImpl = new EclipseJavaSearchProviderImpl();
     searchImpl.search(javaSearch, result);
     assertTrue(!result.getMatches().isEmpty());
-
+    assertTrue(result.getDescription().equals(javaSearch.getPattern()));
   }
 
 }
