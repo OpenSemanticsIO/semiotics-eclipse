@@ -19,7 +19,8 @@ import io.opensemantics.semiotics.search.spi.SearchService;
  */
 public class ModelSearchQuery implements ISearchQuery {
 
-  private final Search search;
+  // Make it testable
+  final Search search;
   private final ModelSearchResult searchResult;
 
   /**
@@ -28,7 +29,8 @@ public class ModelSearchQuery implements ISearchQuery {
   public ModelSearchQuery(Search search) {
     this.search = search;
     this.searchResult = new ModelSearchResult(this);
-
+    SearchResultContentAdapter adapter = new SearchResultContentAdapter(this.searchResult);
+    this.search.eAdapters().add(adapter);
   }
 
   /*
@@ -70,8 +72,7 @@ public class ModelSearchQuery implements ISearchQuery {
    */
   @Override
   public ISearchResult getSearchResult() {
-    // TODO Auto-generated method stub
-    return null;
+    return searchResult;
   }
 
   /*

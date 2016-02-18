@@ -9,7 +9,7 @@ import org.eclipse.search.ui.ISearchResultListener;
 import org.eclipse.search.ui.SearchResultEvent;
 
 import io.opensemantics.semiotics.search.SearchPackage;
-import io.opensemantics.semiotics.search.SearchResults;
+import io.opensemantics.semiotics.search.SearchResult;
 
 /**
  * @author jonpasski
@@ -25,11 +25,11 @@ public class SearchResultContentAdapter extends EContentAdapter {
   public SearchResultContentAdapter(ModelSearchResult searchResult) {
     super();
     this.searchResult = searchResult;
-
   }
 
   /*
-   * (non-Javadoc)
+   * (non-Javadoc) This adapter is concerned with matches added to some
+   * SearchResult
    * 
    * @see
    * org.eclipse.emf.ecore.util.EContentAdapter#notifyChanged(org.eclipse.emf.
@@ -42,8 +42,9 @@ public class SearchResultContentAdapter extends EContentAdapter {
     if (notification.isTouch())
       return;
 
-    switch (notification.getFeatureID(SearchResults.class)) {
-    case SearchPackage.SEARCH_RESULTS__SEARCH_RESULTS:
+    switch (notification.getFeatureID(SearchResult.class)) {
+    // TODO fix
+    case SearchPackage.SEARCH_RESULT__MATCHES:
 
       final SearchResultEvent event;
       switch (notification.getEventType()) {
@@ -57,10 +58,9 @@ public class SearchResultContentAdapter extends EContentAdapter {
         for (Object listener : searchResult.listeners.getListeners()) {
           ((ISearchResultListener) listener).searchResultChanged(event);
         }
-        break;
       }
-
       break;
+
     default:
       // TODO
       break;
