@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Search UI Test
+Bundle-SymbolicName: io.opensemantics.semiotics.search.ui.test
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: OpenSemantics.io
+Fragment-Host: io.opensemantics.semiotics.search.ui
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.junit,
+ io.opensemantics.semiotics.org.mockito;bundle-version="1.10.19",
+ io.opensemantics.semiotics.search.test.mocks;bundle-version="1.0.0"

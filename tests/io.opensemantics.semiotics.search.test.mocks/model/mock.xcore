@@ -1,9 +1,17 @@
 package io.opensemantics.semiotics.search.mock
 
+import io.opensemantics.semiotics.search.Search
 import io.opensemantics.semiotics.search.SearchResult
+import io.opensemantics.semiotics.search.SearchMatch
 
 class MockSearchResult extends SearchResult
-{
-  
+{  
 }
 
+class MockSearch extends Search
+{
+}
+
+class MockSearchMatch extends SearchMatch
+{
+}
