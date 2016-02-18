@@ -65,7 +65,7 @@ enum SearchLanguageType
 abstract class Search extends Node
 {
   String description
-  refers SearchResult result opposite search
+  contains SearchResult result opposite search
   container SearchLibrary library opposite searchs
   // Limitation in Xcore is that a subclass cannot override a super-class
   // value. Will need to do it when setting up the object or
@@ -145,12 +145,6 @@ enum SearchOperator
   Not
 }
 
-
-class SearchResults
-{
-  contains SearchResult[] searchResults opposite parent
-}
-
 abstract class SearchMatch
 {
   container SearchResult result opposite matches
@@ -164,8 +158,7 @@ abstract class SearchResult
 {
   
   contains SearchMatch[] matches opposite result
-  container SearchResults parent opposite searchResults
-  refers Search search opposite result
+  container Search search opposite result
   derived String description get
   {
     if (search != null) search.description
