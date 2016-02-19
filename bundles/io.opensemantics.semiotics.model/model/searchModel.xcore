@@ -62,7 +62,7 @@ enum SearchLanguageType
   Python
 }
 
-abstract class Search extends Node
+class Search extends Node
 {
   String description
   contains SearchResult result opposite search
@@ -71,78 +71,6 @@ abstract class Search extends Node
   // value. Will need to do it when setting up the object or
   // '@generate not' the code
   SearchLanguageType language = "None"
-
-  /* Invariant: children need to be Search
-   * This isn't performant when adding to the search. Adding is a manual
-   * process so this performance impact should be negligible.
-   * TODO: measure performance impact
-   */
-  op boolean childenSearches(EDiagnosticChain diagnostics, EMap<Object, Object> context)
-  {
-    if (children != null)
-      for (Node child : children)
-        // Child needs to be a Search
-        if (!(child instanceof Search)) return false
-    return true
-  }
-}
-
-/* Semantically AND, OR, or NOT this searches sub-searches
- * NOT is special case:
- *   it can only occur as a child of an AND search
- *   it cannot be the first child, otherwise it returns potentially near everything
- */
-class OperatorSearch extends Search
-{
-  SearchOperator operator
-  /* Invariant: NOT has to have an AND as parent and not be the first child */
-  op boolean not(EDiagnosticChain diagnostics, EMap<Object, Object> context)
-  {
-    if (operator != null)
-      if (operator == SearchOperator::NOT)
-        if ((nodeKind == NodeKind::LEAF) || (nodeKind == NodeKind::INTERMEDIATE))
-          if (parent instanceof OperatorSearch)
-          {
-            val OperatorSearch parentOp = parent as OperatorSearch
-            if (parentOp.operator != null)
-              if (parentOp.operator == SearchOperator::AND)
-                // children needs to exist (this node is a Leaf or Intermediate)
-                // Cannot be the first operator
-                return (parentOp.children.indexOf(this) > 0)
-              else
-                // Parent needs to be an AND
-                return false
-          }
-          else
-            // Parent needs to be an OperatorSearch
-            return false
-        else
-          // NOT node cannot be root or singleton node
-          return false
-    return true
-  }
-}
-
-abstract class CalleeSearch extends Search
-{
-}
-
-abstract class CallerSearch extends Search
-{
-}
-
-abstract class CallsiteSearch extends Search
-{
-  contains CalleeSearch callee
-  contains CallerSearch caller
-}
-
-enum SearchOperator
-{
-  Unset
-  And
-  Or
-  Not
 }
 
 abstract class SearchMatch
