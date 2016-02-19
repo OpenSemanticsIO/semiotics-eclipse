@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="search" nsURI="io.opensemantics.semiotics.search" nsPrefix="search">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="editDirectory" value="/io.opensemantics.semiotics.search.edit/src-gen"/>
+    <details key="basePackage" value="io.opensemantics.semiotics"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EEnum" name="TriBool">
+    <eLiterals name="Unknown"/>
+    <eLiterals name="True"/>
+    <eLiterals name="False"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Application">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="projects" upperBound="-1"
+        eType="#//Project" eOpposite="#//Project/applications"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Project">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="applications" upperBound="-1"
+        eType="#//Application" eOpposite="#//Application/projects"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Node" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value=" Fully inspired by Ed Merks' YouTube tutorial&#xA;@link https://www.youtube.com/watch?v=zjluqfxx6B8"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
+        eType="#//Node" containment="true" resolveProxies="false" eOpposite="#//Node/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#//Node"
+        eOpposite="#//Node/children"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nodeKind" unique="false"
+        eType="#//NodeKind" changeable="false" volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="get" value="&lt;%io.opensemantics.semiotics.search.NodeKind%> _xifexpression = null;&#xA;&lt;%io.opensemantics.semiotics.search.Node%> _parent = this.getParent();&#xA;boolean _equals = &lt;%com.google.common.base.Objects%>.equal(_parent, null);&#xA;if (_equals)&#xA;{&#xA;&#x9;&lt;%io.opensemantics.semiotics.search.NodeKind%> _xifexpression_1 = null;&#xA;&#x9;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%io.opensemantics.semiotics.search.Node%>> _children = this.getChildren();&#xA;&#x9;boolean _isEmpty = _children.isEmpty();&#xA;&#x9;if (_isEmpty)&#xA;&#x9;{&#xA;&#x9;&#x9;_xifexpression_1 = &lt;%io.opensemantics.semiotics.search.NodeKind%>.SINGLETON;&#xA;&#x9;}&#xA;&#x9;else&#xA;&#x9;{&#xA;&#x9;&#x9;_xifexpression_1 = &lt;%io.opensemantics.semiotics.search.NodeKind%>.ROOT;&#xA;&#x9;}&#xA;&#x9;_xifexpression = _xifexpression_1;&#xA;}&#xA;else&#xA;{&#xA;&#x9;&lt;%io.opensemantics.semiotics.search.NodeKind%> _xifexpression_2 = null;&#xA;&#x9;&lt;%org.eclipse.emf.common.util.EList%>&lt;&lt;%io.opensemantics.semiotics.search.Node%>> _children_1 = this.getChildren();&#xA;&#x9;boolean _isEmpty_1 = _children_1.isEmpty();&#xA;&#x9;if (_isEmpty_1)&#xA;&#x9;{&#xA;&#x9;&#x9;_xifexpression_2 = &lt;%io.opensemantics.semiotics.search.NodeKind%>.LEAF;&#xA;&#x9;}&#xA;&#x9;else&#xA;&#x9;{&#xA;&#x9;&#x9;_xifexpression_2 = &lt;%io.opensemantics.semiotics.search.NodeKind%>.INTERMEDIATE;&#xA;&#x9;}&#xA;&#x9;_xifexpression = _xifexpression_2;&#xA;}&#xA;return _xifexpression;"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="NodeKind">
+    <eLiterals name="Singleton"/>
+    <eLiterals name="Root"/>
+    <eLiterals name="Intermediate"/>
+    <eLiterals name="Leaf"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SearchLibrary">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="searches" upperBound="-1"
+        eType="#//Search" containment="true" resolveProxies="false" eOpposite="#//Search/library"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SearchLanguageType">
+    <eLiterals name="None"/>
+    <eLiterals name="Java"/>
+    <eLiterals name="Python"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Search" eSuperTypes="#//Node">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="result" eType="#//SearchResult"
+        containment="true" resolveProxies="false" eOpposite="#//SearchResult/search"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="library" eType="#//SearchLibrary"
+        eOpposite="#//SearchLibrary/searches"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="language" unique="false"
+        eType="#//SearchLanguageType" defaultValueLiteral="None"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SearchMatch" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="result" eType="#//SearchResult"
+        eOpposite="#//SearchResult/matches"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
+        changeable="false" volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="get" value="&lt;%java.lang.String%> _xifexpression = null;&#xA;&lt;%io.opensemantics.semiotics.search.SearchResult%> _result = this.getResult();&#xA;boolean _notEquals = (!&lt;%com.google.common.base.Objects%>.equal(_result, null));&#xA;if (_notEquals)&#xA;{&#xA;&#x9;&lt;%io.opensemantics.semiotics.search.SearchResult%> _result_1 = this.getResult();&#xA;&#x9;_xifexpression = _result_1.getDescription();&#xA;}&#xA;return _xifexpression;"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SearchResult" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="matches" upperBound="-1"
+        eType="#//SearchMatch" containment="true" resolveProxies="false" eOpposite="#//SearchMatch/result"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="search" eType="#//Search"
+        eOpposite="#//Search/result"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" unique="false"
+        eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
+        changeable="false" volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="get" value="&lt;%java.lang.String%> _xifexpression = null;&#xA;&lt;%io.opensemantics.semiotics.search.Search%> _search = this.getSearch();&#xA;boolean _notEquals = (!&lt;%com.google.common.base.Objects%>.equal(_search, null));&#xA;if (_notEquals)&#xA;{&#xA;&#x9;&lt;%io.opensemantics.semiotics.search.Search%> _search_1 = this.getSearch();&#xA;&#x9;_xifexpression = _search_1.getDescription();&#xA;}&#xA;return _xifexpression;"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+</ecore:EPackage>
