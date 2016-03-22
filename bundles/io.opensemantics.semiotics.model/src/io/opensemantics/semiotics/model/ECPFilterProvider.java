@@ -1,4 +1,4 @@
-package io.opensemantics.semiotics.search;
+package io.opensemantics.semiotics.model;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -14,10 +14,7 @@ public class ECPFilterProvider implements org.eclipse.emf.ecp.core.util.ECPFilte
   @Override
   public Set<String> getHiddenPackages() {
     Set<String> results = new HashSet<>();
-    // Needed to create new project
     results.add("xcore.lang");
-    // results.add("platform:/plugin/org.eclipse.emf.ecore.xcore.lib/model/XcoreLang.xcore");
     return results;
   }
-
 }

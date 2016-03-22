@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="assessment" nsURI="http://io/opensemantics/semiotics/model/assessment"
+    nsPrefix="io.opensemantics.semiotics.model.assessment">
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceNode" eSuperTypes="#//Node">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HttpService">
+    <eGenericSuperTypes eClassifier="#//Graph">
+      <eTypeArguments eClassifier="#//HttpNode"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HttpNode" eSuperTypes="#//Node">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Graph" abstract="true">
+    <eTypeParameters name="T">
+      <eBounds eClassifier="#//Node"/>
+    </eTypeParameters>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="root" containment="true"
+        eOpposite="#//Node/graph">
+      <eGenericType eTypeParameter="#//Graph/T"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Node" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
+        eType="#//Node" containment="true" eOpposite="#//Node/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#//Node"
+        eOpposite="#//Node/children"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="graph" eOpposite="#//Graph/root">
+      <eGenericType eClassifier="#//Graph">
+        <eTypeArguments/>
+      </eGenericType>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Assessment">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="applications" eType="#//Application"
+        containment="true" eOpposite="#//Application/assessment"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Application">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assessment" eType="#//Assessment"
+        eOpposite="#//Assessment/applications"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HS2Node" eSuperTypes="#//ServiceNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Service">
+    <eTypeParameters name="S">
+      <eBounds eClassifier="#//ServiceNode"/>
+    </eTypeParameters>
+    <eGenericSuperTypes eClassifier="#//Graph">
+      <eTypeArguments eTypeParameter="#//Service/S"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HS2">
+    <eGenericSuperTypes eClassifier="#//Service">
+      <eTypeArguments eClassifier="#//HS2Node"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+</ecore:EPackage>
