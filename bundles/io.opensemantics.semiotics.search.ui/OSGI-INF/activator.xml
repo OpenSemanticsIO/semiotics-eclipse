@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="io.opensemantics.semiotics.search.ui">
-   <implementation class="io.opensemantics.semiotics.search.ui.Activator"/>
-   <reference bind="bindSearchService" cardinality="0..1" interface="io.opensemantics.semiotics.search.spi.SearchService" name="SearchService" policy="static" unbind="unbindSearchService"/>
-</scr:component>

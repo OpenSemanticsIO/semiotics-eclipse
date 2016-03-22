@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="io.opensemantics.semiotics.core">
-   <implementation class="io.opensemantics.semiotics.core.internal.ApplicationProviderImpl"/>
-   <service>
-      <provide interface="io.opensemantics.semiotics.core.ApplicationProvider"/>
-   </service>
-</scr:component>
