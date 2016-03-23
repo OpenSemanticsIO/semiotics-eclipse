@@ -3,5 +3,4 @@ bin/
 src-gen/
 .classpath
 .settings
-.project
 .DS_Store
