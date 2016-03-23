@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+   <extension
+         id="io.opensemantics.semiotics.model.product"
+         name="Semiotics Model Product"
+         point="org.eclipse.core.runtime.products">
+   </extension>
+</plugin>
