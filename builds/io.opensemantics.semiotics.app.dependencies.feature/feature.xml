@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="io.opensemantics.semiotics.app.dependencies.feature"
+      label="Dependencies for Stand-alone Model App"
+      version="1.0.0.qualifier"
+      provider-name="OpenSemantics.io">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <includes
+         id="org.eclipse.ecf.core.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.ecf.core.ssl.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.ecf.filetransfer.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.ecf.filetransfer.httpclient4.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.ecf.filetransfer.ssl.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.common"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.common.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecore"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.e3.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.emfforms.runtime.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.emfstore.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.view.categorization.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.view.compoundcontrol.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.view.custom.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.view.group.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.view.horizontal.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.view.label.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.view.rule.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.view.stack.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.view.table.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.view.template.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.view.treemasterdetail.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.view.unset.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.view.validation.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.view.vertical.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.viewmodel.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.workspace.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.edit"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.edit.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.equinox.p2.core.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.equinox.p2.extras.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.equinox.p2.rcp.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.equinox.p2.user.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.help"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.net4j.util"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.platform"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.rcp"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.emfstore.client.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.emfstore.client.ui.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.databinding"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.databinding.edit"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.equinox.p2.rcp.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.equinox.p2.user.ui"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.help"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.view.model.controls.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.view.model.editor.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.e3.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecore.edit"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.emfforms.idetooling.feature"
+         version="0.0.0"/>
+
+</feature>

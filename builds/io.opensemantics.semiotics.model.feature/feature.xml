@@ -18,13 +18,10 @@
    </license>
 
    <requires>
+      <import plugin="org.eclipse.emf.ecp.core"/>
       <import plugin="org.eclipse.core.runtime"/>
       <import plugin="org.eclipse.emf.ecore"/>
-      <import plugin="org.eclipse.xtext.xbase.lib"/>
-      <import plugin="org.eclipse.emf.ecore.xcore.lib"/>
       <import plugin="org.eclipse.emf.edit"/>
-      <import plugin="org.eclipse.emf.ecp.core"/>
-      <import plugin="org.eclipse.osgi"/>
    </requires>
 
    <plugin

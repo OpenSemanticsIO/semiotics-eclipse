@@ -7,7 +7,7 @@
 <plugin>
    <extension
          id="io.opensemantics.semiotics.model.product"
-         name="Semiotics Model Product"
+         name="OpenSemantics Model Product"
          point="org.eclipse.core.runtime.products">
    </extension>
 </plugin>
