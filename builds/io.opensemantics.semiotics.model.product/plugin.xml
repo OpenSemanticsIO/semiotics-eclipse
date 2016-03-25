@@ -6,8 +6,15 @@
 
 <plugin>
    <extension
-         id="io.opensemantics.semiotics.model.product"
-         name="OpenSemantics Model Product"
+         id="product"
          point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.ui.ide.workbench"
+            name="Semiotics Model">
+         <property
+               name="appName"
+               value="Semiotics Model">
+         </property>
+      </product>
    </extension>
 </plugin>
