@@ -221,4 +221,23 @@
          id="org.eclipse.emf.ecp.emfforms.idetooling.feature"
          version="0.0.0"/>
 
+   <includes
+         id="org.eclipse.emf.emfstore.server.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.emfstore.common.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.emfstore.ecore.feature"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.equinox.concurrent"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
 </feature>
