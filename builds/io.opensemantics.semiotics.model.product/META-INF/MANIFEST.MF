@@ -5,7 +5,4 @@ Bundle-SymbolicName: io.opensemantics.semiotics.model.product;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: OpenSemantics.io
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Require-Bundle: org.eclipse.core.runtime;bundle-version="3.11.0",
- io.opensemantics.semiotics.model;bundle-version="1.0.0",
- io.opensemantics.semiotics.model.assessment;bundle-version="0.1.0",
- io.opensemantics.semiotics.model.assessment.edit;bundle-version="1.0.0"
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.11.0"

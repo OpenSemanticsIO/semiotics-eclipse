@@ -14,7 +14,7 @@ public class ECPFilterProvider implements org.eclipse.emf.ecp.core.util.ECPFilte
   @Override
   public Set<String> getHiddenPackages() {
     Set<String> results = new HashSet<>();
-    results.add("xcore.lang");
+    //results.add("xcore.lang");
     return results;
   }
 }
