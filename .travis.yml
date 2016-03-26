@@ -1,0 +1,4 @@
+language: java
+jdk:
+  - oraclejdk8
+script: "mvn -f build/io.opensemantics.semiotics.parent/pom.xml clean verify"
