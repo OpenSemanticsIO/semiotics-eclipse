@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Semiotics Parent POM
+Bundle-SymbolicName: io.opensemantics.semiotics.parent
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: OpenSemantics.io
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

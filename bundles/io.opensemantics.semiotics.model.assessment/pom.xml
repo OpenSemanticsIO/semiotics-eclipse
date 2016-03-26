@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>io.opensemantics.semiotics.model.assessment</artifactId>
+  <parent>
+    <groupId>io.opensemantics.semiotics</groupId>
+    <artifactId>io.opensemantics.semiotics.parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <relativePath>../../builds/io.opensemantics.semiotics.parent</relativePath>
+  </parent>
+  <packaging>eclipse-plugin</packaging>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-maven-plugin</artifactId>
+      </plugin>
+      <!-- https://gist.github.com/hwellmann/6044835 -->
+      <plugin>
+        <groupId>org.eclipse.tycho.extras</groupId>
+        <artifactId>tycho-eclipserun-plugin</artifactId>
+        <configuration>
+            <!-- linebreaks not permitted in this arg line -->
+            <appArgLine>-data target/workspace -application org.eclipse.emf.codegen.ecore.Generator -projects ${basedir} -edit -model ${basedir}/model/assessment.genmodel target/generated-sources/emf</appArgLine>
+            <dependencies>
+              <dependency>
+                <artifactId>org.eclipse.emf.codegen.ecore</artifactId>
+                <type>eclipse-plugin</type>
+              </dependency>
+            </dependencies>
+            <repositories>
+              <repository>
+                <id>mars</id>
+                <layout>p2</layout>
+                <url>http://download.eclipse.org/releases/mars</url>
+              </repository>
+            </repositories>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>eclipse-run</goal>
+            </goals>
+            <phase>generate-sources</phase>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
