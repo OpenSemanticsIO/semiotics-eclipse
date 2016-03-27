@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/io.opensemantics.semiotics.model.assessment/src-gen"
-    editDirectory="/io.opensemantics.semiotics.model.assessment.edit/src-gen" editorDirectory="/io.opensemantics.semiotics.model.assessment.editor/src-gen"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright 2016 OpenSemantics.IO&#xA;&#xA;Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);&#xA;you may not use this file except in compliance with the License.&#xA;You may obtain a copy of the License at&#xA;&#xA;    http://www.apache.org/licenses/LICENSE-2.0&#xA;&#xA;Unless required by applicable law or agreed to in writing, software&#xA;distributed under the License is distributed on an &quot;AS IS&quot; BASIS,&#xA;WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.&#xA;See the License for the specific language governing permissions and&#xA;limitations under the License."
+    modelDirectory="/io.opensemantics.semiotics.model.assessment/src-gen" editDirectory="/io.opensemantics.semiotics.model.assessment.edit/src-gen"
+    editorDirectory="/io.opensemantics.semiotics.model.assessment.editor/src-gen"
     modelPluginID="io.opensemantics.semiotics.model.assessment" modelName="Assessment"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
     complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
