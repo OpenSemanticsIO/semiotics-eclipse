@@ -1,6 +1,5 @@
 target/
 bin/
-src-gen/
 .classpath
 .settings
 .DS_Store
