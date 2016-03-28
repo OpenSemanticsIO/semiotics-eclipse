@@ -1,25 +1,24 @@
-/*******************************************************************************
+/**
  * Copyright 2016 OpenSemantics.IO
- *
+ * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
+ * 
  *     http://www.apache.org/licenses/LICENSE-2.0
- *
+ * 
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- *******************************************************************************/
-/**
  */
 package io.opensemantics.semiotics.model.assessment.impl;
 
 import io.opensemantics.semiotics.model.assessment.*;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -71,14 +70,23 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case AssessmentPackage.SERVICE_NODE: return createServiceNode();
-			case AssessmentPackage.HTTP_SERVICE: return createHttpService();
-			case AssessmentPackage.HTTP_NODE: return createHttpNode();
+			case AssessmentPackage.HTTP: return createHttp();
 			case AssessmentPackage.ASSESSMENT: return createAssessment();
 			case AssessmentPackage.APPLICATION: return createApplication();
-			case AssessmentPackage.HS2_NODE: return createHS2Node();
-			case AssessmentPackage.SERVICE: return createService();
-			case AssessmentPackage.HS2: return createHS2();
+			case AssessmentPackage.SINK: return createSink();
+			case AssessmentPackage.CONTROLLER: return createController();
+			case AssessmentPackage.VIEW: return createView();
+			case AssessmentPackage.MODEL: return createModel();
+			case AssessmentPackage.FINDING: return createFinding();
+			case AssessmentPackage.PRINCIPAL: return createPrincipal();
+			case AssessmentPackage.ENTITLEMENT: return createEntitlement();
+			case AssessmentPackage.TASK: return createTask();
+			case AssessmentPackage.SCM: return createScm();
+			case AssessmentPackage.LIBRARY: return createLibrary();
+			case AssessmentPackage.LOCATION: return createLocation();
+			case AssessmentPackage.FILE: return createFile();
+			case AssessmentPackage.JAVA: return createJava();
+			case AssessmentPackage.URL: return createUrl();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -89,9 +97,18 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ServiceNode createServiceNode() {
-		ServiceNodeImpl serviceNode = new ServiceNodeImpl();
-		return serviceNode;
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+			case AssessmentPackage.HTTP_METHOD:
+				return createHttpMethodFromString(eDataType, initialValue);
+			case AssessmentPackage.URL_PATTERN:
+				return createUrlPatternFromString(eDataType, initialValue);
+			case AssessmentPackage.LANGUAGE:
+				return createLanguageFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
 	}
 
 	/**
@@ -99,9 +116,18 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public HttpService createHttpService() {
-		HttpServiceImpl httpService = new HttpServiceImpl();
-		return httpService;
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+			case AssessmentPackage.HTTP_METHOD:
+				return convertHttpMethodToString(eDataType, instanceValue);
+			case AssessmentPackage.URL_PATTERN:
+				return convertUrlPatternToString(eDataType, instanceValue);
+			case AssessmentPackage.LANGUAGE:
+				return convertLanguageToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
 	}
 
 	/**
@@ -109,9 +135,9 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public HttpNode createHttpNode() {
-		HttpNodeImpl httpNode = new HttpNodeImpl();
-		return httpNode;
+	public Http createHttp() {
+		HttpImpl http = new HttpImpl();
+		return http;
 	}
 
 	/**
@@ -139,9 +165,9 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public HS2Node createHS2Node() {
-		HS2NodeImpl hs2Node = new HS2NodeImpl();
-		return hs2Node;
+	public Sink createSink() {
+		SinkImpl sink = new SinkImpl();
+		return sink;
 	}
 
 	/**
@@ -149,9 +175,9 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public <S extends ServiceNode> Service<S> createService() {
-		ServiceImpl<S> service = new ServiceImpl<S>();
-		return service;
+	public Controller createController() {
+		ControllerImpl controller = new ControllerImpl();
+		return controller;
 	}
 
 	/**
@@ -159,9 +185,179 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public HS2 createHS2() {
-		HS2Impl hs2 = new HS2Impl();
-		return hs2;
+	public View createView() {
+		ViewImpl view = new ViewImpl();
+		return view;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Model createModel() {
+		ModelImpl model = new ModelImpl();
+		return model;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Finding createFinding() {
+		FindingImpl finding = new FindingImpl();
+		return finding;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Principal createPrincipal() {
+		PrincipalImpl principal = new PrincipalImpl();
+		return principal;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Entitlement createEntitlement() {
+		EntitlementImpl entitlement = new EntitlementImpl();
+		return entitlement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Task createTask() {
+		TaskImpl task = new TaskImpl();
+		return task;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Scm createScm() {
+		ScmImpl scm = new ScmImpl();
+		return scm;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Library createLibrary() {
+		LibraryImpl library = new LibraryImpl();
+		return library;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Location createLocation() {
+		LocationImpl location = new LocationImpl();
+		return location;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public File createFile() {
+		FileImpl file = new FileImpl();
+		return file;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Java createJava() {
+		JavaImpl java = new JavaImpl();
+		return java;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Url createUrl() {
+		UrlImpl url = new UrlImpl();
+		return url;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HttpMethod createHttpMethodFromString(EDataType eDataType, String initialValue) {
+		HttpMethod result = HttpMethod.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertHttpMethodToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UrlPattern createUrlPatternFromString(EDataType eDataType, String initialValue) {
+		UrlPattern result = UrlPattern.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertUrlPatternToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Language createLanguageFromString(EDataType eDataType, String initialValue) {
+		Language result = Language.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertLanguageToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

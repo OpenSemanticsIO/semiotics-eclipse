@@ -1,19 +1,17 @@
-/*******************************************************************************
+/**
  * Copyright 2016 OpenSemantics.IO
- *
+ * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
+ * 
  *     http://www.apache.org/licenses/LICENSE-2.0
- *
+ * 
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- *******************************************************************************/
-/**
  */
 package io.opensemantics.semiotics.model.assessment.provider;
 
@@ -87,72 +85,26 @@ public class AssessmentItemProviderAdapterFactory extends AssessmentAdapterFacto
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.ServiceNode} instances.
+	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Http} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ServiceNodeItemProvider serviceNodeItemProvider;
+	protected HttpItemProvider httpItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.ServiceNode}.
+	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Http}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createServiceNodeAdapter() {
-		if (serviceNodeItemProvider == null) {
-			serviceNodeItemProvider = new ServiceNodeItemProvider(this);
+	public Adapter createHttpAdapter() {
+		if (httpItemProvider == null) {
+			httpItemProvider = new HttpItemProvider(this);
 		}
 
-		return serviceNodeItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.HttpService} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected HttpServiceItemProvider httpServiceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.HttpService}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createHttpServiceAdapter() {
-		if (httpServiceItemProvider == null) {
-			httpServiceItemProvider = new HttpServiceItemProvider(this);
-		}
-
-		return httpServiceItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.HttpNode} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected HttpNodeItemProvider httpNodeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.HttpNode}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createHttpNodeAdapter() {
-		if (httpNodeItemProvider == null) {
-			httpNodeItemProvider = new HttpNodeItemProvider(this);
-		}
-
-		return httpNodeItemProvider;
+		return httpItemProvider;
 	}
 
 	/**
@@ -202,72 +154,325 @@ public class AssessmentItemProviderAdapterFactory extends AssessmentAdapterFacto
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.HS2Node} instances.
+	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Sink} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected HS2NodeItemProvider hs2NodeItemProvider;
+	protected SinkItemProvider sinkItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.HS2Node}.
+	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Sink}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createHS2NodeAdapter() {
-		if (hs2NodeItemProvider == null) {
-			hs2NodeItemProvider = new HS2NodeItemProvider(this);
+	public Adapter createSinkAdapter() {
+		if (sinkItemProvider == null) {
+			sinkItemProvider = new SinkItemProvider(this);
 		}
 
-		return hs2NodeItemProvider;
+		return sinkItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Service} instances.
+	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Controller} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ServiceItemProvider serviceItemProvider;
+	protected ControllerItemProvider controllerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Service}.
+	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Controller}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createServiceAdapter() {
-		if (serviceItemProvider == null) {
-			serviceItemProvider = new ServiceItemProvider(this);
+	public Adapter createControllerAdapter() {
+		if (controllerItemProvider == null) {
+			controllerItemProvider = new ControllerItemProvider(this);
 		}
 
-		return serviceItemProvider;
+		return controllerItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.HS2} instances.
+	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.View} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected HS2ItemProvider hs2ItemProvider;
+	protected ViewItemProvider viewItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.HS2}.
+	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.View}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createHS2Adapter() {
-		if (hs2ItemProvider == null) {
-			hs2ItemProvider = new HS2ItemProvider(this);
+	public Adapter createViewAdapter() {
+		if (viewItemProvider == null) {
+			viewItemProvider = new ViewItemProvider(this);
 		}
 
-		return hs2ItemProvider;
+		return viewItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Model} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ModelItemProvider modelItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Model}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createModelAdapter() {
+		if (modelItemProvider == null) {
+			modelItemProvider = new ModelItemProvider(this);
+		}
+
+		return modelItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Finding} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FindingItemProvider findingItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Finding}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFindingAdapter() {
+		if (findingItemProvider == null) {
+			findingItemProvider = new FindingItemProvider(this);
+		}
+
+		return findingItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Principal} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PrincipalItemProvider principalItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Principal}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPrincipalAdapter() {
+		if (principalItemProvider == null) {
+			principalItemProvider = new PrincipalItemProvider(this);
+		}
+
+		return principalItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Entitlement} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EntitlementItemProvider entitlementItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Entitlement}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEntitlementAdapter() {
+		if (entitlementItemProvider == null) {
+			entitlementItemProvider = new EntitlementItemProvider(this);
+		}
+
+		return entitlementItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Task} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TaskItemProvider taskItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Task}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTaskAdapter() {
+		if (taskItemProvider == null) {
+			taskItemProvider = new TaskItemProvider(this);
+		}
+
+		return taskItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Scm} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ScmItemProvider scmItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Scm}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createScmAdapter() {
+		if (scmItemProvider == null) {
+			scmItemProvider = new ScmItemProvider(this);
+		}
+
+		return scmItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Library} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LibraryItemProvider libraryItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Library}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLibraryAdapter() {
+		if (libraryItemProvider == null) {
+			libraryItemProvider = new LibraryItemProvider(this);
+		}
+
+		return libraryItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Location} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LocationItemProvider locationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Location}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLocationAdapter() {
+		if (locationItemProvider == null) {
+			locationItemProvider = new LocationItemProvider(this);
+		}
+
+		return locationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.File} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FileItemProvider fileItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.File}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFileAdapter() {
+		if (fileItemProvider == null) {
+			fileItemProvider = new FileItemProvider(this);
+		}
+
+		return fileItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Java} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected JavaItemProvider javaItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Java}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createJavaAdapter() {
+		if (javaItemProvider == null) {
+			javaItemProvider = new JavaItemProvider(this);
+		}
+
+		return javaItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Url} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected UrlItemProvider urlItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Url}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createUrlAdapter() {
+		if (urlItemProvider == null) {
+			urlItemProvider = new UrlItemProvider(this);
+		}
+
+		return urlItemProvider;
 	}
 
 	/**
@@ -369,14 +574,23 @@ public class AssessmentItemProviderAdapterFactory extends AssessmentAdapterFacto
 	 * @generated
 	 */
 	public void dispose() {
-		if (serviceNodeItemProvider != null) serviceNodeItemProvider.dispose();
-		if (httpServiceItemProvider != null) httpServiceItemProvider.dispose();
-		if (httpNodeItemProvider != null) httpNodeItemProvider.dispose();
+		if (httpItemProvider != null) httpItemProvider.dispose();
 		if (assessmentItemProvider != null) assessmentItemProvider.dispose();
 		if (applicationItemProvider != null) applicationItemProvider.dispose();
-		if (hs2NodeItemProvider != null) hs2NodeItemProvider.dispose();
-		if (serviceItemProvider != null) serviceItemProvider.dispose();
-		if (hs2ItemProvider != null) hs2ItemProvider.dispose();
+		if (sinkItemProvider != null) sinkItemProvider.dispose();
+		if (controllerItemProvider != null) controllerItemProvider.dispose();
+		if (viewItemProvider != null) viewItemProvider.dispose();
+		if (modelItemProvider != null) modelItemProvider.dispose();
+		if (findingItemProvider != null) findingItemProvider.dispose();
+		if (principalItemProvider != null) principalItemProvider.dispose();
+		if (entitlementItemProvider != null) entitlementItemProvider.dispose();
+		if (taskItemProvider != null) taskItemProvider.dispose();
+		if (scmItemProvider != null) scmItemProvider.dispose();
+		if (libraryItemProvider != null) libraryItemProvider.dispose();
+		if (locationItemProvider != null) locationItemProvider.dispose();
+		if (fileItemProvider != null) fileItemProvider.dispose();
+		if (javaItemProvider != null) javaItemProvider.dispose();
+		if (urlItemProvider != null) urlItemProvider.dispose();
 	}
 
 }

@@ -1,19 +1,17 @@
-/*******************************************************************************
+/**
  * Copyright 2016 OpenSemantics.IO
- *
+ * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
+ * 
  *     http://www.apache.org/licenses/LICENSE-2.0
- *
+ * 
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- *******************************************************************************/
-/**
  */
 package io.opensemantics.semiotics.model.assessment.util;
 
@@ -83,20 +81,8 @@ public class AssessmentAdapterFactory extends AdapterFactoryImpl {
 	protected AssessmentSwitch<Adapter> modelSwitch =
 		new AssessmentSwitch<Adapter>() {
 			@Override
-			public Adapter caseServiceNode(ServiceNode object) {
-				return createServiceNodeAdapter();
-			}
-			@Override
-			public Adapter caseHttpService(HttpService object) {
-				return createHttpServiceAdapter();
-			}
-			@Override
-			public Adapter caseHttpNode(HttpNode object) {
-				return createHttpNodeAdapter();
-			}
-			@Override
-			public <T extends Node> Adapter caseGraph(Graph<T> object) {
-				return createGraphAdapter();
+			public Adapter caseHttp(Http object) {
+				return createHttpAdapter();
 			}
 			@Override
 			public Adapter caseNode(Node object) {
@@ -111,16 +97,68 @@ public class AssessmentAdapterFactory extends AdapterFactoryImpl {
 				return createApplicationAdapter();
 			}
 			@Override
-			public Adapter caseHS2Node(HS2Node object) {
-				return createHS2NodeAdapter();
+			public Adapter caseSink(Sink object) {
+				return createSinkAdapter();
 			}
 			@Override
-			public <S extends ServiceNode> Adapter caseService(Service<S> object) {
-				return createServiceAdapter();
+			public Adapter caseController(Controller object) {
+				return createControllerAdapter();
 			}
 			@Override
-			public Adapter caseHS2(HS2 object) {
-				return createHS2Adapter();
+			public Adapter caseView(View object) {
+				return createViewAdapter();
+			}
+			@Override
+			public Adapter caseModel(Model object) {
+				return createModelAdapter();
+			}
+			@Override
+			public Adapter caseFinding(Finding object) {
+				return createFindingAdapter();
+			}
+			@Override
+			public Adapter casePrincipal(Principal object) {
+				return createPrincipalAdapter();
+			}
+			@Override
+			public Adapter caseEntitlement(Entitlement object) {
+				return createEntitlementAdapter();
+			}
+			@Override
+			public Adapter caseTask(Task object) {
+				return createTaskAdapter();
+			}
+			@Override
+			public Adapter caseScm(Scm object) {
+				return createScmAdapter();
+			}
+			@Override
+			public Adapter caseLibrary(Library object) {
+				return createLibraryAdapter();
+			}
+			@Override
+			public Adapter caseResource(Resource object) {
+				return createResourceAdapter();
+			}
+			@Override
+			public Adapter caseLocation(Location object) {
+				return createLocationAdapter();
+			}
+			@Override
+			public Adapter caseFile(File object) {
+				return createFileAdapter();
+			}
+			@Override
+			public Adapter caseJava(Java object) {
+				return createJavaAdapter();
+			}
+			@Override
+			public Adapter caseUrl(Url object) {
+				return createUrlAdapter();
+			}
+			@Override
+			public <T extends Node> Adapter caseGraph(Graph<T> object) {
+				return createGraphAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -143,58 +181,16 @@ public class AssessmentAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link io.opensemantics.semiotics.model.assessment.ServiceNode <em>Service Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link io.opensemantics.semiotics.model.assessment.Http <em>Http</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see io.opensemantics.semiotics.model.assessment.ServiceNode
+	 * @see io.opensemantics.semiotics.model.assessment.Http
 	 * @generated
 	 */
-	public Adapter createServiceNodeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link io.opensemantics.semiotics.model.assessment.HttpService <em>Http Service</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see io.opensemantics.semiotics.model.assessment.HttpService
-	 * @generated
-	 */
-	public Adapter createHttpServiceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link io.opensemantics.semiotics.model.assessment.HttpNode <em>Http Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see io.opensemantics.semiotics.model.assessment.HttpNode
-	 * @generated
-	 */
-	public Adapter createHttpNodeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link io.opensemantics.semiotics.model.assessment.Graph <em>Graph</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see io.opensemantics.semiotics.model.assessment.Graph
-	 * @generated
-	 */
-	public Adapter createGraphAdapter() {
+	public Adapter createHttpAdapter() {
 		return null;
 	}
 
@@ -241,44 +237,226 @@ public class AssessmentAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link io.opensemantics.semiotics.model.assessment.HS2Node <em>HS2 Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link io.opensemantics.semiotics.model.assessment.Sink <em>Sink</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see io.opensemantics.semiotics.model.assessment.HS2Node
+	 * @see io.opensemantics.semiotics.model.assessment.Sink
 	 * @generated
 	 */
-	public Adapter createHS2NodeAdapter() {
+	public Adapter createSinkAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link io.opensemantics.semiotics.model.assessment.Service <em>Service</em>}'.
+	 * Creates a new adapter for an object of class '{@link io.opensemantics.semiotics.model.assessment.Controller <em>Controller</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see io.opensemantics.semiotics.model.assessment.Service
+	 * @see io.opensemantics.semiotics.model.assessment.Controller
 	 * @generated
 	 */
-	public Adapter createServiceAdapter() {
+	public Adapter createControllerAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link io.opensemantics.semiotics.model.assessment.HS2 <em>HS2</em>}'.
+	 * Creates a new adapter for an object of class '{@link io.opensemantics.semiotics.model.assessment.View <em>View</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see io.opensemantics.semiotics.model.assessment.HS2
+	 * @see io.opensemantics.semiotics.model.assessment.View
 	 * @generated
 	 */
-	public Adapter createHS2Adapter() {
+	public Adapter createViewAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link io.opensemantics.semiotics.model.assessment.Model <em>Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see io.opensemantics.semiotics.model.assessment.Model
+	 * @generated
+	 */
+	public Adapter createModelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link io.opensemantics.semiotics.model.assessment.Finding <em>Finding</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see io.opensemantics.semiotics.model.assessment.Finding
+	 * @generated
+	 */
+	public Adapter createFindingAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link io.opensemantics.semiotics.model.assessment.Principal <em>Principal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see io.opensemantics.semiotics.model.assessment.Principal
+	 * @generated
+	 */
+	public Adapter createPrincipalAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link io.opensemantics.semiotics.model.assessment.Entitlement <em>Entitlement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see io.opensemantics.semiotics.model.assessment.Entitlement
+	 * @generated
+	 */
+	public Adapter createEntitlementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link io.opensemantics.semiotics.model.assessment.Task <em>Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see io.opensemantics.semiotics.model.assessment.Task
+	 * @generated
+	 */
+	public Adapter createTaskAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link io.opensemantics.semiotics.model.assessment.Scm <em>Scm</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see io.opensemantics.semiotics.model.assessment.Scm
+	 * @generated
+	 */
+	public Adapter createScmAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link io.opensemantics.semiotics.model.assessment.Library <em>Library</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see io.opensemantics.semiotics.model.assessment.Library
+	 * @generated
+	 */
+	public Adapter createLibraryAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link io.opensemantics.semiotics.model.assessment.Resource <em>Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see io.opensemantics.semiotics.model.assessment.Resource
+	 * @generated
+	 */
+	public Adapter createResourceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link io.opensemantics.semiotics.model.assessment.Location <em>Location</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see io.opensemantics.semiotics.model.assessment.Location
+	 * @generated
+	 */
+	public Adapter createLocationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link io.opensemantics.semiotics.model.assessment.File <em>File</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see io.opensemantics.semiotics.model.assessment.File
+	 * @generated
+	 */
+	public Adapter createFileAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link io.opensemantics.semiotics.model.assessment.Java <em>Java</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see io.opensemantics.semiotics.model.assessment.Java
+	 * @generated
+	 */
+	public Adapter createJavaAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link io.opensemantics.semiotics.model.assessment.Url <em>Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see io.opensemantics.semiotics.model.assessment.Url
+	 * @generated
+	 */
+	public Adapter createUrlAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link io.opensemantics.semiotics.model.assessment.Graph <em>Graph</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see io.opensemantics.semiotics.model.assessment.Graph
+	 * @generated
+	 */
+	public Adapter createGraphAdapter() {
 		return null;
 	}
 
