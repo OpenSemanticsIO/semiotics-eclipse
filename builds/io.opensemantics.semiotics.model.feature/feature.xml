@@ -14,7 +14,6 @@
     See the License for the specific language governing permissions and
     limitations under the License.
  -->
-
 <feature
       id="io.opensemantics.semiotics.model.feature"
       label="Model Feature"
@@ -56,6 +55,13 @@
 
    <plugin
          id="io.opensemantics.semiotics.model.assessment.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="io.opensemantics.semiotics.model.product"
          download-size="0"
          install-size="0"
          version="0.0.0"
