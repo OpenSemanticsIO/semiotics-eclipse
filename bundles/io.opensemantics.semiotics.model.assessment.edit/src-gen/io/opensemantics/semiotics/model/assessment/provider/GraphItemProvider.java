@@ -164,6 +164,11 @@ public class GraphItemProvider
 			(createChildParameter
 				(AssessmentPackage.Literals.GRAPH__ROOT,
 				 AssessmentFactory.eINSTANCE.createJava()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AssessmentPackage.Literals.GRAPH__ROOT,
+				 AssessmentFactory.eINSTANCE.createGeneric()));
 	}
 
 	/**

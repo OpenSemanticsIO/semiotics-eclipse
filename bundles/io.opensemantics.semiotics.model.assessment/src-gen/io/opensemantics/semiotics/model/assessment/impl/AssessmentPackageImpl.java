@@ -23,6 +23,7 @@ import io.opensemantics.semiotics.model.assessment.Controller;
 import io.opensemantics.semiotics.model.assessment.Entitlement;
 import io.opensemantics.semiotics.model.assessment.File;
 import io.opensemantics.semiotics.model.assessment.Finding;
+import io.opensemantics.semiotics.model.assessment.Generic;
 import io.opensemantics.semiotics.model.assessment.Graph;
 import io.opensemantics.semiotics.model.assessment.Http;
 import io.opensemantics.semiotics.model.assessment.HttpMethod;
@@ -197,6 +198,13 @@ public class AssessmentPackageImpl extends EPackageImpl implements AssessmentPac
 	 * @generated
 	 */
 	private EClass graphEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass genericEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1041,6 +1049,33 @@ public class AssessmentPackageImpl extends EPackageImpl implements AssessmentPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getGeneric() {
+		return genericEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGeneric_Description() {
+		return (EAttribute)genericEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGeneric_Notes() {
+		return (EAttribute)genericEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getHttpMethod() {
 		return httpMethodEEnum;
 	}
@@ -1195,6 +1230,10 @@ public class AssessmentPackageImpl extends EPackageImpl implements AssessmentPac
 		graphEClass = createEClass(GRAPH);
 		createEReference(graphEClass, GRAPH__ROOT);
 
+		genericEClass = createEClass(GENERIC);
+		createEAttribute(genericEClass, GENERIC__DESCRIPTION);
+		createEAttribute(genericEClass, GENERIC__NOTES);
+
 		// Create enums
 		httpMethodEEnum = createEEnum(HTTP_METHOD);
 		urlPatternEEnum = createEEnum(URL_PATTERN);
@@ -1269,6 +1308,7 @@ public class AssessmentPackageImpl extends EPackageImpl implements AssessmentPac
 		fileEClass.getESuperTypes().add(this.getNode());
 		javaEClass.getESuperTypes().add(this.getResource());
 		javaEClass.getESuperTypes().add(this.getNode());
+		genericEClass.getESuperTypes().add(this.getNode());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(httpEClass, Http.class, "Http", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1378,6 +1418,10 @@ public class AssessmentPackageImpl extends EPackageImpl implements AssessmentPac
 		initEClass(graphEClass, Graph.class, "Graph", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		g1 = createEGenericType(graphEClass_T);
 		initEReference(getGraph_Root(), g1, this.getNode_Graph(), "root", null, 0, 1, Graph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(genericEClass, Generic.class, "Generic", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGeneric_Description(), ecorePackage.getEString(), "description", null, 0, 1, Generic.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGeneric_Notes(), ecorePackage.getEString(), "notes", null, 0, 1, Generic.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(httpMethodEEnum, HttpMethod.class, "HttpMethod");

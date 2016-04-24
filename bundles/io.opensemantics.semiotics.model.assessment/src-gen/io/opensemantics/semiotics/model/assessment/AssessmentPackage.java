@@ -1396,6 +1396,79 @@ public interface AssessmentPackage extends EPackage {
 	int URL_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.GenericImpl <em>Generic</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see io.opensemantics.semiotics.model.assessment.impl.GenericImpl
+	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getGeneric()
+	 * @generated
+	 */
+	int GENERIC = 20;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC__CHILDREN = NODE__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC__PARENT = NODE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Graph</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC__GRAPH = NODE__GRAPH;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC__DESCRIPTION = NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Notes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC__NOTES = NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Generic</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC_FEATURE_COUNT = NODE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Generic</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.HttpMethod <em>Http Method</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1403,7 +1476,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getHttpMethod()
 	 * @generated
 	 */
-	int HTTP_METHOD = 20;
+	int HTTP_METHOD = 21;
 
 	/**
 	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.UrlPattern <em>Url Pattern</em>}' enum.
@@ -1413,7 +1486,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getUrlPattern()
 	 * @generated
 	 */
-	int URL_PATTERN = 21;
+	int URL_PATTERN = 22;
 
 	/**
 	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.Language <em>Language</em>}' enum.
@@ -1423,7 +1496,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getLanguage()
 	 * @generated
 	 */
-	int LANGUAGE = 22;
+	int LANGUAGE = 23;
 
 
 	/**
@@ -2331,6 +2404,38 @@ public interface AssessmentPackage extends EPackage {
 	EReference getGraph_Root();
 
 	/**
+	 * Returns the meta object for class '{@link io.opensemantics.semiotics.model.assessment.Generic <em>Generic</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Generic</em>'.
+	 * @see io.opensemantics.semiotics.model.assessment.Generic
+	 * @generated
+	 */
+	EClass getGeneric();
+
+	/**
+	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Generic#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see io.opensemantics.semiotics.model.assessment.Generic#getDescription()
+	 * @see #getGeneric()
+	 * @generated
+	 */
+	EAttribute getGeneric_Description();
+
+	/**
+	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Generic#getNotes <em>Notes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Notes</em>'.
+	 * @see io.opensemantics.semiotics.model.assessment.Generic#getNotes()
+	 * @see #getGeneric()
+	 * @generated
+	 */
+	EAttribute getGeneric_Notes();
+
+	/**
 	 * Returns the meta object for enum '{@link io.opensemantics.semiotics.model.assessment.HttpMethod <em>Http Method</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3094,6 +3199,32 @@ public interface AssessmentPackage extends EPackage {
 		 * @generated
 		 */
 		EReference GRAPH__ROOT = eINSTANCE.getGraph_Root();
+
+		/**
+		 * The meta object literal for the '{@link io.opensemantics.semiotics.model.assessment.impl.GenericImpl <em>Generic</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see io.opensemantics.semiotics.model.assessment.impl.GenericImpl
+		 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getGeneric()
+		 * @generated
+		 */
+		EClass GENERIC = eINSTANCE.getGeneric();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GENERIC__DESCRIPTION = eINSTANCE.getGeneric_Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Notes</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GENERIC__NOTES = eINSTANCE.getGeneric_Notes();
 
 		/**
 		 * The meta object literal for the '{@link io.opensemantics.semiotics.model.assessment.HttpMethod <em>Http Method</em>}' enum.

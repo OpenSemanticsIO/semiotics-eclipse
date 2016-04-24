@@ -263,6 +263,11 @@ public class JavaItemProvider extends ResourceItemProvider {
 			(createChildParameter
 				(AssessmentPackage.Literals.NODE__CHILDREN,
 				 AssessmentFactory.eINSTANCE.createJava()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AssessmentPackage.Literals.NODE__CHILDREN,
+				 AssessmentFactory.eINSTANCE.createGeneric()));
 	}
 
 }

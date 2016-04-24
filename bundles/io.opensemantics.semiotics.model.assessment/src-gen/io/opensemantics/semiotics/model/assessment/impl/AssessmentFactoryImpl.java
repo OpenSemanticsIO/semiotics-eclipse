@@ -87,6 +87,7 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 			case AssessmentPackage.FILE: return createFile();
 			case AssessmentPackage.JAVA: return createJava();
 			case AssessmentPackage.URL: return createUrl();
+			case AssessmentPackage.GENERIC: return createGeneric();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -298,6 +299,16 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	public Url createUrl() {
 		UrlImpl url = new UrlImpl();
 		return url;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Generic createGeneric() {
+		GenericImpl generic = new GenericImpl();
+		return generic;
 	}
 
 	/**

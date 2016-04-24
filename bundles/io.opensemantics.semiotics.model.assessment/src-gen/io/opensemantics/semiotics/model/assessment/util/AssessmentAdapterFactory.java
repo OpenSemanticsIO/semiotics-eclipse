@@ -161,6 +161,10 @@ public class AssessmentAdapterFactory extends AdapterFactoryImpl {
 				return createGraphAdapter();
 			}
 			@Override
+			public Adapter caseGeneric(Generic object) {
+				return createGenericAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -457,6 +461,20 @@ public class AssessmentAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGraphAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link io.opensemantics.semiotics.model.assessment.Generic <em>Generic</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see io.opensemantics.semiotics.model.assessment.Generic
+	 * @generated
+	 */
+	public Adapter createGenericAdapter() {
 		return null;
 	}
 

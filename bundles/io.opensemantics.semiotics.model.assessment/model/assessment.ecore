@@ -193,4 +193,8 @@
     <eLiterals name="Ruby"/>
     <eLiterals name="Other"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Generic" eSuperTypes="#//Node">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="notes" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
 </ecore:EPackage>

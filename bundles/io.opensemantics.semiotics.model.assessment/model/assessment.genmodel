@@ -137,5 +137,9 @@
       <genTypeParameters ecoreTypeParameter="assessment.ecore#//Graph/T"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Graph/root"/>
     </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//Generic">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//Generic/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//Generic/notes"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

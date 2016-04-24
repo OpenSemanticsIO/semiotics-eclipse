@@ -164,6 +164,11 @@ public class NodeItemProvider
 			(createChildParameter
 				(AssessmentPackage.Literals.NODE__CHILDREN,
 				 AssessmentFactory.eINSTANCE.createJava()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AssessmentPackage.Literals.NODE__CHILDREN,
+				 AssessmentFactory.eINSTANCE.createGeneric()));
 	}
 
 	/**

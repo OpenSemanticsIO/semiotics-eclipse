@@ -212,6 +212,13 @@ public class AssessmentSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case AssessmentPackage.GENERIC: {
+				Generic generic = (Generic)theEObject;
+				T1 result = caseGeneric(generic);
+				if (result == null) result = caseNode(generic);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -513,6 +520,21 @@ public class AssessmentSwitch<T1> extends Switch<T1> {
 	 * @generated
 	 */
 	public <T extends Node> T1 caseGraph(Graph<T> object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Generic</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Generic</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseGeneric(Generic object) {
 		return null;
 	}
 

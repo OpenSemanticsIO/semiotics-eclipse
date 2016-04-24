@@ -476,6 +476,29 @@ public class AssessmentItemProviderAdapterFactory extends AssessmentAdapterFacto
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Generic} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected GenericItemProvider genericItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Generic}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createGenericAdapter() {
+		if (genericItemProvider == null) {
+			genericItemProvider = new GenericItemProvider(this);
+		}
+
+		return genericItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -591,6 +614,7 @@ public class AssessmentItemProviderAdapterFactory extends AssessmentAdapterFacto
 		if (fileItemProvider != null) fileItemProvider.dispose();
 		if (javaItemProvider != null) javaItemProvider.dispose();
 		if (urlItemProvider != null) urlItemProvider.dispose();
+		if (genericItemProvider != null) genericItemProvider.dispose();
 	}
 
 }
