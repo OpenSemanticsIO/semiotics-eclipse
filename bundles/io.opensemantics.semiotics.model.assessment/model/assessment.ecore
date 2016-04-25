@@ -10,8 +10,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
         eType="#//GraphNode" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#//Node"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refersTo" upperBound="-1"
+        eType="#//Node" eOpposite="#//Node/referredBy"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referredBy" upperBound="-1"
+        eType="#//Node" eOpposite="#//Node/refersTo"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Assessment">
+  <eClassifiers xsi:type="ecore:EClass" name="Assessment" eSuperTypes="#//Label #//Notes">
     <eStructuralFeatures xsi:type="ecore:EReference" name="applications" upperBound="-1"
         eType="#//Application" containment="true" eOpposite="#//Application/assessment"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="findings" upperBound="-1"

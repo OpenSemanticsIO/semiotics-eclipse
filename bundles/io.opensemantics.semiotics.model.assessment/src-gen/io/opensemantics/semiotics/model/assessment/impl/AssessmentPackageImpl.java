@@ -371,6 +371,24 @@ public class AssessmentPackageImpl extends EPackageImpl implements AssessmentPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getNode_RefersTo() {
+		return (EReference)nodeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getNode_ReferredBy() {
+		return (EReference)nodeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAssessment() {
 		return assessmentEClass;
 	}
@@ -1103,6 +1121,8 @@ public class AssessmentPackageImpl extends EPackageImpl implements AssessmentPac
 		nodeEClass = createEClass(NODE);
 		createEReference(nodeEClass, NODE__CHILDREN);
 		createEReference(nodeEClass, NODE__PARENT);
+		createEReference(nodeEClass, NODE__REFERS_TO);
+		createEReference(nodeEClass, NODE__REFERRED_BY);
 
 		assessmentEClass = createEClass(ASSESSMENT);
 		createEReference(assessmentEClass, ASSESSMENT__APPLICATIONS);
@@ -1241,6 +1261,8 @@ public class AssessmentPackageImpl extends EPackageImpl implements AssessmentPac
 		httpEClass.getESuperTypes().add(this.getGraphNode());
 		nodeEClass.getESuperTypes().add(this.getLabel());
 		nodeEClass.getESuperTypes().add(this.getNotes());
+		assessmentEClass.getESuperTypes().add(this.getLabel());
+		assessmentEClass.getESuperTypes().add(this.getNotes());
 		applicationEClass.getESuperTypes().add(this.getLabel());
 		applicationEClass.getESuperTypes().add(this.getNotes());
 		sinkEClass.getESuperTypes().add(this.getNode());
@@ -1269,6 +1291,8 @@ public class AssessmentPackageImpl extends EPackageImpl implements AssessmentPac
 		initEClass(nodeEClass, Node.class, "Node", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getNode_Children(), this.getGraphNode(), null, "children", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getNode_Parent(), this.getNode(), null, "parent", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_RefersTo(), this.getNode(), this.getNode_ReferredBy(), "refersTo", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_ReferredBy(), this.getNode(), this.getNode_RefersTo(), "referredBy", null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(assessmentEClass, Assessment.class, "Assessment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAssessment_Applications(), this.getApplication(), this.getApplication_Assessment(), "applications", null, 0, -1, Assessment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

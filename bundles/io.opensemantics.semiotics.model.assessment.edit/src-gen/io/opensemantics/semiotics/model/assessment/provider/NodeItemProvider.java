@@ -78,6 +78,8 @@ public class NodeItemProvider
 
 			addLabelPropertyDescriptor(object);
 			addNotesPropertyDescriptor(object);
+			addRefersToPropertyDescriptor(object);
+			addReferredByPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -122,6 +124,50 @@ public class NodeItemProvider
 				 true,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Refers To feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRefersToPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Node_refersTo_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Node_refersTo_feature", "_UI_Node_type"),
+				 AssessmentPackage.Literals.NODE__REFERS_TO,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Referred By feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addReferredByPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Node_referredBy_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Node_referredBy_feature", "_UI_Node_type"),
+				 AssessmentPackage.Literals.NODE__REFERRED_BY,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

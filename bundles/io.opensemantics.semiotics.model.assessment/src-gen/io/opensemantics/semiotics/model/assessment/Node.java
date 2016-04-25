@@ -28,6 +28,8 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Node#getChildren <em>Children</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Node#getParent <em>Parent</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.Node#getRefersTo <em>Refers To</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.Node#getReferredBy <em>Referred By</em>}</li>
  * </ul>
  *
  * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getNode()
@@ -76,5 +78,41 @@ public interface Node extends Label, Notes {
 	 * @generated
 	 */
 	void setParent(Node value);
+
+	/**
+	 * Returns the value of the '<em><b>Refers To</b></em>' reference list.
+	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Node}.
+	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Node#getReferredBy <em>Referred By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Refers To</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Refers To</em>' reference list.
+	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getNode_RefersTo()
+	 * @see io.opensemantics.semiotics.model.assessment.Node#getReferredBy
+	 * @model opposite="referredBy"
+	 * @generated
+	 */
+	EList<Node> getRefersTo();
+
+	/**
+	 * Returns the value of the '<em><b>Referred By</b></em>' reference list.
+	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Node}.
+	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Node#getRefersTo <em>Refers To</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Referred By</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Referred By</em>' reference list.
+	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getNode_ReferredBy()
+	 * @see io.opensemantics.semiotics.model.assessment.Node#getRefersTo
+	 * @model opposite="refersTo"
+	 * @generated
+	 */
+	EList<Node> getReferredBy();
 
 } // Node

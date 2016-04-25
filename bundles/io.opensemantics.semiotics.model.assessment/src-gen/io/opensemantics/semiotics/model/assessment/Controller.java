@@ -15,7 +15,6 @@
  */
 package io.opensemantics.semiotics.model.assessment;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Controller</b></em>'.

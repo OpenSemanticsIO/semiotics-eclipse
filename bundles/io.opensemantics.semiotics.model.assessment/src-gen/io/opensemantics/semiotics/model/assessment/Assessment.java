@@ -17,8 +17,6 @@ package io.opensemantics.semiotics.model.assessment;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Assessment</b></em>'.
@@ -37,7 +35,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Assessment extends EObject {
+public interface Assessment extends Label, Notes {
 	/**
 	 * Returns the value of the '<em><b>Applications</b></em>' containment reference list.
 	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Application}.

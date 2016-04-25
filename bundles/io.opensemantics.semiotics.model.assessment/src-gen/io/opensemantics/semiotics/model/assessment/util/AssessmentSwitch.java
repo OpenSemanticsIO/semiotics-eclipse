@@ -100,6 +100,8 @@ public class AssessmentSwitch<T1> extends Switch<T1> {
 			case AssessmentPackage.ASSESSMENT: {
 				Assessment assessment = (Assessment)theEObject;
 				T1 result = caseAssessment(assessment);
+				if (result == null) result = caseLabel(assessment);
+				if (result == null) result = caseNotes(assessment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

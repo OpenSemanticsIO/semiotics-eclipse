@@ -34,6 +34,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -48,6 +49,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.NodeImpl#getNotes <em>Notes</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.NodeImpl#getChildren <em>Children</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.NodeImpl#getParent <em>Parent</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.NodeImpl#getRefersTo <em>Refers To</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.NodeImpl#getReferredBy <em>Referred By</em>}</li>
  * </ul>
  *
  * @generated
@@ -110,6 +113,25 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	 */
 	protected Node parent;
 
+	/**
+	 * The cached value of the '{@link #getRefersTo() <em>Refers To</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRefersTo()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Node> refersTo;
+
+	/**
+	 * The cached value of the '{@link #getReferredBy() <em>Referred By</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReferredBy()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Node> referredBy;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -184,6 +206,47 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Node> getRefersTo() {
+		if (refersTo == null) {
+			refersTo = new EObjectWithInverseResolvingEList.ManyInverse<Node>(Node.class, this, AssessmentPackage.NODE__REFERS_TO, AssessmentPackage.NODE__REFERRED_BY);
+		}
+		return refersTo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Node> getReferredBy() {
+		if (referredBy == null) {
+			referredBy = new EObjectWithInverseResolvingEList.ManyInverse<Node>(Node.class, this, AssessmentPackage.NODE__REFERRED_BY, AssessmentPackage.NODE__REFERS_TO);
+		}
+		return referredBy;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case AssessmentPackage.NODE__REFERS_TO:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getRefersTo()).basicAdd(otherEnd, msgs);
+			case AssessmentPackage.NODE__REFERRED_BY:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getReferredBy()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getLabel() {
 		return label;
 	}
@@ -231,6 +294,10 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 		switch (featureID) {
 			case AssessmentPackage.NODE__CHILDREN:
 				return ((InternalEList<?>)getChildren()).basicRemove(otherEnd, msgs);
+			case AssessmentPackage.NODE__REFERS_TO:
+				return ((InternalEList<?>)getRefersTo()).basicRemove(otherEnd, msgs);
+			case AssessmentPackage.NODE__REFERRED_BY:
+				return ((InternalEList<?>)getReferredBy()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -252,6 +319,10 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 			case AssessmentPackage.NODE__PARENT:
 				if (resolve) return getParent();
 				return basicGetParent();
+			case AssessmentPackage.NODE__REFERS_TO:
+				return getRefersTo();
+			case AssessmentPackage.NODE__REFERRED_BY:
+				return getReferredBy();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -278,6 +349,14 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 			case AssessmentPackage.NODE__PARENT:
 				setParent((Node)newValue);
 				return;
+			case AssessmentPackage.NODE__REFERS_TO:
+				getRefersTo().clear();
+				getRefersTo().addAll((Collection<? extends Node>)newValue);
+				return;
+			case AssessmentPackage.NODE__REFERRED_BY:
+				getReferredBy().clear();
+				getReferredBy().addAll((Collection<? extends Node>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -302,6 +381,12 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 			case AssessmentPackage.NODE__PARENT:
 				setParent((Node)null);
 				return;
+			case AssessmentPackage.NODE__REFERS_TO:
+				getRefersTo().clear();
+				return;
+			case AssessmentPackage.NODE__REFERRED_BY:
+				getReferredBy().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -322,6 +407,10 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 				return children != null && !children.isEmpty();
 			case AssessmentPackage.NODE__PARENT:
 				return parent != null;
+			case AssessmentPackage.NODE__REFERS_TO:
+				return refersTo != null && !refersTo.isEmpty();
+			case AssessmentPackage.NODE__REFERRED_BY:
+				return referredBy != null && !referredBy.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -154,13 +154,31 @@ public interface AssessmentPackage extends EPackage {
 	int NODE__PARENT = LABEL_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Refers To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__REFERS_TO = LABEL_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Referred By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__REFERRED_BY = LABEL_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FEATURE_COUNT = LABEL_FEATURE_COUNT + 3;
+	int NODE_FEATURE_COUNT = LABEL_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Node</em>' class.
@@ -358,6 +376,24 @@ public interface AssessmentPackage extends EPackage {
 	int GRAPH_NODE__PARENT = NODE__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>Refers To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRAPH_NODE__REFERS_TO = NODE__REFERS_TO;
+
+	/**
+	 * The feature id for the '<em><b>Referred By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRAPH_NODE__REFERRED_BY = NODE__REFERRED_BY;
+
+	/**
 	 * The number of structural features of the '<em>Graph Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -412,6 +448,24 @@ public interface AssessmentPackage extends EPackage {
 	int HTTP__PARENT = GRAPH_NODE__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>Refers To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTTP__REFERS_TO = GRAPH_NODE__REFERS_TO;
+
+	/**
+	 * The feature id for the '<em><b>Referred By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTTP__REFERRED_BY = GRAPH_NODE__REFERRED_BY;
+
+	/**
 	 * The feature id for the '<em><b>Request</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -448,13 +502,31 @@ public interface AssessmentPackage extends EPackage {
 	int HTTP_OPERATION_COUNT = GRAPH_NODE_OPERATION_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSESSMENT__LABEL = LABEL__LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Notes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSESSMENT__NOTES = LABEL_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Applications</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT__APPLICATIONS = 0;
+	int ASSESSMENT__APPLICATIONS = LABEL_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Findings</b></em>' containment reference list.
@@ -463,7 +535,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT__FINDINGS = 1;
+	int ASSESSMENT__FINDINGS = LABEL_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Tasks</b></em>' containment reference list.
@@ -472,7 +544,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT__TASKS = 2;
+	int ASSESSMENT__TASKS = LABEL_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Assessment</em>' class.
@@ -481,7 +553,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT_FEATURE_COUNT = 3;
+	int ASSESSMENT_FEATURE_COUNT = LABEL_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Assessment</em>' class.
@@ -490,7 +562,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT_OPERATION_COUNT = 0;
+	int ASSESSMENT_OPERATION_COUNT = LABEL_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Label</b></em>' attribute.
@@ -673,6 +745,24 @@ public interface AssessmentPackage extends EPackage {
 	int SINK__PARENT = NODE__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>Refers To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINK__REFERS_TO = NODE__REFERS_TO;
+
+	/**
+	 * The feature id for the '<em><b>Referred By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SINK__REFERRED_BY = NODE__REFERRED_BY;
+
+	/**
 	 * The feature id for the '<em><b>Cwes</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -745,6 +835,24 @@ public interface AssessmentPackage extends EPackage {
 	int CONTROLLER__PARENT = NODE__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>Refers To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROLLER__REFERS_TO = NODE__REFERS_TO;
+
+	/**
+	 * The feature id for the '<em><b>Referred By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROLLER__REFERRED_BY = NODE__REFERRED_BY;
+
+	/**
 	 * The feature id for the '<em><b>Application</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -808,6 +916,24 @@ public interface AssessmentPackage extends EPackage {
 	int VIEW__PARENT = NODE__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>Refers To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW__REFERS_TO = NODE__REFERS_TO;
+
+	/**
+	 * The feature id for the '<em><b>Referred By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW__REFERRED_BY = NODE__REFERRED_BY;
+
+	/**
 	 * The feature id for the '<em><b>Application</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -869,6 +995,24 @@ public interface AssessmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int MODEL__PARENT = NODE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Refers To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL__REFERS_TO = NODE__REFERS_TO;
+
+	/**
+	 * The feature id for the '<em><b>Referred By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL__REFERRED_BY = NODE__REFERRED_BY;
 
 	/**
 	 * The feature id for the '<em><b>Application</b></em>' container reference.
@@ -1006,6 +1150,24 @@ public interface AssessmentPackage extends EPackage {
 	int ACCOUNT__PARENT = NODE__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>Refers To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT__REFERS_TO = NODE__REFERS_TO;
+
+	/**
+	 * The feature id for the '<em><b>Referred By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT__REFERRED_BY = NODE__REFERRED_BY;
+
+	/**
 	 * The feature id for the '<em><b>Application</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1105,6 +1267,24 @@ public interface AssessmentPackage extends EPackage {
 	int ENTITLEMENT__PARENT = NODE__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>Refers To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITLEMENT__REFERS_TO = NODE__REFERS_TO;
+
+	/**
+	 * The feature id for the '<em><b>Referred By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITLEMENT__REFERRED_BY = NODE__REFERRED_BY;
+
+	/**
 	 * The feature id for the '<em><b>Principals</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1175,6 +1355,24 @@ public interface AssessmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int TASK__PARENT = NODE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Refers To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__REFERS_TO = NODE__REFERS_TO;
+
+	/**
+	 * The feature id for the '<em><b>Referred By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__REFERRED_BY = NODE__REFERRED_BY;
 
 	/**
 	 * The feature id for the '<em><b>Completed</b></em>' attribute.
@@ -1294,6 +1492,24 @@ public interface AssessmentPackage extends EPackage {
 	int LIBRARY__PARENT = NODE__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>Refers To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__REFERS_TO = NODE__REFERS_TO;
+
+	/**
+	 * The feature id for the '<em><b>Referred By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__REFERRED_BY = NODE__REFERRED_BY;
+
+	/**
 	 * The feature id for the '<em><b>Group</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1392,6 +1608,24 @@ public interface AssessmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int SNIPPET__PARENT = GRAPH_NODE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Refers To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SNIPPET__REFERS_TO = GRAPH_NODE__REFERS_TO;
+
+	/**
+	 * The feature id for the '<em><b>Referred By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SNIPPET__REFERRED_BY = GRAPH_NODE__REFERRED_BY;
 
 	/**
 	 * The feature id for the '<em><b>Contents</b></em>' attribute.
@@ -1585,6 +1819,24 @@ public interface AssessmentPackage extends EPackage {
 	int GENERIC__PARENT = GRAPH_NODE__PARENT;
 
 	/**
+	 * The feature id for the '<em><b>Refers To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC__REFERS_TO = GRAPH_NODE__REFERS_TO;
+
+	/**
+	 * The feature id for the '<em><b>Referred By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC__REFERRED_BY = GRAPH_NODE__REFERRED_BY;
+
+	/**
 	 * The number of structural features of the '<em>Generic</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1647,6 +1899,24 @@ public interface AssessmentPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONTROL__PARENT = GRAPH_NODE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Refers To</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL__REFERS_TO = GRAPH_NODE__REFERS_TO;
+
+	/**
+	 * The feature id for the '<em><b>Referred By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL__REFERRED_BY = GRAPH_NODE__REFERRED_BY;
 
 	/**
 	 * The number of structural features of the '<em>Control</em>' class.
@@ -1898,6 +2168,28 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getNode_Parent();
+
+	/**
+	 * Returns the meta object for the reference list '{@link io.opensemantics.semiotics.model.assessment.Node#getRefersTo <em>Refers To</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Refers To</em>'.
+	 * @see io.opensemantics.semiotics.model.assessment.Node#getRefersTo()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EReference getNode_RefersTo();
+
+	/**
+	 * Returns the meta object for the reference list '{@link io.opensemantics.semiotics.model.assessment.Node#getReferredBy <em>Referred By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Referred By</em>'.
+	 * @see io.opensemantics.semiotics.model.assessment.Node#getReferredBy()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EReference getNode_ReferredBy();
 
 	/**
 	 * Returns the meta object for class '{@link io.opensemantics.semiotics.model.assessment.Assessment <em>Assessment</em>}'.
@@ -2806,6 +3098,22 @@ public interface AssessmentPackage extends EPackage {
 		 * @generated
 		 */
 		EReference NODE__PARENT = eINSTANCE.getNode_Parent();
+
+		/**
+		 * The meta object literal for the '<em><b>Refers To</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NODE__REFERS_TO = eINSTANCE.getNode_RefersTo();
+
+		/**
+		 * The meta object literal for the '<em><b>Referred By</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NODE__REFERRED_BY = eINSTANCE.getNode_ReferredBy();
 
 		/**
 		 * The meta object literal for the '{@link io.opensemantics.semiotics.model.assessment.impl.AssessmentImpl <em>Assessment</em>}' class.

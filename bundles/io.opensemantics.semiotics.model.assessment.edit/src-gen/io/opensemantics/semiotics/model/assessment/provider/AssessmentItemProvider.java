@@ -30,12 +30,14 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -74,8 +76,54 @@ public class AssessmentItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addLabelPropertyDescriptor(object);
+			addNotesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Label feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLabelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Label_label_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Label_label_feature", "_UI_Label_type"),
+				 AssessmentPackage.Literals.LABEL__LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Notes feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNotesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Notes_notes_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Notes_notes_feature", "_UI_Notes_type"),
+				 AssessmentPackage.Literals.NOTES__NOTES,
+				 true,
+				 true,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -129,7 +177,10 @@ public class AssessmentItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Assessment_type");
+		String label = ((Assessment)object).getLabel();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Assessment_type") :
+			getString("_UI_Assessment_type") + " " + label;
 	}
 	
 
@@ -145,6 +196,10 @@ public class AssessmentItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Assessment.class)) {
+			case AssessmentPackage.ASSESSMENT__LABEL:
+			case AssessmentPackage.ASSESSMENT__NOTES:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 			case AssessmentPackage.ASSESSMENT__APPLICATIONS:
 			case AssessmentPackage.ASSESSMENT__FINDINGS:
 			case AssessmentPackage.ASSESSMENT__TASKS:
