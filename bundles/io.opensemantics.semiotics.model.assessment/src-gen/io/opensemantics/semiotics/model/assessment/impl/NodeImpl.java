@@ -16,9 +16,10 @@
 package io.opensemantics.semiotics.model.assessment.impl;
 
 import io.opensemantics.semiotics.model.assessment.AssessmentPackage;
-import io.opensemantics.semiotics.model.assessment.Graph;
+import io.opensemantics.semiotics.model.assessment.GraphNode;
 import io.opensemantics.semiotics.model.assessment.Node;
 
+import io.opensemantics.semiotics.model.assessment.Notes;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -32,8 +33,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
-import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -44,14 +44,52 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.NodeImpl#getLabel <em>Label</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.NodeImpl#getNotes <em>Notes</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.NodeImpl#getChildren <em>Children</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.NodeImpl#getParent <em>Parent</em>}</li>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.NodeImpl#getGraph <em>Graph</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class NodeImpl extends MinimalEObjectImpl.Container implements Node {
+	/**
+	 * The default value of the '{@link #getLabel() <em>Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLabel()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LABEL_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getLabel() <em>Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLabel()
+	 * @generated
+	 * @ordered
+	 */
+	protected String label = LABEL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getNotes() <em>Notes</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNotes()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NOTES_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getNotes() <em>Notes</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNotes()
+	 * @generated
+	 * @ordered
+	 */
+	protected String notes = NOTES_EDEFAULT;
 	/**
 	 * The cached value of the '{@link #getChildren() <em>Children</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -60,7 +98,17 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Node> children;
+	protected EList<GraphNode> children;
+
+	/**
+	 * The cached value of the '{@link #getParent() <em>Parent</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParent()
+	 * @generated
+	 * @ordered
+	 */
+	protected Node parent;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -86,9 +134,9 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Node> getChildren() {
+	public EList<GraphNode> getChildren() {
 		if (children == null) {
-			children = new EObjectContainmentWithInverseEList<Node>(Node.class, this, AssessmentPackage.NODE__CHILDREN, AssessmentPackage.NODE__PARENT);
+			children = new EObjectContainmentEList<GraphNode>(GraphNode.class, this, AssessmentPackage.NODE__CHILDREN);
 		}
 		return children;
 	}
@@ -99,8 +147,15 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	 * @generated
 	 */
 	public Node getParent() {
-		if (eContainerFeatureID() != AssessmentPackage.NODE__PARENT) return null;
-		return (Node)eInternalContainer();
+		if (parent != null && parent.eIsProxy()) {
+			InternalEObject oldParent = (InternalEObject)parent;
+			parent = (Node)eResolveProxy(oldParent);
+			if (parent != oldParent) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AssessmentPackage.NODE__PARENT, oldParent, parent));
+			}
+		}
+		return parent;
 	}
 
 	/**
@@ -108,9 +163,8 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetParent(Node newParent, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newParent, AssessmentPackage.NODE__PARENT, msgs);
-		return msgs;
+	public Node basicGetParent() {
+		return parent;
 	}
 
 	/**
@@ -119,19 +173,10 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	 * @generated
 	 */
 	public void setParent(Node newParent) {
-		if (newParent != eInternalContainer() || (eContainerFeatureID() != AssessmentPackage.NODE__PARENT && newParent != null)) {
-			if (EcoreUtil.isAncestor(this, newParent))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newParent != null)
-				msgs = ((InternalEObject)newParent).eInverseAdd(this, AssessmentPackage.NODE__CHILDREN, Node.class, msgs);
-			msgs = basicSetParent(newParent, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.NODE__PARENT, newParent, newParent));
+		Node oldParent = parent;
+		parent = newParent;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.NODE__PARENT, oldParent, parent));
 	}
 
 	/**
@@ -139,9 +184,8 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Graph<?> getGraph() {
-		if (eContainerFeatureID() != AssessmentPackage.NODE__GRAPH) return null;
-		return (Graph<?>)eInternalContainer();
+	public String getLabel() {
+		return label;
 	}
 
 	/**
@@ -149,9 +193,11 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetGraph(Graph<?> newGraph, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newGraph, AssessmentPackage.NODE__GRAPH, msgs);
-		return msgs;
+	public void setLabel(String newLabel) {
+		String oldLabel = label;
+		label = newLabel;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.NODE__LABEL, oldLabel, label));
 	}
 
 	/**
@@ -159,20 +205,8 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setGraph(Graph<?> newGraph) {
-		if (newGraph != eInternalContainer() || (eContainerFeatureID() != AssessmentPackage.NODE__GRAPH && newGraph != null)) {
-			if (EcoreUtil.isAncestor(this, newGraph))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newGraph != null)
-				msgs = ((InternalEObject)newGraph).eInverseAdd(this, AssessmentPackage.GRAPH__ROOT, Graph.class, msgs);
-			msgs = basicSetGraph(newGraph, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.NODE__GRAPH, newGraph, newGraph));
+	public String getNotes() {
+		return notes;
 	}
 
 	/**
@@ -180,22 +214,11 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case AssessmentPackage.NODE__CHILDREN:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getChildren()).basicAdd(otherEnd, msgs);
-			case AssessmentPackage.NODE__PARENT:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetParent((Node)otherEnd, msgs);
-			case AssessmentPackage.NODE__GRAPH:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetGraph((Graph<?>)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
+	public void setNotes(String newNotes) {
+		String oldNotes = notes;
+		notes = newNotes;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.NODE__NOTES, oldNotes, notes));
 	}
 
 	/**
@@ -208,10 +231,6 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 		switch (featureID) {
 			case AssessmentPackage.NODE__CHILDREN:
 				return ((InternalEList<?>)getChildren()).basicRemove(otherEnd, msgs);
-			case AssessmentPackage.NODE__PARENT:
-				return basicSetParent(null, msgs);
-			case AssessmentPackage.NODE__GRAPH:
-				return basicSetGraph(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -222,30 +241,17 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case AssessmentPackage.NODE__PARENT:
-				return eInternalContainer().eInverseRemove(this, AssessmentPackage.NODE__CHILDREN, Node.class, msgs);
-			case AssessmentPackage.NODE__GRAPH:
-				return eInternalContainer().eInverseRemove(this, AssessmentPackage.GRAPH__ROOT, Graph.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case AssessmentPackage.NODE__LABEL:
+				return getLabel();
+			case AssessmentPackage.NODE__NOTES:
+				return getNotes();
 			case AssessmentPackage.NODE__CHILDREN:
 				return getChildren();
 			case AssessmentPackage.NODE__PARENT:
-				return getParent();
-			case AssessmentPackage.NODE__GRAPH:
-				return getGraph();
+				if (resolve) return getParent();
+				return basicGetParent();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -259,15 +265,18 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case AssessmentPackage.NODE__LABEL:
+				setLabel((String)newValue);
+				return;
+			case AssessmentPackage.NODE__NOTES:
+				setNotes((String)newValue);
+				return;
 			case AssessmentPackage.NODE__CHILDREN:
 				getChildren().clear();
-				getChildren().addAll((Collection<? extends Node>)newValue);
+				getChildren().addAll((Collection<? extends GraphNode>)newValue);
 				return;
 			case AssessmentPackage.NODE__PARENT:
 				setParent((Node)newValue);
-				return;
-			case AssessmentPackage.NODE__GRAPH:
-				setGraph((Graph<?>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -281,14 +290,17 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case AssessmentPackage.NODE__LABEL:
+				setLabel(LABEL_EDEFAULT);
+				return;
+			case AssessmentPackage.NODE__NOTES:
+				setNotes(NOTES_EDEFAULT);
+				return;
 			case AssessmentPackage.NODE__CHILDREN:
 				getChildren().clear();
 				return;
 			case AssessmentPackage.NODE__PARENT:
 				setParent((Node)null);
-				return;
-			case AssessmentPackage.NODE__GRAPH:
-				setGraph((Graph<?>)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -302,14 +314,66 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case AssessmentPackage.NODE__LABEL:
+				return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
+			case AssessmentPackage.NODE__NOTES:
+				return NOTES_EDEFAULT == null ? notes != null : !NOTES_EDEFAULT.equals(notes);
 			case AssessmentPackage.NODE__CHILDREN:
 				return children != null && !children.isEmpty();
 			case AssessmentPackage.NODE__PARENT:
-				return getParent() != null;
-			case AssessmentPackage.NODE__GRAPH:
-				return getGraph() != null;
+				return parent != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Notes.class) {
+			switch (derivedFeatureID) {
+				case AssessmentPackage.NODE__NOTES: return AssessmentPackage.NOTES__NOTES;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Notes.class) {
+			switch (baseFeatureID) {
+				case AssessmentPackage.NOTES__NOTES: return AssessmentPackage.NODE__NOTES;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (label: ");
+		result.append(label);
+		result.append(", notes: ");
+		result.append(notes);
+		result.append(')');
+		return result.toString();
 	}
 
 } //NodeImpl

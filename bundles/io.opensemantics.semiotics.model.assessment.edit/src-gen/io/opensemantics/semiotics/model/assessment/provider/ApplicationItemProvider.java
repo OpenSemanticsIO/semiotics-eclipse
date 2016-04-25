@@ -76,13 +76,34 @@ public class ApplicationItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addScmPropertyDescriptor(object);
-			addNamePropertyDescriptor(object);
-			addLanguagesPropertyDescriptor(object);
-			addLocationPropertyDescriptor(object);
+			addLabelPropertyDescriptor(object);
 			addNotesPropertyDescriptor(object);
+			addScmPropertyDescriptor(object);
+			addLanguagesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Label feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLabelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Label_label_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Label_label_feature", "_UI_Label_type"),
+				 AssessmentPackage.Literals.LABEL__LABEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -103,28 +124,6 @@ public class ApplicationItemProvider
 				 false,
 				 true,
 				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Application_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Application_name_feature", "_UI_Application_type"),
-				 AssessmentPackage.Literals.APPLICATION__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -152,28 +151,6 @@ public class ApplicationItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Location feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addLocationPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Application_location_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Application_location_feature", "_UI_Application_type"),
-				 AssessmentPackage.Literals.APPLICATION__LOCATION,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Notes feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -184,11 +161,11 @@ public class ApplicationItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Application_notes_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Application_notes_feature", "_UI_Application_type"),
-				 AssessmentPackage.Literals.APPLICATION__NOTES,
+				 getString("_UI_Notes_notes_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Notes_notes_feature", "_UI_Notes_type"),
+				 AssessmentPackage.Literals.NOTES__NOTES,
 				 true,
-				 false,
+				 true,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
@@ -214,6 +191,8 @@ public class ApplicationItemProvider
 			childrenFeatures.add(AssessmentPackage.Literals.APPLICATION__LIBRARIES);
 			childrenFeatures.add(AssessmentPackage.Literals.APPLICATION__VIEWS);
 			childrenFeatures.add(AssessmentPackage.Literals.APPLICATION__SINKS);
+			childrenFeatures.add(AssessmentPackage.Literals.APPLICATION__RESOURCES);
+			childrenFeatures.add(AssessmentPackage.Literals.APPLICATION__URLS);
 		}
 		return childrenFeatures;
 	}
@@ -250,7 +229,7 @@ public class ApplicationItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Application)object).getName();
+		String label = ((Application)object).getLabel();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Application_type") :
 			getString("_UI_Application_type") + " " + label;
@@ -269,10 +248,9 @@ public class ApplicationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Application.class)) {
-			case AssessmentPackage.APPLICATION__NAME:
-			case AssessmentPackage.APPLICATION__LANGUAGES:
-			case AssessmentPackage.APPLICATION__LOCATION:
+			case AssessmentPackage.APPLICATION__LABEL:
 			case AssessmentPackage.APPLICATION__NOTES:
+			case AssessmentPackage.APPLICATION__LANGUAGES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case AssessmentPackage.APPLICATION__ACCOUNTS:
@@ -282,6 +260,8 @@ public class ApplicationItemProvider
 			case AssessmentPackage.APPLICATION__LIBRARIES:
 			case AssessmentPackage.APPLICATION__VIEWS:
 			case AssessmentPackage.APPLICATION__SINKS:
+			case AssessmentPackage.APPLICATION__RESOURCES:
+			case AssessmentPackage.APPLICATION__URLS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -302,7 +282,7 @@ public class ApplicationItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(AssessmentPackage.Literals.APPLICATION__ACCOUNTS,
-				 AssessmentFactory.eINSTANCE.createPrincipal()));
+				 AssessmentFactory.eINSTANCE.createAccount()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -333,6 +313,16 @@ public class ApplicationItemProvider
 			(createChildParameter
 				(AssessmentPackage.Literals.APPLICATION__SINKS,
 				 AssessmentFactory.eINSTANCE.createSink()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AssessmentPackage.Literals.APPLICATION__RESOURCES,
+				 AssessmentFactory.eINSTANCE.createResource()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AssessmentPackage.Literals.APPLICATION__URLS,
+				 AssessmentFactory.eINSTANCE.createUrl()));
 	}
 
 	/**

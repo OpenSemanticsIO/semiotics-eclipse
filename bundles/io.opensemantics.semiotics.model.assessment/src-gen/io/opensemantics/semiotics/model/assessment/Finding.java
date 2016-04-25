@@ -15,8 +15,6 @@
  */
 package io.opensemantics.semiotics.model.assessment;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Finding</b></em>'.
@@ -27,7 +25,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Finding#getAssessment <em>Assessment</em>}</li>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.Finding#getDescription <em>Description</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Finding#getReproducer <em>Reproducer</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Finding#getRemediation <em>Remediation</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Finding#getReferences <em>References</em>}</li>
@@ -37,7 +34,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Finding extends EObject {
+public interface Finding extends Label, Notes {
 	/**
 	 * Returns the value of the '<em><b>Assessment</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Assessment#getFindings <em>Findings</em>}'.
@@ -65,32 +62,6 @@ public interface Finding extends EObject {
 	 * @generated
 	 */
 	void setAssessment(Assessment value);
-
-	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
-	 * @see #setDescription(String)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getFinding_Description()
-	 * @model
-	 * @generated
-	 */
-	String getDescription();
-
-	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Finding#getDescription <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' attribute.
-	 * @see #getDescription()
-	 * @generated
-	 */
-	void setDescription(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Reproducer</b></em>' attribute.

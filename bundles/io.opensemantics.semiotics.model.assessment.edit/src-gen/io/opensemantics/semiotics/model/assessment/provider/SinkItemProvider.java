@@ -36,7 +36,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SinkItemProvider extends GraphItemProvider {
+public class SinkItemProvider extends NodeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -59,7 +59,6 @@ public class SinkItemProvider extends GraphItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addCwesPropertyDescriptor(object);
-			addTaintedPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -87,28 +86,6 @@ public class SinkItemProvider extends GraphItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Tainted feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTaintedPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Sink_tainted_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Sink_tainted_feature", "_UI_Sink_type"),
-				 AssessmentPackage.Literals.SINK__TAINTED,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This returns Sink.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -127,8 +104,10 @@ public class SinkItemProvider extends GraphItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		Sink sink = (Sink)object;
-		return getString("_UI_Sink_type") + " " + sink.isTainted();
+		String label = ((Sink)object).getLabel();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Sink_type") :
+			getString("_UI_Sink_type") + " " + label;
 	}
 	
 
@@ -145,7 +124,6 @@ public class SinkItemProvider extends GraphItemProvider {
 
 		switch (notification.getFeatureID(Sink.class)) {
 			case AssessmentPackage.SINK__CWES:
-			case AssessmentPackage.SINK__TAINTED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

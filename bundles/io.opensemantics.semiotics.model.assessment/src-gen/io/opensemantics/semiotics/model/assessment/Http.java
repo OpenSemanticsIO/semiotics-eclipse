@@ -15,8 +15,6 @@
  */
 package io.opensemantics.semiotics.model.assessment;
 
-import org.eclipse.emf.common.util.EList;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Http</b></em>'.
@@ -26,84 +24,65 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.Http#getDescription <em>Description</em>}</li>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.Http#getMethods <em>Methods</em>}</li>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.Http#getUri <em>Uri</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.Http#getRequest <em>Request</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.Http#getResponse <em>Response</em>}</li>
  * </ul>
  *
  * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getHttp()
  * @model
  * @generated
  */
-public interface Http extends Node {
+public interface Http extends GraphNode {
 	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * Returns the value of the '<em><b>Request</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Request</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
-	 * @see #setDescription(String)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getHttp_Description()
+	 * @return the value of the '<em>Request</em>' attribute.
+	 * @see #setRequest(String)
+	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getHttp_Request()
 	 * @model
 	 * @generated
 	 */
-	String getDescription();
+	String getRequest();
 
 	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Http#getDescription <em>Description</em>}' attribute.
+	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Http#getRequest <em>Request</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' attribute.
-	 * @see #getDescription()
+	 * @param value the new value of the '<em>Request</em>' attribute.
+	 * @see #getRequest()
 	 * @generated
 	 */
-	void setDescription(String value);
+	void setRequest(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Methods</b></em>' attribute list.
-	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.HttpMethod}.
-	 * The literals are from the enumeration {@link io.opensemantics.semiotics.model.assessment.HttpMethod}.
+	 * Returns the value of the '<em><b>Response</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Methods</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Response</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Methods</em>' attribute list.
-	 * @see io.opensemantics.semiotics.model.assessment.HttpMethod
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getHttp_Methods()
+	 * @return the value of the '<em>Response</em>' attribute.
+	 * @see #setResponse(String)
+	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getHttp_Response()
 	 * @model
 	 * @generated
 	 */
-	EList<HttpMethod> getMethods();
+	String getResponse();
 
 	/**
-	 * Returns the value of the '<em><b>Uri</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Uri</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Uri</em>' containment reference.
-	 * @see #setUri(Url)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getHttp_Uri()
-	 * @model containment="true"
-	 * @generated
-	 */
-	Url getUri();
-
-	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Http#getUri <em>Uri</em>}' containment reference.
+	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Http#getResponse <em>Response</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Uri</em>' containment reference.
-	 * @see #getUri()
+	 * @param value the new value of the '<em>Response</em>' attribute.
+	 * @see #getResponse()
 	 * @generated
 	 */
-	void setUri(Url value);
+	void setResponse(String value);
 
 } // Http

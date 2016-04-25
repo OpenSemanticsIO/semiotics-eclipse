@@ -158,17 +158,57 @@ public class GraphItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(AssessmentPackage.Literals.GRAPH__ROOT,
-				 AssessmentFactory.eINSTANCE.createFile()));
+				 AssessmentFactory.eINSTANCE.createSink()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(AssessmentPackage.Literals.GRAPH__ROOT,
-				 AssessmentFactory.eINSTANCE.createJava()));
+				 AssessmentFactory.eINSTANCE.createController()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AssessmentPackage.Literals.GRAPH__ROOT,
+				 AssessmentFactory.eINSTANCE.createView()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AssessmentPackage.Literals.GRAPH__ROOT,
+				 AssessmentFactory.eINSTANCE.createModel()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AssessmentPackage.Literals.GRAPH__ROOT,
+				 AssessmentFactory.eINSTANCE.createAccount()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AssessmentPackage.Literals.GRAPH__ROOT,
+				 AssessmentFactory.eINSTANCE.createEntitlement()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AssessmentPackage.Literals.GRAPH__ROOT,
+				 AssessmentFactory.eINSTANCE.createTask()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AssessmentPackage.Literals.GRAPH__ROOT,
+				 AssessmentFactory.eINSTANCE.createLibrary()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AssessmentPackage.Literals.GRAPH__ROOT,
+				 AssessmentFactory.eINSTANCE.createSnippet()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(AssessmentPackage.Literals.GRAPH__ROOT,
 				 AssessmentFactory.eINSTANCE.createGeneric()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AssessmentPackage.Literals.GRAPH__ROOT,
+				 AssessmentFactory.eINSTANCE.createControl()));
 	}
 
 	/**

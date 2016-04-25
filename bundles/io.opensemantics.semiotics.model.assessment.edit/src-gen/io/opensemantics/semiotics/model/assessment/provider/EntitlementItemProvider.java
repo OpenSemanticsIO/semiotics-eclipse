@@ -18,6 +18,7 @@ package io.opensemantics.semiotics.model.assessment.provider;
 
 import io.opensemantics.semiotics.model.assessment.AssessmentPackage;
 
+import io.opensemantics.semiotics.model.assessment.Entitlement;
 import java.util.Collection;
 import java.util.List;
 
@@ -33,7 +34,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EntitlementItemProvider extends GraphItemProvider {
+public class EntitlementItemProvider extends NodeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -124,7 +125,10 @@ public class EntitlementItemProvider extends GraphItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Entitlement_type");
+		String label = ((Entitlement)object).getLabel();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Entitlement_type") :
+			getString("_UI_Entitlement_type") + " " + label;
 	}
 	
 

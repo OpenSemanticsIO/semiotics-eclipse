@@ -16,8 +16,8 @@
 package io.opensemantics.semiotics.model.assessment.provider;
 
 
+import io.opensemantics.semiotics.model.assessment.Account;
 import io.opensemantics.semiotics.model.assessment.AssessmentPackage;
-import io.opensemantics.semiotics.model.assessment.Principal;
 
 import java.util.Collection;
 import java.util.List;
@@ -31,19 +31,19 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link io.opensemantics.semiotics.model.assessment.Principal} object.
+ * This is the item provider adapter for a {@link io.opensemantics.semiotics.model.assessment.Account} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class PrincipalItemProvider extends GraphItemProvider {
+public class AccountItemProvider extends NodeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrincipalItemProvider(AdapterFactory adapterFactory) {
+	public AccountItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -77,9 +77,9 @@ public class PrincipalItemProvider extends GraphItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Principal_entitlements_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Principal_entitlements_feature", "_UI_Principal_type"),
-				 AssessmentPackage.Literals.PRINCIPAL__ENTITLEMENTS,
+				 getString("_UI_Account_entitlements_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Account_entitlements_feature", "_UI_Account_type"),
+				 AssessmentPackage.Literals.ACCOUNT__ENTITLEMENTS,
 				 true,
 				 false,
 				 true,
@@ -99,9 +99,9 @@ public class PrincipalItemProvider extends GraphItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Principal_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Principal_name_feature", "_UI_Principal_type"),
-				 AssessmentPackage.Literals.PRINCIPAL__NAME,
+				 getString("_UI_Account_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Account_name_feature", "_UI_Account_type"),
+				 AssessmentPackage.Literals.ACCOUNT__NAME,
 				 true,
 				 false,
 				 false,
@@ -121,9 +121,9 @@ public class PrincipalItemProvider extends GraphItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Principal_email_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Principal_email_feature", "_UI_Principal_type"),
-				 AssessmentPackage.Literals.PRINCIPAL__EMAIL,
+				 getString("_UI_Account_email_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Account_email_feature", "_UI_Account_type"),
+				 AssessmentPackage.Literals.ACCOUNT__EMAIL,
 				 true,
 				 false,
 				 false,
@@ -143,9 +143,9 @@ public class PrincipalItemProvider extends GraphItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Principal_password_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Principal_password_feature", "_UI_Principal_type"),
-				 AssessmentPackage.Literals.PRINCIPAL__PASSWORD,
+				 getString("_UI_Account_password_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Account_password_feature", "_UI_Account_type"),
+				 AssessmentPackage.Literals.ACCOUNT__PASSWORD,
 				 true,
 				 false,
 				 false,
@@ -155,14 +155,14 @@ public class PrincipalItemProvider extends GraphItemProvider {
 	}
 
 	/**
-	 * This returns Principal.gif.
+	 * This returns Account.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Principal"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Account"));
 	}
 
 	/**
@@ -173,10 +173,10 @@ public class PrincipalItemProvider extends GraphItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Principal)object).getName();
+		String label = ((Account)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Principal_type") :
-			getString("_UI_Principal_type") + " " + label;
+			getString("_UI_Account_type") :
+			getString("_UI_Account_type") + " " + label;
 	}
 	
 
@@ -191,10 +191,10 @@ public class PrincipalItemProvider extends GraphItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Principal.class)) {
-			case AssessmentPackage.PRINCIPAL__NAME:
-			case AssessmentPackage.PRINCIPAL__EMAIL:
-			case AssessmentPackage.PRINCIPAL__PASSWORD:
+		switch (notification.getFeatureID(Account.class)) {
+			case AssessmentPackage.ACCOUNT__NAME:
+			case AssessmentPackage.ACCOUNT__EMAIL:
+			case AssessmentPackage.ACCOUNT__PASSWORD:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

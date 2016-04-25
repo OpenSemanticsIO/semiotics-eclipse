@@ -35,7 +35,7 @@ package io.opensemantics.semiotics.model.assessment;
  * @model
  * @generated
  */
-public interface Library extends Graph<Node> {
+public interface Library extends Node {
 	/**
 	 * Returns the value of the '<em><b>Group</b></em>' attribute.
 	 * <!-- begin-user-doc -->

@@ -17,7 +17,6 @@ package io.opensemantics.semiotics.model.assessment.impl;
 
 import io.opensemantics.semiotics.model.assessment.Application;
 import io.opensemantics.semiotics.model.assessment.AssessmentPackage;
-import io.opensemantics.semiotics.model.assessment.Node;
 import io.opensemantics.semiotics.model.assessment.View;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -27,7 +26,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
@@ -43,7 +41,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *
  * @generated
  */
-public class ViewImpl extends GraphImpl<Node> implements View {
+public class ViewImpl extends NodeImpl implements View {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

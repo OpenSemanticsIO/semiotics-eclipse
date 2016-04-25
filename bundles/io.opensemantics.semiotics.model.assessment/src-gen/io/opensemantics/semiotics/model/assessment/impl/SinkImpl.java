@@ -17,7 +17,6 @@ package io.opensemantics.semiotics.model.assessment.impl;
 
 import io.opensemantics.semiotics.model.assessment.Application;
 import io.opensemantics.semiotics.model.assessment.AssessmentPackage;
-import io.opensemantics.semiotics.model.assessment.Node;
 import io.opensemantics.semiotics.model.assessment.Sink;
 
 import java.util.Collection;
@@ -44,13 +43,12 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * </p>
  * <ul>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.SinkImpl#getCwes <em>Cwes</em>}</li>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.SinkImpl#isTainted <em>Tainted</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.SinkImpl#getApplication <em>Application</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class SinkImpl extends GraphImpl<Node> implements Sink {
+public class SinkImpl extends NodeImpl implements Sink {
 	/**
 	 * The cached value of the '{@link #getCwes() <em>Cwes</em>}' attribute list.
 	 * <!-- begin-user-doc -->
@@ -60,26 +58,6 @@ public class SinkImpl extends GraphImpl<Node> implements Sink {
 	 * @ordered
 	 */
 	protected EList<Integer> cwes;
-
-	/**
-	 * The default value of the '{@link #isTainted() <em>Tainted</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isTainted()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean TAINTED_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isTainted() <em>Tainted</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isTainted()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean tainted = TAINTED_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -110,27 +88,6 @@ public class SinkImpl extends GraphImpl<Node> implements Sink {
 			cwes = new EDataTypeUniqueEList<Integer>(Integer.class, this, AssessmentPackage.SINK__CWES);
 		}
 		return cwes;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isTainted() {
-		return tainted;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTainted(boolean newTainted) {
-		boolean oldTainted = tainted;
-		tainted = newTainted;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.SINK__TAINTED, oldTainted, tainted));
 	}
 
 	/**
@@ -228,8 +185,6 @@ public class SinkImpl extends GraphImpl<Node> implements Sink {
 		switch (featureID) {
 			case AssessmentPackage.SINK__CWES:
 				return getCwes();
-			case AssessmentPackage.SINK__TAINTED:
-				return isTainted();
 			case AssessmentPackage.SINK__APPLICATION:
 				return getApplication();
 		}
@@ -249,9 +204,6 @@ public class SinkImpl extends GraphImpl<Node> implements Sink {
 				getCwes().clear();
 				getCwes().addAll((Collection<? extends Integer>)newValue);
 				return;
-			case AssessmentPackage.SINK__TAINTED:
-				setTainted((Boolean)newValue);
-				return;
 			case AssessmentPackage.SINK__APPLICATION:
 				setApplication((Application)newValue);
 				return;
@@ -270,9 +222,6 @@ public class SinkImpl extends GraphImpl<Node> implements Sink {
 			case AssessmentPackage.SINK__CWES:
 				getCwes().clear();
 				return;
-			case AssessmentPackage.SINK__TAINTED:
-				setTainted(TAINTED_EDEFAULT);
-				return;
 			case AssessmentPackage.SINK__APPLICATION:
 				setApplication((Application)null);
 				return;
@@ -290,8 +239,6 @@ public class SinkImpl extends GraphImpl<Node> implements Sink {
 		switch (featureID) {
 			case AssessmentPackage.SINK__CWES:
 				return cwes != null && !cwes.isEmpty();
-			case AssessmentPackage.SINK__TAINTED:
-				return tainted != TAINTED_EDEFAULT;
 			case AssessmentPackage.SINK__APPLICATION:
 				return getApplication() != null;
 		}
@@ -310,8 +257,6 @@ public class SinkImpl extends GraphImpl<Node> implements Sink {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (cwes: ");
 		result.append(cwes);
-		result.append(", tainted: ");
-		result.append(tainted);
 		result.append(')');
 		return result.toString();
 	}

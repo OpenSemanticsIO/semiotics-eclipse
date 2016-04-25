@@ -36,7 +36,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class LibraryItemProvider extends GraphItemProvider {
+public class LibraryItemProvider extends NodeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -150,7 +150,7 @@ public class LibraryItemProvider extends GraphItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Library)object).getGroup();
+		String label = ((Library)object).getLabel();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Library_type") :
 			getString("_UI_Library_type") + " " + label;

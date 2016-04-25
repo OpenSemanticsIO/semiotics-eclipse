@@ -107,13 +107,13 @@ public interface AssessmentFactory extends EFactory {
 	Finding createFinding();
 
 	/**
-	 * Returns a new object of class '<em>Principal</em>'.
+	 * Returns a new object of class '<em>Account</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Principal</em>'.
+	 * @return a new object of class '<em>Account</em>'.
 	 * @generated
 	 */
-	Principal createPrincipal();
+	Account createAccount();
 
 	/**
 	 * Returns a new object of class '<em>Entitlement</em>'.
@@ -152,31 +152,13 @@ public interface AssessmentFactory extends EFactory {
 	Library createLibrary();
 
 	/**
-	 * Returns a new object of class '<em>Location</em>'.
+	 * Returns a new object of class '<em>Snippet</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Location</em>'.
+	 * @return a new object of class '<em>Snippet</em>'.
 	 * @generated
 	 */
-	Location createLocation();
-
-	/**
-	 * Returns a new object of class '<em>File</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>File</em>'.
-	 * @generated
-	 */
-	File createFile();
-
-	/**
-	 * Returns a new object of class '<em>Java</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Java</em>'.
-	 * @generated
-	 */
-	Java createJava();
+	Snippet createSnippet();
 
 	/**
 	 * Returns a new object of class '<em>Url</em>'.
@@ -195,6 +177,24 @@ public interface AssessmentFactory extends EFactory {
 	 * @generated
 	 */
 	Generic createGeneric();
+
+	/**
+	 * Returns a new object of class '<em>Control</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Control</em>'.
+	 * @generated
+	 */
+	Control createControl();
+
+	/**
+	 * Returns a new object of class '<em>Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Resource</em>'.
+	 * @generated
+	 */
+	Resource createResource();
 
 	/**
 	 * Returns the package supported by this factory.

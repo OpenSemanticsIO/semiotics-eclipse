@@ -34,11 +34,11 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Entitlement extends Graph<Node> {
+public interface Entitlement extends Node {
 	/**
 	 * Returns the value of the '<em><b>Principals</b></em>' reference list.
-	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Principal}.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Principal#getEntitlements <em>Entitlements</em>}'.
+	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Account}.
+	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Account#getEntitlements <em>Entitlements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Principals</em>' reference list isn't clear,
@@ -47,11 +47,11 @@ public interface Entitlement extends Graph<Node> {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Principals</em>' reference list.
 	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getEntitlement_Principals()
-	 * @see io.opensemantics.semiotics.model.assessment.Principal#getEntitlements
+	 * @see io.opensemantics.semiotics.model.assessment.Account#getEntitlements
 	 * @model opposite="entitlements"
 	 * @generated
 	 */
-	EList<Principal> getPrincipals();
+	EList<Account> getPrincipals();
 
 	/**
 	 * Returns the value of the '<em><b>Application</b></em>' container reference.

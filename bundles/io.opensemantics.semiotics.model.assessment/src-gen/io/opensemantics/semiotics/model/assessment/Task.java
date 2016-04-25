@@ -25,7 +25,6 @@ package io.opensemantics.semiotics.model.assessment;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.Task#getDescription <em>Description</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Task#isCompleted <em>Completed</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Task#getAssessment <em>Assessment</em>}</li>
  * </ul>
@@ -34,33 +33,7 @@ package io.opensemantics.semiotics.model.assessment;
  * @model
  * @generated
  */
-public interface Task extends Graph<Node> {
-	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
-	 * @see #setDescription(String)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getTask_Description()
-	 * @model
-	 * @generated
-	 */
-	String getDescription();
-
-	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Task#getDescription <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' attribute.
-	 * @see #getDescription()
-	 * @generated
-	 */
-	void setDescription(String value);
-
+public interface Task extends Node {
 	/**
 	 * Returns the value of the '<em><b>Completed</b></em>' attribute.
 	 * <!-- begin-user-doc -->

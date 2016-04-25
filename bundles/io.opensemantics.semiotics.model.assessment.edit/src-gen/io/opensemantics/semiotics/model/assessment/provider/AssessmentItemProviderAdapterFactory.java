@@ -269,26 +269,26 @@ public class AssessmentItemProviderAdapterFactory extends AssessmentAdapterFacto
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Principal} instances.
+	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Account} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PrincipalItemProvider principalItemProvider;
+	protected AccountItemProvider accountItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Principal}.
+	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Account}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createPrincipalAdapter() {
-		if (principalItemProvider == null) {
-			principalItemProvider = new PrincipalItemProvider(this);
+	public Adapter createAccountAdapter() {
+		if (accountItemProvider == null) {
+			accountItemProvider = new AccountItemProvider(this);
 		}
 
-		return principalItemProvider;
+		return accountItemProvider;
 	}
 
 	/**
@@ -384,72 +384,26 @@ public class AssessmentItemProviderAdapterFactory extends AssessmentAdapterFacto
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Location} instances.
+	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Snippet} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LocationItemProvider locationItemProvider;
+	protected SnippetItemProvider snippetItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Location}.
+	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Snippet}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createLocationAdapter() {
-		if (locationItemProvider == null) {
-			locationItemProvider = new LocationItemProvider(this);
+	public Adapter createSnippetAdapter() {
+		if (snippetItemProvider == null) {
+			snippetItemProvider = new SnippetItemProvider(this);
 		}
 
-		return locationItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.File} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FileItemProvider fileItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.File}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFileAdapter() {
-		if (fileItemProvider == null) {
-			fileItemProvider = new FileItemProvider(this);
-		}
-
-		return fileItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Java} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected JavaItemProvider javaItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Java}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createJavaAdapter() {
-		if (javaItemProvider == null) {
-			javaItemProvider = new JavaItemProvider(this);
-		}
-
-		return javaItemProvider;
+		return snippetItemProvider;
 	}
 
 	/**
@@ -496,6 +450,52 @@ public class AssessmentItemProviderAdapterFactory extends AssessmentAdapterFacto
 		}
 
 		return genericItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Control} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ControlItemProvider controlItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Control}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createControlAdapter() {
+		if (controlItemProvider == null) {
+			controlItemProvider = new ControlItemProvider(this);
+		}
+
+		return controlItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Resource} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ResourceItemProvider resourceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Resource}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createResourceAdapter() {
+		if (resourceItemProvider == null) {
+			resourceItemProvider = new ResourceItemProvider(this);
+		}
+
+		return resourceItemProvider;
 	}
 
 	/**
@@ -605,16 +605,16 @@ public class AssessmentItemProviderAdapterFactory extends AssessmentAdapterFacto
 		if (viewItemProvider != null) viewItemProvider.dispose();
 		if (modelItemProvider != null) modelItemProvider.dispose();
 		if (findingItemProvider != null) findingItemProvider.dispose();
-		if (principalItemProvider != null) principalItemProvider.dispose();
+		if (accountItemProvider != null) accountItemProvider.dispose();
 		if (entitlementItemProvider != null) entitlementItemProvider.dispose();
 		if (taskItemProvider != null) taskItemProvider.dispose();
 		if (scmItemProvider != null) scmItemProvider.dispose();
 		if (libraryItemProvider != null) libraryItemProvider.dispose();
-		if (locationItemProvider != null) locationItemProvider.dispose();
-		if (fileItemProvider != null) fileItemProvider.dispose();
-		if (javaItemProvider != null) javaItemProvider.dispose();
+		if (snippetItemProvider != null) snippetItemProvider.dispose();
 		if (urlItemProvider != null) urlItemProvider.dispose();
 		if (genericItemProvider != null) genericItemProvider.dispose();
+		if (controlItemProvider != null) controlItemProvider.dispose();
+		if (resourceItemProvider != null) resourceItemProvider.dispose();
 	}
 
 }

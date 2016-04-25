@@ -36,7 +36,6 @@ import org.eclipse.emf.ecore.EObject;
 public interface Graph<T extends Node> extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Root</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Node#getGraph <em>Graph</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Root</em>' containment reference isn't clear,
@@ -46,8 +45,7 @@ public interface Graph<T extends Node> extends EObject {
 	 * @return the value of the '<em>Root</em>' containment reference.
 	 * @see #setRoot(Node)
 	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getGraph_Root()
-	 * @see io.opensemantics.semiotics.model.assessment.Node#getGraph
-	 * @model opposite="graph" containment="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	T getRoot();

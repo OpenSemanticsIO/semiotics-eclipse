@@ -19,6 +19,7 @@ import io.opensemantics.semiotics.model.assessment.Assessment;
 import io.opensemantics.semiotics.model.assessment.AssessmentPackage;
 import io.opensemantics.semiotics.model.assessment.Finding;
 
+import io.opensemantics.semiotics.model.assessment.Notes;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -38,8 +39,9 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.FindingImpl#getLabel <em>Label</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.FindingImpl#getNotes <em>Notes</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.FindingImpl#getAssessment <em>Assessment</em>}</li>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.FindingImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.FindingImpl#getReproducer <em>Reproducer</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.FindingImpl#getRemediation <em>Remediation</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.FindingImpl#getReferences <em>References</em>}</li>
@@ -49,24 +51,44 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  */
 public class FindingImpl extends MinimalEObjectImpl.Container implements Finding {
 	/**
-	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * The default value of the '{@link #getLabel() <em>Label</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDescription()
+	 * @see #getLabel()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DESCRIPTION_EDEFAULT = null;
+	protected static final String LABEL_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * The cached value of the '{@link #getLabel() <em>Label</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDescription()
+	 * @see #getLabel()
 	 * @generated
 	 * @ordered
 	 */
-	protected String description = DESCRIPTION_EDEFAULT;
+	protected String label = LABEL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getNotes() <em>Notes</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNotes()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NOTES_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getNotes() <em>Notes</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNotes()
+	 * @generated
+	 * @ordered
+	 */
+	protected String notes = NOTES_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getReproducer() <em>Reproducer</em>}' attribute.
@@ -152,6 +174,48 @@ public class FindingImpl extends MinimalEObjectImpl.Container implements Finding
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getLabel() {
+		return label;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLabel(String newLabel) {
+		String oldLabel = label;
+		label = newLabel;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.FINDING__LABEL, oldLabel, label));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getNotes() {
+		return notes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNotes(String newNotes) {
+		String oldNotes = notes;
+		notes = newNotes;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.FINDING__NOTES, oldNotes, notes));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Assessment getAssessment() {
 		if (eContainerFeatureID() != AssessmentPackage.FINDING__ASSESSMENT) return null;
 		return (Assessment)eInternalContainer();
@@ -186,27 +250,6 @@ public class FindingImpl extends MinimalEObjectImpl.Container implements Finding
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.FINDING__ASSESSMENT, newAssessment, newAssessment));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getDescription() {
-		return description;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDescription(String newDescription) {
-		String oldDescription = description;
-		description = newDescription;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.FINDING__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -324,10 +367,12 @@ public class FindingImpl extends MinimalEObjectImpl.Container implements Finding
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case AssessmentPackage.FINDING__LABEL:
+				return getLabel();
+			case AssessmentPackage.FINDING__NOTES:
+				return getNotes();
 			case AssessmentPackage.FINDING__ASSESSMENT:
 				return getAssessment();
-			case AssessmentPackage.FINDING__DESCRIPTION:
-				return getDescription();
 			case AssessmentPackage.FINDING__REPRODUCER:
 				return getReproducer();
 			case AssessmentPackage.FINDING__REMEDIATION:
@@ -346,11 +391,14 @@ public class FindingImpl extends MinimalEObjectImpl.Container implements Finding
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case AssessmentPackage.FINDING__LABEL:
+				setLabel((String)newValue);
+				return;
+			case AssessmentPackage.FINDING__NOTES:
+				setNotes((String)newValue);
+				return;
 			case AssessmentPackage.FINDING__ASSESSMENT:
 				setAssessment((Assessment)newValue);
-				return;
-			case AssessmentPackage.FINDING__DESCRIPTION:
-				setDescription((String)newValue);
 				return;
 			case AssessmentPackage.FINDING__REPRODUCER:
 				setReproducer((String)newValue);
@@ -373,11 +421,14 @@ public class FindingImpl extends MinimalEObjectImpl.Container implements Finding
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case AssessmentPackage.FINDING__LABEL:
+				setLabel(LABEL_EDEFAULT);
+				return;
+			case AssessmentPackage.FINDING__NOTES:
+				setNotes(NOTES_EDEFAULT);
+				return;
 			case AssessmentPackage.FINDING__ASSESSMENT:
 				setAssessment((Assessment)null);
-				return;
-			case AssessmentPackage.FINDING__DESCRIPTION:
-				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 			case AssessmentPackage.FINDING__REPRODUCER:
 				setReproducer(REPRODUCER_EDEFAULT);
@@ -400,10 +451,12 @@ public class FindingImpl extends MinimalEObjectImpl.Container implements Finding
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case AssessmentPackage.FINDING__LABEL:
+				return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
+			case AssessmentPackage.FINDING__NOTES:
+				return NOTES_EDEFAULT == null ? notes != null : !NOTES_EDEFAULT.equals(notes);
 			case AssessmentPackage.FINDING__ASSESSMENT:
 				return getAssessment() != null;
-			case AssessmentPackage.FINDING__DESCRIPTION:
-				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case AssessmentPackage.FINDING__REPRODUCER:
 				return REPRODUCER_EDEFAULT == null ? reproducer != null : !REPRODUCER_EDEFAULT.equals(reproducer);
 			case AssessmentPackage.FINDING__REMEDIATION:
@@ -420,12 +473,46 @@ public class FindingImpl extends MinimalEObjectImpl.Container implements Finding
 	 * @generated
 	 */
 	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Notes.class) {
+			switch (derivedFeatureID) {
+				case AssessmentPackage.FINDING__NOTES: return AssessmentPackage.NOTES__NOTES;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Notes.class) {
+			switch (baseFeatureID) {
+				case AssessmentPackage.NOTES__NOTES: return AssessmentPackage.FINDING__NOTES;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (description: ");
-		result.append(description);
+		result.append(" (label: ");
+		result.append(label);
+		result.append(", notes: ");
+		result.append(notes);
 		result.append(", reproducer: ");
 		result.append(reproducer);
 		result.append(", remediation: ");

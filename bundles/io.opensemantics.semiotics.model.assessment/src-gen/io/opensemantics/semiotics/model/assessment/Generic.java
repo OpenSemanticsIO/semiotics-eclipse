@@ -21,69 +21,11 @@ package io.opensemantics.semiotics.model.assessment;
  * A representation of the model object '<em><b>Generic</b></em>'.
  * <!-- end-user-doc -->
  *
- * <p>
- * The following features are supported:
- * </p>
- * <ul>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.Generic#getDescription <em>Description</em>}</li>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.Generic#getNotes <em>Notes</em>}</li>
- * </ul>
  *
  * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getGeneric()
  * @model
  * @generated
  */
-public interface Generic extends Node {
-	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
-	 * @see #setDescription(String)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getGeneric_Description()
-	 * @model
-	 * @generated
-	 */
-	String getDescription();
-
-	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Generic#getDescription <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' attribute.
-	 * @see #getDescription()
-	 * @generated
-	 */
-	void setDescription(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Notes</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Notes</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Notes</em>' attribute.
-	 * @see #setNotes(String)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getGeneric_Notes()
-	 * @model
-	 * @generated
-	 */
-	String getNotes();
-
-	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Generic#getNotes <em>Notes</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Notes</em>' attribute.
-	 * @see #getNotes()
-	 * @generated
-	 */
-	void setNotes(String value);
+public interface Generic extends GraphNode {
 
 } // Generic

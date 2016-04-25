@@ -36,7 +36,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TaskItemProvider extends GraphItemProvider {
+public class TaskItemProvider extends NodeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -58,32 +58,9 @@ public class TaskItemProvider extends GraphItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDescriptionPropertyDescriptor(object);
 			addCompletedPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Description feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDescriptionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Task_description_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Task_description_feature", "_UI_Task_type"),
-				 AssessmentPackage.Literals.TASK__DESCRIPTION,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -127,7 +104,7 @@ public class TaskItemProvider extends GraphItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Task)object).getDescription();
+		String label = ((Task)object).getLabel();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Task_type") :
 			getString("_UI_Task_type") + " " + label;
@@ -146,7 +123,6 @@ public class TaskItemProvider extends GraphItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Task.class)) {
-			case AssessmentPackage.TASK__DESCRIPTION:
 			case AssessmentPackage.TASK__COMPLETED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

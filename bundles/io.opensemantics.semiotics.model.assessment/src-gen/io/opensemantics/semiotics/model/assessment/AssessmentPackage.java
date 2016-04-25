@@ -71,6 +71,43 @@ public interface AssessmentPackage extends EPackage {
 	AssessmentPackage eINSTANCE = io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.Label <em>Label</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see io.opensemantics.semiotics.model.assessment.Label
+	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getLabel()
+	 * @generated
+	 */
+	int LABEL = 21;
+
+	/**
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__LABEL = 0;
+
+	/**
+	 * The number of structural features of the '<em>Label</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Label</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.NodeImpl <em>Node</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -81,31 +118,40 @@ public interface AssessmentPackage extends EPackage {
 	int NODE = 1;
 
 	/**
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__LABEL = LABEL__LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Notes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__NOTES = LABEL_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__CHILDREN = 0;
+	int NODE__CHILDREN = LABEL_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__PARENT = 1;
-
-	/**
-	 * The feature id for the '<em><b>Graph</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE__GRAPH = 2;
+	int NODE__PARENT = LABEL_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Node</em>' class.
@@ -114,7 +160,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FEATURE_COUNT = 3;
+	int NODE_FEATURE_COUNT = LABEL_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Node</em>' class.
@@ -123,7 +169,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_OPERATION_COUNT = 0;
+	int NODE_OPERATION_COUNT = LABEL_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.HttpImpl <em>Http</em>}' class.
@@ -136,78 +182,6 @@ public interface AssessmentPackage extends EPackage {
 	int HTTP = 0;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HTTP__CHILDREN = NODE__CHILDREN;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HTTP__PARENT = NODE__PARENT;
-
-	/**
-	 * The feature id for the '<em><b>Graph</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HTTP__GRAPH = NODE__GRAPH;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HTTP__DESCRIPTION = NODE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Methods</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HTTP__METHODS = NODE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Uri</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HTTP__URI = NODE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Http</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HTTP_FEATURE_COUNT = NODE_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>Http</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HTTP_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.AssessmentImpl <em>Assessment</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -216,6 +190,262 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 */
 	int ASSESSMENT = 2;
+
+	/**
+	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.ApplicationImpl <em>Application</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see io.opensemantics.semiotics.model.assessment.impl.ApplicationImpl
+	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getApplication()
+	 * @generated
+	 */
+	int APPLICATION = 3;
+
+	/**
+	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.GraphImpl <em>Graph</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see io.opensemantics.semiotics.model.assessment.impl.GraphImpl
+	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getGraph()
+	 * @generated
+	 */
+	int GRAPH = 16;
+
+	/**
+	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.SinkImpl <em>Sink</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see io.opensemantics.semiotics.model.assessment.impl.SinkImpl
+	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getSink()
+	 * @generated
+	 */
+	int SINK = 4;
+
+	/**
+	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.ControllerImpl <em>Controller</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see io.opensemantics.semiotics.model.assessment.impl.ControllerImpl
+	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getController()
+	 * @generated
+	 */
+	int CONTROLLER = 5;
+
+	/**
+	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.ViewImpl <em>View</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see io.opensemantics.semiotics.model.assessment.impl.ViewImpl
+	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getView()
+	 * @generated
+	 */
+	int VIEW = 6;
+
+	/**
+	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.ModelImpl <em>Model</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see io.opensemantics.semiotics.model.assessment.impl.ModelImpl
+	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getModel()
+	 * @generated
+	 */
+	int MODEL = 7;
+
+	/**
+	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.FindingImpl <em>Finding</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see io.opensemantics.semiotics.model.assessment.impl.FindingImpl
+	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getFinding()
+	 * @generated
+	 */
+	int FINDING = 8;
+
+	/**
+	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.AccountImpl <em>Account</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see io.opensemantics.semiotics.model.assessment.impl.AccountImpl
+	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getAccount()
+	 * @generated
+	 */
+	int ACCOUNT = 9;
+
+	/**
+	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.EntitlementImpl <em>Entitlement</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see io.opensemantics.semiotics.model.assessment.impl.EntitlementImpl
+	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getEntitlement()
+	 * @generated
+	 */
+	int ENTITLEMENT = 10;
+
+	/**
+	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.TaskImpl <em>Task</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see io.opensemantics.semiotics.model.assessment.impl.TaskImpl
+	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getTask()
+	 * @generated
+	 */
+	int TASK = 11;
+
+	/**
+	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.ScmImpl <em>Scm</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see io.opensemantics.semiotics.model.assessment.impl.ScmImpl
+	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getScm()
+	 * @generated
+	 */
+	int SCM = 12;
+
+	/**
+	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.LibraryImpl <em>Library</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see io.opensemantics.semiotics.model.assessment.impl.LibraryImpl
+	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getLibrary()
+	 * @generated
+	 */
+	int LIBRARY = 13;
+
+	/**
+	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.GraphNodeImpl <em>Graph Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see io.opensemantics.semiotics.model.assessment.impl.GraphNodeImpl
+	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getGraphNode()
+	 * @generated
+	 */
+	int GRAPH_NODE = 18;
+
+	/**
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRAPH_NODE__LABEL = NODE__LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Notes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRAPH_NODE__NOTES = NODE__NOTES;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRAPH_NODE__CHILDREN = NODE__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRAPH_NODE__PARENT = NODE__PARENT;
+
+	/**
+	 * The number of structural features of the '<em>Graph Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRAPH_NODE_FEATURE_COUNT = NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Graph Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRAPH_NODE_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTTP__LABEL = GRAPH_NODE__LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Notes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTTP__NOTES = GRAPH_NODE__NOTES;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTTP__CHILDREN = GRAPH_NODE__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTTP__PARENT = GRAPH_NODE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Request</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTTP__REQUEST = GRAPH_NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Response</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTTP__RESPONSE = GRAPH_NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Http</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTTP_FEATURE_COUNT = GRAPH_NODE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Http</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTTP_OPERATION_COUNT = GRAPH_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Applications</b></em>' containment reference list.
@@ -263,122 +493,13 @@ public interface AssessmentPackage extends EPackage {
 	int ASSESSMENT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.ApplicationImpl <em>Application</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see io.opensemantics.semiotics.model.assessment.impl.ApplicationImpl
-	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getApplication()
-	 * @generated
-	 */
-	int APPLICATION = 3;
-
-	/**
-	 * The feature id for the '<em><b>Assessment</b></em>' container reference.
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION__ASSESSMENT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Accounts</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLICATION__ACCOUNTS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Entitlements</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLICATION__ENTITLEMENTS = 2;
-
-	/**
-	 * The feature id for the '<em><b>Controllers</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLICATION__CONTROLLERS = 3;
-
-	/**
-	 * The feature id for the '<em><b>Models</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLICATION__MODELS = 4;
-
-	/**
-	 * The feature id for the '<em><b>Scm</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLICATION__SCM = 5;
-
-	/**
-	 * The feature id for the '<em><b>Libraries</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLICATION__LIBRARIES = 6;
-
-	/**
-	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLICATION__VIEWS = 7;
-
-	/**
-	 * The feature id for the '<em><b>Sinks</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLICATION__SINKS = 8;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLICATION__NAME = 9;
-
-	/**
-	 * The feature id for the '<em><b>Languages</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLICATION__LANGUAGES = 10;
-
-	/**
-	 * The feature id for the '<em><b>Location</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLICATION__LOCATION = 11;
+	int APPLICATION__LABEL = LABEL__LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Notes</b></em>' attribute.
@@ -387,7 +508,115 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION__NOTES = 12;
+	int APPLICATION__NOTES = LABEL_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Assessment</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION__ASSESSMENT = LABEL_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Accounts</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION__ACCOUNTS = LABEL_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Entitlements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION__ENTITLEMENTS = LABEL_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Controllers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION__CONTROLLERS = LABEL_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Models</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION__MODELS = LABEL_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Scm</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION__SCM = LABEL_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Libraries</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION__LIBRARIES = LABEL_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Views</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION__VIEWS = LABEL_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Sinks</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION__SINKS = LABEL_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Languages</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION__LANGUAGES = LABEL_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Resources</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION__RESOURCES = LABEL_FEATURE_COUNT + 11;
+
+	/**
+	 * The feature id for the '<em><b>Urls</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION__URLS = LABEL_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of structural features of the '<em>Application</em>' class.
@@ -396,7 +625,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION_FEATURE_COUNT = 13;
+	int APPLICATION_FEATURE_COUNT = LABEL_FEATURE_COUNT + 13;
 
 	/**
 	 * The number of operations of the '<em>Application</em>' class.
@@ -405,63 +634,43 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION_OPERATION_COUNT = 0;
+	int APPLICATION_OPERATION_COUNT = LABEL_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.GraphImpl <em>Graph</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see io.opensemantics.semiotics.model.assessment.impl.GraphImpl
-	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getGraph()
-	 * @generated
-	 */
-	int GRAPH = 19;
-
-	/**
-	 * The feature id for the '<em><b>Root</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GRAPH__ROOT = 0;
+	int SINK__LABEL = NODE__LABEL;
 
 	/**
-	 * The number of structural features of the '<em>Graph</em>' class.
+	 * The feature id for the '<em><b>Notes</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GRAPH_FEATURE_COUNT = 1;
+	int SINK__NOTES = NODE__NOTES;
 
 	/**
-	 * The number of operations of the '<em>Graph</em>' class.
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GRAPH_OPERATION_COUNT = 0;
+	int SINK__CHILDREN = NODE__CHILDREN;
 
 	/**
-	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.SinkImpl <em>Sink</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see io.opensemantics.semiotics.model.assessment.impl.SinkImpl
-	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getSink()
-	 * @generated
-	 */
-	int SINK = 4;
-
-	/**
-	 * The feature id for the '<em><b>Root</b></em>' containment reference.
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SINK__ROOT = GRAPH__ROOT;
+	int SINK__PARENT = NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Cwes</b></em>' attribute list.
@@ -470,16 +679,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SINK__CWES = GRAPH_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Tainted</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SINK__TAINTED = GRAPH_FEATURE_COUNT + 1;
+	int SINK__CWES = NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Application</b></em>' container reference.
@@ -488,7 +688,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SINK__APPLICATION = GRAPH_FEATURE_COUNT + 2;
+	int SINK__APPLICATION = NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Sink</em>' class.
@@ -497,7 +697,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SINK_FEATURE_COUNT = GRAPH_FEATURE_COUNT + 3;
+	int SINK_FEATURE_COUNT = NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Sink</em>' class.
@@ -506,26 +706,43 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SINK_OPERATION_COUNT = GRAPH_OPERATION_COUNT + 0;
+	int SINK_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.ControllerImpl <em>Controller</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see io.opensemantics.semiotics.model.assessment.impl.ControllerImpl
-	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getController()
-	 * @generated
-	 */
-	int CONTROLLER = 5;
-
-	/**
-	 * The feature id for the '<em><b>Root</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER__ROOT = GRAPH__ROOT;
+	int CONTROLLER__LABEL = NODE__LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Notes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROLLER__NOTES = NODE__NOTES;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROLLER__CHILDREN = NODE__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROLLER__PARENT = NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Application</b></em>' container reference.
@@ -534,7 +751,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER__APPLICATION = GRAPH_FEATURE_COUNT + 0;
+	int CONTROLLER__APPLICATION = NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Controller</em>' class.
@@ -543,7 +760,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER_FEATURE_COUNT = GRAPH_FEATURE_COUNT + 1;
+	int CONTROLLER_FEATURE_COUNT = NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Controller</em>' class.
@@ -552,26 +769,43 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER_OPERATION_COUNT = GRAPH_OPERATION_COUNT + 0;
+	int CONTROLLER_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.ViewImpl <em>View</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see io.opensemantics.semiotics.model.assessment.impl.ViewImpl
-	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getView()
-	 * @generated
-	 */
-	int VIEW = 6;
-
-	/**
-	 * The feature id for the '<em><b>Root</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW__ROOT = GRAPH__ROOT;
+	int VIEW__LABEL = NODE__LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Notes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW__NOTES = NODE__NOTES;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW__CHILDREN = NODE__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VIEW__PARENT = NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Application</b></em>' container reference.
@@ -580,7 +814,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW__APPLICATION = GRAPH_FEATURE_COUNT + 0;
+	int VIEW__APPLICATION = NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>View</em>' class.
@@ -589,7 +823,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW_FEATURE_COUNT = GRAPH_FEATURE_COUNT + 1;
+	int VIEW_FEATURE_COUNT = NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>View</em>' class.
@@ -598,26 +832,43 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW_OPERATION_COUNT = GRAPH_OPERATION_COUNT + 0;
+	int VIEW_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.ModelImpl <em>Model</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see io.opensemantics.semiotics.model.assessment.impl.ModelImpl
-	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getModel()
-	 * @generated
-	 */
-	int MODEL = 7;
-
-	/**
-	 * The feature id for the '<em><b>Root</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL__ROOT = GRAPH__ROOT;
+	int MODEL__LABEL = NODE__LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Notes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL__NOTES = NODE__NOTES;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL__CHILDREN = NODE__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL__PARENT = NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Application</b></em>' container reference.
@@ -626,7 +877,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL__APPLICATION = GRAPH_FEATURE_COUNT + 0;
+	int MODEL__APPLICATION = NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Model</em>' class.
@@ -635,7 +886,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL_FEATURE_COUNT = GRAPH_FEATURE_COUNT + 1;
+	int MODEL_FEATURE_COUNT = NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Model</em>' class.
@@ -644,17 +895,25 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL_OPERATION_COUNT = GRAPH_OPERATION_COUNT + 0;
+	int MODEL_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.FindingImpl <em>Finding</em>}' class.
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see io.opensemantics.semiotics.model.assessment.impl.FindingImpl
-	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getFinding()
 	 * @generated
+	 * @ordered
 	 */
-	int FINDING = 8;
+	int FINDING__LABEL = LABEL__LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Notes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINDING__NOTES = LABEL_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Assessment</b></em>' container reference.
@@ -663,16 +922,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FINDING__ASSESSMENT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FINDING__DESCRIPTION = 1;
+	int FINDING__ASSESSMENT = LABEL_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Reproducer</b></em>' attribute.
@@ -681,7 +931,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FINDING__REPRODUCER = 2;
+	int FINDING__REPRODUCER = LABEL_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Remediation</b></em>' attribute.
@@ -690,7 +940,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FINDING__REMEDIATION = 3;
+	int FINDING__REMEDIATION = LABEL_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>References</b></em>' attribute.
@@ -699,7 +949,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FINDING__REFERENCES = 4;
+	int FINDING__REFERENCES = LABEL_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Finding</em>' class.
@@ -708,7 +958,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FINDING_FEATURE_COUNT = 5;
+	int FINDING_FEATURE_COUNT = LABEL_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Finding</em>' class.
@@ -717,26 +967,43 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FINDING_OPERATION_COUNT = 0;
+	int FINDING_OPERATION_COUNT = LABEL_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.PrincipalImpl <em>Principal</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see io.opensemantics.semiotics.model.assessment.impl.PrincipalImpl
-	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getPrincipal()
-	 * @generated
-	 */
-	int PRINCIPAL = 9;
-
-	/**
-	 * The feature id for the '<em><b>Root</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRINCIPAL__ROOT = GRAPH__ROOT;
+	int ACCOUNT__LABEL = NODE__LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Notes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT__NOTES = NODE__NOTES;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT__CHILDREN = NODE__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCOUNT__PARENT = NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Application</b></em>' container reference.
@@ -745,7 +1012,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRINCIPAL__APPLICATION = GRAPH_FEATURE_COUNT + 0;
+	int ACCOUNT__APPLICATION = NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Entitlements</b></em>' reference list.
@@ -754,7 +1021,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRINCIPAL__ENTITLEMENTS = GRAPH_FEATURE_COUNT + 1;
+	int ACCOUNT__ENTITLEMENTS = NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -763,7 +1030,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRINCIPAL__NAME = GRAPH_FEATURE_COUNT + 2;
+	int ACCOUNT__NAME = NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Email</b></em>' attribute.
@@ -772,7 +1039,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRINCIPAL__EMAIL = GRAPH_FEATURE_COUNT + 3;
+	int ACCOUNT__EMAIL = NODE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Password</b></em>' attribute.
@@ -781,44 +1048,61 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRINCIPAL__PASSWORD = GRAPH_FEATURE_COUNT + 4;
+	int ACCOUNT__PASSWORD = NODE_FEATURE_COUNT + 4;
 
 	/**
-	 * The number of structural features of the '<em>Principal</em>' class.
+	 * The number of structural features of the '<em>Account</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRINCIPAL_FEATURE_COUNT = GRAPH_FEATURE_COUNT + 5;
+	int ACCOUNT_FEATURE_COUNT = NODE_FEATURE_COUNT + 5;
 
 	/**
-	 * The number of operations of the '<em>Principal</em>' class.
+	 * The number of operations of the '<em>Account</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRINCIPAL_OPERATION_COUNT = GRAPH_OPERATION_COUNT + 0;
+	int ACCOUNT_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.EntitlementImpl <em>Entitlement</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see io.opensemantics.semiotics.model.assessment.impl.EntitlementImpl
-	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getEntitlement()
-	 * @generated
-	 */
-	int ENTITLEMENT = 10;
-
-	/**
-	 * The feature id for the '<em><b>Root</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITLEMENT__ROOT = GRAPH__ROOT;
+	int ENTITLEMENT__LABEL = NODE__LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Notes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITLEMENT__NOTES = NODE__NOTES;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITLEMENT__CHILDREN = NODE__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITLEMENT__PARENT = NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Principals</b></em>' reference list.
@@ -827,7 +1111,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITLEMENT__PRINCIPALS = GRAPH_FEATURE_COUNT + 0;
+	int ENTITLEMENT__PRINCIPALS = NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Application</b></em>' container reference.
@@ -836,7 +1120,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITLEMENT__APPLICATION = GRAPH_FEATURE_COUNT + 1;
+	int ENTITLEMENT__APPLICATION = NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Entitlement</em>' class.
@@ -845,7 +1129,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITLEMENT_FEATURE_COUNT = GRAPH_FEATURE_COUNT + 2;
+	int ENTITLEMENT_FEATURE_COUNT = NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Entitlement</em>' class.
@@ -854,35 +1138,43 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITLEMENT_OPERATION_COUNT = GRAPH_OPERATION_COUNT + 0;
+	int ENTITLEMENT_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.TaskImpl <em>Task</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see io.opensemantics.semiotics.model.assessment.impl.TaskImpl
-	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getTask()
-	 * @generated
-	 */
-	int TASK = 11;
-
-	/**
-	 * The feature id for the '<em><b>Root</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__ROOT = GRAPH__ROOT;
+	int TASK__LABEL = NODE__LABEL;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * The feature id for the '<em><b>Notes</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__DESCRIPTION = GRAPH_FEATURE_COUNT + 0;
+	int TASK__NOTES = NODE__NOTES;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__CHILDREN = NODE__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__PARENT = NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Completed</b></em>' attribute.
@@ -891,7 +1183,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__COMPLETED = GRAPH_FEATURE_COUNT + 1;
+	int TASK__COMPLETED = NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Assessment</b></em>' container reference.
@@ -900,7 +1192,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK__ASSESSMENT = GRAPH_FEATURE_COUNT + 2;
+	int TASK__ASSESSMENT = NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Task</em>' class.
@@ -909,7 +1201,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_FEATURE_COUNT = GRAPH_FEATURE_COUNT + 3;
+	int TASK_FEATURE_COUNT = NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Task</em>' class.
@@ -918,17 +1210,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_OPERATION_COUNT = GRAPH_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.ScmImpl <em>Scm</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see io.opensemantics.semiotics.model.assessment.impl.ScmImpl
-	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getScm()
-	 * @generated
-	 */
-	int SCM = 12;
+	int TASK_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Repository</b></em>' attribute.
@@ -976,23 +1258,40 @@ public interface AssessmentPackage extends EPackage {
 	int SCM_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.LibraryImpl <em>Library</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see io.opensemantics.semiotics.model.assessment.impl.LibraryImpl
-	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getLibrary()
-	 * @generated
-	 */
-	int LIBRARY = 13;
-
-	/**
-	 * The feature id for the '<em><b>Root</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY__ROOT = GRAPH__ROOT;
+	int LIBRARY__LABEL = NODE__LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Notes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__NOTES = NODE__NOTES;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__CHILDREN = NODE__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIBRARY__PARENT = NODE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Group</b></em>' attribute.
@@ -1001,7 +1300,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY__GROUP = GRAPH_FEATURE_COUNT + 0;
+	int LIBRARY__GROUP = NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Artifact</b></em>' attribute.
@@ -1010,7 +1309,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY__ARTIFACT = GRAPH_FEATURE_COUNT + 1;
+	int LIBRARY__ARTIFACT = NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Version</b></em>' attribute.
@@ -1019,7 +1318,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY__VERSION = GRAPH_FEATURE_COUNT + 2;
+	int LIBRARY__VERSION = NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Application</b></em>' container reference.
@@ -1028,7 +1327,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY__APPLICATION = GRAPH_FEATURE_COUNT + 3;
+	int LIBRARY__APPLICATION = NODE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Library</em>' class.
@@ -1037,7 +1336,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_FEATURE_COUNT = GRAPH_FEATURE_COUNT + 4;
+	int LIBRARY_FEATURE_COUNT = NODE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Library</em>' class.
@@ -1046,72 +1345,62 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LIBRARY_OPERATION_COUNT = GRAPH_OPERATION_COUNT + 0;
+	int LIBRARY_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.ResourceImpl <em>Resource</em>}' class.
+	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.SnippetImpl <em>Snippet</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see io.opensemantics.semiotics.model.assessment.impl.ResourceImpl
-	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getResource()
+	 * @see io.opensemantics.semiotics.model.assessment.impl.SnippetImpl
+	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getSnippet()
 	 * @generated
 	 */
-	int RESOURCE = 14;
+	int SNIPPET = 14;
 
 	/**
-	 * The feature id for the '<em><b>Path</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE__PATH = 0;
-
-	/**
-	 * The feature id for the '<em><b>Location</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE__LOCATION = 1;
+	int SNIPPET__LABEL = GRAPH_NODE__LABEL;
 
 	/**
-	 * The number of structural features of the '<em>Resource</em>' class.
+	 * The feature id for the '<em><b>Notes</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_FEATURE_COUNT = 2;
+	int SNIPPET__NOTES = GRAPH_NODE__NOTES;
 
 	/**
-	 * The number of operations of the '<em>Resource</em>' class.
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_OPERATION_COUNT = 0;
+	int SNIPPET__CHILDREN = GRAPH_NODE__CHILDREN;
 
 	/**
-	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.LocationImpl <em>Location</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see io.opensemantics.semiotics.model.assessment.impl.LocationImpl
-	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getLocation()
-	 * @generated
-	 */
-	int LOCATION = 15;
-
-	/**
-	 * The feature id for the '<em><b>Line Start</b></em>' attribute.
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION__LINE_START = 0;
+	int SNIPPET__PARENT = GRAPH_NODE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Contents</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SNIPPET__CONTENTS = GRAPH_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Line End</b></em>' attribute.
@@ -1120,7 +1409,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION__LINE_END = 1;
+	int SNIPPET__LINE_END = GRAPH_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Column Start</b></em>' attribute.
@@ -1129,7 +1418,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION__COLUMN_START = 2;
+	int SNIPPET__COLUMN_START = GRAPH_NODE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Column End</b></em>' attribute.
@@ -1138,216 +1427,43 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION__COLUMN_END = 3;
+	int SNIPPET__COLUMN_END = GRAPH_NODE_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Resource</b></em>' container reference.
+	 * The feature id for the '<em><b>Line Start</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION__RESOURCE = 4;
+	int SNIPPET__LINE_START = GRAPH_NODE_FEATURE_COUNT + 4;
 
 	/**
-	 * The number of structural features of the '<em>Location</em>' class.
+	 * The feature id for the '<em><b>Resource</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_FEATURE_COUNT = 5;
+	int SNIPPET__RESOURCE = GRAPH_NODE_FEATURE_COUNT + 5;
 
 	/**
-	 * The number of operations of the '<em>Location</em>' class.
+	 * The number of structural features of the '<em>Snippet</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_OPERATION_COUNT = 0;
+	int SNIPPET_FEATURE_COUNT = GRAPH_NODE_FEATURE_COUNT + 6;
 
 	/**
-	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.FileImpl <em>File</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see io.opensemantics.semiotics.model.assessment.impl.FileImpl
-	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getFile()
-	 * @generated
-	 */
-	int FILE = 16;
-
-	/**
-	 * The feature id for the '<em><b>Path</b></em>' attribute.
+	 * The number of operations of the '<em>Snippet</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FILE__PATH = RESOURCE__PATH;
-
-	/**
-	 * The feature id for the '<em><b>Location</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE__LOCATION = RESOURCE__LOCATION;
-
-	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE__CHILDREN = RESOURCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE__PARENT = RESOURCE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Graph</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE__GRAPH = RESOURCE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>File</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_FEATURE_COUNT = RESOURCE_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>File</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FILE_OPERATION_COUNT = RESOURCE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.JavaImpl <em>Java</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see io.opensemantics.semiotics.model.assessment.impl.JavaImpl
-	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getJava()
-	 * @generated
-	 */
-	int JAVA = 17;
-
-	/**
-	 * The feature id for the '<em><b>Path</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JAVA__PATH = RESOURCE__PATH;
-
-	/**
-	 * The feature id for the '<em><b>Location</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JAVA__LOCATION = RESOURCE__LOCATION;
-
-	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JAVA__CHILDREN = RESOURCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JAVA__PARENT = RESOURCE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Graph</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JAVA__GRAPH = RESOURCE_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Package</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JAVA__PACKAGE = RESOURCE_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JAVA__TYPE = RESOURCE_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Field</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JAVA__FIELD = RESOURCE_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Method</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JAVA__METHOD = RESOURCE_FEATURE_COUNT + 6;
-
-	/**
-	 * The number of structural features of the '<em>Java</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JAVA_FEATURE_COUNT = RESOURCE_FEATURE_COUNT + 7;
-
-	/**
-	 * The number of operations of the '<em>Java</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JAVA_OPERATION_COUNT = RESOURCE_OPERATION_COUNT + 0;
+	int SNIPPET_OPERATION_COUNT = GRAPH_NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.UrlImpl <em>Url</em>}' class.
@@ -1357,7 +1473,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getUrl()
 	 * @generated
 	 */
-	int URL = 18;
+	int URL = 15;
 
 	/**
 	 * The feature id for the '<em><b>Pattern</b></em>' attribute.
@@ -1396,6 +1512,33 @@ public interface AssessmentPackage extends EPackage {
 	int URL_OPERATION_COUNT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Root</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRAPH__ROOT = 0;
+
+	/**
+	 * The number of structural features of the '<em>Graph</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRAPH_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Graph</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRAPH_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.GenericImpl <em>Generic</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1403,43 +1546,16 @@ public interface AssessmentPackage extends EPackage {
 	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getGeneric()
 	 * @generated
 	 */
-	int GENERIC = 20;
+	int GENERIC = 17;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GENERIC__CHILDREN = NODE__CHILDREN;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GENERIC__PARENT = NODE__PARENT;
-
-	/**
-	 * The feature id for the '<em><b>Graph</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GENERIC__GRAPH = NODE__GRAPH;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GENERIC__DESCRIPTION = NODE_FEATURE_COUNT + 0;
+	int GENERIC__LABEL = GRAPH_NODE__LABEL;
 
 	/**
 	 * The feature id for the '<em><b>Notes</b></em>' attribute.
@@ -1448,7 +1564,25 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERIC__NOTES = NODE_FEATURE_COUNT + 1;
+	int GENERIC__NOTES = GRAPH_NODE__NOTES;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC__CHILDREN = GRAPH_NODE__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GENERIC__PARENT = GRAPH_NODE__PARENT;
 
 	/**
 	 * The number of structural features of the '<em>Generic</em>' class.
@@ -1457,7 +1591,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERIC_FEATURE_COUNT = NODE_FEATURE_COUNT + 2;
+	int GENERIC_FEATURE_COUNT = GRAPH_NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Generic</em>' class.
@@ -1466,7 +1600,209 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GENERIC_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+	int GENERIC_OPERATION_COUNT = GRAPH_NODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.ControlImpl <em>Control</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see io.opensemantics.semiotics.model.assessment.impl.ControlImpl
+	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getControl()
+	 * @generated
+	 */
+	int CONTROL = 19;
+
+	/**
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL__LABEL = GRAPH_NODE__LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Notes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL__NOTES = GRAPH_NODE__NOTES;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL__CHILDREN = GRAPH_NODE__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL__PARENT = GRAPH_NODE__PARENT;
+
+	/**
+	 * The number of structural features of the '<em>Control</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_FEATURE_COUNT = GRAPH_NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Control</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_OPERATION_COUNT = GRAPH_NODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.impl.ResourceImpl <em>Resource</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see io.opensemantics.semiotics.model.assessment.impl.ResourceImpl
+	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getResource()
+	 * @generated
+	 */
+	int RESOURCE = 20;
+
+	/**
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE__LABEL = LABEL__LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Notes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE__NOTES = LABEL_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Application</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE__APPLICATION = LABEL_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Snippets</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE__SNIPPETS = LABEL_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Resource</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_FEATURE_COUNT = LABEL_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Resource</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_OPERATION_COUNT = LABEL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.Contents <em>Contents</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see io.opensemantics.semiotics.model.assessment.Contents
+	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getContents()
+	 * @generated
+	 */
+	int CONTENTS = 22;
+
+	/**
+	 * The feature id for the '<em><b>Contents</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTENTS__CONTENTS = 0;
+
+	/**
+	 * The number of structural features of the '<em>Contents</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTENTS_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Contents</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTENTS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.Notes <em>Notes</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see io.opensemantics.semiotics.model.assessment.Notes
+	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getNotes()
+	 * @generated
+	 */
+	int NOTES = 23;
+
+	/**
+	 * The feature id for the '<em><b>Notes</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NOTES__NOTES = 0;
+
+	/**
+	 * The number of structural features of the '<em>Notes</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NOTES_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Notes</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NOTES_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.HttpMethod <em>Http Method</em>}' enum.
@@ -1476,7 +1812,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getHttpMethod()
 	 * @generated
 	 */
-	int HTTP_METHOD = 21;
+	int HTTP_METHOD = 24;
 
 	/**
 	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.UrlPattern <em>Url Pattern</em>}' enum.
@@ -1486,7 +1822,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getUrlPattern()
 	 * @generated
 	 */
-	int URL_PATTERN = 22;
+	int URL_PATTERN = 25;
 
 	/**
 	 * The meta object id for the '{@link io.opensemantics.semiotics.model.assessment.Language <em>Language</em>}' enum.
@@ -1496,7 +1832,7 @@ public interface AssessmentPackage extends EPackage {
 	 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getLanguage()
 	 * @generated
 	 */
-	int LANGUAGE = 23;
+	int LANGUAGE = 26;
 
 
 	/**
@@ -1510,37 +1846,26 @@ public interface AssessmentPackage extends EPackage {
 	EClass getHttp();
 
 	/**
-	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Http#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Http#getRequest <em>Request</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Http#getDescription()
+	 * @return the meta object for the attribute '<em>Request</em>'.
+	 * @see io.opensemantics.semiotics.model.assessment.Http#getRequest()
 	 * @see #getHttp()
 	 * @generated
 	 */
-	EAttribute getHttp_Description();
+	EAttribute getHttp_Request();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link io.opensemantics.semiotics.model.assessment.Http#getMethods <em>Methods</em>}'.
+	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Http#getResponse <em>Response</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Methods</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Http#getMethods()
+	 * @return the meta object for the attribute '<em>Response</em>'.
+	 * @see io.opensemantics.semiotics.model.assessment.Http#getResponse()
 	 * @see #getHttp()
 	 * @generated
 	 */
-	EAttribute getHttp_Methods();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link io.opensemantics.semiotics.model.assessment.Http#getUri <em>Uri</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Uri</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Http#getUri()
-	 * @see #getHttp()
-	 * @generated
-	 */
-	EReference getHttp_Uri();
+	EAttribute getHttp_Response();
 
 	/**
 	 * Returns the meta object for class '{@link io.opensemantics.semiotics.model.assessment.Node <em>Node</em>}'.
@@ -1564,26 +1889,15 @@ public interface AssessmentPackage extends EPackage {
 	EReference getNode_Children();
 
 	/**
-	 * Returns the meta object for the container reference '{@link io.opensemantics.semiotics.model.assessment.Node#getParent <em>Parent</em>}'.
+	 * Returns the meta object for the reference '{@link io.opensemantics.semiotics.model.assessment.Node#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @return the meta object for the reference '<em>Parent</em>'.
 	 * @see io.opensemantics.semiotics.model.assessment.Node#getParent()
 	 * @see #getNode()
 	 * @generated
 	 */
 	EReference getNode_Parent();
-
-	/**
-	 * Returns the meta object for the container reference '{@link io.opensemantics.semiotics.model.assessment.Node#getGraph <em>Graph</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Graph</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Node#getGraph()
-	 * @see #getNode()
-	 * @generated
-	 */
-	EReference getNode_Graph();
 
 	/**
 	 * Returns the meta object for class '{@link io.opensemantics.semiotics.model.assessment.Assessment <em>Assessment</em>}'.
@@ -1738,17 +2052,6 @@ public interface AssessmentPackage extends EPackage {
 	EReference getApplication_Sinks();
 
 	/**
-	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Application#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Application#getName()
-	 * @see #getApplication()
-	 * @generated
-	 */
-	EAttribute getApplication_Name();
-
-	/**
 	 * Returns the meta object for the attribute list '{@link io.opensemantics.semiotics.model.assessment.Application#getLanguages <em>Languages</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1760,26 +2063,26 @@ public interface AssessmentPackage extends EPackage {
 	EAttribute getApplication_Languages();
 
 	/**
-	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Application#getLocation <em>Location</em>}'.
+	 * Returns the meta object for the containment reference list '{@link io.opensemantics.semiotics.model.assessment.Application#getResources <em>Resources</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Location</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Application#getLocation()
+	 * @return the meta object for the containment reference list '<em>Resources</em>'.
+	 * @see io.opensemantics.semiotics.model.assessment.Application#getResources()
 	 * @see #getApplication()
 	 * @generated
 	 */
-	EAttribute getApplication_Location();
+	EReference getApplication_Resources();
 
 	/**
-	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Application#getNotes <em>Notes</em>}'.
+	 * Returns the meta object for the containment reference list '{@link io.opensemantics.semiotics.model.assessment.Application#getUrls <em>Urls</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Notes</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Application#getNotes()
+	 * @return the meta object for the containment reference list '<em>Urls</em>'.
+	 * @see io.opensemantics.semiotics.model.assessment.Application#getUrls()
 	 * @see #getApplication()
 	 * @generated
 	 */
-	EAttribute getApplication_Notes();
+	EReference getApplication_Urls();
 
 	/**
 	 * Returns the meta object for class '{@link io.opensemantics.semiotics.model.assessment.Sink <em>Sink</em>}'.
@@ -1801,17 +2104,6 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getSink_Cwes();
-
-	/**
-	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Sink#isTainted <em>Tainted</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Tainted</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Sink#isTainted()
-	 * @see #getSink()
-	 * @generated
-	 */
-	EAttribute getSink_Tainted();
 
 	/**
 	 * Returns the meta object for the container reference '{@link io.opensemantics.semiotics.model.assessment.Sink#getApplication <em>Application</em>}'.
@@ -1909,17 +2201,6 @@ public interface AssessmentPackage extends EPackage {
 	EReference getFinding_Assessment();
 
 	/**
-	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Finding#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Finding#getDescription()
-	 * @see #getFinding()
-	 * @generated
-	 */
-	EAttribute getFinding_Description();
-
-	/**
 	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Finding#getReproducer <em>Reproducer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1953,69 +2234,69 @@ public interface AssessmentPackage extends EPackage {
 	EAttribute getFinding_References();
 
 	/**
-	 * Returns the meta object for class '{@link io.opensemantics.semiotics.model.assessment.Principal <em>Principal</em>}'.
+	 * Returns the meta object for class '{@link io.opensemantics.semiotics.model.assessment.Account <em>Account</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Principal</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Principal
+	 * @return the meta object for class '<em>Account</em>'.
+	 * @see io.opensemantics.semiotics.model.assessment.Account
 	 * @generated
 	 */
-	EClass getPrincipal();
+	EClass getAccount();
 
 	/**
-	 * Returns the meta object for the container reference '{@link io.opensemantics.semiotics.model.assessment.Principal#getApplication <em>Application</em>}'.
+	 * Returns the meta object for the container reference '{@link io.opensemantics.semiotics.model.assessment.Account#getApplication <em>Application</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Application</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Principal#getApplication()
-	 * @see #getPrincipal()
+	 * @see io.opensemantics.semiotics.model.assessment.Account#getApplication()
+	 * @see #getAccount()
 	 * @generated
 	 */
-	EReference getPrincipal_Application();
+	EReference getAccount_Application();
 
 	/**
-	 * Returns the meta object for the reference list '{@link io.opensemantics.semiotics.model.assessment.Principal#getEntitlements <em>Entitlements</em>}'.
+	 * Returns the meta object for the reference list '{@link io.opensemantics.semiotics.model.assessment.Account#getEntitlements <em>Entitlements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Entitlements</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Principal#getEntitlements()
-	 * @see #getPrincipal()
+	 * @see io.opensemantics.semiotics.model.assessment.Account#getEntitlements()
+	 * @see #getAccount()
 	 * @generated
 	 */
-	EReference getPrincipal_Entitlements();
+	EReference getAccount_Entitlements();
 
 	/**
-	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Principal#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Account#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Principal#getName()
-	 * @see #getPrincipal()
+	 * @see io.opensemantics.semiotics.model.assessment.Account#getName()
+	 * @see #getAccount()
 	 * @generated
 	 */
-	EAttribute getPrincipal_Name();
+	EAttribute getAccount_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Principal#getEmail <em>Email</em>}'.
+	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Account#getEmail <em>Email</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Email</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Principal#getEmail()
-	 * @see #getPrincipal()
+	 * @see io.opensemantics.semiotics.model.assessment.Account#getEmail()
+	 * @see #getAccount()
 	 * @generated
 	 */
-	EAttribute getPrincipal_Email();
+	EAttribute getAccount_Email();
 
 	/**
-	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Principal#getPassword <em>Password</em>}'.
+	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Account#getPassword <em>Password</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Password</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Principal#getPassword()
-	 * @see #getPrincipal()
+	 * @see io.opensemantics.semiotics.model.assessment.Account#getPassword()
+	 * @see #getAccount()
 	 * @generated
 	 */
-	EAttribute getPrincipal_Password();
+	EAttribute getAccount_Password();
 
 	/**
 	 * Returns the meta object for class '{@link io.opensemantics.semiotics.model.assessment.Entitlement <em>Entitlement</em>}'.
@@ -2058,17 +2339,6 @@ public interface AssessmentPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTask();
-
-	/**
-	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Task#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Task#getDescription()
-	 * @see #getTask()
-	 * @generated
-	 */
-	EAttribute getTask_Description();
 
 	/**
 	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Task#isCompleted <em>Completed</em>}'.
@@ -2190,165 +2460,69 @@ public interface AssessmentPackage extends EPackage {
 	EReference getLibrary_Application();
 
 	/**
-	 * Returns the meta object for class '{@link io.opensemantics.semiotics.model.assessment.Resource <em>Resource</em>}'.
+	 * Returns the meta object for class '{@link io.opensemantics.semiotics.model.assessment.Snippet <em>Snippet</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Resource</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Resource
+	 * @return the meta object for class '<em>Snippet</em>'.
+	 * @see io.opensemantics.semiotics.model.assessment.Snippet
 	 * @generated
 	 */
-	EClass getResource();
+	EClass getSnippet();
 
 	/**
-	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Resource#getPath <em>Path</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Path</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Resource#getPath()
-	 * @see #getResource()
-	 * @generated
-	 */
-	EAttribute getResource_Path();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link io.opensemantics.semiotics.model.assessment.Resource#getLocation <em>Location</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Location</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Resource#getLocation()
-	 * @see #getResource()
-	 * @generated
-	 */
-	EReference getResource_Location();
-
-	/**
-	 * Returns the meta object for class '{@link io.opensemantics.semiotics.model.assessment.Location <em>Location</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Location</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Location
-	 * @generated
-	 */
-	EClass getLocation();
-
-	/**
-	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Location#getLineStart <em>Line Start</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Line Start</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Location#getLineStart()
-	 * @see #getLocation()
-	 * @generated
-	 */
-	EAttribute getLocation_LineStart();
-
-	/**
-	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Location#getLineEnd <em>Line End</em>}'.
+	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Snippet#getLineEnd <em>Line End</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Line End</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Location#getLineEnd()
-	 * @see #getLocation()
+	 * @see io.opensemantics.semiotics.model.assessment.Snippet#getLineEnd()
+	 * @see #getSnippet()
 	 * @generated
 	 */
-	EAttribute getLocation_LineEnd();
+	EAttribute getSnippet_LineEnd();
 
 	/**
-	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Location#getColumnStart <em>Column Start</em>}'.
+	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Snippet#getColumnStart <em>Column Start</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Column Start</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Location#getColumnStart()
-	 * @see #getLocation()
+	 * @see io.opensemantics.semiotics.model.assessment.Snippet#getColumnStart()
+	 * @see #getSnippet()
 	 * @generated
 	 */
-	EAttribute getLocation_ColumnStart();
+	EAttribute getSnippet_ColumnStart();
 
 	/**
-	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Location#getColumnEnd <em>Column End</em>}'.
+	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Snippet#getColumnEnd <em>Column End</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Column End</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Location#getColumnEnd()
-	 * @see #getLocation()
+	 * @see io.opensemantics.semiotics.model.assessment.Snippet#getColumnEnd()
+	 * @see #getSnippet()
 	 * @generated
 	 */
-	EAttribute getLocation_ColumnEnd();
+	EAttribute getSnippet_ColumnEnd();
 
 	/**
-	 * Returns the meta object for the container reference '{@link io.opensemantics.semiotics.model.assessment.Location#getResource <em>Resource</em>}'.
+	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Snippet#getLineStart <em>Line Start</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Resource</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Location#getResource()
-	 * @see #getLocation()
+	 * @return the meta object for the attribute '<em>Line Start</em>'.
+	 * @see io.opensemantics.semiotics.model.assessment.Snippet#getLineStart()
+	 * @see #getSnippet()
 	 * @generated
 	 */
-	EReference getLocation_Resource();
+	EAttribute getSnippet_LineStart();
 
 	/**
-	 * Returns the meta object for class '{@link io.opensemantics.semiotics.model.assessment.File <em>File</em>}'.
+	 * Returns the meta object for the reference '{@link io.opensemantics.semiotics.model.assessment.Snippet#getResource <em>Resource</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>File</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.File
+	 * @return the meta object for the reference '<em>Resource</em>'.
+	 * @see io.opensemantics.semiotics.model.assessment.Snippet#getResource()
+	 * @see #getSnippet()
 	 * @generated
 	 */
-	EClass getFile();
-
-	/**
-	 * Returns the meta object for class '{@link io.opensemantics.semiotics.model.assessment.Java <em>Java</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Java</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Java
-	 * @generated
-	 */
-	EClass getJava();
-
-	/**
-	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Java#getPackage <em>Package</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Package</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Java#getPackage()
-	 * @see #getJava()
-	 * @generated
-	 */
-	EAttribute getJava_Package();
-
-	/**
-	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Java#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Java#getType()
-	 * @see #getJava()
-	 * @generated
-	 */
-	EAttribute getJava_Type();
-
-	/**
-	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Java#getField <em>Field</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Field</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Java#getField()
-	 * @see #getJava()
-	 * @generated
-	 */
-	EAttribute getJava_Field();
-
-	/**
-	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Java#getMethod <em>Method</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Method</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Java#getMethod()
-	 * @see #getJava()
-	 * @generated
-	 */
-	EAttribute getJava_Method();
+	EReference getSnippet_Resource();
 
 	/**
 	 * Returns the meta object for class '{@link io.opensemantics.semiotics.model.assessment.Url <em>Url</em>}'.
@@ -2414,26 +2588,119 @@ public interface AssessmentPackage extends EPackage {
 	EClass getGeneric();
 
 	/**
-	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Generic#getDescription <em>Description</em>}'.
+	 * Returns the meta object for class '{@link io.opensemantics.semiotics.model.assessment.GraphNode <em>Graph Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Generic#getDescription()
-	 * @see #getGeneric()
+	 * @return the meta object for class '<em>Graph Node</em>'.
+	 * @see io.opensemantics.semiotics.model.assessment.GraphNode
 	 * @generated
 	 */
-	EAttribute getGeneric_Description();
+	EClass getGraphNode();
 
 	/**
-	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Generic#getNotes <em>Notes</em>}'.
+	 * Returns the meta object for class '{@link io.opensemantics.semiotics.model.assessment.Control <em>Control</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Control</em>'.
+	 * @see io.opensemantics.semiotics.model.assessment.Control
+	 * @generated
+	 */
+	EClass getControl();
+
+	/**
+	 * Returns the meta object for class '{@link io.opensemantics.semiotics.model.assessment.Resource <em>Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Resource</em>'.
+	 * @see io.opensemantics.semiotics.model.assessment.Resource
+	 * @generated
+	 */
+	EClass getResource();
+
+	/**
+	 * Returns the meta object for the container reference '{@link io.opensemantics.semiotics.model.assessment.Resource#getApplication <em>Application</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Application</em>'.
+	 * @see io.opensemantics.semiotics.model.assessment.Resource#getApplication()
+	 * @see #getResource()
+	 * @generated
+	 */
+	EReference getResource_Application();
+
+	/**
+	 * Returns the meta object for the reference list '{@link io.opensemantics.semiotics.model.assessment.Resource#getSnippets <em>Snippets</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Snippets</em>'.
+	 * @see io.opensemantics.semiotics.model.assessment.Resource#getSnippets()
+	 * @see #getResource()
+	 * @generated
+	 */
+	EReference getResource_Snippets();
+
+	/**
+	 * Returns the meta object for class '{@link io.opensemantics.semiotics.model.assessment.Label <em>Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Label</em>'.
+	 * @see io.opensemantics.semiotics.model.assessment.Label
+	 * @generated
+	 */
+	EClass getLabel();
+
+	/**
+	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Label#getLabel <em>Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Label</em>'.
+	 * @see io.opensemantics.semiotics.model.assessment.Label#getLabel()
+	 * @see #getLabel()
+	 * @generated
+	 */
+	EAttribute getLabel_Label();
+
+	/**
+	 * Returns the meta object for class '{@link io.opensemantics.semiotics.model.assessment.Contents <em>Contents</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Contents</em>'.
+	 * @see io.opensemantics.semiotics.model.assessment.Contents
+	 * @generated
+	 */
+	EClass getContents();
+
+	/**
+	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Contents#getContents <em>Contents</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Contents</em>'.
+	 * @see io.opensemantics.semiotics.model.assessment.Contents#getContents()
+	 * @see #getContents()
+	 * @generated
+	 */
+	EAttribute getContents_Contents();
+
+	/**
+	 * Returns the meta object for class '{@link io.opensemantics.semiotics.model.assessment.Notes <em>Notes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Notes</em>'.
+	 * @see io.opensemantics.semiotics.model.assessment.Notes
+	 * @generated
+	 */
+	EClass getNotes();
+
+	/**
+	 * Returns the meta object for the attribute '{@link io.opensemantics.semiotics.model.assessment.Notes#getNotes <em>Notes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Notes</em>'.
-	 * @see io.opensemantics.semiotics.model.assessment.Generic#getNotes()
-	 * @see #getGeneric()
+	 * @see io.opensemantics.semiotics.model.assessment.Notes#getNotes()
+	 * @see #getNotes()
 	 * @generated
 	 */
-	EAttribute getGeneric_Notes();
+	EAttribute getNotes_Notes();
 
 	/**
 	 * Returns the meta object for enum '{@link io.opensemantics.semiotics.model.assessment.HttpMethod <em>Http Method</em>}'.
@@ -2499,28 +2766,20 @@ public interface AssessmentPackage extends EPackage {
 		EClass HTTP = eINSTANCE.getHttp();
 
 		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Request</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute HTTP__DESCRIPTION = eINSTANCE.getHttp_Description();
+		EAttribute HTTP__REQUEST = eINSTANCE.getHttp_Request();
 
 		/**
-		 * The meta object literal for the '<em><b>Methods</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Response</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute HTTP__METHODS = eINSTANCE.getHttp_Methods();
-
-		/**
-		 * The meta object literal for the '<em><b>Uri</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference HTTP__URI = eINSTANCE.getHttp_Uri();
+		EAttribute HTTP__RESPONSE = eINSTANCE.getHttp_Response();
 
 		/**
 		 * The meta object literal for the '{@link io.opensemantics.semiotics.model.assessment.impl.NodeImpl <em>Node</em>}' class.
@@ -2541,20 +2800,12 @@ public interface AssessmentPackage extends EPackage {
 		EReference NODE__CHILDREN = eINSTANCE.getNode_Children();
 
 		/**
-		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * The meta object literal for the '<em><b>Parent</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference NODE__PARENT = eINSTANCE.getNode_Parent();
-
-		/**
-		 * The meta object literal for the '<em><b>Graph</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference NODE__GRAPH = eINSTANCE.getNode_Graph();
 
 		/**
 		 * The meta object literal for the '{@link io.opensemantics.semiotics.model.assessment.impl.AssessmentImpl <em>Assessment</em>}' class.
@@ -2673,14 +2924,6 @@ public interface AssessmentPackage extends EPackage {
 		EReference APPLICATION__SINKS = eINSTANCE.getApplication_Sinks();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute APPLICATION__NAME = eINSTANCE.getApplication_Name();
-
-		/**
 		 * The meta object literal for the '<em><b>Languages</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2689,20 +2932,20 @@ public interface AssessmentPackage extends EPackage {
 		EAttribute APPLICATION__LANGUAGES = eINSTANCE.getApplication_Languages();
 
 		/**
-		 * The meta object literal for the '<em><b>Location</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Resources</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute APPLICATION__LOCATION = eINSTANCE.getApplication_Location();
+		EReference APPLICATION__RESOURCES = eINSTANCE.getApplication_Resources();
 
 		/**
-		 * The meta object literal for the '<em><b>Notes</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Urls</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute APPLICATION__NOTES = eINSTANCE.getApplication_Notes();
+		EReference APPLICATION__URLS = eINSTANCE.getApplication_Urls();
 
 		/**
 		 * The meta object literal for the '{@link io.opensemantics.semiotics.model.assessment.impl.SinkImpl <em>Sink</em>}' class.
@@ -2721,14 +2964,6 @@ public interface AssessmentPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SINK__CWES = eINSTANCE.getSink_Cwes();
-
-		/**
-		 * The meta object literal for the '<em><b>Tainted</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SINK__TAINTED = eINSTANCE.getSink_Tainted();
 
 		/**
 		 * The meta object literal for the '<em><b>Application</b></em>' container reference feature.
@@ -2811,14 +3046,6 @@ public interface AssessmentPackage extends EPackage {
 		EReference FINDING__ASSESSMENT = eINSTANCE.getFinding_Assessment();
 
 		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FINDING__DESCRIPTION = eINSTANCE.getFinding_Description();
-
-		/**
 		 * The meta object literal for the '<em><b>Reproducer</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2843,14 +3070,14 @@ public interface AssessmentPackage extends EPackage {
 		EAttribute FINDING__REFERENCES = eINSTANCE.getFinding_References();
 
 		/**
-		 * The meta object literal for the '{@link io.opensemantics.semiotics.model.assessment.impl.PrincipalImpl <em>Principal</em>}' class.
+		 * The meta object literal for the '{@link io.opensemantics.semiotics.model.assessment.impl.AccountImpl <em>Account</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see io.opensemantics.semiotics.model.assessment.impl.PrincipalImpl
-		 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getPrincipal()
+		 * @see io.opensemantics.semiotics.model.assessment.impl.AccountImpl
+		 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getAccount()
 		 * @generated
 		 */
-		EClass PRINCIPAL = eINSTANCE.getPrincipal();
+		EClass ACCOUNT = eINSTANCE.getAccount();
 
 		/**
 		 * The meta object literal for the '<em><b>Application</b></em>' container reference feature.
@@ -2858,7 +3085,7 @@ public interface AssessmentPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PRINCIPAL__APPLICATION = eINSTANCE.getPrincipal_Application();
+		EReference ACCOUNT__APPLICATION = eINSTANCE.getAccount_Application();
 
 		/**
 		 * The meta object literal for the '<em><b>Entitlements</b></em>' reference list feature.
@@ -2866,7 +3093,7 @@ public interface AssessmentPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PRINCIPAL__ENTITLEMENTS = eINSTANCE.getPrincipal_Entitlements();
+		EReference ACCOUNT__ENTITLEMENTS = eINSTANCE.getAccount_Entitlements();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -2874,7 +3101,7 @@ public interface AssessmentPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PRINCIPAL__NAME = eINSTANCE.getPrincipal_Name();
+		EAttribute ACCOUNT__NAME = eINSTANCE.getAccount_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Email</b></em>' attribute feature.
@@ -2882,7 +3109,7 @@ public interface AssessmentPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PRINCIPAL__EMAIL = eINSTANCE.getPrincipal_Email();
+		EAttribute ACCOUNT__EMAIL = eINSTANCE.getAccount_Email();
 
 		/**
 		 * The meta object literal for the '<em><b>Password</b></em>' attribute feature.
@@ -2890,7 +3117,7 @@ public interface AssessmentPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PRINCIPAL__PASSWORD = eINSTANCE.getPrincipal_Password();
+		EAttribute ACCOUNT__PASSWORD = eINSTANCE.getAccount_Password();
 
 		/**
 		 * The meta object literal for the '{@link io.opensemantics.semiotics.model.assessment.impl.EntitlementImpl <em>Entitlement</em>}' class.
@@ -2927,14 +3154,6 @@ public interface AssessmentPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TASK = eINSTANCE.getTask();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TASK__DESCRIPTION = eINSTANCE.getTask_Description();
 
 		/**
 		 * The meta object literal for the '<em><b>Completed</b></em>' attribute feature.
@@ -3029,48 +3248,14 @@ public interface AssessmentPackage extends EPackage {
 		EReference LIBRARY__APPLICATION = eINSTANCE.getLibrary_Application();
 
 		/**
-		 * The meta object literal for the '{@link io.opensemantics.semiotics.model.assessment.impl.ResourceImpl <em>Resource</em>}' class.
+		 * The meta object literal for the '{@link io.opensemantics.semiotics.model.assessment.impl.SnippetImpl <em>Snippet</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see io.opensemantics.semiotics.model.assessment.impl.ResourceImpl
-		 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getResource()
+		 * @see io.opensemantics.semiotics.model.assessment.impl.SnippetImpl
+		 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getSnippet()
 		 * @generated
 		 */
-		EClass RESOURCE = eINSTANCE.getResource();
-
-		/**
-		 * The meta object literal for the '<em><b>Path</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute RESOURCE__PATH = eINSTANCE.getResource_Path();
-
-		/**
-		 * The meta object literal for the '<em><b>Location</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference RESOURCE__LOCATION = eINSTANCE.getResource_Location();
-
-		/**
-		 * The meta object literal for the '{@link io.opensemantics.semiotics.model.assessment.impl.LocationImpl <em>Location</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see io.opensemantics.semiotics.model.assessment.impl.LocationImpl
-		 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getLocation()
-		 * @generated
-		 */
-		EClass LOCATION = eINSTANCE.getLocation();
-
-		/**
-		 * The meta object literal for the '<em><b>Line Start</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LOCATION__LINE_START = eINSTANCE.getLocation_LineStart();
+		EClass SNIPPET = eINSTANCE.getSnippet();
 
 		/**
 		 * The meta object literal for the '<em><b>Line End</b></em>' attribute feature.
@@ -3078,7 +3263,7 @@ public interface AssessmentPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LOCATION__LINE_END = eINSTANCE.getLocation_LineEnd();
+		EAttribute SNIPPET__LINE_END = eINSTANCE.getSnippet_LineEnd();
 
 		/**
 		 * The meta object literal for the '<em><b>Column Start</b></em>' attribute feature.
@@ -3086,7 +3271,7 @@ public interface AssessmentPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LOCATION__COLUMN_START = eINSTANCE.getLocation_ColumnStart();
+		EAttribute SNIPPET__COLUMN_START = eINSTANCE.getSnippet_ColumnStart();
 
 		/**
 		 * The meta object literal for the '<em><b>Column End</b></em>' attribute feature.
@@ -3094,67 +3279,23 @@ public interface AssessmentPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LOCATION__COLUMN_END = eINSTANCE.getLocation_ColumnEnd();
+		EAttribute SNIPPET__COLUMN_END = eINSTANCE.getSnippet_ColumnEnd();
 
 		/**
-		 * The meta object literal for the '<em><b>Resource</b></em>' container reference feature.
+		 * The meta object literal for the '<em><b>Line Start</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference LOCATION__RESOURCE = eINSTANCE.getLocation_Resource();
+		EAttribute SNIPPET__LINE_START = eINSTANCE.getSnippet_LineStart();
 
 		/**
-		 * The meta object literal for the '{@link io.opensemantics.semiotics.model.assessment.impl.FileImpl <em>File</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see io.opensemantics.semiotics.model.assessment.impl.FileImpl
-		 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getFile()
-		 * @generated
-		 */
-		EClass FILE = eINSTANCE.getFile();
-
-		/**
-		 * The meta object literal for the '{@link io.opensemantics.semiotics.model.assessment.impl.JavaImpl <em>Java</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see io.opensemantics.semiotics.model.assessment.impl.JavaImpl
-		 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getJava()
-		 * @generated
-		 */
-		EClass JAVA = eINSTANCE.getJava();
-
-		/**
-		 * The meta object literal for the '<em><b>Package</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Resource</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute JAVA__PACKAGE = eINSTANCE.getJava_Package();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute JAVA__TYPE = eINSTANCE.getJava_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Field</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute JAVA__FIELD = eINSTANCE.getJava_Field();
-
-		/**
-		 * The meta object literal for the '<em><b>Method</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute JAVA__METHOD = eINSTANCE.getJava_Method();
+		EReference SNIPPET__RESOURCE = eINSTANCE.getSnippet_Resource();
 
 		/**
 		 * The meta object literal for the '{@link io.opensemantics.semiotics.model.assessment.impl.UrlImpl <em>Url</em>}' class.
@@ -3211,12 +3352,96 @@ public interface AssessmentPackage extends EPackage {
 		EClass GENERIC = eINSTANCE.getGeneric();
 
 		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * The meta object literal for the '{@link io.opensemantics.semiotics.model.assessment.impl.GraphNodeImpl <em>Graph Node</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see io.opensemantics.semiotics.model.assessment.impl.GraphNodeImpl
+		 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getGraphNode()
+		 * @generated
+		 */
+		EClass GRAPH_NODE = eINSTANCE.getGraphNode();
+
+		/**
+		 * The meta object literal for the '{@link io.opensemantics.semiotics.model.assessment.impl.ControlImpl <em>Control</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see io.opensemantics.semiotics.model.assessment.impl.ControlImpl
+		 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getControl()
+		 * @generated
+		 */
+		EClass CONTROL = eINSTANCE.getControl();
+
+		/**
+		 * The meta object literal for the '{@link io.opensemantics.semiotics.model.assessment.impl.ResourceImpl <em>Resource</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see io.opensemantics.semiotics.model.assessment.impl.ResourceImpl
+		 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getResource()
+		 * @generated
+		 */
+		EClass RESOURCE = eINSTANCE.getResource();
+
+		/**
+		 * The meta object literal for the '<em><b>Application</b></em>' container reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GENERIC__DESCRIPTION = eINSTANCE.getGeneric_Description();
+		EReference RESOURCE__APPLICATION = eINSTANCE.getResource_Application();
+
+		/**
+		 * The meta object literal for the '<em><b>Snippets</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RESOURCE__SNIPPETS = eINSTANCE.getResource_Snippets();
+
+		/**
+		 * The meta object literal for the '{@link io.opensemantics.semiotics.model.assessment.Label <em>Label</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see io.opensemantics.semiotics.model.assessment.Label
+		 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getLabel()
+		 * @generated
+		 */
+		EClass LABEL = eINSTANCE.getLabel();
+
+		/**
+		 * The meta object literal for the '<em><b>Label</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LABEL__LABEL = eINSTANCE.getLabel_Label();
+
+		/**
+		 * The meta object literal for the '{@link io.opensemantics.semiotics.model.assessment.Contents <em>Contents</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see io.opensemantics.semiotics.model.assessment.Contents
+		 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getContents()
+		 * @generated
+		 */
+		EClass CONTENTS = eINSTANCE.getContents();
+
+		/**
+		 * The meta object literal for the '<em><b>Contents</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONTENTS__CONTENTS = eINSTANCE.getContents_Contents();
+
+		/**
+		 * The meta object literal for the '{@link io.opensemantics.semiotics.model.assessment.Notes <em>Notes</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see io.opensemantics.semiotics.model.assessment.Notes
+		 * @see io.opensemantics.semiotics.model.assessment.impl.AssessmentPackageImpl#getNotes()
+		 * @generated
+		 */
+		EClass NOTES = eINSTANCE.getNotes();
 
 		/**
 		 * The meta object literal for the '<em><b>Notes</b></em>' attribute feature.
@@ -3224,7 +3449,7 @@ public interface AssessmentPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GENERIC__NOTES = eINSTANCE.getGeneric_Notes();
+		EAttribute NOTES__NOTES = eINSTANCE.getNotes_Notes();
 
 		/**
 		 * The meta object literal for the '{@link io.opensemantics.semiotics.model.assessment.HttpMethod <em>Http Method</em>}' enum.

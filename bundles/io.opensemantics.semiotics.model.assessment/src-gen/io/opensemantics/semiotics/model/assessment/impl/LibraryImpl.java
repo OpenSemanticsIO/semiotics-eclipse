@@ -18,8 +18,6 @@ package io.opensemantics.semiotics.model.assessment.impl;
 import io.opensemantics.semiotics.model.assessment.Application;
 import io.opensemantics.semiotics.model.assessment.AssessmentPackage;
 import io.opensemantics.semiotics.model.assessment.Library;
-import io.opensemantics.semiotics.model.assessment.Node;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -46,7 +44,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *
  * @generated
  */
-public class LibraryImpl extends GraphImpl<Node> implements Library {
+public class LibraryImpl extends NodeImpl implements Library {
 	/**
 	 * The default value of the '{@link #getGroup() <em>Group</em>}' attribute.
 	 * <!-- begin-user-doc -->

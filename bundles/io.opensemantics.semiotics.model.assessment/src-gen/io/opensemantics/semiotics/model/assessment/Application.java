@@ -17,8 +17,6 @@ package io.opensemantics.semiotics.model.assessment;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Application</b></em>'.
@@ -37,17 +35,16 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getLibraries <em>Libraries</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getViews <em>Views</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getSinks <em>Sinks</em>}</li>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getName <em>Name</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getLanguages <em>Languages</em>}</li>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getLocation <em>Location</em>}</li>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getNotes <em>Notes</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getResources <em>Resources</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getUrls <em>Urls</em>}</li>
  * </ul>
  *
  * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication()
  * @model
  * @generated
  */
-public interface Application extends EObject {
+public interface Application extends Label, Notes {
 	/**
 	 * Returns the value of the '<em><b>Assessment</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Assessment#getApplications <em>Applications</em>}'.
@@ -78,8 +75,8 @@ public interface Application extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Accounts</b></em>' containment reference list.
-	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Principal}.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Principal#getApplication <em>Application</em>}'.
+	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Account}.
+	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Account#getApplication <em>Application</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Accounts</em>' containment reference list isn't clear,
@@ -88,11 +85,11 @@ public interface Application extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Accounts</em>' containment reference list.
 	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Accounts()
-	 * @see io.opensemantics.semiotics.model.assessment.Principal#getApplication
+	 * @see io.opensemantics.semiotics.model.assessment.Account#getApplication
 	 * @model opposite="application" containment="true"
 	 * @generated
 	 */
-	EList<Principal> getAccounts();
+	EList<Account> getAccounts();
 
 	/**
 	 * Returns the value of the '<em><b>Entitlements</b></em>' containment reference list.
@@ -231,32 +228,6 @@ public interface Application extends EObject {
 	EList<Sink> getSinks();
 
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Name()
-	 * @model
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Application#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Languages</b></em>' attribute list.
 	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Language}.
 	 * The literals are from the enumeration {@link io.opensemantics.semiotics.model.assessment.Language}.
@@ -275,55 +246,37 @@ public interface Application extends EObject {
 	EList<Language> getLanguages();
 
 	/**
-	 * Returns the value of the '<em><b>Location</b></em>' attribute.
+	 * Returns the value of the '<em><b>Resources</b></em>' containment reference list.
+	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Resource}.
+	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Resource#getApplication <em>Application</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Location</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Resources</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Location</em>' attribute.
-	 * @see #setLocation(String)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Location()
-	 * @model
+	 * @return the value of the '<em>Resources</em>' containment reference list.
+	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Resources()
+	 * @see io.opensemantics.semiotics.model.assessment.Resource#getApplication
+	 * @model opposite="application" containment="true"
 	 * @generated
 	 */
-	String getLocation();
+	EList<Resource> getResources();
 
 	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Application#getLocation <em>Location</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Location</em>' attribute.
-	 * @see #getLocation()
-	 * @generated
-	 */
-	void setLocation(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Notes</b></em>' attribute.
+	 * Returns the value of the '<em><b>Urls</b></em>' containment reference list.
+	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Url}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Notes</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Urls</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Notes</em>' attribute.
-	 * @see #setNotes(String)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Notes()
-	 * @model
+	 * @return the value of the '<em>Urls</em>' containment reference list.
+	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Urls()
+	 * @model containment="true"
 	 * @generated
 	 */
-	String getNotes();
-
-	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Application#getNotes <em>Notes</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Notes</em>' attribute.
-	 * @see #getNotes()
-	 * @generated
-	 */
-	void setNotes(String value);
+	EList<Url> getUrls();
 
 } // Application

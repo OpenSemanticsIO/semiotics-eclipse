@@ -15,7 +15,7 @@
  */
 package io.opensemantics.semiotics.model.assessment;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,67 +26,59 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.Resource#getPath <em>Path</em>}</li>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.Resource#getLocation <em>Location</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.Resource#getApplication <em>Application</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.Resource#getSnippets <em>Snippets</em>}</li>
  * </ul>
  *
  * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getResource()
- * @model abstract="true"
+ * @model
  * @generated
  */
-public interface Resource extends EObject {
+public interface Resource extends Label, Notes {
 	/**
-	 * Returns the value of the '<em><b>Path</b></em>' attribute.
+	 * Returns the value of the '<em><b>Application</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Application#getResources <em>Resources</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Path</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Application</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Path</em>' attribute.
-	 * @see #setPath(String)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getResource_Path()
-	 * @model
+	 * @return the value of the '<em>Application</em>' container reference.
+	 * @see #setApplication(Application)
+	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getResource_Application()
+	 * @see io.opensemantics.semiotics.model.assessment.Application#getResources
+	 * @model opposite="resources" transient="false"
 	 * @generated
 	 */
-	String getPath();
+	Application getApplication();
 
 	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Resource#getPath <em>Path</em>}' attribute.
+	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Resource#getApplication <em>Application</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Path</em>' attribute.
-	 * @see #getPath()
+	 * @param value the new value of the '<em>Application</em>' container reference.
+	 * @see #getApplication()
 	 * @generated
 	 */
-	void setPath(String value);
+	void setApplication(Application value);
 
 	/**
-	 * Returns the value of the '<em><b>Location</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Location#getResource <em>Resource</em>}'.
+	 * Returns the value of the '<em><b>Snippets</b></em>' reference list.
+	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Snippet}.
+	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Snippet#getResource <em>Resource</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Location</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Snippets</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Location</em>' containment reference.
-	 * @see #setLocation(Location)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getResource_Location()
-	 * @see io.opensemantics.semiotics.model.assessment.Location#getResource
-	 * @model opposite="resource" containment="true"
+	 * @return the value of the '<em>Snippets</em>' reference list.
+	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getResource_Snippets()
+	 * @see io.opensemantics.semiotics.model.assessment.Snippet#getResource
+	 * @model opposite="resource"
 	 * @generated
 	 */
-	Location getLocation();
-
-	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Resource#getLocation <em>Location</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Location</em>' containment reference.
-	 * @see #getLocation()
-	 * @generated
-	 */
-	void setLocation(Location value);
+	EList<Snippet> getSnippets();
 
 } // Resource

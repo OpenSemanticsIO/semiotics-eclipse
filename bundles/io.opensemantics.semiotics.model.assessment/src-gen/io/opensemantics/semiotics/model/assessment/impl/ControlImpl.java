@@ -13,18 +13,38 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.opensemantics.semiotics.model.assessment;
+package io.opensemantics.semiotics.model.assessment.impl;
 
+import io.opensemantics.semiotics.model.assessment.AssessmentPackage;
+import io.opensemantics.semiotics.model.assessment.Control;
+
+import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>File</b></em>'.
+ * An implementation of the model object '<em><b>Control</b></em>'.
  * <!-- end-user-doc -->
  *
- *
- * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getFile()
- * @model
  * @generated
  */
-public interface File extends Resource, Node {
-} // File
+public class ControlImpl extends GraphNodeImpl implements Control {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ControlImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return AssessmentPackage.Literals.CONTROL;
+	}
+
+} //ControlImpl

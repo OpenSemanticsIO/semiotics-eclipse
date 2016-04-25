@@ -15,6 +15,7 @@
  */
 package io.opensemantics.semiotics.model.assessment.impl;
 
+import io.opensemantics.semiotics.model.assessment.Account;
 import io.opensemantics.semiotics.model.assessment.Application;
 import io.opensemantics.semiotics.model.assessment.Assessment;
 import io.opensemantics.semiotics.model.assessment.AssessmentPackage;
@@ -23,9 +24,11 @@ import io.opensemantics.semiotics.model.assessment.Entitlement;
 import io.opensemantics.semiotics.model.assessment.Language;
 import io.opensemantics.semiotics.model.assessment.Library;
 import io.opensemantics.semiotics.model.assessment.Model;
-import io.opensemantics.semiotics.model.assessment.Principal;
+import io.opensemantics.semiotics.model.assessment.Notes;
+import io.opensemantics.semiotics.model.assessment.Resource;
 import io.opensemantics.semiotics.model.assessment.Scm;
 import io.opensemantics.semiotics.model.assessment.Sink;
+import io.opensemantics.semiotics.model.assessment.Url;
 import io.opensemantics.semiotics.model.assessment.View;
 
 import java.util.Collection;
@@ -42,6 +45,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -54,6 +58,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.ApplicationImpl#getLabel <em>Label</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.ApplicationImpl#getNotes <em>Notes</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.ApplicationImpl#getAssessment <em>Assessment</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.ApplicationImpl#getAccounts <em>Accounts</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.ApplicationImpl#getEntitlements <em>Entitlements</em>}</li>
@@ -63,15 +69,54 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.ApplicationImpl#getLibraries <em>Libraries</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.ApplicationImpl#getViews <em>Views</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.ApplicationImpl#getSinks <em>Sinks</em>}</li>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.ApplicationImpl#getName <em>Name</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.ApplicationImpl#getLanguages <em>Languages</em>}</li>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.ApplicationImpl#getLocation <em>Location</em>}</li>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.ApplicationImpl#getNotes <em>Notes</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.ApplicationImpl#getResources <em>Resources</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.ApplicationImpl#getUrls <em>Urls</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ApplicationImpl extends MinimalEObjectImpl.Container implements Application {
+	/**
+	 * The default value of the '{@link #getLabel() <em>Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLabel()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LABEL_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getLabel() <em>Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLabel()
+	 * @generated
+	 * @ordered
+	 */
+	protected String label = LABEL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getNotes() <em>Notes</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNotes()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NOTES_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getNotes() <em>Notes</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNotes()
+	 * @generated
+	 * @ordered
+	 */
+	protected String notes = NOTES_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getAccounts() <em>Accounts</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -80,7 +125,7 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Principal> accounts;
+	protected EList<Account> accounts;
 
 	/**
 	 * The cached value of the '{@link #getEntitlements() <em>Entitlements</em>}' containment reference list.
@@ -153,26 +198,6 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	protected EList<Sink> sinks;
 
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
-	/**
 	 * The cached value of the '{@link #getLanguages() <em>Languages</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -183,44 +208,24 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	protected EList<Language> languages;
 
 	/**
-	 * The default value of the '{@link #getLocation() <em>Location</em>}' attribute.
+	 * The cached value of the '{@link #getResources() <em>Resources</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLocation()
+	 * @see #getResources()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String LOCATION_EDEFAULT = null;
+	protected EList<Resource> resources;
 
 	/**
-	 * The cached value of the '{@link #getLocation() <em>Location</em>}' attribute.
+	 * The cached value of the '{@link #getUrls() <em>Urls</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLocation()
+	 * @see #getUrls()
 	 * @generated
 	 * @ordered
 	 */
-	protected String location = LOCATION_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getNotes() <em>Notes</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNotes()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NOTES_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getNotes() <em>Notes</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNotes()
-	 * @generated
-	 * @ordered
-	 */
-	protected String notes = NOTES_EDEFAULT;
+	protected EList<Url> urls;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -239,6 +244,27 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	@Override
 	protected EClass eStaticClass() {
 		return AssessmentPackage.Literals.APPLICATION;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getLabel() {
+		return label;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLabel(String newLabel) {
+		String oldLabel = label;
+		label = newLabel;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.APPLICATION__LABEL, oldLabel, label));
 	}
 
 	/**
@@ -287,9 +313,9 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Principal> getAccounts() {
+	public EList<Account> getAccounts() {
 		if (accounts == null) {
-			accounts = new EObjectContainmentWithInverseEList<Principal>(Principal.class, this, AssessmentPackage.APPLICATION__ACCOUNTS, AssessmentPackage.PRINCIPAL__APPLICATION);
+			accounts = new EObjectContainmentWithInverseEList<Account>(Account.class, this, AssessmentPackage.APPLICATION__ACCOUNTS, AssessmentPackage.ACCOUNT__APPLICATION);
 		}
 		return accounts;
 	}
@@ -414,53 +440,11 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.APPLICATION__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<Language> getLanguages() {
 		if (languages == null) {
 			languages = new EDataTypeUniqueEList<Language>(Language.class, this, AssessmentPackage.APPLICATION__LANGUAGES);
 		}
 		return languages;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getLocation() {
-		return location;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLocation(String newLocation) {
-		String oldLocation = location;
-		location = newLocation;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.APPLICATION__LOCATION, oldLocation, location));
 	}
 
 	/**
@@ -482,6 +466,30 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 		notes = newNotes;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.APPLICATION__NOTES, oldNotes, notes));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Resource> getResources() {
+		if (resources == null) {
+			resources = new EObjectContainmentWithInverseEList<Resource>(Resource.class, this, AssessmentPackage.APPLICATION__RESOURCES, AssessmentPackage.RESOURCE__APPLICATION);
+		}
+		return resources;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Url> getUrls() {
+		if (urls == null) {
+			urls = new EObjectContainmentEList<Url>(Url.class, this, AssessmentPackage.APPLICATION__URLS);
+		}
+		return urls;
 	}
 
 	/**
@@ -515,6 +523,8 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getViews()).basicAdd(otherEnd, msgs);
 			case AssessmentPackage.APPLICATION__SINKS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSinks()).basicAdd(otherEnd, msgs);
+			case AssessmentPackage.APPLICATION__RESOURCES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getResources()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -545,6 +555,10 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 				return ((InternalEList<?>)getViews()).basicRemove(otherEnd, msgs);
 			case AssessmentPackage.APPLICATION__SINKS:
 				return ((InternalEList<?>)getSinks()).basicRemove(otherEnd, msgs);
+			case AssessmentPackage.APPLICATION__RESOURCES:
+				return ((InternalEList<?>)getResources()).basicRemove(otherEnd, msgs);
+			case AssessmentPackage.APPLICATION__URLS:
+				return ((InternalEList<?>)getUrls()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -571,6 +585,10 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case AssessmentPackage.APPLICATION__LABEL:
+				return getLabel();
+			case AssessmentPackage.APPLICATION__NOTES:
+				return getNotes();
 			case AssessmentPackage.APPLICATION__ASSESSMENT:
 				return getAssessment();
 			case AssessmentPackage.APPLICATION__ACCOUNTS:
@@ -589,14 +607,12 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 				return getViews();
 			case AssessmentPackage.APPLICATION__SINKS:
 				return getSinks();
-			case AssessmentPackage.APPLICATION__NAME:
-				return getName();
 			case AssessmentPackage.APPLICATION__LANGUAGES:
 				return getLanguages();
-			case AssessmentPackage.APPLICATION__LOCATION:
-				return getLocation();
-			case AssessmentPackage.APPLICATION__NOTES:
-				return getNotes();
+			case AssessmentPackage.APPLICATION__RESOURCES:
+				return getResources();
+			case AssessmentPackage.APPLICATION__URLS:
+				return getUrls();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -610,12 +626,18 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case AssessmentPackage.APPLICATION__LABEL:
+				setLabel((String)newValue);
+				return;
+			case AssessmentPackage.APPLICATION__NOTES:
+				setNotes((String)newValue);
+				return;
 			case AssessmentPackage.APPLICATION__ASSESSMENT:
 				setAssessment((Assessment)newValue);
 				return;
 			case AssessmentPackage.APPLICATION__ACCOUNTS:
 				getAccounts().clear();
-				getAccounts().addAll((Collection<? extends Principal>)newValue);
+				getAccounts().addAll((Collection<? extends Account>)newValue);
 				return;
 			case AssessmentPackage.APPLICATION__ENTITLEMENTS:
 				getEntitlements().clear();
@@ -644,18 +666,17 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 				getSinks().clear();
 				getSinks().addAll((Collection<? extends Sink>)newValue);
 				return;
-			case AssessmentPackage.APPLICATION__NAME:
-				setName((String)newValue);
-				return;
 			case AssessmentPackage.APPLICATION__LANGUAGES:
 				getLanguages().clear();
 				getLanguages().addAll((Collection<? extends Language>)newValue);
 				return;
-			case AssessmentPackage.APPLICATION__LOCATION:
-				setLocation((String)newValue);
+			case AssessmentPackage.APPLICATION__RESOURCES:
+				getResources().clear();
+				getResources().addAll((Collection<? extends Resource>)newValue);
 				return;
-			case AssessmentPackage.APPLICATION__NOTES:
-				setNotes((String)newValue);
+			case AssessmentPackage.APPLICATION__URLS:
+				getUrls().clear();
+				getUrls().addAll((Collection<? extends Url>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -669,6 +690,12 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case AssessmentPackage.APPLICATION__LABEL:
+				setLabel(LABEL_EDEFAULT);
+				return;
+			case AssessmentPackage.APPLICATION__NOTES:
+				setNotes(NOTES_EDEFAULT);
+				return;
 			case AssessmentPackage.APPLICATION__ASSESSMENT:
 				setAssessment((Assessment)null);
 				return;
@@ -696,17 +723,14 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 			case AssessmentPackage.APPLICATION__SINKS:
 				getSinks().clear();
 				return;
-			case AssessmentPackage.APPLICATION__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case AssessmentPackage.APPLICATION__LANGUAGES:
 				getLanguages().clear();
 				return;
-			case AssessmentPackage.APPLICATION__LOCATION:
-				setLocation(LOCATION_EDEFAULT);
+			case AssessmentPackage.APPLICATION__RESOURCES:
+				getResources().clear();
 				return;
-			case AssessmentPackage.APPLICATION__NOTES:
-				setNotes(NOTES_EDEFAULT);
+			case AssessmentPackage.APPLICATION__URLS:
+				getUrls().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -720,6 +744,10 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case AssessmentPackage.APPLICATION__LABEL:
+				return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
+			case AssessmentPackage.APPLICATION__NOTES:
+				return NOTES_EDEFAULT == null ? notes != null : !NOTES_EDEFAULT.equals(notes);
 			case AssessmentPackage.APPLICATION__ASSESSMENT:
 				return getAssessment() != null;
 			case AssessmentPackage.APPLICATION__ACCOUNTS:
@@ -738,16 +766,46 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 				return views != null && !views.isEmpty();
 			case AssessmentPackage.APPLICATION__SINKS:
 				return sinks != null && !sinks.isEmpty();
-			case AssessmentPackage.APPLICATION__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case AssessmentPackage.APPLICATION__LANGUAGES:
 				return languages != null && !languages.isEmpty();
-			case AssessmentPackage.APPLICATION__LOCATION:
-				return LOCATION_EDEFAULT == null ? location != null : !LOCATION_EDEFAULT.equals(location);
-			case AssessmentPackage.APPLICATION__NOTES:
-				return NOTES_EDEFAULT == null ? notes != null : !NOTES_EDEFAULT.equals(notes);
+			case AssessmentPackage.APPLICATION__RESOURCES:
+				return resources != null && !resources.isEmpty();
+			case AssessmentPackage.APPLICATION__URLS:
+				return urls != null && !urls.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Notes.class) {
+			switch (derivedFeatureID) {
+				case AssessmentPackage.APPLICATION__NOTES: return AssessmentPackage.NOTES__NOTES;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Notes.class) {
+			switch (baseFeatureID) {
+				case AssessmentPackage.NOTES__NOTES: return AssessmentPackage.APPLICATION__NOTES;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 	/**
@@ -760,14 +818,12 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", languages: ");
-		result.append(languages);
-		result.append(", location: ");
-		result.append(location);
+		result.append(" (label: ");
+		result.append(label);
 		result.append(", notes: ");
 		result.append(notes);
+		result.append(", languages: ");
+		result.append(languages);
 		result.append(')');
 		return result.toString();
 	}

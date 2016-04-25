@@ -17,7 +17,7 @@ package io.opensemantics.semiotics.model.assessment.provider;
 
 
 import io.opensemantics.semiotics.model.assessment.AssessmentPackage;
-import io.opensemantics.semiotics.model.assessment.Location;
+import io.opensemantics.semiotics.model.assessment.Snippet;
 
 import java.util.Collection;
 import java.util.List;
@@ -25,40 +25,25 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link io.opensemantics.semiotics.model.assessment.Location} object.
+ * This is the item provider adapter for a {@link io.opensemantics.semiotics.model.assessment.Snippet} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class LocationItemProvider 
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+public class SnippetItemProvider extends GraphNodeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LocationItemProvider(AdapterFactory adapterFactory) {
+	public SnippetItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -73,34 +58,14 @@ public class LocationItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addLineStartPropertyDescriptor(object);
+			addContentsPropertyDescriptor(object);
 			addLineEndPropertyDescriptor(object);
 			addColumnStartPropertyDescriptor(object);
 			addColumnEndPropertyDescriptor(object);
+			addLineStartPropertyDescriptor(object);
+			addResourcePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Line Start feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addLineStartPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Location_lineStart_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Location_lineStart_feature", "_UI_Location_type"),
-				 AssessmentPackage.Literals.LOCATION__LINE_START,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -114,9 +79,9 @@ public class LocationItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Location_lineEnd_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Location_lineEnd_feature", "_UI_Location_type"),
-				 AssessmentPackage.Literals.LOCATION__LINE_END,
+				 getString("_UI_Snippet_lineEnd_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Snippet_lineEnd_feature", "_UI_Snippet_type"),
+				 AssessmentPackage.Literals.SNIPPET__LINE_END,
 				 true,
 				 false,
 				 false,
@@ -136,9 +101,9 @@ public class LocationItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Location_columnStart_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Location_columnStart_feature", "_UI_Location_type"),
-				 AssessmentPackage.Literals.LOCATION__COLUMN_START,
+				 getString("_UI_Snippet_columnStart_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Snippet_columnStart_feature", "_UI_Snippet_type"),
+				 AssessmentPackage.Literals.SNIPPET__COLUMN_START,
 				 true,
 				 false,
 				 false,
@@ -158,9 +123,9 @@ public class LocationItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Location_columnEnd_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Location_columnEnd_feature", "_UI_Location_type"),
-				 AssessmentPackage.Literals.LOCATION__COLUMN_END,
+				 getString("_UI_Snippet_columnEnd_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Snippet_columnEnd_feature", "_UI_Snippet_type"),
+				 AssessmentPackage.Literals.SNIPPET__COLUMN_END,
 				 true,
 				 false,
 				 false,
@@ -170,14 +135,80 @@ public class LocationItemProvider
 	}
 
 	/**
-	 * This returns Location.gif.
+	 * This adds a property descriptor for the Contents feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addContentsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Contents_contents_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Contents_contents_feature", "_UI_Contents_type"),
+				 AssessmentPackage.Literals.CONTENTS__CONTENTS,
+				 true,
+				 true,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Line Start feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLineStartPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Snippet_lineStart_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Snippet_lineStart_feature", "_UI_Snippet_type"),
+				 AssessmentPackage.Literals.SNIPPET__LINE_START,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Resource feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addResourcePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Snippet_resource_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Snippet_resource_feature", "_UI_Snippet_type"),
+				 AssessmentPackage.Literals.SNIPPET__RESOURCE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This returns Snippet.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Location"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Snippet"));
 	}
 
 	/**
@@ -188,8 +219,10 @@ public class LocationItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		Location location = (Location)object;
-		return getString("_UI_Location_type") + " " + location.getLineStart();
+		String label = ((Snippet)object).getLabel();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Snippet_type") :
+			getString("_UI_Snippet_type") + " " + label;
 	}
 	
 
@@ -204,11 +237,12 @@ public class LocationItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Location.class)) {
-			case AssessmentPackage.LOCATION__LINE_START:
-			case AssessmentPackage.LOCATION__LINE_END:
-			case AssessmentPackage.LOCATION__COLUMN_START:
-			case AssessmentPackage.LOCATION__COLUMN_END:
+		switch (notification.getFeatureID(Snippet.class)) {
+			case AssessmentPackage.SNIPPET__CONTENTS:
+			case AssessmentPackage.SNIPPET__LINE_END:
+			case AssessmentPackage.SNIPPET__COLUMN_START:
+			case AssessmentPackage.SNIPPET__COLUMN_END:
+			case AssessmentPackage.SNIPPET__LINE_START:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -225,17 +259,6 @@ public class LocationItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return AssessmentEditPlugin.INSTANCE;
 	}
 
 }

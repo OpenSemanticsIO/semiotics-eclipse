@@ -73,7 +73,8 @@ public class FindingItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDescriptionPropertyDescriptor(object);
+			addLabelPropertyDescriptor(object);
+			addNotesPropertyDescriptor(object);
 			addReproducerPropertyDescriptor(object);
 			addRemediationPropertyDescriptor(object);
 			addReferencesPropertyDescriptor(object);
@@ -82,21 +83,43 @@ public class FindingItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Description feature.
+	 * This adds a property descriptor for the Label feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDescriptionPropertyDescriptor(Object object) {
+	protected void addLabelPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Finding_description_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Finding_description_feature", "_UI_Finding_type"),
-				 AssessmentPackage.Literals.FINDING__DESCRIPTION,
+				 getString("_UI_Label_label_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Label_label_feature", "_UI_Label_type"),
+				 AssessmentPackage.Literals.LABEL__LABEL,
 				 true,
 				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Notes feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNotesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Notes_notes_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Notes_notes_feature", "_UI_Notes_type"),
+				 AssessmentPackage.Literals.NOTES__NOTES,
+				 true,
+				 true,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
@@ -188,7 +211,7 @@ public class FindingItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Finding)object).getDescription();
+		String label = ((Finding)object).getLabel();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Finding_type") :
 			getString("_UI_Finding_type") + " " + label;
@@ -207,7 +230,8 @@ public class FindingItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Finding.class)) {
-			case AssessmentPackage.FINDING__DESCRIPTION:
+			case AssessmentPackage.FINDING__LABEL:
+			case AssessmentPackage.FINDING__NOTES:
 			case AssessmentPackage.FINDING__REPRODUCER:
 			case AssessmentPackage.FINDING__REMEDIATION:
 			case AssessmentPackage.FINDING__REFERENCES:

@@ -15,12 +15,10 @@
  */
 package io.opensemantics.semiotics.model.assessment.impl;
 
+import io.opensemantics.semiotics.model.assessment.Account;
 import io.opensemantics.semiotics.model.assessment.Application;
 import io.opensemantics.semiotics.model.assessment.AssessmentPackage;
 import io.opensemantics.semiotics.model.assessment.Entitlement;
-import io.opensemantics.semiotics.model.assessment.Node;
-import io.opensemantics.semiotics.model.assessment.Principal;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -39,22 +37,22 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Principal</b></em>'.
+ * An implementation of the model object '<em><b>Account</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.PrincipalImpl#getApplication <em>Application</em>}</li>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.PrincipalImpl#getEntitlements <em>Entitlements</em>}</li>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.PrincipalImpl#getName <em>Name</em>}</li>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.PrincipalImpl#getEmail <em>Email</em>}</li>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.PrincipalImpl#getPassword <em>Password</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.AccountImpl#getApplication <em>Application</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.AccountImpl#getEntitlements <em>Entitlements</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.AccountImpl#getName <em>Name</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.AccountImpl#getEmail <em>Email</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.AccountImpl#getPassword <em>Password</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class PrincipalImpl extends GraphImpl<Node> implements Principal {
+public class AccountImpl extends NodeImpl implements Account {
 	/**
 	 * The cached value of the '{@link #getEntitlements() <em>Entitlements</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -130,7 +128,7 @@ public class PrincipalImpl extends GraphImpl<Node> implements Principal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PrincipalImpl() {
+	protected AccountImpl() {
 		super();
 	}
 
@@ -141,7 +139,7 @@ public class PrincipalImpl extends GraphImpl<Node> implements Principal {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return AssessmentPackage.Literals.PRINCIPAL;
+		return AssessmentPackage.Literals.ACCOUNT;
 	}
 
 	/**
@@ -150,7 +148,7 @@ public class PrincipalImpl extends GraphImpl<Node> implements Principal {
 	 * @generated
 	 */
 	public Application getApplication() {
-		if (eContainerFeatureID() != AssessmentPackage.PRINCIPAL__APPLICATION) return null;
+		if (eContainerFeatureID() != AssessmentPackage.ACCOUNT__APPLICATION) return null;
 		return (Application)eInternalContainer();
 	}
 
@@ -160,7 +158,7 @@ public class PrincipalImpl extends GraphImpl<Node> implements Principal {
 	 * @generated
 	 */
 	public NotificationChain basicSetApplication(Application newApplication, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newApplication, AssessmentPackage.PRINCIPAL__APPLICATION, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newApplication, AssessmentPackage.ACCOUNT__APPLICATION, msgs);
 		return msgs;
 	}
 
@@ -170,7 +168,7 @@ public class PrincipalImpl extends GraphImpl<Node> implements Principal {
 	 * @generated
 	 */
 	public void setApplication(Application newApplication) {
-		if (newApplication != eInternalContainer() || (eContainerFeatureID() != AssessmentPackage.PRINCIPAL__APPLICATION && newApplication != null)) {
+		if (newApplication != eInternalContainer() || (eContainerFeatureID() != AssessmentPackage.ACCOUNT__APPLICATION && newApplication != null)) {
 			if (EcoreUtil.isAncestor(this, newApplication))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
@@ -182,7 +180,7 @@ public class PrincipalImpl extends GraphImpl<Node> implements Principal {
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.PRINCIPAL__APPLICATION, newApplication, newApplication));
+			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.ACCOUNT__APPLICATION, newApplication, newApplication));
 	}
 
 	/**
@@ -192,7 +190,7 @@ public class PrincipalImpl extends GraphImpl<Node> implements Principal {
 	 */
 	public EList<Entitlement> getEntitlements() {
 		if (entitlements == null) {
-			entitlements = new EObjectWithInverseResolvingEList.ManyInverse<Entitlement>(Entitlement.class, this, AssessmentPackage.PRINCIPAL__ENTITLEMENTS, AssessmentPackage.ENTITLEMENT__PRINCIPALS);
+			entitlements = new EObjectWithInverseResolvingEList.ManyInverse<Entitlement>(Entitlement.class, this, AssessmentPackage.ACCOUNT__ENTITLEMENTS, AssessmentPackage.ENTITLEMENT__PRINCIPALS);
 		}
 		return entitlements;
 	}
@@ -215,7 +213,7 @@ public class PrincipalImpl extends GraphImpl<Node> implements Principal {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.PRINCIPAL__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.ACCOUNT__NAME, oldName, name));
 	}
 
 	/**
@@ -236,7 +234,7 @@ public class PrincipalImpl extends GraphImpl<Node> implements Principal {
 		String oldEmail = email;
 		email = newEmail;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.PRINCIPAL__EMAIL, oldEmail, email));
+			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.ACCOUNT__EMAIL, oldEmail, email));
 	}
 
 	/**
@@ -257,7 +255,7 @@ public class PrincipalImpl extends GraphImpl<Node> implements Principal {
 		String oldPassword = password;
 		password = newPassword;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.PRINCIPAL__PASSWORD, oldPassword, password));
+			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.ACCOUNT__PASSWORD, oldPassword, password));
 	}
 
 	/**
@@ -269,11 +267,11 @@ public class PrincipalImpl extends GraphImpl<Node> implements Principal {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case AssessmentPackage.PRINCIPAL__APPLICATION:
+			case AssessmentPackage.ACCOUNT__APPLICATION:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetApplication((Application)otherEnd, msgs);
-			case AssessmentPackage.PRINCIPAL__ENTITLEMENTS:
+			case AssessmentPackage.ACCOUNT__ENTITLEMENTS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getEntitlements()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -287,9 +285,9 @@ public class PrincipalImpl extends GraphImpl<Node> implements Principal {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case AssessmentPackage.PRINCIPAL__APPLICATION:
+			case AssessmentPackage.ACCOUNT__APPLICATION:
 				return basicSetApplication(null, msgs);
-			case AssessmentPackage.PRINCIPAL__ENTITLEMENTS:
+			case AssessmentPackage.ACCOUNT__ENTITLEMENTS:
 				return ((InternalEList<?>)getEntitlements()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -303,7 +301,7 @@ public class PrincipalImpl extends GraphImpl<Node> implements Principal {
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case AssessmentPackage.PRINCIPAL__APPLICATION:
+			case AssessmentPackage.ACCOUNT__APPLICATION:
 				return eInternalContainer().eInverseRemove(this, AssessmentPackage.APPLICATION__ACCOUNTS, Application.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
@@ -317,15 +315,15 @@ public class PrincipalImpl extends GraphImpl<Node> implements Principal {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case AssessmentPackage.PRINCIPAL__APPLICATION:
+			case AssessmentPackage.ACCOUNT__APPLICATION:
 				return getApplication();
-			case AssessmentPackage.PRINCIPAL__ENTITLEMENTS:
+			case AssessmentPackage.ACCOUNT__ENTITLEMENTS:
 				return getEntitlements();
-			case AssessmentPackage.PRINCIPAL__NAME:
+			case AssessmentPackage.ACCOUNT__NAME:
 				return getName();
-			case AssessmentPackage.PRINCIPAL__EMAIL:
+			case AssessmentPackage.ACCOUNT__EMAIL:
 				return getEmail();
-			case AssessmentPackage.PRINCIPAL__PASSWORD:
+			case AssessmentPackage.ACCOUNT__PASSWORD:
 				return getPassword();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -340,20 +338,20 @@ public class PrincipalImpl extends GraphImpl<Node> implements Principal {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case AssessmentPackage.PRINCIPAL__APPLICATION:
+			case AssessmentPackage.ACCOUNT__APPLICATION:
 				setApplication((Application)newValue);
 				return;
-			case AssessmentPackage.PRINCIPAL__ENTITLEMENTS:
+			case AssessmentPackage.ACCOUNT__ENTITLEMENTS:
 				getEntitlements().clear();
 				getEntitlements().addAll((Collection<? extends Entitlement>)newValue);
 				return;
-			case AssessmentPackage.PRINCIPAL__NAME:
+			case AssessmentPackage.ACCOUNT__NAME:
 				setName((String)newValue);
 				return;
-			case AssessmentPackage.PRINCIPAL__EMAIL:
+			case AssessmentPackage.ACCOUNT__EMAIL:
 				setEmail((String)newValue);
 				return;
-			case AssessmentPackage.PRINCIPAL__PASSWORD:
+			case AssessmentPackage.ACCOUNT__PASSWORD:
 				setPassword((String)newValue);
 				return;
 		}
@@ -368,19 +366,19 @@ public class PrincipalImpl extends GraphImpl<Node> implements Principal {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case AssessmentPackage.PRINCIPAL__APPLICATION:
+			case AssessmentPackage.ACCOUNT__APPLICATION:
 				setApplication((Application)null);
 				return;
-			case AssessmentPackage.PRINCIPAL__ENTITLEMENTS:
+			case AssessmentPackage.ACCOUNT__ENTITLEMENTS:
 				getEntitlements().clear();
 				return;
-			case AssessmentPackage.PRINCIPAL__NAME:
+			case AssessmentPackage.ACCOUNT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case AssessmentPackage.PRINCIPAL__EMAIL:
+			case AssessmentPackage.ACCOUNT__EMAIL:
 				setEmail(EMAIL_EDEFAULT);
 				return;
-			case AssessmentPackage.PRINCIPAL__PASSWORD:
+			case AssessmentPackage.ACCOUNT__PASSWORD:
 				setPassword(PASSWORD_EDEFAULT);
 				return;
 		}
@@ -395,15 +393,15 @@ public class PrincipalImpl extends GraphImpl<Node> implements Principal {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case AssessmentPackage.PRINCIPAL__APPLICATION:
+			case AssessmentPackage.ACCOUNT__APPLICATION:
 				return getApplication() != null;
-			case AssessmentPackage.PRINCIPAL__ENTITLEMENTS:
+			case AssessmentPackage.ACCOUNT__ENTITLEMENTS:
 				return entitlements != null && !entitlements.isEmpty();
-			case AssessmentPackage.PRINCIPAL__NAME:
+			case AssessmentPackage.ACCOUNT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case AssessmentPackage.PRINCIPAL__EMAIL:
+			case AssessmentPackage.ACCOUNT__EMAIL:
 				return EMAIL_EDEFAULT == null ? email != null : !EMAIL_EDEFAULT.equals(email);
-			case AssessmentPackage.PRINCIPAL__PASSWORD:
+			case AssessmentPackage.ACCOUNT__PASSWORD:
 				return PASSWORD_EDEFAULT == null ? password != null : !PASSWORD_EDEFAULT.equals(password);
 		}
 		return super.eIsSet(featureID);
@@ -429,4 +427,4 @@ public class PrincipalImpl extends GraphImpl<Node> implements Principal {
 		return result.toString();
 	}
 
-} //PrincipalImpl
+} //AccountImpl

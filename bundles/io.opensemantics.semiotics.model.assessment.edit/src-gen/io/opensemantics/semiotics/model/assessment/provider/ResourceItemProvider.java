@@ -16,10 +16,9 @@
 package io.opensemantics.semiotics.model.assessment.provider;
 
 
-import io.opensemantics.semiotics.model.assessment.AssessmentFactory;
 import io.opensemantics.semiotics.model.assessment.AssessmentPackage;
-import io.opensemantics.semiotics.model.assessment.Resource;
 
+import io.opensemantics.semiotics.model.assessment.Resource;
 import java.util.Collection;
 import java.util.List;
 
@@ -27,8 +26,6 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
-
-import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -76,25 +73,28 @@ public class ResourceItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addPathPropertyDescriptor(object);
+			addLabelPropertyDescriptor(object);
+			addNotesPropertyDescriptor(object);
+			addApplicationPropertyDescriptor(object);
+			addSnippetsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Path feature.
+	 * This adds a property descriptor for the Label feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPathPropertyDescriptor(Object object) {
+	protected void addLabelPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Resource_path_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Resource_path_feature", "_UI_Resource_type"),
-				 AssessmentPackage.Literals.RESOURCE__PATH,
+				 getString("_UI_Label_label_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Label_label_feature", "_UI_Label_type"),
+				 AssessmentPackage.Literals.LABEL__LABEL,
 				 true,
 				 false,
 				 false,
@@ -104,33 +104,80 @@ public class ResourceItemProvider
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * This adds a property descriptor for the Notes feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(AssessmentPackage.Literals.RESOURCE__LOCATION);
-		}
-		return childrenFeatures;
+	protected void addNotesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Notes_notes_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Notes_notes_feature", "_UI_Notes_type"),
+				 AssessmentPackage.Literals.NOTES__NOTES,
+				 true,
+				 true,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
+	 * This adds a property descriptor for the Application feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addApplicationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Resource_application_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Resource_application_feature", "_UI_Resource_type"),
+				 AssessmentPackage.Literals.RESOURCE__APPLICATION,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Snippets feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSnippetsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Resource_snippets_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Resource_snippets_feature", "_UI_Resource_type"),
+				 AssessmentPackage.Literals.RESOURCE__SNIPPETS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This returns Resource.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
+	public Object getImage(Object object) {
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Resource"));
 	}
 
 	/**
@@ -141,7 +188,7 @@ public class ResourceItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Resource)object).getPath();
+		String label = ((Resource)object).getLabel();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Resource_type") :
 			getString("_UI_Resource_type") + " " + label;
@@ -160,11 +207,9 @@ public class ResourceItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Resource.class)) {
-			case AssessmentPackage.RESOURCE__PATH:
+			case AssessmentPackage.RESOURCE__LABEL:
+			case AssessmentPackage.RESOURCE__NOTES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case AssessmentPackage.RESOURCE__LOCATION:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -180,11 +225,6 @@ public class ResourceItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(AssessmentPackage.Literals.RESOURCE__LOCATION,
-				 AssessmentFactory.eINSTANCE.createLocation()));
 	}
 
 	/**

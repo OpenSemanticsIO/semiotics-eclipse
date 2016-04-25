@@ -16,6 +16,7 @@
 package io.opensemantics.semiotics.model.assessment.provider;
 
 
+import io.opensemantics.semiotics.model.assessment.Model;
 import java.util.Collection;
 import java.util.List;
 
@@ -30,7 +31,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModelItemProvider extends GraphItemProvider {
+public class ModelItemProvider extends NodeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -75,7 +76,10 @@ public class ModelItemProvider extends GraphItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Model_type");
+		String label = ((Model)object).getLabel();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Model_type") :
+			getString("_UI_Model_type") + " " + label;
 	}
 	
 

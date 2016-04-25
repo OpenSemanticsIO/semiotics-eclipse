@@ -17,7 +17,6 @@ package io.opensemantics.semiotics.model.assessment.impl;
 
 import io.opensemantics.semiotics.model.assessment.Assessment;
 import io.opensemantics.semiotics.model.assessment.AssessmentPackage;
-import io.opensemantics.semiotics.model.assessment.Node;
 import io.opensemantics.semiotics.model.assessment.Task;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -38,34 +37,13 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.TaskImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.TaskImpl#isCompleted <em>Completed</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.TaskImpl#getAssessment <em>Assessment</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TaskImpl extends GraphImpl<Node> implements Task {
-	/**
-	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DESCRIPTION_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected String description = DESCRIPTION_EDEFAULT;
-
+public class TaskImpl extends NodeImpl implements Task {
 	/**
 	 * The default value of the '{@link #isCompleted() <em>Completed</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -103,27 +81,6 @@ public class TaskImpl extends GraphImpl<Node> implements Task {
 	@Override
 	protected EClass eStaticClass() {
 		return AssessmentPackage.Literals.TASK;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getDescription() {
-		return description;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDescription(String newDescription) {
-		String oldDescription = description;
-		description = newDescription;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.TASK__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -240,8 +197,6 @@ public class TaskImpl extends GraphImpl<Node> implements Task {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case AssessmentPackage.TASK__DESCRIPTION:
-				return getDescription();
 			case AssessmentPackage.TASK__COMPLETED:
 				return isCompleted();
 			case AssessmentPackage.TASK__ASSESSMENT:
@@ -258,9 +213,6 @@ public class TaskImpl extends GraphImpl<Node> implements Task {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case AssessmentPackage.TASK__DESCRIPTION:
-				setDescription((String)newValue);
-				return;
 			case AssessmentPackage.TASK__COMPLETED:
 				setCompleted((Boolean)newValue);
 				return;
@@ -279,9 +231,6 @@ public class TaskImpl extends GraphImpl<Node> implements Task {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case AssessmentPackage.TASK__DESCRIPTION:
-				setDescription(DESCRIPTION_EDEFAULT);
-				return;
 			case AssessmentPackage.TASK__COMPLETED:
 				setCompleted(COMPLETED_EDEFAULT);
 				return;
@@ -300,8 +249,6 @@ public class TaskImpl extends GraphImpl<Node> implements Task {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case AssessmentPackage.TASK__DESCRIPTION:
-				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case AssessmentPackage.TASK__COMPLETED:
 				return completed != COMPLETED_EDEFAULT;
 			case AssessmentPackage.TASK__ASSESSMENT:
@@ -320,9 +267,7 @@ public class TaskImpl extends GraphImpl<Node> implements Task {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (description: ");
-		result.append(description);
-		result.append(", completed: ");
+		result.append(" (completed: ");
 		result.append(completed);
 		result.append(')');
 		return result.toString();

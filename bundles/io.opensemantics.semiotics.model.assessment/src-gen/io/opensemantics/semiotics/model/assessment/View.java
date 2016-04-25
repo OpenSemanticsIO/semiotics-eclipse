@@ -15,7 +15,6 @@
  */
 package io.opensemantics.semiotics.model.assessment;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>View</b></em>'.
@@ -32,7 +31,7 @@ package io.opensemantics.semiotics.model.assessment;
  * @model
  * @generated
  */
-public interface View extends Graph<Node> {
+public interface View extends Node {
 	/**
 	 * Returns the value of the '<em><b>Application</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Application#getViews <em>Views</em>}'.

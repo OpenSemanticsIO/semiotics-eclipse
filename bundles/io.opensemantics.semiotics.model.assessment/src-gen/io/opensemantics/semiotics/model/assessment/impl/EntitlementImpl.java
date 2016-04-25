@@ -15,12 +15,10 @@
  */
 package io.opensemantics.semiotics.model.assessment.impl;
 
+import io.opensemantics.semiotics.model.assessment.Account;
 import io.opensemantics.semiotics.model.assessment.Application;
 import io.opensemantics.semiotics.model.assessment.AssessmentPackage;
 import io.opensemantics.semiotics.model.assessment.Entitlement;
-import io.opensemantics.semiotics.model.assessment.Node;
-import io.opensemantics.semiotics.model.assessment.Principal;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -51,7 +49,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class EntitlementImpl extends GraphImpl<Node> implements Entitlement {
+public class EntitlementImpl extends NodeImpl implements Entitlement {
 	/**
 	 * The cached value of the '{@link #getPrincipals() <em>Principals</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -60,7 +58,7 @@ public class EntitlementImpl extends GraphImpl<Node> implements Entitlement {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Principal> principals;
+	protected EList<Account> principals;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -86,9 +84,9 @@ public class EntitlementImpl extends GraphImpl<Node> implements Entitlement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Principal> getPrincipals() {
+	public EList<Account> getPrincipals() {
 		if (principals == null) {
-			principals = new EObjectWithInverseResolvingEList.ManyInverse<Principal>(Principal.class, this, AssessmentPackage.ENTITLEMENT__PRINCIPALS, AssessmentPackage.PRINCIPAL__ENTITLEMENTS);
+			principals = new EObjectWithInverseResolvingEList.ManyInverse<Account>(Account.class, this, AssessmentPackage.ENTITLEMENT__PRINCIPALS, AssessmentPackage.ACCOUNT__ENTITLEMENTS);
 		}
 		return principals;
 	}
@@ -210,7 +208,7 @@ public class EntitlementImpl extends GraphImpl<Node> implements Entitlement {
 		switch (featureID) {
 			case AssessmentPackage.ENTITLEMENT__PRINCIPALS:
 				getPrincipals().clear();
-				getPrincipals().addAll((Collection<? extends Principal>)newValue);
+				getPrincipals().addAll((Collection<? extends Account>)newValue);
 				return;
 			case AssessmentPackage.ENTITLEMENT__APPLICATION:
 				setApplication((Application)newValue);

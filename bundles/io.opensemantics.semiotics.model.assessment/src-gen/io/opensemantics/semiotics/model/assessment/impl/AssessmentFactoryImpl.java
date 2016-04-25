@@ -78,16 +78,16 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 			case AssessmentPackage.VIEW: return createView();
 			case AssessmentPackage.MODEL: return createModel();
 			case AssessmentPackage.FINDING: return createFinding();
-			case AssessmentPackage.PRINCIPAL: return createPrincipal();
+			case AssessmentPackage.ACCOUNT: return createAccount();
 			case AssessmentPackage.ENTITLEMENT: return createEntitlement();
 			case AssessmentPackage.TASK: return createTask();
 			case AssessmentPackage.SCM: return createScm();
 			case AssessmentPackage.LIBRARY: return createLibrary();
-			case AssessmentPackage.LOCATION: return createLocation();
-			case AssessmentPackage.FILE: return createFile();
-			case AssessmentPackage.JAVA: return createJava();
+			case AssessmentPackage.SNIPPET: return createSnippet();
 			case AssessmentPackage.URL: return createUrl();
 			case AssessmentPackage.GENERIC: return createGeneric();
+			case AssessmentPackage.CONTROL: return createControl();
+			case AssessmentPackage.RESOURCE: return createResource();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -216,9 +216,9 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Principal createPrincipal() {
-		PrincipalImpl principal = new PrincipalImpl();
-		return principal;
+	public Account createAccount() {
+		AccountImpl account = new AccountImpl();
+		return account;
 	}
 
 	/**
@@ -266,29 +266,9 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Location createLocation() {
-		LocationImpl location = new LocationImpl();
-		return location;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public File createFile() {
-		FileImpl file = new FileImpl();
-		return file;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Java createJava() {
-		JavaImpl java = new JavaImpl();
-		return java;
+	public Snippet createSnippet() {
+		SnippetImpl snippet = new SnippetImpl();
+		return snippet;
 	}
 
 	/**
@@ -309,6 +289,26 @@ public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFac
 	public Generic createGeneric() {
 		GenericImpl generic = new GenericImpl();
 		return generic;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Control createControl() {
+		ControlImpl control = new ControlImpl();
+		return control;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Resource createResource() {
+		ResourceImpl resource = new ResourceImpl();
+		return resource;
 	}
 
 	/**

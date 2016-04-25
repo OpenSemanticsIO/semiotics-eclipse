@@ -104,31 +104,14 @@ public abstract class GraphImpl<T extends Node> extends MinimalEObjectImpl.Conta
 		if (newRoot != root) {
 			NotificationChain msgs = null;
 			if (root != null)
-				msgs = ((InternalEObject)root).eInverseRemove(this, AssessmentPackage.NODE__GRAPH, Node.class, msgs);
+				msgs = ((InternalEObject)root).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AssessmentPackage.GRAPH__ROOT, null, msgs);
 			if (newRoot != null)
-				msgs = ((InternalEObject)newRoot).eInverseAdd(this, AssessmentPackage.NODE__GRAPH, Node.class, msgs);
+				msgs = ((InternalEObject)newRoot).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AssessmentPackage.GRAPH__ROOT, null, msgs);
 			msgs = basicSetRoot(newRoot, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.GRAPH__ROOT, newRoot, newRoot));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case AssessmentPackage.GRAPH__ROOT:
-				if (root != null)
-					msgs = ((InternalEObject)root).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AssessmentPackage.GRAPH__ROOT, null, msgs);
-				return basicSetRoot((T)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**

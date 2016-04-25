@@ -36,7 +36,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class HttpItemProvider extends NodeItemProvider {
+public class HttpItemProvider extends GraphNodeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -58,29 +58,28 @@ public class HttpItemProvider extends NodeItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDescriptionPropertyDescriptor(object);
-			addMethodsPropertyDescriptor(object);
-			addUriPropertyDescriptor(object);
+			addRequestPropertyDescriptor(object);
+			addResponsePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Description feature.
+	 * This adds a property descriptor for the Request feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDescriptionPropertyDescriptor(Object object) {
+	protected void addRequestPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Http_description_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Http_description_feature", "_UI_Http_type"),
-				 AssessmentPackage.Literals.HTTP__DESCRIPTION,
+				 getString("_UI_Http_request_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Http_request_feature", "_UI_Http_type"),
+				 AssessmentPackage.Literals.HTTP__REQUEST,
 				 true,
-				 false,
+				 true,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
@@ -88,45 +87,23 @@ public class HttpItemProvider extends NodeItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Methods feature.
+	 * This adds a property descriptor for the Response feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addMethodsPropertyDescriptor(Object object) {
+	protected void addResponsePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Http_methods_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Http_methods_feature", "_UI_Http_type"),
-				 AssessmentPackage.Literals.HTTP__METHODS,
+				 getString("_UI_Http_response_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Http_response_feature", "_UI_Http_type"),
+				 AssessmentPackage.Literals.HTTP__RESPONSE,
 				 true,
-				 false,
+				 true,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Uri feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addUriPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Http_uri_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Http_uri_feature", "_UI_Http_type"),
-				 AssessmentPackage.Literals.HTTP__URI,
-				 true,
-				 false,
-				 true,
-				 null,
 				 null,
 				 null));
 	}
@@ -150,7 +127,7 @@ public class HttpItemProvider extends NodeItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Http)object).getDescription();
+		String label = ((Http)object).getLabel();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Http_type") :
 			getString("_UI_Http_type") + " " + label;
@@ -169,8 +146,8 @@ public class HttpItemProvider extends NodeItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Http.class)) {
-			case AssessmentPackage.HTTP__DESCRIPTION:
-			case AssessmentPackage.HTTP__METHODS:
+			case AssessmentPackage.HTTP__REQUEST:
+			case AssessmentPackage.HTTP__RESPONSE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

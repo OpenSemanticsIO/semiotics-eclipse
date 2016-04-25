@@ -32,7 +32,7 @@ package io.opensemantics.semiotics.model.assessment;
  * @model
  * @generated
  */
-public interface Controller extends Graph<Node> {
+public interface Controller extends Node {
 	/**
 	 * Returns the value of the '<em><b>Application</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Application#getControllers <em>Controllers</em>}'.

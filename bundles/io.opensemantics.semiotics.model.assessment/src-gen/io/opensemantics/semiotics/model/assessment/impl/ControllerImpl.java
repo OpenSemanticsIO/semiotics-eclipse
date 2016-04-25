@@ -18,16 +18,12 @@ package io.opensemantics.semiotics.model.assessment.impl;
 import io.opensemantics.semiotics.model.assessment.Application;
 import io.opensemantics.semiotics.model.assessment.AssessmentPackage;
 import io.opensemantics.semiotics.model.assessment.Controller;
-import io.opensemantics.semiotics.model.assessment.Node;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
@@ -43,7 +39,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *
  * @generated
  */
-public class ControllerImpl extends GraphImpl<Node> implements Controller {
+public class ControllerImpl extends NodeImpl implements Controller {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
