@@ -162,25 +162,23 @@ public class AssessmentItemProvider
 	 * This returns Assessment.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Assessment"));
+		return overlayImage(object, getResourceLocator().getImage("famfamfam/silk/rainbow.png"));
 	}
 
 	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
 		String label = ((Assessment)object).getLabel();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Assessment_type") :
-			getString("_UI_Assessment_type") + " " + label;
+		return label == null || label.length() == 0 ? "" : label;
 	}
 	
 

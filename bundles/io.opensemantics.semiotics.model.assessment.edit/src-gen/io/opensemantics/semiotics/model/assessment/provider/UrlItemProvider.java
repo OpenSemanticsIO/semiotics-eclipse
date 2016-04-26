@@ -127,25 +127,23 @@ public class UrlItemProvider
 	 * This returns Url.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Url"));
+		return overlayImage(object, getResourceLocator().getImage("famfamfam/silk/sitemap.png"));
 	}
 
 	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
 		String label = ((Url)object).getPattern();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Url_type") :
-			getString("_UI_Url_type") + " " + label;
+		return label == null || label.length() == 0 ? "" : label;
 	}
 	
 

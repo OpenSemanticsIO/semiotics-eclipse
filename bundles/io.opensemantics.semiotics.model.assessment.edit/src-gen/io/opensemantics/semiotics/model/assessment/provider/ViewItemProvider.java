@@ -60,25 +60,23 @@ public class ViewItemProvider extends NodeItemProvider {
 	 * This returns View.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/View"));
+		return overlayImage(object, getResourceLocator().getImage("famfamfam/silk/comment.png"));
 	}
 
 	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
 		String label = ((View)object).getLabel();
-		return label == null || label.length() == 0 ?
-			getString("_UI_View_type") :
-			getString("_UI_View_type") + " " + label;
+		return label == null || label.length() == 0 ? "" : label;
 	}
 	
 

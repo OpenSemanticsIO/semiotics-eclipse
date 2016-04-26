@@ -62,25 +62,23 @@ public class ControlItemProvider extends GraphNodeItemProvider {
 	 * This returns Control.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Control"));
+		return overlayImage(object, getResourceLocator().getImage("famfamfam/silk/shield.png"));
 	}
 
 	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
 		String label = ((Control)object).getLabel();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Control_type") :
-			getString("_UI_Control_type") + " " + label;
+		return label == null || label.length() == 0 ? "" : label;
 	}
 	
 

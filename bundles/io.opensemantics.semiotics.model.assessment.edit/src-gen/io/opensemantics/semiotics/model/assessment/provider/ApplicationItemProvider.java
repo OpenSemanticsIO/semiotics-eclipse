@@ -214,25 +214,23 @@ public class ApplicationItemProvider
 	 * This returns Application.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Application"));
+		return overlayImage(object, getResourceLocator().getImage("famfamfam/silk/building.png"));
 	}
 
 	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
 		String label = ((Application)object).getLabel();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Application_type") :
-			getString("_UI_Application_type") + " " + label;
+		return label == null || label.length() == 0 ? "" : label;
 	}
 	
 

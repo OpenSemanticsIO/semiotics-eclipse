@@ -110,25 +110,23 @@ public class EntitlementItemProvider extends NodeItemProvider {
 	 * This returns Entitlement.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Entitlement"));
+		return overlayImage(object, getResourceLocator().getImage("famfamfam/silk/award_star_gold_3.png"));
 	}
 
 	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
 		String label = ((Entitlement)object).getLabel();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Entitlement_type") :
-			getString("_UI_Entitlement_type") + " " + label;
+		return label == null || label.length() == 0 ? "" : label;
 	}
 	
 

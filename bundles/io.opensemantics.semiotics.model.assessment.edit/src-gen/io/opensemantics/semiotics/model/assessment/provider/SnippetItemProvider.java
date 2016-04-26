@@ -17,6 +17,7 @@ package io.opensemantics.semiotics.model.assessment.provider;
 
 
 import io.opensemantics.semiotics.model.assessment.AssessmentPackage;
+import io.opensemantics.semiotics.model.assessment.Resource;
 import io.opensemantics.semiotics.model.assessment.Snippet;
 
 import java.util.Collection;
@@ -204,25 +205,42 @@ public class SnippetItemProvider extends GraphNodeItemProvider {
 	 * This returns Snippet.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Snippet"));
+		return overlayImage(object, getResourceLocator().getImage("famfamfam/silk/note.png"));
 	}
 
 	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Snippet)object).getLabel();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Snippet_type") :
-			getString("_UI_Snippet_type") + " " + label;
+		Snippet snippet = (Snippet)object;
+		StringBuilder label = new StringBuilder();
+		Resource resource = snippet.getResource();
+		if (resource != null) { 
+			String resourceLabel = resource.getLabel();
+			if (resourceLabel != null && !resourceLabel.equals("")) {
+				label.append(resourceLabel);
+				
+				// Assume set if lineEnd is not 0
+				if (snippet.getLineEnd() != 0) {
+					label.append(String.format(", %d-%d", snippet.getLineStart(), snippet.getLineEnd()));
+				}
+			}
+		}
+		String snippetLabel = snippet.getLabel();
+		if (snippetLabel != null && !snippet.equals("")) {
+			if (label.length() != 0) label.append(": ");
+
+			label.append(snippetLabel);
+		}
+		return label.toString();
 	}
 	
 

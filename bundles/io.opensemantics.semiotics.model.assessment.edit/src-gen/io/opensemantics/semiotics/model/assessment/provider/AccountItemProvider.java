@@ -158,25 +158,23 @@ public class AccountItemProvider extends NodeItemProvider {
 	 * This returns Account.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Account"));
+		return overlayImage(object, getResourceLocator().getImage("famfamfam/silk/user_female.png"));
 	}
 
 	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Account)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Account_type") :
-			getString("_UI_Account_type") + " " + label;
+		String label = ((Account)object).getLabel();
+		return label == null || label.length() == 0 ? "" : label;
 	}
 	
 
