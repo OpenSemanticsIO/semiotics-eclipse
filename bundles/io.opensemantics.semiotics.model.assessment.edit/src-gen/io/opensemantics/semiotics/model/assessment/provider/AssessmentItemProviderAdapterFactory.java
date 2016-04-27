@@ -47,574 +47,790 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  */
 public class AssessmentItemProviderAdapterFactory extends AssessmentAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
 	/**
-	 * This keeps track of the root adapter factory that delegates to this adapter factory.
-	 * <!-- begin-user-doc -->
+   * This keeps track of the root adapter factory that delegates to this adapter factory.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected ComposedAdapterFactory parentAdapterFactory;
 
 	/**
-	 * This is used to implement {@link org.eclipse.emf.edit.provider.IChangeNotifier}.
-	 * <!-- begin-user-doc -->
+   * This is used to implement {@link org.eclipse.emf.edit.provider.IChangeNotifier}.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected IChangeNotifier changeNotifier = new ChangeNotifier();
 
 	/**
-	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
-	 * <!-- begin-user-doc -->
+   * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected Collection<Object> supportedTypes = new ArrayList<Object>();
 
 	/**
-	 * This constructs an instance.
-	 * <!-- begin-user-doc -->
+   * This constructs an instance.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public AssessmentItemProviderAdapterFactory() {
-		supportedTypes.add(IEditingDomainItemProvider.class);
-		supportedTypes.add(IStructuredItemContentProvider.class);
-		supportedTypes.add(ITreeItemContentProvider.class);
-		supportedTypes.add(IItemLabelProvider.class);
-		supportedTypes.add(IItemPropertySource.class);
-	}
+    supportedTypes.add(IEditingDomainItemProvider.class);
+    supportedTypes.add(IStructuredItemContentProvider.class);
+    supportedTypes.add(ITreeItemContentProvider.class);
+    supportedTypes.add(IItemLabelProvider.class);
+    supportedTypes.add(IItemPropertySource.class);
+  }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Http} instances.
-	 * <!-- begin-user-doc -->
+   * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Http} instances.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected HttpItemProvider httpItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Http}.
-	 * <!-- begin-user-doc -->
+   * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Http}.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public Adapter createHttpAdapter() {
-		if (httpItemProvider == null) {
-			httpItemProvider = new HttpItemProvider(this);
-		}
+    if (httpItemProvider == null) {
+      httpItemProvider = new HttpItemProvider(this);
+    }
 
-		return httpItemProvider;
-	}
+    return httpItemProvider;
+  }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Assessment} instances.
-	 * <!-- begin-user-doc -->
+   * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Assessment} instances.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected AssessmentItemProvider assessmentItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Assessment}.
-	 * <!-- begin-user-doc -->
+   * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Assessment}.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public Adapter createAssessmentAdapter() {
-		if (assessmentItemProvider == null) {
-			assessmentItemProvider = new AssessmentItemProvider(this);
-		}
+    if (assessmentItemProvider == null) {
+      assessmentItemProvider = new AssessmentItemProvider(this);
+    }
 
-		return assessmentItemProvider;
-	}
+    return assessmentItemProvider;
+  }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Application} instances.
-	 * <!-- begin-user-doc -->
+   * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Application} instances.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected ApplicationItemProvider applicationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Application}.
-	 * <!-- begin-user-doc -->
+   * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Application}.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public Adapter createApplicationAdapter() {
-		if (applicationItemProvider == null) {
-			applicationItemProvider = new ApplicationItemProvider(this);
-		}
+    if (applicationItemProvider == null) {
+      applicationItemProvider = new ApplicationItemProvider(this);
+    }
 
-		return applicationItemProvider;
-	}
+    return applicationItemProvider;
+  }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Sink} instances.
-	 * <!-- begin-user-doc -->
+   * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Sink} instances.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected SinkItemProvider sinkItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Sink}.
-	 * <!-- begin-user-doc -->
+   * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Sink}.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public Adapter createSinkAdapter() {
-		if (sinkItemProvider == null) {
-			sinkItemProvider = new SinkItemProvider(this);
-		}
+    if (sinkItemProvider == null) {
+      sinkItemProvider = new SinkItemProvider(this);
+    }
 
-		return sinkItemProvider;
-	}
+    return sinkItemProvider;
+  }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Controller} instances.
-	 * <!-- begin-user-doc -->
+   * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Controller} instances.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected ControllerItemProvider controllerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Controller}.
-	 * <!-- begin-user-doc -->
+   * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Controller}.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public Adapter createControllerAdapter() {
-		if (controllerItemProvider == null) {
-			controllerItemProvider = new ControllerItemProvider(this);
-		}
+    if (controllerItemProvider == null) {
+      controllerItemProvider = new ControllerItemProvider(this);
+    }
 
-		return controllerItemProvider;
-	}
+    return controllerItemProvider;
+  }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.View} instances.
-	 * <!-- begin-user-doc -->
+   * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.View} instances.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected ViewItemProvider viewItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.View}.
-	 * <!-- begin-user-doc -->
+   * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.View}.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public Adapter createViewAdapter() {
-		if (viewItemProvider == null) {
-			viewItemProvider = new ViewItemProvider(this);
-		}
+    if (viewItemProvider == null) {
+      viewItemProvider = new ViewItemProvider(this);
+    }
 
-		return viewItemProvider;
-	}
+    return viewItemProvider;
+  }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Model} instances.
-	 * <!-- begin-user-doc -->
+   * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Model} instances.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected ModelItemProvider modelItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Model}.
-	 * <!-- begin-user-doc -->
+   * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Model}.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public Adapter createModelAdapter() {
-		if (modelItemProvider == null) {
-			modelItemProvider = new ModelItemProvider(this);
-		}
+    if (modelItemProvider == null) {
+      modelItemProvider = new ModelItemProvider(this);
+    }
 
-		return modelItemProvider;
-	}
+    return modelItemProvider;
+  }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Finding} instances.
-	 * <!-- begin-user-doc -->
+   * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Finding} instances.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected FindingItemProvider findingItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Finding}.
-	 * <!-- begin-user-doc -->
+   * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Finding}.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public Adapter createFindingAdapter() {
-		if (findingItemProvider == null) {
-			findingItemProvider = new FindingItemProvider(this);
-		}
+    if (findingItemProvider == null) {
+      findingItemProvider = new FindingItemProvider(this);
+    }
 
-		return findingItemProvider;
-	}
+    return findingItemProvider;
+  }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Account} instances.
-	 * <!-- begin-user-doc -->
+   * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Account} instances.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected AccountItemProvider accountItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Account}.
-	 * <!-- begin-user-doc -->
+   * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Account}.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public Adapter createAccountAdapter() {
-		if (accountItemProvider == null) {
-			accountItemProvider = new AccountItemProvider(this);
-		}
+    if (accountItemProvider == null) {
+      accountItemProvider = new AccountItemProvider(this);
+    }
 
-		return accountItemProvider;
-	}
+    return accountItemProvider;
+  }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Entitlement} instances.
-	 * <!-- begin-user-doc -->
+   * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Entitlement} instances.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected EntitlementItemProvider entitlementItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Entitlement}.
-	 * <!-- begin-user-doc -->
+   * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Entitlement}.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public Adapter createEntitlementAdapter() {
-		if (entitlementItemProvider == null) {
-			entitlementItemProvider = new EntitlementItemProvider(this);
-		}
+    if (entitlementItemProvider == null) {
+      entitlementItemProvider = new EntitlementItemProvider(this);
+    }
 
-		return entitlementItemProvider;
-	}
+    return entitlementItemProvider;
+  }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Task} instances.
-	 * <!-- begin-user-doc -->
+   * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Task} instances.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected TaskItemProvider taskItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Task}.
-	 * <!-- begin-user-doc -->
+   * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Task}.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public Adapter createTaskAdapter() {
-		if (taskItemProvider == null) {
-			taskItemProvider = new TaskItemProvider(this);
-		}
+    if (taskItemProvider == null) {
+      taskItemProvider = new TaskItemProvider(this);
+    }
 
-		return taskItemProvider;
-	}
+    return taskItemProvider;
+  }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Scm} instances.
-	 * <!-- begin-user-doc -->
+   * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Scm} instances.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected ScmItemProvider scmItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Scm}.
-	 * <!-- begin-user-doc -->
+   * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Scm}.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public Adapter createScmAdapter() {
-		if (scmItemProvider == null) {
-			scmItemProvider = new ScmItemProvider(this);
-		}
+    if (scmItemProvider == null) {
+      scmItemProvider = new ScmItemProvider(this);
+    }
 
-		return scmItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Library} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected LibraryItemProvider libraryItemProvider;
+    return scmItemProvider;
+  }
 
 	/**
-	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Library}.
-	 * <!-- begin-user-doc -->
+   * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Snippet} instances.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createLibraryAdapter() {
-		if (libraryItemProvider == null) {
-			libraryItemProvider = new LibraryItemProvider(this);
-		}
-
-		return libraryItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Snippet} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected SnippetItemProvider snippetItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Snippet}.
-	 * <!-- begin-user-doc -->
+   * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Snippet}.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public Adapter createSnippetAdapter() {
-		if (snippetItemProvider == null) {
-			snippetItemProvider = new SnippetItemProvider(this);
-		}
+    if (snippetItemProvider == null) {
+      snippetItemProvider = new SnippetItemProvider(this);
+    }
 
-		return snippetItemProvider;
-	}
+    return snippetItemProvider;
+  }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Url} instances.
-	 * <!-- begin-user-doc -->
+   * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Url} instances.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected UrlItemProvider urlItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Url}.
-	 * <!-- begin-user-doc -->
+   * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Url}.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public Adapter createUrlAdapter() {
-		if (urlItemProvider == null) {
-			urlItemProvider = new UrlItemProvider(this);
-		}
+    if (urlItemProvider == null) {
+      urlItemProvider = new UrlItemProvider(this);
+    }
 
-		return urlItemProvider;
-	}
+    return urlItemProvider;
+  }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Generic} instances.
-	 * <!-- begin-user-doc -->
+   * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Generic} instances.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected GenericItemProvider genericItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Generic}.
-	 * <!-- begin-user-doc -->
+   * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Generic}.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public Adapter createGenericAdapter() {
-		if (genericItemProvider == null) {
-			genericItemProvider = new GenericItemProvider(this);
-		}
+    if (genericItemProvider == null) {
+      genericItemProvider = new GenericItemProvider(this);
+    }
 
-		return genericItemProvider;
-	}
+    return genericItemProvider;
+  }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Control} instances.
-	 * <!-- begin-user-doc -->
+   * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Control} instances.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected ControlItemProvider controlItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Control}.
-	 * <!-- begin-user-doc -->
+   * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Control}.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public Adapter createControlAdapter() {
-		if (controlItemProvider == null) {
-			controlItemProvider = new ControlItemProvider(this);
-		}
+    if (controlItemProvider == null) {
+      controlItemProvider = new ControlItemProvider(this);
+    }
 
-		return controlItemProvider;
-	}
+    return controlItemProvider;
+  }
 
 	/**
-	 * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Resource} instances.
-	 * <!-- begin-user-doc -->
+   * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Resource} instances.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected ResourceItemProvider resourceItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Resource}.
-	 * <!-- begin-user-doc -->
+   * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Resource}.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public Adapter createResourceAdapter() {
-		if (resourceItemProvider == null) {
-			resourceItemProvider = new ResourceItemProvider(this);
-		}
+    if (resourceItemProvider == null) {
+      resourceItemProvider = new ResourceItemProvider(this);
+    }
 
-		return resourceItemProvider;
-	}
+    return resourceItemProvider;
+  }
 
 	/**
-	 * This returns the root adapter factory that contains this factory.
-	 * <!-- begin-user-doc -->
+   * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Applications} instances.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
+	protected ApplicationsItemProvider applicationsItemProvider;
+
+	/**
+   * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Applications}.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	@Override
+	public Adapter createApplicationsAdapter() {
+    if (applicationsItemProvider == null) {
+      applicationsItemProvider = new ApplicationsItemProvider(this);
+    }
+
+    return applicationsItemProvider;
+  }
+
+	/**
+   * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Findings} instances.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	protected FindingsItemProvider findingsItemProvider;
+
+	/**
+   * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Findings}.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	@Override
+	public Adapter createFindingsAdapter() {
+    if (findingsItemProvider == null) {
+      findingsItemProvider = new FindingsItemProvider(this);
+    }
+
+    return findingsItemProvider;
+  }
+
+	/**
+   * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Accounts} instances.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	protected AccountsItemProvider accountsItemProvider;
+
+	/**
+   * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Accounts}.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	@Override
+	public Adapter createAccountsAdapter() {
+    if (accountsItemProvider == null) {
+      accountsItemProvider = new AccountsItemProvider(this);
+    }
+
+    return accountsItemProvider;
+  }
+
+	/**
+   * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Controllers} instances.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	protected ControllersItemProvider controllersItemProvider;
+
+	/**
+   * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Controllers}.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	@Override
+	public Adapter createControllersAdapter() {
+    if (controllersItemProvider == null) {
+      controllersItemProvider = new ControllersItemProvider(this);
+    }
+
+    return controllersItemProvider;
+  }
+
+	/**
+   * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Entitlements} instances.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	protected EntitlementsItemProvider entitlementsItemProvider;
+
+	/**
+   * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Entitlements}.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	@Override
+	public Adapter createEntitlementsAdapter() {
+    if (entitlementsItemProvider == null) {
+      entitlementsItemProvider = new EntitlementsItemProvider(this);
+    }
+
+    return entitlementsItemProvider;
+  }
+
+	/**
+   * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Models} instances.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	protected ModelsItemProvider modelsItemProvider;
+
+	/**
+   * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Models}.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	@Override
+	public Adapter createModelsAdapter() {
+    if (modelsItemProvider == null) {
+      modelsItemProvider = new ModelsItemProvider(this);
+    }
+
+    return modelsItemProvider;
+  }
+
+	/**
+   * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Views} instances.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	protected ViewsItemProvider viewsItemProvider;
+
+	/**
+   * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Views}.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	@Override
+	public Adapter createViewsAdapter() {
+    if (viewsItemProvider == null) {
+      viewsItemProvider = new ViewsItemProvider(this);
+    }
+
+    return viewsItemProvider;
+  }
+
+	/**
+   * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Sinks} instances.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	protected SinksItemProvider sinksItemProvider;
+
+	/**
+   * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Sinks}.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	@Override
+	public Adapter createSinksAdapter() {
+    if (sinksItemProvider == null) {
+      sinksItemProvider = new SinksItemProvider(this);
+    }
+
+    return sinksItemProvider;
+  }
+
+	/**
+   * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Resources} instances.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	protected ResourcesItemProvider resourcesItemProvider;
+
+	/**
+   * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Resources}.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	@Override
+	public Adapter createResourcesAdapter() {
+    if (resourcesItemProvider == null) {
+      resourcesItemProvider = new ResourcesItemProvider(this);
+    }
+
+    return resourcesItemProvider;
+  }
+
+	/**
+   * This keeps track of the one adapter used for all {@link io.opensemantics.semiotics.model.assessment.Tasks} instances.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	protected TasksItemProvider tasksItemProvider;
+
+	/**
+   * This creates an adapter for a {@link io.opensemantics.semiotics.model.assessment.Tasks}.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	@Override
+	public Adapter createTasksAdapter() {
+    if (tasksItemProvider == null) {
+      tasksItemProvider = new TasksItemProvider(this);
+    }
+
+    return tasksItemProvider;
+  }
+
+	/**
+   * This returns the root adapter factory that contains this factory.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
 	public ComposeableAdapterFactory getRootAdapterFactory() {
-		return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
-	}
+    return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
+  }
 
 	/**
-	 * This sets the composed adapter factory that contains this factory.
-	 * <!-- begin-user-doc -->
+   * This sets the composed adapter factory that contains this factory.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
-		this.parentAdapterFactory = parentAdapterFactory;
-	}
+    this.parentAdapterFactory = parentAdapterFactory;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public boolean isFactoryForType(Object type) {
-		return supportedTypes.contains(type) || super.isFactoryForType(type);
-	}
+    return supportedTypes.contains(type) || super.isFactoryForType(type);
+  }
 
 	/**
-	 * This implementation substitutes the factory itself as the key for the adapter.
-	 * <!-- begin-user-doc -->
+   * This implementation substitutes the factory itself as the key for the adapter.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public Adapter adapt(Notifier notifier, Object type) {
-		return super.adapt(notifier, this);
-	}
+    return super.adapt(notifier, this);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public Object adapt(Object object, Object type) {
-		if (isFactoryForType(type)) {
-			Object adapter = super.adapt(object, type);
-			if (!(type instanceof Class<?>) || (((Class<?>)type).isInstance(adapter))) {
-				return adapter;
-			}
-		}
+    if (isFactoryForType(type)) {
+      Object adapter = super.adapt(object, type);
+      if (!(type instanceof Class<?>) || (((Class<?>)type).isInstance(adapter))) {
+        return adapter;
+      }
+    }
 
-		return null;
-	}
+    return null;
+  }
 
 	/**
-	 * This adds a listener.
-	 * <!-- begin-user-doc -->
+   * This adds a listener.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public void addListener(INotifyChangedListener notifyChangedListener) {
-		changeNotifier.addListener(notifyChangedListener);
-	}
+    changeNotifier.addListener(notifyChangedListener);
+  }
 
 	/**
-	 * This removes a listener.
-	 * <!-- begin-user-doc -->
+   * This removes a listener.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public void removeListener(INotifyChangedListener notifyChangedListener) {
-		changeNotifier.removeListener(notifyChangedListener);
-	}
+    changeNotifier.removeListener(notifyChangedListener);
+  }
 
 	/**
-	 * This delegates to {@link #changeNotifier} and to {@link #parentAdapterFactory}.
-	 * <!-- begin-user-doc -->
+   * This delegates to {@link #changeNotifier} and to {@link #parentAdapterFactory}.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public void fireNotifyChanged(Notification notification) {
-		changeNotifier.fireNotifyChanged(notification);
+    changeNotifier.fireNotifyChanged(notification);
 
-		if (parentAdapterFactory != null) {
-			parentAdapterFactory.fireNotifyChanged(notification);
-		}
-	}
+    if (parentAdapterFactory != null) {
+      parentAdapterFactory.fireNotifyChanged(notification);
+    }
+  }
 
 	/**
-	 * This disposes all of the item providers created by this factory. 
-	 * <!-- begin-user-doc -->
+   * This disposes all of the item providers created by this factory. 
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public void dispose() {
-		if (httpItemProvider != null) httpItemProvider.dispose();
-		if (assessmentItemProvider != null) assessmentItemProvider.dispose();
-		if (applicationItemProvider != null) applicationItemProvider.dispose();
-		if (sinkItemProvider != null) sinkItemProvider.dispose();
-		if (controllerItemProvider != null) controllerItemProvider.dispose();
-		if (viewItemProvider != null) viewItemProvider.dispose();
-		if (modelItemProvider != null) modelItemProvider.dispose();
-		if (findingItemProvider != null) findingItemProvider.dispose();
-		if (accountItemProvider != null) accountItemProvider.dispose();
-		if (entitlementItemProvider != null) entitlementItemProvider.dispose();
-		if (taskItemProvider != null) taskItemProvider.dispose();
-		if (scmItemProvider != null) scmItemProvider.dispose();
-		if (libraryItemProvider != null) libraryItemProvider.dispose();
-		if (snippetItemProvider != null) snippetItemProvider.dispose();
-		if (urlItemProvider != null) urlItemProvider.dispose();
-		if (genericItemProvider != null) genericItemProvider.dispose();
-		if (controlItemProvider != null) controlItemProvider.dispose();
-		if (resourceItemProvider != null) resourceItemProvider.dispose();
-	}
+    if (httpItemProvider != null) httpItemProvider.dispose();
+    if (assessmentItemProvider != null) assessmentItemProvider.dispose();
+    if (applicationItemProvider != null) applicationItemProvider.dispose();
+    if (sinkItemProvider != null) sinkItemProvider.dispose();
+    if (controllerItemProvider != null) controllerItemProvider.dispose();
+    if (viewItemProvider != null) viewItemProvider.dispose();
+    if (modelItemProvider != null) modelItemProvider.dispose();
+    if (findingItemProvider != null) findingItemProvider.dispose();
+    if (accountItemProvider != null) accountItemProvider.dispose();
+    if (entitlementItemProvider != null) entitlementItemProvider.dispose();
+    if (taskItemProvider != null) taskItemProvider.dispose();
+    if (scmItemProvider != null) scmItemProvider.dispose();
+    if (snippetItemProvider != null) snippetItemProvider.dispose();
+    if (urlItemProvider != null) urlItemProvider.dispose();
+    if (genericItemProvider != null) genericItemProvider.dispose();
+    if (controlItemProvider != null) controlItemProvider.dispose();
+    if (resourceItemProvider != null) resourceItemProvider.dispose();
+    if (applicationsItemProvider != null) applicationsItemProvider.dispose();
+    if (findingsItemProvider != null) findingsItemProvider.dispose();
+    if (accountsItemProvider != null) accountsItemProvider.dispose();
+    if (controllersItemProvider != null) controllersItemProvider.dispose();
+    if (entitlementsItemProvider != null) entitlementsItemProvider.dispose();
+    if (modelsItemProvider != null) modelsItemProvider.dispose();
+    if (viewsItemProvider != null) viewsItemProvider.dispose();
+    if (sinksItemProvider != null) sinksItemProvider.dispose();
+    if (resourcesItemProvider != null) resourcesItemProvider.dispose();
+    if (tasksItemProvider != null) tasksItemProvider.dispose();
+  }
 
 }

@@ -53,143 +53,148 @@ public class ScmItemProvider
 		IItemLabelProvider,
 		IItemPropertySource {
 	/**
-	 * This constructs an instance from a factory and a notifier.
-	 * <!-- begin-user-doc -->
+   * This constructs an instance from a factory and a notifier.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public ScmItemProvider(AdapterFactory adapterFactory) {
-		super(adapterFactory);
-	}
+    super(adapterFactory);
+  }
 
 	/**
-	 * This returns the property descriptors for the adapted class.
-	 * <!-- begin-user-doc -->
+   * This returns the property descriptors for the adapted class.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
-			super.getPropertyDescriptors(object);
+    if (itemPropertyDescriptors == null) {
+      super.getPropertyDescriptors(object);
 
-			addRepositoryPropertyDescriptor(object);
-			addBranchTagPropertyDescriptor(object);
-		}
-		return itemPropertyDescriptors;
-	}
+      addRepositoryPropertyDescriptor(object);
+      addBranchTagPropertyDescriptor(object);
+    }
+    return itemPropertyDescriptors;
+  }
 
 	/**
-	 * This adds a property descriptor for the Repository feature.
-	 * <!-- begin-user-doc -->
+   * This adds a property descriptor for the Repository feature.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected void addRepositoryPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Scm_repository_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Scm_repository_feature", "_UI_Scm_type"),
-				 AssessmentPackage.Literals.SCM__REPOSITORY,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+    itemPropertyDescriptors.add
+      (createItemPropertyDescriptor
+        (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+         getResourceLocator(),
+         getString("_UI_Scm_repository_feature"),
+         getString("_UI_PropertyDescriptor_description", "_UI_Scm_repository_feature", "_UI_Scm_type"),
+         AssessmentPackage.Literals.SCM__REPOSITORY,
+         true,
+         false,
+         false,
+         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+         null,
+         null));
+  }
 
 	/**
-	 * This adds a property descriptor for the Branch Tag feature.
-	 * <!-- begin-user-doc -->
+   * This adds a property descriptor for the Branch Tag feature.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected void addBranchTagPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Scm_branchTag_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Scm_branchTag_feature", "_UI_Scm_type"),
-				 AssessmentPackage.Literals.SCM__BRANCH_TAG,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+    itemPropertyDescriptors.add
+      (createItemPropertyDescriptor
+        (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+         getResourceLocator(),
+         getString("_UI_Scm_branchTag_feature"),
+         getString("_UI_PropertyDescriptor_description", "_UI_Scm_branchTag_feature", "_UI_Scm_type"),
+         AssessmentPackage.Literals.SCM__BRANCH_TAG,
+         true,
+         false,
+         false,
+         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+         null,
+         null));
+  }
 
 	/**
 	 * This returns Scm.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Scm"));
+		return overlayImage(object, getResourceLocator().getImage("famfamfam/silk/sitemap.png"));
 	}
 
 	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Scm)object).getRepository();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Scm_type") :
-			getString("_UI_Scm_type") + " " + label;
+		final Scm scm = (Scm)object;
+		final StringBuilder sb = new StringBuilder();
+		if (scm.getRepository() != null && !scm.getRepository().equals("")) {
+			sb.append(scm.getRepository());
+			if (scm.getBranchTag() != null && !scm.getBranchTag().equals("")) {
+				sb.append(String.format(" [%s]", scm.getBranchTag()));
+			}
+		}
+		return sb.length() == 0 ? getString("_UI_Scm_type") : sb.toString();
 	}
 	
 
 	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update any cached
-	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc -->
+   * This handles model notifications by calling {@link #updateChildren} to update any cached
+   * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public void notifyChanged(Notification notification) {
-		updateChildren(notification);
+    updateChildren(notification);
 
-		switch (notification.getFeatureID(Scm.class)) {
-			case AssessmentPackage.SCM__REPOSITORY:
-			case AssessmentPackage.SCM__BRANCH_TAG:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
-		super.notifyChanged(notification);
-	}
+    switch (notification.getFeatureID(Scm.class)) {
+      case AssessmentPackage.SCM__REPOSITORY:
+      case AssessmentPackage.SCM__BRANCH_TAG:
+        fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+        return;
+    }
+    super.notifyChanged(notification);
+  }
 
 	/**
-	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
-	 * that can be created under this object.
-	 * <!-- begin-user-doc -->
+   * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
+   * that can be created under this object.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
-		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
+    super.collectNewChildDescriptors(newChildDescriptors, object);
+  }
 
 	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
+   * Return the resource locator for this item provider's resources.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return AssessmentEditPlugin.INSTANCE;
-	}
+    return AssessmentEditPlugin.INSTANCE;
+  }
 
 }

@@ -53,121 +53,121 @@ public class ResourceItemProvider
 		IItemLabelProvider,
 		IItemPropertySource {
 	/**
-	 * This constructs an instance from a factory and a notifier.
-	 * <!-- begin-user-doc -->
+   * This constructs an instance from a factory and a notifier.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public ResourceItemProvider(AdapterFactory adapterFactory) {
-		super(adapterFactory);
-	}
+    super(adapterFactory);
+  }
 
 	/**
-	 * This returns the property descriptors for the adapted class.
-	 * <!-- begin-user-doc -->
+   * This returns the property descriptors for the adapted class.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
-			super.getPropertyDescriptors(object);
+    if (itemPropertyDescriptors == null) {
+      super.getPropertyDescriptors(object);
 
-			addLabelPropertyDescriptor(object);
-			addNotesPropertyDescriptor(object);
-			addApplicationPropertyDescriptor(object);
-			addSnippetsPropertyDescriptor(object);
-		}
-		return itemPropertyDescriptors;
-	}
+      addLabelPropertyDescriptor(object);
+      addNotesPropertyDescriptor(object);
+      addContentsPropertyDescriptor(object);
+      addSnippetsPropertyDescriptor(object);
+    }
+    return itemPropertyDescriptors;
+  }
 
 	/**
-	 * This adds a property descriptor for the Label feature.
-	 * <!-- begin-user-doc -->
+   * This adds a property descriptor for the Label feature.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected void addLabelPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Label_label_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Label_label_feature", "_UI_Label_type"),
-				 AssessmentPackage.Literals.LABEL__LABEL,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+    itemPropertyDescriptors.add
+      (createItemPropertyDescriptor
+        (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+         getResourceLocator(),
+         getString("_UI_Label_label_feature"),
+         getString("_UI_PropertyDescriptor_description", "_UI_Label_label_feature", "_UI_Label_type"),
+         AssessmentPackage.Literals.LABEL__LABEL,
+         true,
+         false,
+         false,
+         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+         null,
+         null));
+  }
 
 	/**
-	 * This adds a property descriptor for the Notes feature.
-	 * <!-- begin-user-doc -->
+   * This adds a property descriptor for the Notes feature.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected void addNotesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Notes_notes_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Notes_notes_feature", "_UI_Notes_type"),
-				 AssessmentPackage.Literals.NOTES__NOTES,
-				 true,
-				 true,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+    itemPropertyDescriptors.add
+      (createItemPropertyDescriptor
+        (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+         getResourceLocator(),
+         getString("_UI_Notes_notes_feature"),
+         getString("_UI_PropertyDescriptor_description", "_UI_Notes_notes_feature", "_UI_Notes_type"),
+         AssessmentPackage.Literals.NOTES__NOTES,
+         true,
+         true,
+         false,
+         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+         null,
+         null));
+  }
 
 	/**
-	 * This adds a property descriptor for the Application feature.
-	 * <!-- begin-user-doc -->
+   * This adds a property descriptor for the Contents feature.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addApplicationPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Resource_application_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Resource_application_feature", "_UI_Resource_type"),
-				 AssessmentPackage.Literals.RESOURCE__APPLICATION,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
+   * @generated
+   */
+	protected void addContentsPropertyDescriptor(Object object) {
+    itemPropertyDescriptors.add
+      (createItemPropertyDescriptor
+        (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+         getResourceLocator(),
+         getString("_UI_Contents_contents_feature"),
+         getString("_UI_PropertyDescriptor_description", "_UI_Contents_contents_feature", "_UI_Contents_type"),
+         AssessmentPackage.Literals.CONTENTS__CONTENTS,
+         true,
+         true,
+         false,
+         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+         null,
+         null));
+  }
 
 	/**
-	 * This adds a property descriptor for the Snippets feature.
-	 * <!-- begin-user-doc -->
+   * This adds a property descriptor for the Snippets feature.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected void addSnippetsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Resource_snippets_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Resource_snippets_feature", "_UI_Resource_type"),
-				 AssessmentPackage.Literals.RESOURCE__SNIPPETS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
+    itemPropertyDescriptors.add
+      (createItemPropertyDescriptor
+        (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+         getResourceLocator(),
+         getString("_UI_Resource_snippets_feature"),
+         getString("_UI_PropertyDescriptor_description", "_UI_Resource_snippets_feature", "_UI_Resource_type"),
+         AssessmentPackage.Literals.RESOURCE__SNIPPETS,
+         true,
+         false,
+         true,
+         null,
+         null,
+         null));
+  }
 
 	/**
 	 * This returns Resource.gif.
@@ -189,51 +189,53 @@ public class ResourceItemProvider
 	@Override
 	public String getText(Object object) {
 		String label = ((Resource)object).getLabel();
-		return label == null || label.length() == 0 ? "" : label;
+		return label == null || label.length() == 0 ?
+			getString("_UI_Resource_type") : label;
 	}
 	
 
 	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update any cached
-	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc -->
+   * This handles model notifications by calling {@link #updateChildren} to update any cached
+   * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public void notifyChanged(Notification notification) {
-		updateChildren(notification);
+    updateChildren(notification);
 
-		switch (notification.getFeatureID(Resource.class)) {
-			case AssessmentPackage.RESOURCE__LABEL:
-			case AssessmentPackage.RESOURCE__NOTES:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
-		super.notifyChanged(notification);
-	}
+    switch (notification.getFeatureID(Resource.class)) {
+      case AssessmentPackage.RESOURCE__LABEL:
+      case AssessmentPackage.RESOURCE__NOTES:
+      case AssessmentPackage.RESOURCE__CONTENTS:
+        fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+        return;
+    }
+    super.notifyChanged(notification);
+  }
 
 	/**
-	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
-	 * that can be created under this object.
-	 * <!-- begin-user-doc -->
+   * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
+   * that can be created under this object.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
-		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
+    super.collectNewChildDescriptors(newChildDescriptors, object);
+  }
 
 	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
+   * Return the resource locator for this item provider's resources.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return AssessmentEditPlugin.INSTANCE;
-	}
+    return AssessmentEditPlugin.INSTANCE;
+  }
 
 }

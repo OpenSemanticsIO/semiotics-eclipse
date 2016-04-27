@@ -26,18 +26,18 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getAssessment <em>Assessment</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getAccounts <em>Accounts</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getEntitlements <em>Entitlements</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getControllers <em>Controllers</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getModels <em>Models</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getScm <em>Scm</em>}</li>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getLibraries <em>Libraries</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getViews <em>Views</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getSinks <em>Sinks</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getLanguages <em>Languages</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getResources <em>Resources</em>}</li>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getUrls <em>Urls</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getApplications <em>Applications</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getInternalURL <em>Internal URL</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getExternalURL <em>External URL</em>}</li>
  * </ul>
  *
  * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication()
@@ -46,237 +46,319 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Application extends Label, Notes {
 	/**
-	 * Returns the value of the '<em><b>Assessment</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Assessment#getApplications <em>Applications</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Assessment</em>' container reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Assessment</em>' container reference.
-	 * @see #setAssessment(Assessment)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Assessment()
-	 * @see io.opensemantics.semiotics.model.assessment.Assessment#getApplications
-	 * @model opposite="applications" transient="false"
-	 * @generated
-	 */
-	Assessment getAssessment();
-
-	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Application#getAssessment <em>Assessment</em>}' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Assessment</em>' container reference.
-	 * @see #getAssessment()
-	 * @generated
-	 */
-	void setAssessment(Assessment value);
-
-	/**
-	 * Returns the value of the '<em><b>Accounts</b></em>' containment reference list.
-	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Account}.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Account#getApplication <em>Application</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Accounts</b></em>' containment reference.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Accounts</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Accounts</em>' containment reference list.
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Accounts()
-	 * @see io.opensemantics.semiotics.model.assessment.Account#getApplication
-	 * @model opposite="application" containment="true"
-	 * @generated
-	 */
-	EList<Account> getAccounts();
+   * @return the value of the '<em>Accounts</em>' containment reference.
+   * @see #setAccounts(Accounts)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Accounts()
+   * @model containment="true"
+   * @generated
+   */
+	Accounts getAccounts();
 
 	/**
-	 * Returns the value of the '<em><b>Entitlements</b></em>' containment reference list.
-	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Entitlement}.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Entitlement#getApplication <em>Application</em>}'.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Application#getAccounts <em>Accounts</em>}' containment reference.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Accounts</em>' containment reference.
+   * @see #getAccounts()
+   * @generated
+   */
+	void setAccounts(Accounts value);
+
+	/**
+   * Returns the value of the '<em><b>Entitlements</b></em>' containment reference.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Entitlements</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Entitlements</em>' containment reference list.
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Entitlements()
-	 * @see io.opensemantics.semiotics.model.assessment.Entitlement#getApplication
-	 * @model opposite="application" containment="true"
-	 * @generated
-	 */
-	EList<Entitlement> getEntitlements();
+   * @return the value of the '<em>Entitlements</em>' containment reference.
+   * @see #setEntitlements(Entitlements)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Entitlements()
+   * @model containment="true"
+   * @generated
+   */
+	Entitlements getEntitlements();
 
 	/**
-	 * Returns the value of the '<em><b>Controllers</b></em>' containment reference list.
-	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Controller}.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Controller#getApplication <em>Application</em>}'.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Application#getEntitlements <em>Entitlements</em>}' containment reference.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Entitlements</em>' containment reference.
+   * @see #getEntitlements()
+   * @generated
+   */
+	void setEntitlements(Entitlements value);
+
+	/**
+   * Returns the value of the '<em><b>Controllers</b></em>' containment reference.
+   * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Controllers#getApplication <em>Application</em>}'.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Controllers</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Controllers</em>' containment reference list.
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Controllers()
-	 * @see io.opensemantics.semiotics.model.assessment.Controller#getApplication
-	 * @model opposite="application" containment="true"
-	 * @generated
-	 */
-	EList<Controller> getControllers();
+   * @return the value of the '<em>Controllers</em>' containment reference.
+   * @see #setControllers(Controllers)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Controllers()
+   * @see io.opensemantics.semiotics.model.assessment.Controllers#getApplication
+   * @model opposite="application" containment="true"
+   * @generated
+   */
+	Controllers getControllers();
 
 	/**
-	 * Returns the value of the '<em><b>Models</b></em>' containment reference list.
-	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Model}.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Model#getApplication <em>Application</em>}'.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Application#getControllers <em>Controllers</em>}' containment reference.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Controllers</em>' containment reference.
+   * @see #getControllers()
+   * @generated
+   */
+	void setControllers(Controllers value);
+
+	/**
+   * Returns the value of the '<em><b>Models</b></em>' containment reference.
+   * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Models#getApplication <em>Application</em>}'.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Models</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Models</em>' containment reference list.
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Models()
-	 * @see io.opensemantics.semiotics.model.assessment.Model#getApplication
-	 * @model opposite="application" containment="true"
-	 * @generated
-	 */
-	EList<Model> getModels();
+   * @return the value of the '<em>Models</em>' containment reference.
+   * @see #setModels(Models)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Models()
+   * @see io.opensemantics.semiotics.model.assessment.Models#getApplication
+   * @model opposite="application" containment="true"
+   * @generated
+   */
+	Models getModels();
 
 	/**
-	 * Returns the value of the '<em><b>Scm</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Scm#getApplication <em>Application</em>}'.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Application#getModels <em>Models</em>}' containment reference.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Models</em>' containment reference.
+   * @see #getModels()
+   * @generated
+   */
+	void setModels(Models value);
+
+	/**
+   * Returns the value of the '<em><b>Scm</b></em>' containment reference.
+   * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Scm#getApplication <em>Application</em>}'.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Scm</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Scm</em>' containment reference.
-	 * @see #setScm(Scm)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Scm()
-	 * @see io.opensemantics.semiotics.model.assessment.Scm#getApplication
-	 * @model opposite="application" containment="true"
-	 * @generated
-	 */
+   * @return the value of the '<em>Scm</em>' containment reference.
+   * @see #setScm(Scm)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Scm()
+   * @see io.opensemantics.semiotics.model.assessment.Scm#getApplication
+   * @model opposite="application" containment="true"
+   * @generated
+   */
 	Scm getScm();
 
 	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Application#getScm <em>Scm</em>}' containment reference.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Application#getScm <em>Scm</em>}' containment reference.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Scm</em>' containment reference.
-	 * @see #getScm()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Scm</em>' containment reference.
+   * @see #getScm()
+   * @generated
+   */
 	void setScm(Scm value);
 
 	/**
-	 * Returns the value of the '<em><b>Libraries</b></em>' containment reference list.
-	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Library}.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Library#getApplication <em>Application</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Libraries</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Libraries</em>' containment reference list.
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Libraries()
-	 * @see io.opensemantics.semiotics.model.assessment.Library#getApplication
-	 * @model opposite="application" containment="true"
-	 * @generated
-	 */
-	EList<Library> getLibraries();
-
-	/**
-	 * Returns the value of the '<em><b>Views</b></em>' containment reference list.
-	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.View}.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.View#getApplication <em>Application</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Views</b></em>' containment reference.
+   * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Views#getApplication <em>Application</em>}'.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Views</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Views</em>' containment reference list.
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Views()
-	 * @see io.opensemantics.semiotics.model.assessment.View#getApplication
-	 * @model opposite="application" containment="true"
-	 * @generated
-	 */
-	EList<View> getViews();
+   * @return the value of the '<em>Views</em>' containment reference.
+   * @see #setViews(Views)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Views()
+   * @see io.opensemantics.semiotics.model.assessment.Views#getApplication
+   * @model opposite="application" containment="true"
+   * @generated
+   */
+	Views getViews();
 
 	/**
-	 * Returns the value of the '<em><b>Sinks</b></em>' containment reference list.
-	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Sink}.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Sink#getApplication <em>Application</em>}'.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Application#getViews <em>Views</em>}' containment reference.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Views</em>' containment reference.
+   * @see #getViews()
+   * @generated
+   */
+	void setViews(Views value);
+
+	/**
+   * Returns the value of the '<em><b>Sinks</b></em>' containment reference.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Sinks</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sinks</em>' containment reference list.
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Sinks()
-	 * @see io.opensemantics.semiotics.model.assessment.Sink#getApplication
-	 * @model opposite="application" containment="true"
-	 * @generated
-	 */
-	EList<Sink> getSinks();
+   * @return the value of the '<em>Sinks</em>' containment reference.
+   * @see #setSinks(Sinks)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Sinks()
+   * @model containment="true"
+   * @generated
+   */
+	Sinks getSinks();
 
 	/**
-	 * Returns the value of the '<em><b>Languages</b></em>' attribute list.
-	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Language}.
-	 * The literals are from the enumeration {@link io.opensemantics.semiotics.model.assessment.Language}.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Application#getSinks <em>Sinks</em>}' containment reference.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Sinks</em>' containment reference.
+   * @see #getSinks()
+   * @generated
+   */
+	void setSinks(Sinks value);
+
+	/**
+   * Returns the value of the '<em><b>Languages</b></em>' attribute list.
+   * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Language}.
+   * The literals are from the enumeration {@link io.opensemantics.semiotics.model.assessment.Language}.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Languages</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Languages</em>' attribute list.
-	 * @see io.opensemantics.semiotics.model.assessment.Language
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Languages()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Languages</em>' attribute list.
+   * @see io.opensemantics.semiotics.model.assessment.Language
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Languages()
+   * @model
+   * @generated
+   */
 	EList<Language> getLanguages();
 
 	/**
-	 * Returns the value of the '<em><b>Resources</b></em>' containment reference list.
-	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Resource}.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Resource#getApplication <em>Application</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Resources</b></em>' containment reference.
+   * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Resources#getApplication <em>Application</em>}'.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Resources</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Resources</em>' containment reference list.
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Resources()
-	 * @see io.opensemantics.semiotics.model.assessment.Resource#getApplication
-	 * @model opposite="application" containment="true"
-	 * @generated
-	 */
-	EList<Resource> getResources();
+   * @return the value of the '<em>Resources</em>' containment reference.
+   * @see #setResources(Resources)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Resources()
+   * @see io.opensemantics.semiotics.model.assessment.Resources#getApplication
+   * @model opposite="application" containment="true"
+   * @generated
+   */
+	Resources getResources();
 
 	/**
-	 * Returns the value of the '<em><b>Urls</b></em>' containment reference list.
-	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Url}.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Application#getResources <em>Resources</em>}' containment reference.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Resources</em>' containment reference.
+   * @see #getResources()
+   * @generated
+   */
+	void setResources(Resources value);
+
+	/**
+   * Returns the value of the '<em><b>Applications</b></em>' container reference.
+   * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Applications#getApplications <em>Applications</em>}'.
+   * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Urls</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Applications</em>' container reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Urls</em>' containment reference list.
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Urls()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Url> getUrls();
+   * @return the value of the '<em>Applications</em>' container reference.
+   * @see #setApplications(Applications)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Applications()
+   * @see io.opensemantics.semiotics.model.assessment.Applications#getApplications
+   * @model opposite="applications" transient="false"
+   * @generated
+   */
+	Applications getApplications();
+
+	/**
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Application#getApplications <em>Applications</em>}' container reference.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Applications</em>' container reference.
+   * @see #getApplications()
+   * @generated
+   */
+	void setApplications(Applications value);
+
+	/**
+   * Returns the value of the '<em><b>Internal URL</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Internal URL</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Internal URL</em>' attribute.
+   * @see #setInternalURL(String)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_InternalURL()
+   * @model
+   * @generated
+   */
+  String getInternalURL();
+
+  /**
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Application#getInternalURL <em>Internal URL</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Internal URL</em>' attribute.
+   * @see #getInternalURL()
+   * @generated
+   */
+  void setInternalURL(String value);
+
+  /**
+   * Returns the value of the '<em><b>External URL</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>External URL</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>External URL</em>' attribute.
+   * @see #setExternalURL(String)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_ExternalURL()
+   * @model
+   * @generated
+   */
+  String getExternalURL();
+
+  /**
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Application#getExternalURL <em>External URL</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>External URL</em>' attribute.
+   * @see #getExternalURL()
+   * @generated
+   */
+  void setExternalURL(String value);
 
 } // Application

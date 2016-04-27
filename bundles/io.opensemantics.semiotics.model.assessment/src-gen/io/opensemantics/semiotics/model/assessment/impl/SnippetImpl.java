@@ -47,492 +47,492 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class SnippetImpl extends GraphNodeImpl implements Snippet {
 	/**
-	 * The default value of the '{@link #getContents() <em>Contents</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The default value of the '{@link #getContents() <em>Contents</em>}' attribute.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getContents()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getContents()
+   * @generated
+   * @ordered
+   */
 	protected static final String CONTENTS_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getContents() <em>Contents</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getContents() <em>Contents</em>}' attribute.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getContents()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getContents()
+   * @generated
+   * @ordered
+   */
 	protected String contents = CONTENTS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getLineEnd() <em>Line End</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The default value of the '{@link #getLineEnd() <em>Line End</em>}' attribute.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLineEnd()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getLineEnd()
+   * @generated
+   * @ordered
+   */
 	protected static final int LINE_END_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getLineEnd() <em>Line End</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getLineEnd() <em>Line End</em>}' attribute.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLineEnd()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getLineEnd()
+   * @generated
+   * @ordered
+   */
 	protected int lineEnd = LINE_END_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getColumnStart() <em>Column Start</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The default value of the '{@link #getColumnStart() <em>Column Start</em>}' attribute.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getColumnStart()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getColumnStart()
+   * @generated
+   * @ordered
+   */
 	protected static final int COLUMN_START_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getColumnStart() <em>Column Start</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getColumnStart() <em>Column Start</em>}' attribute.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getColumnStart()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getColumnStart()
+   * @generated
+   * @ordered
+   */
 	protected int columnStart = COLUMN_START_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getColumnEnd() <em>Column End</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The default value of the '{@link #getColumnEnd() <em>Column End</em>}' attribute.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getColumnEnd()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getColumnEnd()
+   * @generated
+   * @ordered
+   */
 	protected static final int COLUMN_END_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getColumnEnd() <em>Column End</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getColumnEnd() <em>Column End</em>}' attribute.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getColumnEnd()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getColumnEnd()
+   * @generated
+   * @ordered
+   */
 	protected int columnEnd = COLUMN_END_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getLineStart() <em>Line Start</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The default value of the '{@link #getLineStart() <em>Line Start</em>}' attribute.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLineStart()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getLineStart()
+   * @generated
+   * @ordered
+   */
 	protected static final int LINE_START_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getLineStart() <em>Line Start</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getLineStart() <em>Line Start</em>}' attribute.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLineStart()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getLineStart()
+   * @generated
+   * @ordered
+   */
 	protected int lineStart = LINE_START_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getResource() <em>Resource</em>}' reference.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getResource() <em>Resource</em>}' reference.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getResource()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getResource()
+   * @generated
+   * @ordered
+   */
 	protected Resource resource;
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected SnippetImpl() {
-		super();
-	}
+    super();
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	protected EClass eStaticClass() {
-		return AssessmentPackage.Literals.SNIPPET;
-	}
+    return AssessmentPackage.Literals.SNIPPET;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public int getLineEnd() {
-		return lineEnd;
-	}
+    return lineEnd;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public void setLineEnd(int newLineEnd) {
-		int oldLineEnd = lineEnd;
-		lineEnd = newLineEnd;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.SNIPPET__LINE_END, oldLineEnd, lineEnd));
-	}
+    int oldLineEnd = lineEnd;
+    lineEnd = newLineEnd;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.SNIPPET__LINE_END, oldLineEnd, lineEnd));
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public int getColumnStart() {
-		return columnStart;
-	}
+    return columnStart;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public void setColumnStart(int newColumnStart) {
-		int oldColumnStart = columnStart;
-		columnStart = newColumnStart;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.SNIPPET__COLUMN_START, oldColumnStart, columnStart));
-	}
+    int oldColumnStart = columnStart;
+    columnStart = newColumnStart;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.SNIPPET__COLUMN_START, oldColumnStart, columnStart));
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public int getColumnEnd() {
-		return columnEnd;
-	}
+    return columnEnd;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public void setColumnEnd(int newColumnEnd) {
-		int oldColumnEnd = columnEnd;
-		columnEnd = newColumnEnd;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.SNIPPET__COLUMN_END, oldColumnEnd, columnEnd));
-	}
+    int oldColumnEnd = columnEnd;
+    columnEnd = newColumnEnd;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.SNIPPET__COLUMN_END, oldColumnEnd, columnEnd));
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public String getContents() {
-		return contents;
-	}
+    return contents;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public void setContents(String newContents) {
-		String oldContents = contents;
-		contents = newContents;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.SNIPPET__CONTENTS, oldContents, contents));
-	}
+    String oldContents = contents;
+    contents = newContents;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.SNIPPET__CONTENTS, oldContents, contents));
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public int getLineStart() {
-		return lineStart;
-	}
+    return lineStart;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public void setLineStart(int newLineStart) {
-		int oldLineStart = lineStart;
-		lineStart = newLineStart;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.SNIPPET__LINE_START, oldLineStart, lineStart));
-	}
+    int oldLineStart = lineStart;
+    lineStart = newLineStart;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.SNIPPET__LINE_START, oldLineStart, lineStart));
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public Resource getResource() {
-		if (resource != null && resource.eIsProxy()) {
-			InternalEObject oldResource = (InternalEObject)resource;
-			resource = (Resource)eResolveProxy(oldResource);
-			if (resource != oldResource) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AssessmentPackage.SNIPPET__RESOURCE, oldResource, resource));
-			}
-		}
-		return resource;
-	}
+    if (resource != null && resource.eIsProxy()) {
+      InternalEObject oldResource = (InternalEObject)resource;
+      resource = (Resource)eResolveProxy(oldResource);
+      if (resource != oldResource) {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, AssessmentPackage.SNIPPET__RESOURCE, oldResource, resource));
+      }
+    }
+    return resource;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public Resource basicGetResource() {
-		return resource;
-	}
+    return resource;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public NotificationChain basicSetResource(Resource newResource, NotificationChain msgs) {
-		Resource oldResource = resource;
-		resource = newResource;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AssessmentPackage.SNIPPET__RESOURCE, oldResource, newResource);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
+    Resource oldResource = resource;
+    resource = newResource;
+    if (eNotificationRequired()) {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AssessmentPackage.SNIPPET__RESOURCE, oldResource, newResource);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public void setResource(Resource newResource) {
-		if (newResource != resource) {
-			NotificationChain msgs = null;
-			if (resource != null)
-				msgs = ((InternalEObject)resource).eInverseRemove(this, AssessmentPackage.RESOURCE__SNIPPETS, Resource.class, msgs);
-			if (newResource != null)
-				msgs = ((InternalEObject)newResource).eInverseAdd(this, AssessmentPackage.RESOURCE__SNIPPETS, Resource.class, msgs);
-			msgs = basicSetResource(newResource, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.SNIPPET__RESOURCE, newResource, newResource));
-	}
+    if (newResource != resource) {
+      NotificationChain msgs = null;
+      if (resource != null)
+        msgs = ((InternalEObject)resource).eInverseRemove(this, AssessmentPackage.RESOURCE__SNIPPETS, Resource.class, msgs);
+      if (newResource != null)
+        msgs = ((InternalEObject)newResource).eInverseAdd(this, AssessmentPackage.RESOURCE__SNIPPETS, Resource.class, msgs);
+      msgs = basicSetResource(newResource, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.SNIPPET__RESOURCE, newResource, newResource));
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case AssessmentPackage.SNIPPET__RESOURCE:
-				if (resource != null)
-					msgs = ((InternalEObject)resource).eInverseRemove(this, AssessmentPackage.RESOURCE__SNIPPETS, Resource.class, msgs);
-				return basicSetResource((Resource)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
+    switch (featureID) {
+      case AssessmentPackage.SNIPPET__RESOURCE:
+        if (resource != null)
+          msgs = ((InternalEObject)resource).eInverseRemove(this, AssessmentPackage.RESOURCE__SNIPPETS, Resource.class, msgs);
+        return basicSetResource((Resource)otherEnd, msgs);
+    }
+    return super.eInverseAdd(otherEnd, featureID, msgs);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case AssessmentPackage.SNIPPET__RESOURCE:
-				return basicSetResource(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    switch (featureID) {
+      case AssessmentPackage.SNIPPET__RESOURCE:
+        return basicSetResource(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case AssessmentPackage.SNIPPET__CONTENTS:
-				return getContents();
-			case AssessmentPackage.SNIPPET__LINE_END:
-				return getLineEnd();
-			case AssessmentPackage.SNIPPET__COLUMN_START:
-				return getColumnStart();
-			case AssessmentPackage.SNIPPET__COLUMN_END:
-				return getColumnEnd();
-			case AssessmentPackage.SNIPPET__LINE_START:
-				return getLineStart();
-			case AssessmentPackage.SNIPPET__RESOURCE:
-				if (resolve) return getResource();
-				return basicGetResource();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    switch (featureID) {
+      case AssessmentPackage.SNIPPET__CONTENTS:
+        return getContents();
+      case AssessmentPackage.SNIPPET__LINE_END:
+        return getLineEnd();
+      case AssessmentPackage.SNIPPET__COLUMN_START:
+        return getColumnStart();
+      case AssessmentPackage.SNIPPET__COLUMN_END:
+        return getColumnEnd();
+      case AssessmentPackage.SNIPPET__LINE_START:
+        return getLineStart();
+      case AssessmentPackage.SNIPPET__RESOURCE:
+        if (resolve) return getResource();
+        return basicGetResource();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case AssessmentPackage.SNIPPET__CONTENTS:
-				setContents((String)newValue);
-				return;
-			case AssessmentPackage.SNIPPET__LINE_END:
-				setLineEnd((Integer)newValue);
-				return;
-			case AssessmentPackage.SNIPPET__COLUMN_START:
-				setColumnStart((Integer)newValue);
-				return;
-			case AssessmentPackage.SNIPPET__COLUMN_END:
-				setColumnEnd((Integer)newValue);
-				return;
-			case AssessmentPackage.SNIPPET__LINE_START:
-				setLineStart((Integer)newValue);
-				return;
-			case AssessmentPackage.SNIPPET__RESOURCE:
-				setResource((Resource)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    switch (featureID) {
+      case AssessmentPackage.SNIPPET__CONTENTS:
+        setContents((String)newValue);
+        return;
+      case AssessmentPackage.SNIPPET__LINE_END:
+        setLineEnd((Integer)newValue);
+        return;
+      case AssessmentPackage.SNIPPET__COLUMN_START:
+        setColumnStart((Integer)newValue);
+        return;
+      case AssessmentPackage.SNIPPET__COLUMN_END:
+        setColumnEnd((Integer)newValue);
+        return;
+      case AssessmentPackage.SNIPPET__LINE_START:
+        setLineStart((Integer)newValue);
+        return;
+      case AssessmentPackage.SNIPPET__RESOURCE:
+        setResource((Resource)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case AssessmentPackage.SNIPPET__CONTENTS:
-				setContents(CONTENTS_EDEFAULT);
-				return;
-			case AssessmentPackage.SNIPPET__LINE_END:
-				setLineEnd(LINE_END_EDEFAULT);
-				return;
-			case AssessmentPackage.SNIPPET__COLUMN_START:
-				setColumnStart(COLUMN_START_EDEFAULT);
-				return;
-			case AssessmentPackage.SNIPPET__COLUMN_END:
-				setColumnEnd(COLUMN_END_EDEFAULT);
-				return;
-			case AssessmentPackage.SNIPPET__LINE_START:
-				setLineStart(LINE_START_EDEFAULT);
-				return;
-			case AssessmentPackage.SNIPPET__RESOURCE:
-				setResource((Resource)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+    switch (featureID) {
+      case AssessmentPackage.SNIPPET__CONTENTS:
+        setContents(CONTENTS_EDEFAULT);
+        return;
+      case AssessmentPackage.SNIPPET__LINE_END:
+        setLineEnd(LINE_END_EDEFAULT);
+        return;
+      case AssessmentPackage.SNIPPET__COLUMN_START:
+        setColumnStart(COLUMN_START_EDEFAULT);
+        return;
+      case AssessmentPackage.SNIPPET__COLUMN_END:
+        setColumnEnd(COLUMN_END_EDEFAULT);
+        return;
+      case AssessmentPackage.SNIPPET__LINE_START:
+        setLineStart(LINE_START_EDEFAULT);
+        return;
+      case AssessmentPackage.SNIPPET__RESOURCE:
+        setResource((Resource)null);
+        return;
+    }
+    super.eUnset(featureID);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case AssessmentPackage.SNIPPET__CONTENTS:
-				return CONTENTS_EDEFAULT == null ? contents != null : !CONTENTS_EDEFAULT.equals(contents);
-			case AssessmentPackage.SNIPPET__LINE_END:
-				return lineEnd != LINE_END_EDEFAULT;
-			case AssessmentPackage.SNIPPET__COLUMN_START:
-				return columnStart != COLUMN_START_EDEFAULT;
-			case AssessmentPackage.SNIPPET__COLUMN_END:
-				return columnEnd != COLUMN_END_EDEFAULT;
-			case AssessmentPackage.SNIPPET__LINE_START:
-				return lineStart != LINE_START_EDEFAULT;
-			case AssessmentPackage.SNIPPET__RESOURCE:
-				return resource != null;
-		}
-		return super.eIsSet(featureID);
-	}
+    switch (featureID) {
+      case AssessmentPackage.SNIPPET__CONTENTS:
+        return CONTENTS_EDEFAULT == null ? contents != null : !CONTENTS_EDEFAULT.equals(contents);
+      case AssessmentPackage.SNIPPET__LINE_END:
+        return lineEnd != LINE_END_EDEFAULT;
+      case AssessmentPackage.SNIPPET__COLUMN_START:
+        return columnStart != COLUMN_START_EDEFAULT;
+      case AssessmentPackage.SNIPPET__COLUMN_END:
+        return columnEnd != COLUMN_END_EDEFAULT;
+      case AssessmentPackage.SNIPPET__LINE_START:
+        return lineStart != LINE_START_EDEFAULT;
+      case AssessmentPackage.SNIPPET__RESOURCE:
+        return resource != null;
+    }
+    return super.eIsSet(featureID);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == Contents.class) {
-			switch (derivedFeatureID) {
-				case AssessmentPackage.SNIPPET__CONTENTS: return AssessmentPackage.CONTENTS__CONTENTS;
-				default: return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
+    if (baseClass == Contents.class) {
+      switch (derivedFeatureID) {
+        case AssessmentPackage.SNIPPET__CONTENTS: return AssessmentPackage.CONTENTS__CONTENTS;
+        default: return -1;
+      }
+    }
+    return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == Contents.class) {
-			switch (baseFeatureID) {
-				case AssessmentPackage.CONTENTS__CONTENTS: return AssessmentPackage.SNIPPET__CONTENTS;
-				default: return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
+    if (baseClass == Contents.class) {
+      switch (baseFeatureID) {
+        case AssessmentPackage.CONTENTS__CONTENTS: return AssessmentPackage.SNIPPET__CONTENTS;
+        default: return -1;
+      }
+    }
+    return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+    if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (contents: ");
-		result.append(contents);
-		result.append(", lineEnd: ");
-		result.append(lineEnd);
-		result.append(", columnStart: ");
-		result.append(columnStart);
-		result.append(", columnEnd: ");
-		result.append(columnEnd);
-		result.append(", lineStart: ");
-		result.append(lineStart);
-		result.append(')');
-		return result.toString();
-	}
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (contents: ");
+    result.append(contents);
+    result.append(", lineEnd: ");
+    result.append(lineEnd);
+    result.append(", columnStart: ");
+    result.append(columnStart);
+    result.append(", columnEnd: ");
+    result.append(columnEnd);
+    result.append(", lineStart: ");
+    result.append(lineStart);
+    result.append(')');
+    return result.toString();
+  }
 
 } //SnippetImpl

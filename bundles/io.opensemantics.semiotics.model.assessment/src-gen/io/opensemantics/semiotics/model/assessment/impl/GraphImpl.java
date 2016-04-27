@@ -43,148 +43,148 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public abstract class GraphImpl<T extends Node> extends MinimalEObjectImpl.Container implements Graph<T> {
 	/**
-	 * The cached value of the '{@link #getRoot() <em>Root</em>}' containment reference.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getRoot() <em>Root</em>}' containment reference.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRoot()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getRoot()
+   * @generated
+   * @ordered
+   */
 	protected T root;
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected GraphImpl() {
-		super();
-	}
+    super();
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	protected EClass eStaticClass() {
-		return AssessmentPackage.Literals.GRAPH;
-	}
+    return AssessmentPackage.Literals.GRAPH;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public T getRoot() {
-		return root;
-	}
+    return root;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public NotificationChain basicSetRoot(T newRoot, NotificationChain msgs) {
-		T oldRoot = root;
-		root = newRoot;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AssessmentPackage.GRAPH__ROOT, oldRoot, newRoot);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
+    T oldRoot = root;
+    root = newRoot;
+    if (eNotificationRequired()) {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, AssessmentPackage.GRAPH__ROOT, oldRoot, newRoot);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public void setRoot(T newRoot) {
-		if (newRoot != root) {
-			NotificationChain msgs = null;
-			if (root != null)
-				msgs = ((InternalEObject)root).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AssessmentPackage.GRAPH__ROOT, null, msgs);
-			if (newRoot != null)
-				msgs = ((InternalEObject)newRoot).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AssessmentPackage.GRAPH__ROOT, null, msgs);
-			msgs = basicSetRoot(newRoot, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.GRAPH__ROOT, newRoot, newRoot));
-	}
+    if (newRoot != root) {
+      NotificationChain msgs = null;
+      if (root != null)
+        msgs = ((InternalEObject)root).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - AssessmentPackage.GRAPH__ROOT, null, msgs);
+      if (newRoot != null)
+        msgs = ((InternalEObject)newRoot).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - AssessmentPackage.GRAPH__ROOT, null, msgs);
+      msgs = basicSetRoot(newRoot, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.GRAPH__ROOT, newRoot, newRoot));
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case AssessmentPackage.GRAPH__ROOT:
-				return basicSetRoot(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    switch (featureID) {
+      case AssessmentPackage.GRAPH__ROOT:
+        return basicSetRoot(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case AssessmentPackage.GRAPH__ROOT:
-				return getRoot();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    switch (featureID) {
+      case AssessmentPackage.GRAPH__ROOT:
+        return getRoot();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case AssessmentPackage.GRAPH__ROOT:
-				setRoot((T)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    switch (featureID) {
+      case AssessmentPackage.GRAPH__ROOT:
+        setRoot((T)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case AssessmentPackage.GRAPH__ROOT:
-				setRoot((T)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+    switch (featureID) {
+      case AssessmentPackage.GRAPH__ROOT:
+        setRoot((T)null);
+        return;
+    }
+    super.eUnset(featureID);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case AssessmentPackage.GRAPH__ROOT:
-				return root != null;
-		}
-		return super.eIsSet(featureID);
-	}
+    switch (featureID) {
+      case AssessmentPackage.GRAPH__ROOT:
+        return root != null;
+    }
+    return super.eIsSet(featureID);
+  }
 
 } //GraphImpl

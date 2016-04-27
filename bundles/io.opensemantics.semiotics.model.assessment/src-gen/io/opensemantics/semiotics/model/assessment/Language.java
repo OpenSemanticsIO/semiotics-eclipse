@@ -32,351 +32,351 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum Language implements Enumerator {
 	/**
-	 * The '<em><b>Java</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>Java</b></em>' literal object.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #JAVA_VALUE
-	 * @generated
-	 * @ordered
-	 */
+   * @see #JAVA_VALUE
+   * @generated
+   * @ordered
+   */
 	JAVA(0, "Java", "Java"),
 
 	/**
-	 * The '<em><b>Python</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>Python</b></em>' literal object.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #PYTHON_VALUE
-	 * @generated
-	 * @ordered
-	 */
+   * @see #PYTHON_VALUE
+   * @generated
+   * @ordered
+   */
 	PYTHON(0, "Python", "Python"),
 
 	/**
-	 * The '<em><b>CSharp</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>CSharp</b></em>' literal object.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #CSHARP_VALUE
-	 * @generated
-	 * @ordered
-	 */
+   * @see #CSHARP_VALUE
+   * @generated
+   * @ordered
+   */
 	CSHARP(0, "C_Sharp", "C_Sharp"),
 
 	/**
-	 * The '<em><b>Scala</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>Scala</b></em>' literal object.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #SCALA_VALUE
-	 * @generated
-	 * @ordered
-	 */
+   * @see #SCALA_VALUE
+   * @generated
+   * @ordered
+   */
 	SCALA(0, "Scala", "Scala"),
 
 	/**
-	 * The '<em><b>PHP</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>PHP</b></em>' literal object.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #PHP_VALUE
-	 * @generated
-	 * @ordered
-	 */
+   * @see #PHP_VALUE
+   * @generated
+   * @ordered
+   */
 	PHP(0, "PHP", "PHP"),
 
 	/**
-	 * The '<em><b>CCpp</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>CCpp</b></em>' literal object.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #CCPP_VALUE
-	 * @generated
-	 * @ordered
-	 */
+   * @see #CCPP_VALUE
+   * @generated
+   * @ordered
+   */
 	CCPP(0, "C_Cpp", "C_Cpp"),
 
 	/**
-	 * The '<em><b>Ruby</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>Ruby</b></em>' literal object.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #RUBY_VALUE
-	 * @generated
-	 * @ordered
-	 */
+   * @see #RUBY_VALUE
+   * @generated
+   * @ordered
+   */
 	RUBY(0, "Ruby", "Ruby"),
 
 	/**
-	 * The '<em><b>Other</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>Other</b></em>' literal object.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #OTHER_VALUE
-	 * @generated
-	 * @ordered
-	 */
+   * @see #OTHER_VALUE
+   * @generated
+   * @ordered
+   */
 	OTHER(0, "Other", "Other");
 
 	/**
-	 * The '<em><b>Java</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>Java</b></em>' literal value.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>Java</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #JAVA
-	 * @model name="Java"
-	 * @generated
-	 * @ordered
-	 */
+   * @see #JAVA
+   * @model name="Java"
+   * @generated
+   * @ordered
+   */
 	public static final int JAVA_VALUE = 0;
 
 	/**
-	 * The '<em><b>Python</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>Python</b></em>' literal value.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>Python</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #PYTHON
-	 * @model name="Python"
-	 * @generated
-	 * @ordered
-	 */
+   * @see #PYTHON
+   * @model name="Python"
+   * @generated
+   * @ordered
+   */
 	public static final int PYTHON_VALUE = 0;
 
 	/**
-	 * The '<em><b>CSharp</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>CSharp</b></em>' literal value.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>CSharp</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #CSHARP
-	 * @model name="C_Sharp"
-	 * @generated
-	 * @ordered
-	 */
+   * @see #CSHARP
+   * @model name="C_Sharp"
+   * @generated
+   * @ordered
+   */
 	public static final int CSHARP_VALUE = 0;
 
 	/**
-	 * The '<em><b>Scala</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>Scala</b></em>' literal value.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>Scala</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #SCALA
-	 * @model name="Scala"
-	 * @generated
-	 * @ordered
-	 */
+   * @see #SCALA
+   * @model name="Scala"
+   * @generated
+   * @ordered
+   */
 	public static final int SCALA_VALUE = 0;
 
 	/**
-	 * The '<em><b>PHP</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>PHP</b></em>' literal value.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>PHP</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #PHP
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
+   * @see #PHP
+   * @model
+   * @generated
+   * @ordered
+   */
 	public static final int PHP_VALUE = 0;
 
 	/**
-	 * The '<em><b>CCpp</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>CCpp</b></em>' literal value.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>CCpp</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #CCPP
-	 * @model name="C_Cpp"
-	 * @generated
-	 * @ordered
-	 */
+   * @see #CCPP
+   * @model name="C_Cpp"
+   * @generated
+   * @ordered
+   */
 	public static final int CCPP_VALUE = 0;
 
 	/**
-	 * The '<em><b>Ruby</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>Ruby</b></em>' literal value.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>Ruby</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #RUBY
-	 * @model name="Ruby"
-	 * @generated
-	 * @ordered
-	 */
+   * @see #RUBY
+   * @model name="Ruby"
+   * @generated
+   * @ordered
+   */
 	public static final int RUBY_VALUE = 0;
 
 	/**
-	 * The '<em><b>Other</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>Other</b></em>' literal value.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>Other</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #OTHER
-	 * @model name="Other"
-	 * @generated
-	 * @ordered
-	 */
+   * @see #OTHER
+   * @model name="Other"
+   * @generated
+   * @ordered
+   */
 	public static final int OTHER_VALUE = 0;
 
 	/**
-	 * An array of all the '<em><b>Language</b></em>' enumerators.
-	 * <!-- begin-user-doc -->
+   * An array of all the '<em><b>Language</b></em>' enumerators.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	private static final Language[] VALUES_ARRAY =
 		new Language[] {
-			JAVA,
-			PYTHON,
-			CSHARP,
-			SCALA,
-			PHP,
-			CCPP,
-			RUBY,
-			OTHER,
-		};
+      JAVA,
+      PYTHON,
+      CSHARP,
+      SCALA,
+      PHP,
+      CCPP,
+      RUBY,
+      OTHER,
+    };
 
 	/**
-	 * A public read-only list of all the '<em><b>Language</b></em>' enumerators.
-	 * <!-- begin-user-doc -->
+   * A public read-only list of all the '<em><b>Language</b></em>' enumerators.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public static final List<Language> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Language</b></em>' literal with the specified literal value.
-	 * <!-- begin-user-doc -->
+   * Returns the '<em><b>Language</b></em>' literal with the specified literal value.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param literal the literal.
-	 * @return the matching enumerator or <code>null</code>.
-	 * @generated
-	 */
+   * @param literal the literal.
+   * @return the matching enumerator or <code>null</code>.
+   * @generated
+   */
 	public static Language get(String literal) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			Language result = VALUES_ARRAY[i];
-			if (result.toString().equals(literal)) {
-				return result;
-			}
-		}
-		return null;
-	}
+    for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+      Language result = VALUES_ARRAY[i];
+      if (result.toString().equals(literal)) {
+        return result;
+      }
+    }
+    return null;
+  }
 
 	/**
-	 * Returns the '<em><b>Language</b></em>' literal with the specified name.
-	 * <!-- begin-user-doc -->
+   * Returns the '<em><b>Language</b></em>' literal with the specified name.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param name the name.
-	 * @return the matching enumerator or <code>null</code>.
-	 * @generated
-	 */
+   * @param name the name.
+   * @return the matching enumerator or <code>null</code>.
+   * @generated
+   */
 	public static Language getByName(String name) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			Language result = VALUES_ARRAY[i];
-			if (result.getName().equals(name)) {
-				return result;
-			}
-		}
-		return null;
-	}
+    for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+      Language result = VALUES_ARRAY[i];
+      if (result.getName().equals(name)) {
+        return result;
+      }
+    }
+    return null;
+  }
 
 	/**
-	 * Returns the '<em><b>Language</b></em>' literal with the specified integer value.
-	 * <!-- begin-user-doc -->
+   * Returns the '<em><b>Language</b></em>' literal with the specified integer value.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the integer value.
-	 * @return the matching enumerator or <code>null</code>.
-	 * @generated
-	 */
+   * @param value the integer value.
+   * @return the matching enumerator or <code>null</code>.
+   * @generated
+   */
 	public static Language get(int value) {
-		switch (value) {
-			case JAVA_VALUE: return JAVA;
-		}
-		return null;
-	}
+    switch (value) {
+      case JAVA_VALUE: return JAVA;
+    }
+    return null;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	private final int value;
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	private final String name;
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	private final String literal;
 
 	/**
-	 * Only this class can construct instances.
-	 * <!-- begin-user-doc -->
+   * Only this class can construct instances.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	private Language(int value, String name, String literal) {
-		this.value = value;
-		this.name = name;
-		this.literal = literal;
-	}
+    this.value = value;
+    this.name = name;
+    this.literal = literal;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public int getValue() {
-	  return value;
-	}
+    return value;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public String getName() {
-	  return name;
-	}
+    return name;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public String getLiteral() {
-	  return literal;
-	}
+    return literal;
+  }
 
 	/**
-	 * Returns the literal value of the enumerator, which is its string representation.
-	 * <!-- begin-user-doc -->
+   * Returns the literal value of the enumerator, which is its string representation.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public String toString() {
-		return literal;
-	}
+    return literal;
+  }
 	
 } //Language

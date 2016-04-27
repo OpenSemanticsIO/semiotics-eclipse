@@ -16,9 +16,9 @@
 package io.opensemantics.semiotics.model.assessment.impl;
 
 import io.opensemantics.semiotics.model.assessment.Account;
-import io.opensemantics.semiotics.model.assessment.Application;
 import io.opensemantics.semiotics.model.assessment.AssessmentPackage;
 import io.opensemantics.semiotics.model.assessment.Entitlement;
+import io.opensemantics.semiotics.model.assessment.Entitlements;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -43,212 +43,211 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.EntitlementImpl#getPrincipals <em>Principals</em>}</li>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.EntitlementImpl#getApplication <em>Application</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.EntitlementImpl#getAccounts <em>Accounts</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.EntitlementImpl#getEntitlements <em>Entitlements</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class EntitlementImpl extends NodeImpl implements Entitlement {
 	/**
-	 * The cached value of the '{@link #getPrincipals() <em>Principals</em>}' reference list.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getAccounts() <em>Accounts</em>}' reference list.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPrincipals()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Account> principals;
-
+   * @see #getAccounts()
+   * @generated
+   * @ordered
+   */
+	protected EList<Account> accounts;
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected EntitlementImpl() {
-		super();
-	}
+    super();
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	protected EClass eStaticClass() {
-		return AssessmentPackage.Literals.ENTITLEMENT;
-	}
+    return AssessmentPackage.Literals.ENTITLEMENT;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Account> getPrincipals() {
-		if (principals == null) {
-			principals = new EObjectWithInverseResolvingEList.ManyInverse<Account>(Account.class, this, AssessmentPackage.ENTITLEMENT__PRINCIPALS, AssessmentPackage.ACCOUNT__ENTITLEMENTS);
-		}
-		return principals;
-	}
+   * @generated
+   */
+	public EList<Account> getAccounts() {
+    if (accounts == null) {
+      accounts = new EObjectWithInverseResolvingEList.ManyInverse<Account>(Account.class, this, AssessmentPackage.ENTITLEMENT__ACCOUNTS, AssessmentPackage.ACCOUNT__ENTITLEMENTS);
+    }
+    return accounts;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Application getApplication() {
-		if (eContainerFeatureID() != AssessmentPackage.ENTITLEMENT__APPLICATION) return null;
-		return (Application)eInternalContainer();
-	}
+   * @generated
+   */
+	public Entitlements getEntitlements() {
+    if (eContainerFeatureID() != AssessmentPackage.ENTITLEMENT__ENTITLEMENTS) return null;
+    return (Entitlements)eInternalContainer();
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetApplication(Application newApplication, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newApplication, AssessmentPackage.ENTITLEMENT__APPLICATION, msgs);
-		return msgs;
-	}
+   * @generated
+   */
+	public NotificationChain basicSetEntitlements(Entitlements newEntitlements, NotificationChain msgs) {
+    msgs = eBasicSetContainer((InternalEObject)newEntitlements, AssessmentPackage.ENTITLEMENT__ENTITLEMENTS, msgs);
+    return msgs;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setApplication(Application newApplication) {
-		if (newApplication != eInternalContainer() || (eContainerFeatureID() != AssessmentPackage.ENTITLEMENT__APPLICATION && newApplication != null)) {
-			if (EcoreUtil.isAncestor(this, newApplication))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newApplication != null)
-				msgs = ((InternalEObject)newApplication).eInverseAdd(this, AssessmentPackage.APPLICATION__ENTITLEMENTS, Application.class, msgs);
-			msgs = basicSetApplication(newApplication, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.ENTITLEMENT__APPLICATION, newApplication, newApplication));
-	}
+   * @generated
+   */
+	public void setEntitlements(Entitlements newEntitlements) {
+    if (newEntitlements != eInternalContainer() || (eContainerFeatureID() != AssessmentPackage.ENTITLEMENT__ENTITLEMENTS && newEntitlements != null)) {
+      if (EcoreUtil.isAncestor(this, newEntitlements))
+        throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+      NotificationChain msgs = null;
+      if (eInternalContainer() != null)
+        msgs = eBasicRemoveFromContainer(msgs);
+      if (newEntitlements != null)
+        msgs = ((InternalEObject)newEntitlements).eInverseAdd(this, AssessmentPackage.ENTITLEMENTS__ENTITLEMENTS, Entitlements.class, msgs);
+      msgs = basicSetEntitlements(newEntitlements, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.ENTITLEMENT__ENTITLEMENTS, newEntitlements, newEntitlements));
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case AssessmentPackage.ENTITLEMENT__PRINCIPALS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getPrincipals()).basicAdd(otherEnd, msgs);
-			case AssessmentPackage.ENTITLEMENT__APPLICATION:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetApplication((Application)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
+    switch (featureID) {
+      case AssessmentPackage.ENTITLEMENT__ACCOUNTS:
+        return ((InternalEList<InternalEObject>)(InternalEList<?>)getAccounts()).basicAdd(otherEnd, msgs);
+      case AssessmentPackage.ENTITLEMENT__ENTITLEMENTS:
+        if (eInternalContainer() != null)
+          msgs = eBasicRemoveFromContainer(msgs);
+        return basicSetEntitlements((Entitlements)otherEnd, msgs);
+    }
+    return super.eInverseAdd(otherEnd, featureID, msgs);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case AssessmentPackage.ENTITLEMENT__PRINCIPALS:
-				return ((InternalEList<?>)getPrincipals()).basicRemove(otherEnd, msgs);
-			case AssessmentPackage.ENTITLEMENT__APPLICATION:
-				return basicSetApplication(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    switch (featureID) {
+      case AssessmentPackage.ENTITLEMENT__ACCOUNTS:
+        return ((InternalEList<?>)getAccounts()).basicRemove(otherEnd, msgs);
+      case AssessmentPackage.ENTITLEMENT__ENTITLEMENTS:
+        return basicSetEntitlements(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case AssessmentPackage.ENTITLEMENT__APPLICATION:
-				return eInternalContainer().eInverseRemove(this, AssessmentPackage.APPLICATION__ENTITLEMENTS, Application.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
-	}
+    switch (eContainerFeatureID()) {
+      case AssessmentPackage.ENTITLEMENT__ENTITLEMENTS:
+        return eInternalContainer().eInverseRemove(this, AssessmentPackage.ENTITLEMENTS__ENTITLEMENTS, Entitlements.class, msgs);
+    }
+    return super.eBasicRemoveFromContainerFeature(msgs);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case AssessmentPackage.ENTITLEMENT__PRINCIPALS:
-				return getPrincipals();
-			case AssessmentPackage.ENTITLEMENT__APPLICATION:
-				return getApplication();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    switch (featureID) {
+      case AssessmentPackage.ENTITLEMENT__ACCOUNTS:
+        return getAccounts();
+      case AssessmentPackage.ENTITLEMENT__ENTITLEMENTS:
+        return getEntitlements();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case AssessmentPackage.ENTITLEMENT__PRINCIPALS:
-				getPrincipals().clear();
-				getPrincipals().addAll((Collection<? extends Account>)newValue);
-				return;
-			case AssessmentPackage.ENTITLEMENT__APPLICATION:
-				setApplication((Application)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    switch (featureID) {
+      case AssessmentPackage.ENTITLEMENT__ACCOUNTS:
+        getAccounts().clear();
+        getAccounts().addAll((Collection<? extends Account>)newValue);
+        return;
+      case AssessmentPackage.ENTITLEMENT__ENTITLEMENTS:
+        setEntitlements((Entitlements)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case AssessmentPackage.ENTITLEMENT__PRINCIPALS:
-				getPrincipals().clear();
-				return;
-			case AssessmentPackage.ENTITLEMENT__APPLICATION:
-				setApplication((Application)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+    switch (featureID) {
+      case AssessmentPackage.ENTITLEMENT__ACCOUNTS:
+        getAccounts().clear();
+        return;
+      case AssessmentPackage.ENTITLEMENT__ENTITLEMENTS:
+        setEntitlements((Entitlements)null);
+        return;
+    }
+    super.eUnset(featureID);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case AssessmentPackage.ENTITLEMENT__PRINCIPALS:
-				return principals != null && !principals.isEmpty();
-			case AssessmentPackage.ENTITLEMENT__APPLICATION:
-				return getApplication() != null;
-		}
-		return super.eIsSet(featureID);
-	}
+    switch (featureID) {
+      case AssessmentPackage.ENTITLEMENT__ACCOUNTS:
+        return accounts != null && !accounts.isEmpty();
+      case AssessmentPackage.ENTITLEMENT__ENTITLEMENTS:
+        return getEntitlements() != null;
+    }
+    return super.eIsSet(featureID);
+  }
 
 } //EntitlementImpl

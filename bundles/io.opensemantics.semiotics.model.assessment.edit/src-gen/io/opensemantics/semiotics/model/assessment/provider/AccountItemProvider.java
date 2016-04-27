@@ -38,121 +38,98 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  */
 public class AccountItemProvider extends NodeItemProvider {
 	/**
-	 * This constructs an instance from a factory and a notifier.
-	 * <!-- begin-user-doc -->
+   * This constructs an instance from a factory and a notifier.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public AccountItemProvider(AdapterFactory adapterFactory) {
-		super(adapterFactory);
-	}
+    super(adapterFactory);
+  }
 
 	/**
-	 * This returns the property descriptors for the adapted class.
-	 * <!-- begin-user-doc -->
+   * This returns the property descriptors for the adapted class.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
-			super.getPropertyDescriptors(object);
+    if (itemPropertyDescriptors == null) {
+      super.getPropertyDescriptors(object);
 
-			addEntitlementsPropertyDescriptor(object);
-			addNamePropertyDescriptor(object);
-			addEmailPropertyDescriptor(object);
-			addPasswordPropertyDescriptor(object);
-		}
-		return itemPropertyDescriptors;
-	}
+      addEntitlementsPropertyDescriptor(object);
+      addEmailPropertyDescriptor(object);
+      addPasswordPropertyDescriptor(object);
+    }
+    return itemPropertyDescriptors;
+  }
 
 	/**
-	 * This adds a property descriptor for the Entitlements feature.
-	 * <!-- begin-user-doc -->
+   * This adds a property descriptor for the Entitlements feature.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected void addEntitlementsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Account_entitlements_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Account_entitlements_feature", "_UI_Account_type"),
-				 AssessmentPackage.Literals.ACCOUNT__ENTITLEMENTS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
+    itemPropertyDescriptors.add
+      (createItemPropertyDescriptor
+        (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+         getResourceLocator(),
+         getString("_UI_Account_entitlements_feature"),
+         getString("_UI_PropertyDescriptor_description", "_UI_Account_entitlements_feature", "_UI_Account_type"),
+         AssessmentPackage.Literals.ACCOUNT__ENTITLEMENTS,
+         true,
+         false,
+         true,
+         null,
+         null,
+         null));
+  }
 
 	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
+   * This adds a property descriptor for the Email feature.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Account_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Account_name_feature", "_UI_Account_type"),
-				 AssessmentPackage.Literals.ACCOUNT__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Email feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected void addEmailPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Account_email_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Account_email_feature", "_UI_Account_type"),
-				 AssessmentPackage.Literals.ACCOUNT__EMAIL,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+    itemPropertyDescriptors.add
+      (createItemPropertyDescriptor
+        (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+         getResourceLocator(),
+         getString("_UI_Account_email_feature"),
+         getString("_UI_PropertyDescriptor_description", "_UI_Account_email_feature", "_UI_Account_type"),
+         AssessmentPackage.Literals.ACCOUNT__EMAIL,
+         true,
+         false,
+         false,
+         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+         null,
+         null));
+  }
 
 	/**
-	 * This adds a property descriptor for the Password feature.
-	 * <!-- begin-user-doc -->
+   * This adds a property descriptor for the Password feature.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected void addPasswordPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Account_password_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Account_password_feature", "_UI_Account_type"),
-				 AssessmentPackage.Literals.ACCOUNT__PASSWORD,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+    itemPropertyDescriptors.add
+      (createItemPropertyDescriptor
+        (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+         getResourceLocator(),
+         getString("_UI_Account_password_feature"),
+         getString("_UI_PropertyDescriptor_description", "_UI_Account_password_feature", "_UI_Account_type"),
+         AssessmentPackage.Literals.ACCOUNT__PASSWORD,
+         true,
+         false,
+         false,
+         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+         null,
+         null));
+  }
 
 	/**
 	 * This returns Account.gif.
@@ -174,41 +151,41 @@ public class AccountItemProvider extends NodeItemProvider {
 	@Override
 	public String getText(Object object) {
 		String label = ((Account)object).getLabel();
-		return label == null || label.length() == 0 ? "" : label;
+		return label == null || label.length() == 0 ?
+			getString("_UI_Account_type") : label;
 	}
 	
 
 	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update any cached
-	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc -->
+   * This handles model notifications by calling {@link #updateChildren} to update any cached
+   * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public void notifyChanged(Notification notification) {
-		updateChildren(notification);
+    updateChildren(notification);
 
-		switch (notification.getFeatureID(Account.class)) {
-			case AssessmentPackage.ACCOUNT__NAME:
-			case AssessmentPackage.ACCOUNT__EMAIL:
-			case AssessmentPackage.ACCOUNT__PASSWORD:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
-		super.notifyChanged(notification);
-	}
+    switch (notification.getFeatureID(Account.class)) {
+      case AssessmentPackage.ACCOUNT__EMAIL:
+      case AssessmentPackage.ACCOUNT__PASSWORD:
+        fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+        return;
+    }
+    super.notifyChanged(notification);
+  }
 
 	/**
-	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
-	 * that can be created under this object.
-	 * <!-- begin-user-doc -->
+   * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
+   * that can be created under this object.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
-		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
+    super.collectNewChildDescriptors(newChildDescriptors, object);
+  }
 
 }

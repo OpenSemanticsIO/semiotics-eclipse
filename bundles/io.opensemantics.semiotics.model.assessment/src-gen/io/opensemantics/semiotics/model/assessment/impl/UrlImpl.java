@@ -42,190 +42,190 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class UrlImpl extends MinimalEObjectImpl.Container implements Url {
 	/**
-	 * The default value of the '{@link #getPattern() <em>Pattern</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The default value of the '{@link #getPattern() <em>Pattern</em>}' attribute.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPattern()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getPattern()
+   * @generated
+   * @ordered
+   */
 	protected static final String PATTERN_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getPattern() <em>Pattern</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getPattern() <em>Pattern</em>}' attribute.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPattern()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getPattern()
+   * @generated
+   * @ordered
+   */
 	protected String pattern = PATTERN_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getPatternType() <em>Pattern Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The default value of the '{@link #getPatternType() <em>Pattern Type</em>}' attribute.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPatternType()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getPatternType()
+   * @generated
+   * @ordered
+   */
 	protected static final UrlPattern PATTERN_TYPE_EDEFAULT = UrlPattern.ANT;
 
 	/**
-	 * The cached value of the '{@link #getPatternType() <em>Pattern Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getPatternType() <em>Pattern Type</em>}' attribute.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPatternType()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getPatternType()
+   * @generated
+   * @ordered
+   */
 	protected UrlPattern patternType = PATTERN_TYPE_EDEFAULT;
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected UrlImpl() {
-		super();
-	}
+    super();
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	protected EClass eStaticClass() {
-		return AssessmentPackage.Literals.URL;
-	}
+    return AssessmentPackage.Literals.URL;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public String getPattern() {
-		return pattern;
-	}
+    return pattern;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public void setPattern(String newPattern) {
-		String oldPattern = pattern;
-		pattern = newPattern;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.URL__PATTERN, oldPattern, pattern));
-	}
+    String oldPattern = pattern;
+    pattern = newPattern;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.URL__PATTERN, oldPattern, pattern));
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public UrlPattern getPatternType() {
-		return patternType;
-	}
+    return patternType;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public void setPatternType(UrlPattern newPatternType) {
-		UrlPattern oldPatternType = patternType;
-		patternType = newPatternType == null ? PATTERN_TYPE_EDEFAULT : newPatternType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.URL__PATTERN_TYPE, oldPatternType, patternType));
-	}
+    UrlPattern oldPatternType = patternType;
+    patternType = newPatternType == null ? PATTERN_TYPE_EDEFAULT : newPatternType;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.URL__PATTERN_TYPE, oldPatternType, patternType));
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case AssessmentPackage.URL__PATTERN:
-				return getPattern();
-			case AssessmentPackage.URL__PATTERN_TYPE:
-				return getPatternType();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    switch (featureID) {
+      case AssessmentPackage.URL__PATTERN:
+        return getPattern();
+      case AssessmentPackage.URL__PATTERN_TYPE:
+        return getPatternType();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case AssessmentPackage.URL__PATTERN:
-				setPattern((String)newValue);
-				return;
-			case AssessmentPackage.URL__PATTERN_TYPE:
-				setPatternType((UrlPattern)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    switch (featureID) {
+      case AssessmentPackage.URL__PATTERN:
+        setPattern((String)newValue);
+        return;
+      case AssessmentPackage.URL__PATTERN_TYPE:
+        setPatternType((UrlPattern)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case AssessmentPackage.URL__PATTERN:
-				setPattern(PATTERN_EDEFAULT);
-				return;
-			case AssessmentPackage.URL__PATTERN_TYPE:
-				setPatternType(PATTERN_TYPE_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+    switch (featureID) {
+      case AssessmentPackage.URL__PATTERN:
+        setPattern(PATTERN_EDEFAULT);
+        return;
+      case AssessmentPackage.URL__PATTERN_TYPE:
+        setPatternType(PATTERN_TYPE_EDEFAULT);
+        return;
+    }
+    super.eUnset(featureID);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case AssessmentPackage.URL__PATTERN:
-				return PATTERN_EDEFAULT == null ? pattern != null : !PATTERN_EDEFAULT.equals(pattern);
-			case AssessmentPackage.URL__PATTERN_TYPE:
-				return patternType != PATTERN_TYPE_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
-	}
+    switch (featureID) {
+      case AssessmentPackage.URL__PATTERN:
+        return PATTERN_EDEFAULT == null ? pattern != null : !PATTERN_EDEFAULT.equals(pattern);
+      case AssessmentPackage.URL__PATTERN_TYPE:
+        return patternType != PATTERN_TYPE_EDEFAULT;
+    }
+    return super.eIsSet(featureID);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+    if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (pattern: ");
-		result.append(pattern);
-		result.append(", patternType: ");
-		result.append(patternType);
-		result.append(')');
-		return result.toString();
-	}
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (pattern: ");
+    result.append(pattern);
+    result.append(", patternType: ");
+    result.append(patternType);
+    result.append(')');
+    return result.toString();
+  }
 
 } //UrlImpl

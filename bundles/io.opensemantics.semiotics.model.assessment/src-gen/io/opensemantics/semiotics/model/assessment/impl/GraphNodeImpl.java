@@ -29,22 +29,22 @@ import org.eclipse.emf.ecore.EClass;
  */
 public abstract class GraphNodeImpl extends NodeImpl implements GraphNode {
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected GraphNodeImpl() {
-		super();
-	}
+    super();
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	protected EClass eStaticClass() {
-		return AssessmentPackage.Literals.GRAPH_NODE;
-	}
+    return AssessmentPackage.Literals.GRAPH_NODE;
+  }
 
 } //GraphNodeImpl

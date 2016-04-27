@@ -35,29 +35,29 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Graph<T extends Node> extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Root</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Root</b></em>' containment reference.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Root</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Root</em>' containment reference.
-	 * @see #setRoot(Node)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getGraph_Root()
-	 * @model containment="true"
-	 * @generated
-	 */
+   * @return the value of the '<em>Root</em>' containment reference.
+   * @see #setRoot(Node)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getGraph_Root()
+   * @model containment="true"
+   * @generated
+   */
 	T getRoot();
 
 	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Graph#getRoot <em>Root</em>}' containment reference.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Graph#getRoot <em>Root</em>}' containment reference.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Root</em>' containment reference.
-	 * @see #getRoot()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Root</em>' containment reference.
+   * @see #getRoot()
+   * @generated
+   */
 	void setRoot(T value);
 
 } // Graph

@@ -30,6 +30,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Node#getParent <em>Parent</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Node#getRefersTo <em>Refers To</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Node#getReferredBy <em>Referred By</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.Node#getTasks <em>Tasks</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.Node#getFindings <em>Findings</em>}</li>
  * </ul>
  *
  * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getNode()
@@ -38,81 +40,117 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Node extends Label, Notes {
 	/**
-	 * Returns the value of the '<em><b>Children</b></em>' containment reference list.
-	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.GraphNode}.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Children</b></em>' containment reference list.
+   * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.GraphNode}.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Children</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Children</em>' containment reference list.
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getNode_Children()
-	 * @model containment="true"
-	 * @generated
-	 */
+   * @return the value of the '<em>Children</em>' containment reference list.
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getNode_Children()
+   * @model containment="true"
+   * @generated
+   */
 	EList<GraphNode> getChildren();
 
 	/**
-	 * Returns the value of the '<em><b>Parent</b></em>' reference.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Parent</b></em>' reference.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Parent</em>' container reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Parent</em>' reference.
-	 * @see #setParent(Node)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getNode_Parent()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Parent</em>' reference.
+   * @see #setParent(Node)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getNode_Parent()
+   * @model
+   * @generated
+   */
 	Node getParent();
 
 	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Node#getParent <em>Parent</em>}' reference.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Node#getParent <em>Parent</em>}' reference.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Parent</em>' reference.
-	 * @see #getParent()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Parent</em>' reference.
+   * @see #getParent()
+   * @generated
+   */
 	void setParent(Node value);
 
 	/**
-	 * Returns the value of the '<em><b>Refers To</b></em>' reference list.
-	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Node}.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Node#getReferredBy <em>Referred By</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Refers To</b></em>' reference list.
+   * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Node}.
+   * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Node#getReferredBy <em>Referred By</em>}'.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Refers To</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Refers To</em>' reference list.
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getNode_RefersTo()
-	 * @see io.opensemantics.semiotics.model.assessment.Node#getReferredBy
-	 * @model opposite="referredBy"
-	 * @generated
-	 */
+   * @return the value of the '<em>Refers To</em>' reference list.
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getNode_RefersTo()
+   * @see io.opensemantics.semiotics.model.assessment.Node#getReferredBy
+   * @model opposite="referredBy"
+   * @generated
+   */
 	EList<Node> getRefersTo();
 
 	/**
-	 * Returns the value of the '<em><b>Referred By</b></em>' reference list.
-	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Node}.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Node#getRefersTo <em>Refers To</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Referred By</b></em>' reference list.
+   * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Node}.
+   * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Node#getRefersTo <em>Refers To</em>}'.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Referred By</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Referred By</em>' reference list.
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getNode_ReferredBy()
-	 * @see io.opensemantics.semiotics.model.assessment.Node#getRefersTo
-	 * @model opposite="refersTo"
-	 * @generated
-	 */
+   * @return the value of the '<em>Referred By</em>' reference list.
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getNode_ReferredBy()
+   * @see io.opensemantics.semiotics.model.assessment.Node#getRefersTo
+   * @model opposite="refersTo"
+   * @generated
+   */
 	EList<Node> getReferredBy();
+
+	/**
+   * Returns the value of the '<em><b>Tasks</b></em>' reference list.
+   * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Task}.
+   * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Task#getAffects <em>Affects</em>}'.
+   * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Tasks</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+   * @return the value of the '<em>Tasks</em>' reference list.
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getNode_Tasks()
+   * @see io.opensemantics.semiotics.model.assessment.Task#getAffects
+   * @model opposite="affects"
+   * @generated
+   */
+	EList<Task> getTasks();
+
+	/**
+   * Returns the value of the '<em><b>Findings</b></em>' reference list.
+   * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Finding}.
+   * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Finding#getAffects <em>Affects</em>}'.
+   * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Findings</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+   * @return the value of the '<em>Findings</em>' reference list.
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getNode_Findings()
+   * @see io.opensemantics.semiotics.model.assessment.Finding#getAffects
+   * @model opposite="affects"
+   * @generated
+   */
+	EList<Finding> getFindings();
 
 } // Node

@@ -27,7 +27,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Sink#getCwes <em>Cwes</em>}</li>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.Sink#getApplication <em>Application</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.Sink#getSinks <em>Sinks</em>}</li>
  * </ul>
  *
  * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getSink()
@@ -36,47 +36,47 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Sink extends Node {
 	/**
-	 * Returns the value of the '<em><b>Cwes</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.Integer}.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Cwes</b></em>' attribute list.
+   * The list contents are of type {@link java.lang.Integer}.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Cwes</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Cwes</em>' attribute list.
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getSink_Cwes()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Cwes</em>' attribute list.
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getSink_Cwes()
+   * @model
+   * @generated
+   */
 	EList<Integer> getCwes();
 
 	/**
-	 * Returns the value of the '<em><b>Application</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Application#getSinks <em>Sinks</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Sinks</b></em>' container reference.
+   * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Sinks#getSinks <em>Sinks</em>}'.
+   * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Application</em>' container reference isn't clear,
+	 * If the meaning of the '<em>Sinks</em>' container reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Application</em>' container reference.
-	 * @see #setApplication(Application)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getSink_Application()
-	 * @see io.opensemantics.semiotics.model.assessment.Application#getSinks
-	 * @model opposite="sinks" transient="false"
-	 * @generated
-	 */
-	Application getApplication();
+   * @return the value of the '<em>Sinks</em>' container reference.
+   * @see #setSinks(Sinks)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getSink_Sinks()
+   * @see io.opensemantics.semiotics.model.assessment.Sinks#getSinks
+   * @model opposite="sinks" transient="false"
+   * @generated
+   */
+	Sinks getSinks();
 
 	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Sink#getApplication <em>Application</em>}' container reference.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Sink#getSinks <em>Sinks</em>}' container reference.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Application</em>' container reference.
-	 * @see #getApplication()
-	 * @generated
-	 */
-	void setApplication(Application value);
+   * @param value the new value of the '<em>Sinks</em>' container reference.
+   * @see #getSinks()
+   * @generated
+   */
+	void setSinks(Sinks value);
 
 } // Sink

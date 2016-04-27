@@ -37,83 +37,83 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Scm extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Repository</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Repository</b></em>' attribute.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Repository</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Repository</em>' attribute.
-	 * @see #setRepository(String)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getScm_Repository()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Repository</em>' attribute.
+   * @see #setRepository(String)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getScm_Repository()
+   * @model
+   * @generated
+   */
 	String getRepository();
 
 	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Scm#getRepository <em>Repository</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Scm#getRepository <em>Repository</em>}' attribute.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Repository</em>' attribute.
-	 * @see #getRepository()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Repository</em>' attribute.
+   * @see #getRepository()
+   * @generated
+   */
 	void setRepository(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Branch Tag</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Branch Tag</b></em>' attribute.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Branch Tag</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Branch Tag</em>' attribute.
-	 * @see #setBranchTag(String)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getScm_BranchTag()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Branch Tag</em>' attribute.
+   * @see #setBranchTag(String)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getScm_BranchTag()
+   * @model
+   * @generated
+   */
 	String getBranchTag();
 
 	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Scm#getBranchTag <em>Branch Tag</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Scm#getBranchTag <em>Branch Tag</em>}' attribute.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Branch Tag</em>' attribute.
-	 * @see #getBranchTag()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Branch Tag</em>' attribute.
+   * @see #getBranchTag()
+   * @generated
+   */
 	void setBranchTag(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Application</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Application#getScm <em>Scm</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Application</b></em>' container reference.
+   * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Application#getScm <em>Scm</em>}'.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Application</em>' container reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Application</em>' container reference.
-	 * @see #setApplication(Application)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getScm_Application()
-	 * @see io.opensemantics.semiotics.model.assessment.Application#getScm
-	 * @model opposite="scm" transient="false"
-	 * @generated
-	 */
+   * @return the value of the '<em>Application</em>' container reference.
+   * @see #setApplication(Application)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getScm_Application()
+   * @see io.opensemantics.semiotics.model.assessment.Application#getScm
+   * @model opposite="scm" transient="false"
+   * @generated
+   */
 	Application getApplication();
 
 	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Scm#getApplication <em>Application</em>}' container reference.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Scm#getApplication <em>Application</em>}' container reference.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Application</em>' container reference.
-	 * @see #getApplication()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Application</em>' container reference.
+   * @see #getApplication()
+   * @generated
+   */
 	void setApplication(Application value);
 
 } // Scm

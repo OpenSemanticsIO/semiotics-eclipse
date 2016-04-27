@@ -39,167 +39,167 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  */
 public class SnippetItemProvider extends GraphNodeItemProvider {
 	/**
-	 * This constructs an instance from a factory and a notifier.
-	 * <!-- begin-user-doc -->
+   * This constructs an instance from a factory and a notifier.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public SnippetItemProvider(AdapterFactory adapterFactory) {
-		super(adapterFactory);
-	}
+    super(adapterFactory);
+  }
 
 	/**
-	 * This returns the property descriptors for the adapted class.
-	 * <!-- begin-user-doc -->
+   * This returns the property descriptors for the adapted class.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
-			super.getPropertyDescriptors(object);
+    if (itemPropertyDescriptors == null) {
+      super.getPropertyDescriptors(object);
 
-			addContentsPropertyDescriptor(object);
-			addLineEndPropertyDescriptor(object);
-			addColumnStartPropertyDescriptor(object);
-			addColumnEndPropertyDescriptor(object);
-			addLineStartPropertyDescriptor(object);
-			addResourcePropertyDescriptor(object);
-		}
-		return itemPropertyDescriptors;
-	}
+      addContentsPropertyDescriptor(object);
+      addLineEndPropertyDescriptor(object);
+      addColumnStartPropertyDescriptor(object);
+      addColumnEndPropertyDescriptor(object);
+      addLineStartPropertyDescriptor(object);
+      addResourcePropertyDescriptor(object);
+    }
+    return itemPropertyDescriptors;
+  }
 
 	/**
-	 * This adds a property descriptor for the Line End feature.
-	 * <!-- begin-user-doc -->
+   * This adds a property descriptor for the Line End feature.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected void addLineEndPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Snippet_lineEnd_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Snippet_lineEnd_feature", "_UI_Snippet_type"),
-				 AssessmentPackage.Literals.SNIPPET__LINE_END,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+    itemPropertyDescriptors.add
+      (createItemPropertyDescriptor
+        (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+         getResourceLocator(),
+         getString("_UI_Snippet_lineEnd_feature"),
+         getString("_UI_PropertyDescriptor_description", "_UI_Snippet_lineEnd_feature", "_UI_Snippet_type"),
+         AssessmentPackage.Literals.SNIPPET__LINE_END,
+         true,
+         false,
+         false,
+         ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+         null,
+         null));
+  }
 
 	/**
-	 * This adds a property descriptor for the Column Start feature.
-	 * <!-- begin-user-doc -->
+   * This adds a property descriptor for the Column Start feature.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected void addColumnStartPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Snippet_columnStart_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Snippet_columnStart_feature", "_UI_Snippet_type"),
-				 AssessmentPackage.Literals.SNIPPET__COLUMN_START,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+    itemPropertyDescriptors.add
+      (createItemPropertyDescriptor
+        (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+         getResourceLocator(),
+         getString("_UI_Snippet_columnStart_feature"),
+         getString("_UI_PropertyDescriptor_description", "_UI_Snippet_columnStart_feature", "_UI_Snippet_type"),
+         AssessmentPackage.Literals.SNIPPET__COLUMN_START,
+         true,
+         false,
+         false,
+         ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+         null,
+         null));
+  }
 
 	/**
-	 * This adds a property descriptor for the Column End feature.
-	 * <!-- begin-user-doc -->
+   * This adds a property descriptor for the Column End feature.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected void addColumnEndPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Snippet_columnEnd_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Snippet_columnEnd_feature", "_UI_Snippet_type"),
-				 AssessmentPackage.Literals.SNIPPET__COLUMN_END,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+    itemPropertyDescriptors.add
+      (createItemPropertyDescriptor
+        (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+         getResourceLocator(),
+         getString("_UI_Snippet_columnEnd_feature"),
+         getString("_UI_PropertyDescriptor_description", "_UI_Snippet_columnEnd_feature", "_UI_Snippet_type"),
+         AssessmentPackage.Literals.SNIPPET__COLUMN_END,
+         true,
+         false,
+         false,
+         ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+         null,
+         null));
+  }
 
 	/**
-	 * This adds a property descriptor for the Contents feature.
-	 * <!-- begin-user-doc -->
+   * This adds a property descriptor for the Contents feature.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected void addContentsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Contents_contents_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Contents_contents_feature", "_UI_Contents_type"),
-				 AssessmentPackage.Literals.CONTENTS__CONTENTS,
-				 true,
-				 true,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+    itemPropertyDescriptors.add
+      (createItemPropertyDescriptor
+        (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+         getResourceLocator(),
+         getString("_UI_Contents_contents_feature"),
+         getString("_UI_PropertyDescriptor_description", "_UI_Contents_contents_feature", "_UI_Contents_type"),
+         AssessmentPackage.Literals.CONTENTS__CONTENTS,
+         true,
+         true,
+         false,
+         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+         null,
+         null));
+  }
 
 	/**
-	 * This adds a property descriptor for the Line Start feature.
-	 * <!-- begin-user-doc -->
+   * This adds a property descriptor for the Line Start feature.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected void addLineStartPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Snippet_lineStart_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Snippet_lineStart_feature", "_UI_Snippet_type"),
-				 AssessmentPackage.Literals.SNIPPET__LINE_START,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
+    itemPropertyDescriptors.add
+      (createItemPropertyDescriptor
+        (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+         getResourceLocator(),
+         getString("_UI_Snippet_lineStart_feature"),
+         getString("_UI_PropertyDescriptor_description", "_UI_Snippet_lineStart_feature", "_UI_Snippet_type"),
+         AssessmentPackage.Literals.SNIPPET__LINE_START,
+         true,
+         false,
+         false,
+         ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+         null,
+         null));
+  }
 
 	/**
-	 * This adds a property descriptor for the Resource feature.
-	 * <!-- begin-user-doc -->
+   * This adds a property descriptor for the Resource feature.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected void addResourcePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Snippet_resource_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Snippet_resource_feature", "_UI_Snippet_type"),
-				 AssessmentPackage.Literals.SNIPPET__RESOURCE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
+    itemPropertyDescriptors.add
+      (createItemPropertyDescriptor
+        (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+         getResourceLocator(),
+         getString("_UI_Snippet_resource_feature"),
+         getString("_UI_PropertyDescriptor_description", "_UI_Snippet_resource_feature", "_UI_Snippet_type"),
+         AssessmentPackage.Literals.SNIPPET__RESOURCE,
+         true,
+         false,
+         true,
+         null,
+         null,
+         null));
+  }
 
 	/**
 	 * This returns Snippet.gif.
@@ -237,46 +237,47 @@ public class SnippetItemProvider extends GraphNodeItemProvider {
 		String snippetLabel = snippet.getLabel();
 		if (snippetLabel != null && !snippet.equals("")) {
 			if (label.length() != 0) label.append(": ");
-
 			label.append(snippetLabel);
+		} else {
+			label.append(getString("_UI_Snippet_type"));
 		}
 		return label.toString();
 	}
 	
 
 	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update any cached
-	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc -->
+   * This handles model notifications by calling {@link #updateChildren} to update any cached
+   * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public void notifyChanged(Notification notification) {
-		updateChildren(notification);
+    updateChildren(notification);
 
-		switch (notification.getFeatureID(Snippet.class)) {
-			case AssessmentPackage.SNIPPET__CONTENTS:
-			case AssessmentPackage.SNIPPET__LINE_END:
-			case AssessmentPackage.SNIPPET__COLUMN_START:
-			case AssessmentPackage.SNIPPET__COLUMN_END:
-			case AssessmentPackage.SNIPPET__LINE_START:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
-		super.notifyChanged(notification);
-	}
+    switch (notification.getFeatureID(Snippet.class)) {
+      case AssessmentPackage.SNIPPET__CONTENTS:
+      case AssessmentPackage.SNIPPET__LINE_END:
+      case AssessmentPackage.SNIPPET__COLUMN_START:
+      case AssessmentPackage.SNIPPET__COLUMN_END:
+      case AssessmentPackage.SNIPPET__LINE_START:
+        fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+        return;
+    }
+    super.notifyChanged(notification);
+  }
 
 	/**
-	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
-	 * that can be created under this object.
-	 * <!-- begin-user-doc -->
+   * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
+   * that can be created under this object.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
-		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
+    super.collectNewChildDescriptors(newChildDescriptors, object);
+  }
 
 }

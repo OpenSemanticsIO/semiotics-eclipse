@@ -15,10 +15,10 @@
  */
 package io.opensemantics.semiotics.model.assessment.impl;
 
-import io.opensemantics.semiotics.model.assessment.Application;
 import io.opensemantics.semiotics.model.assessment.AssessmentPackage;
 import io.opensemantics.semiotics.model.assessment.Sink;
 
+import io.opensemantics.semiotics.model.assessment.Sinks;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -43,222 +43,222 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * </p>
  * <ul>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.SinkImpl#getCwes <em>Cwes</em>}</li>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.SinkImpl#getApplication <em>Application</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.SinkImpl#getSinks <em>Sinks</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class SinkImpl extends NodeImpl implements Sink {
 	/**
-	 * The cached value of the '{@link #getCwes() <em>Cwes</em>}' attribute list.
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getCwes() <em>Cwes</em>}' attribute list.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCwes()
-	 * @generated
-	 * @ordered
-	 */
+   * @see #getCwes()
+   * @generated
+   * @ordered
+   */
 	protected EList<Integer> cwes;
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected SinkImpl() {
-		super();
-	}
+    super();
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	protected EClass eStaticClass() {
-		return AssessmentPackage.Literals.SINK;
-	}
+    return AssessmentPackage.Literals.SINK;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public EList<Integer> getCwes() {
-		if (cwes == null) {
-			cwes = new EDataTypeUniqueEList<Integer>(Integer.class, this, AssessmentPackage.SINK__CWES);
-		}
-		return cwes;
-	}
+    if (cwes == null) {
+      cwes = new EDataTypeUniqueEList<Integer>(Integer.class, this, AssessmentPackage.SINK__CWES);
+    }
+    return cwes;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Application getApplication() {
-		if (eContainerFeatureID() != AssessmentPackage.SINK__APPLICATION) return null;
-		return (Application)eInternalContainer();
-	}
+   * @generated
+   */
+	public Sinks getSinks() {
+    if (eContainerFeatureID() != AssessmentPackage.SINK__SINKS) return null;
+    return (Sinks)eInternalContainer();
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetApplication(Application newApplication, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newApplication, AssessmentPackage.SINK__APPLICATION, msgs);
-		return msgs;
-	}
+   * @generated
+   */
+	public NotificationChain basicSetSinks(Sinks newSinks, NotificationChain msgs) {
+    msgs = eBasicSetContainer((InternalEObject)newSinks, AssessmentPackage.SINK__SINKS, msgs);
+    return msgs;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setApplication(Application newApplication) {
-		if (newApplication != eInternalContainer() || (eContainerFeatureID() != AssessmentPackage.SINK__APPLICATION && newApplication != null)) {
-			if (EcoreUtil.isAncestor(this, newApplication))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newApplication != null)
-				msgs = ((InternalEObject)newApplication).eInverseAdd(this, AssessmentPackage.APPLICATION__SINKS, Application.class, msgs);
-			msgs = basicSetApplication(newApplication, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.SINK__APPLICATION, newApplication, newApplication));
-	}
+   * @generated
+   */
+	public void setSinks(Sinks newSinks) {
+    if (newSinks != eInternalContainer() || (eContainerFeatureID() != AssessmentPackage.SINK__SINKS && newSinks != null)) {
+      if (EcoreUtil.isAncestor(this, newSinks))
+        throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+      NotificationChain msgs = null;
+      if (eInternalContainer() != null)
+        msgs = eBasicRemoveFromContainer(msgs);
+      if (newSinks != null)
+        msgs = ((InternalEObject)newSinks).eInverseAdd(this, AssessmentPackage.SINKS__SINKS, Sinks.class, msgs);
+      msgs = basicSetSinks(newSinks, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.SINK__SINKS, newSinks, newSinks));
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case AssessmentPackage.SINK__APPLICATION:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetApplication((Application)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
+    switch (featureID) {
+      case AssessmentPackage.SINK__SINKS:
+        if (eInternalContainer() != null)
+          msgs = eBasicRemoveFromContainer(msgs);
+        return basicSetSinks((Sinks)otherEnd, msgs);
+    }
+    return super.eInverseAdd(otherEnd, featureID, msgs);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case AssessmentPackage.SINK__APPLICATION:
-				return basicSetApplication(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
+    switch (featureID) {
+      case AssessmentPackage.SINK__SINKS:
+        return basicSetSinks(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case AssessmentPackage.SINK__APPLICATION:
-				return eInternalContainer().eInverseRemove(this, AssessmentPackage.APPLICATION__SINKS, Application.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
-	}
+    switch (eContainerFeatureID()) {
+      case AssessmentPackage.SINK__SINKS:
+        return eInternalContainer().eInverseRemove(this, AssessmentPackage.SINKS__SINKS, Sinks.class, msgs);
+    }
+    return super.eBasicRemoveFromContainerFeature(msgs);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case AssessmentPackage.SINK__CWES:
-				return getCwes();
-			case AssessmentPackage.SINK__APPLICATION:
-				return getApplication();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    switch (featureID) {
+      case AssessmentPackage.SINK__CWES:
+        return getCwes();
+      case AssessmentPackage.SINK__SINKS:
+        return getSinks();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case AssessmentPackage.SINK__CWES:
-				getCwes().clear();
-				getCwes().addAll((Collection<? extends Integer>)newValue);
-				return;
-			case AssessmentPackage.SINK__APPLICATION:
-				setApplication((Application)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    switch (featureID) {
+      case AssessmentPackage.SINK__CWES:
+        getCwes().clear();
+        getCwes().addAll((Collection<? extends Integer>)newValue);
+        return;
+      case AssessmentPackage.SINK__SINKS:
+        setSinks((Sinks)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case AssessmentPackage.SINK__CWES:
-				getCwes().clear();
-				return;
-			case AssessmentPackage.SINK__APPLICATION:
-				setApplication((Application)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+    switch (featureID) {
+      case AssessmentPackage.SINK__CWES:
+        getCwes().clear();
+        return;
+      case AssessmentPackage.SINK__SINKS:
+        setSinks((Sinks)null);
+        return;
+    }
+    super.eUnset(featureID);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case AssessmentPackage.SINK__CWES:
-				return cwes != null && !cwes.isEmpty();
-			case AssessmentPackage.SINK__APPLICATION:
-				return getApplication() != null;
-		}
-		return super.eIsSet(featureID);
-	}
+    switch (featureID) {
+      case AssessmentPackage.SINK__CWES:
+        return cwes != null && !cwes.isEmpty();
+      case AssessmentPackage.SINK__SINKS:
+        return getSinks() != null;
+    }
+    return super.eIsSet(featureID);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public String toString() {
-		if (eIsProxy()) return super.toString();
+    if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (cwes: ");
-		result.append(cwes);
-		result.append(')');
-		return result.toString();
-	}
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (cwes: ");
+    result.append(cwes);
+    result.append(')');
+    return result.toString();
+  }
 
 } //SinkImpl

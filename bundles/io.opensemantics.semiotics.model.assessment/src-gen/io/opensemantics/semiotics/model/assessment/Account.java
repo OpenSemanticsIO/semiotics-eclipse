@@ -26,9 +26,8 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.Account#getApplication <em>Application</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.Account#getAccounts <em>Accounts</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Account#getEntitlements <em>Entitlements</em>}</li>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.Account#getName <em>Name</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Account#getEmail <em>Email</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Account#getPassword <em>Password</em>}</li>
  * </ul>
@@ -39,127 +38,101 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Account extends Node {
 	/**
-	 * Returns the value of the '<em><b>Application</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Application#getAccounts <em>Accounts</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Accounts</b></em>' container reference.
+   * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Accounts#getAccounts <em>Accounts</em>}'.
+   * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Application</em>' container reference isn't clear,
+	 * If the meaning of the '<em>Accounts</em>' container reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Application</em>' container reference.
-	 * @see #setApplication(Application)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getAccount_Application()
-	 * @see io.opensemantics.semiotics.model.assessment.Application#getAccounts
-	 * @model opposite="accounts" transient="false"
-	 * @generated
-	 */
-	Application getApplication();
+   * @return the value of the '<em>Accounts</em>' container reference.
+   * @see #setAccounts(Accounts)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getAccount_Accounts()
+   * @see io.opensemantics.semiotics.model.assessment.Accounts#getAccounts
+   * @model opposite="accounts" transient="false"
+   * @generated
+   */
+	Accounts getAccounts();
 
 	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Account#getApplication <em>Application</em>}' container reference.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Account#getAccounts <em>Accounts</em>}' container reference.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Application</em>' container reference.
-	 * @see #getApplication()
-	 * @generated
-	 */
-	void setApplication(Application value);
+   * @param value the new value of the '<em>Accounts</em>' container reference.
+   * @see #getAccounts()
+   * @generated
+   */
+	void setAccounts(Accounts value);
 
 	/**
-	 * Returns the value of the '<em><b>Entitlements</b></em>' reference list.
-	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Entitlement}.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Entitlement#getPrincipals <em>Principals</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Entitlements</b></em>' reference list.
+   * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Entitlement}.
+   * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Entitlement#getAccounts <em>Accounts</em>}'.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Entitlements</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Entitlements</em>' reference list.
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getAccount_Entitlements()
-	 * @see io.opensemantics.semiotics.model.assessment.Entitlement#getPrincipals
-	 * @model opposite="principals"
-	 * @generated
-	 */
+   * @return the value of the '<em>Entitlements</em>' reference list.
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getAccount_Entitlements()
+   * @see io.opensemantics.semiotics.model.assessment.Entitlement#getAccounts
+   * @model opposite="accounts"
+   * @generated
+   */
 	EList<Entitlement> getEntitlements();
 
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getAccount_Name()
-	 * @model
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Account#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Email</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Email</b></em>' attribute.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Email</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Email</em>' attribute.
-	 * @see #setEmail(String)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getAccount_Email()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Email</em>' attribute.
+   * @see #setEmail(String)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getAccount_Email()
+   * @model
+   * @generated
+   */
 	String getEmail();
 
 	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Account#getEmail <em>Email</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Account#getEmail <em>Email</em>}' attribute.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Email</em>' attribute.
-	 * @see #getEmail()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Email</em>' attribute.
+   * @see #getEmail()
+   * @generated
+   */
 	void setEmail(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Password</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Password</b></em>' attribute.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Password</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Password</em>' attribute.
-	 * @see #setPassword(String)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getAccount_Password()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Password</em>' attribute.
+   * @see #setPassword(String)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getAccount_Password()
+   * @model
+   * @generated
+   */
 	String getPassword();
 
 	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Account#getPassword <em>Password</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Account#getPassword <em>Password</em>}' attribute.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Password</em>' attribute.
-	 * @see #getPassword()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Password</em>' attribute.
+   * @see #getPassword()
+   * @generated
+   */
 	void setPassword(String value);
 
 } // Account

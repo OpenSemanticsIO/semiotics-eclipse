@@ -15,6 +15,8 @@
  */
 package io.opensemantics.semiotics.model.assessment;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -25,67 +27,89 @@ package io.opensemantics.semiotics.model.assessment;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.Task#isCompleted <em>Completed</em>}</li>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.Task#getAssessment <em>Assessment</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.Task#getTasks <em>Tasks</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.Task#getAffects <em>Affects</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.Task#getStatus <em>Status</em>}</li>
  * </ul>
  *
  * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getTask()
  * @model
  * @generated
  */
-public interface Task extends Node {
+public interface Task extends Label, Notes {
 	/**
-	 * Returns the value of the '<em><b>Completed</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Tasks</b></em>' container reference.
+   * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Tasks#getTasks <em>Tasks</em>}'.
+   * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Completed</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Tasks</em>' container reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Completed</em>' attribute.
-	 * @see #setCompleted(boolean)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getTask_Completed()
-	 * @model
-	 * @generated
-	 */
-	boolean isCompleted();
+   * @return the value of the '<em>Tasks</em>' container reference.
+   * @see #setTasks(Tasks)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getTask_Tasks()
+   * @see io.opensemantics.semiotics.model.assessment.Tasks#getTasks
+   * @model opposite="tasks" transient="false"
+   * @generated
+   */
+	Tasks getTasks();
 
 	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Task#isCompleted <em>Completed</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Task#getTasks <em>Tasks</em>}' container reference.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Completed</em>' attribute.
-	 * @see #isCompleted()
-	 * @generated
-	 */
-	void setCompleted(boolean value);
+   * @param value the new value of the '<em>Tasks</em>' container reference.
+   * @see #getTasks()
+   * @generated
+   */
+	void setTasks(Tasks value);
 
 	/**
-	 * Returns the value of the '<em><b>Assessment</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Assessment#getTasks <em>Tasks</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Affects</b></em>' reference list.
+   * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Node}.
+   * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Node#getTasks <em>Tasks</em>}'.
+   * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Assessment</em>' container reference isn't clear,
+	 * If the meaning of the '<em>Affects</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Assessment</em>' container reference.
-	 * @see #setAssessment(Assessment)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getTask_Assessment()
-	 * @see io.opensemantics.semiotics.model.assessment.Assessment#getTasks
-	 * @model opposite="tasks" transient="false"
-	 * @generated
-	 */
-	Assessment getAssessment();
+   * @return the value of the '<em>Affects</em>' reference list.
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getTask_Affects()
+   * @see io.opensemantics.semiotics.model.assessment.Node#getTasks
+   * @model opposite="tasks"
+   * @generated
+   */
+	EList<Node> getAffects();
 
 	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Task#getAssessment <em>Assessment</em>}' container reference.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Status</b></em>' attribute.
+   * The literals are from the enumeration {@link io.opensemantics.semiotics.model.assessment.TaskStatus}.
+   * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Status</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Assessment</em>' container reference.
-	 * @see #getAssessment()
-	 * @generated
-	 */
-	void setAssessment(Assessment value);
+   * @return the value of the '<em>Status</em>' attribute.
+   * @see io.opensemantics.semiotics.model.assessment.TaskStatus
+   * @see #setStatus(TaskStatus)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getTask_Status()
+   * @model
+   * @generated
+   */
+	TaskStatus getStatus();
+
+	/**
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Task#getStatus <em>Status</em>}' attribute.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Status</em>' attribute.
+   * @see io.opensemantics.semiotics.model.assessment.TaskStatus
+   * @see #getStatus()
+   * @generated
+   */
+	void setStatus(TaskStatus value);
 
 } // Task

@@ -26,7 +26,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.Resource#getApplication <em>Application</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.Resource#getResources <em>Resources</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Resource#getSnippets <em>Snippets</em>}</li>
  * </ul>
  *
@@ -34,51 +34,51 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Resource extends Label, Notes {
+public interface Resource extends Label, Notes, Contents {
 	/**
-	 * Returns the value of the '<em><b>Application</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Application#getResources <em>Resources</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Resources</b></em>' container reference.
+   * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Resources#getResources <em>Resources</em>}'.
+   * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Application</em>' reference isn't clear,
+	 * If the meaning of the '<em>Resources</em>' container reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Application</em>' container reference.
-	 * @see #setApplication(Application)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getResource_Application()
-	 * @see io.opensemantics.semiotics.model.assessment.Application#getResources
-	 * @model opposite="resources" transient="false"
-	 * @generated
-	 */
-	Application getApplication();
+   * @return the value of the '<em>Resources</em>' container reference.
+   * @see #setResources(Resources)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getResource_Resources()
+   * @see io.opensemantics.semiotics.model.assessment.Resources#getResources
+   * @model opposite="resources" transient="false"
+   * @generated
+   */
+	Resources getResources();
 
 	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Resource#getApplication <em>Application</em>}' container reference.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Resource#getResources <em>Resources</em>}' container reference.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Application</em>' container reference.
-	 * @see #getApplication()
-	 * @generated
-	 */
-	void setApplication(Application value);
+   * @param value the new value of the '<em>Resources</em>' container reference.
+   * @see #getResources()
+   * @generated
+   */
+	void setResources(Resources value);
 
 	/**
-	 * Returns the value of the '<em><b>Snippets</b></em>' reference list.
-	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Snippet}.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Snippet#getResource <em>Resource</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Snippets</b></em>' reference list.
+   * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Snippet}.
+   * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Snippet#getResource <em>Resource</em>}'.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Snippets</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Snippets</em>' reference list.
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getResource_Snippets()
-	 * @see io.opensemantics.semiotics.model.assessment.Snippet#getResource
-	 * @model opposite="resource"
-	 * @generated
-	 */
+   * @return the value of the '<em>Snippets</em>' reference list.
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getResource_Snippets()
+   * @see io.opensemantics.semiotics.model.assessment.Snippet#getResource
+   * @model opposite="resource"
+   * @generated
+   */
 	EList<Snippet> getSnippets();
 
 } // Resource

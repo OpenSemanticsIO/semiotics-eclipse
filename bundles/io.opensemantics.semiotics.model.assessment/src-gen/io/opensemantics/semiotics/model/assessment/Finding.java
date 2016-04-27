@@ -15,6 +15,8 @@
  */
 package io.opensemantics.semiotics.model.assessment;
 
+import org.eclipse.emf.common.util.EList;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Finding</b></em>'.
@@ -24,10 +26,11 @@ package io.opensemantics.semiotics.model.assessment;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.Finding#getAssessment <em>Assessment</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.Finding#getFindings <em>Findings</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Finding#getReproducer <em>Reproducer</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Finding#getRemediation <em>Remediation</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Finding#getReferences <em>References</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.Finding#getAffects <em>Affects</em>}</li>
  * </ul>
  *
  * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getFinding()
@@ -36,109 +39,127 @@ package io.opensemantics.semiotics.model.assessment;
  */
 public interface Finding extends Label, Notes {
 	/**
-	 * Returns the value of the '<em><b>Assessment</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Assessment#getFindings <em>Findings</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Findings</b></em>' container reference.
+   * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Findings#getFindings <em>Findings</em>}'.
+   * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Assessment</em>' container reference isn't clear,
+	 * If the meaning of the '<em>Findings</em>' container reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Assessment</em>' container reference.
-	 * @see #setAssessment(Assessment)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getFinding_Assessment()
-	 * @see io.opensemantics.semiotics.model.assessment.Assessment#getFindings
-	 * @model opposite="findings" transient="false"
-	 * @generated
-	 */
-	Assessment getAssessment();
+   * @return the value of the '<em>Findings</em>' container reference.
+   * @see #setFindings(Findings)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getFinding_Findings()
+   * @see io.opensemantics.semiotics.model.assessment.Findings#getFindings
+   * @model opposite="findings" transient="false"
+   * @generated
+   */
+	Findings getFindings();
 
 	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Finding#getAssessment <em>Assessment</em>}' container reference.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Finding#getFindings <em>Findings</em>}' container reference.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Assessment</em>' container reference.
-	 * @see #getAssessment()
-	 * @generated
-	 */
-	void setAssessment(Assessment value);
+   * @param value the new value of the '<em>Findings</em>' container reference.
+   * @see #getFindings()
+   * @generated
+   */
+	void setFindings(Findings value);
 
 	/**
-	 * Returns the value of the '<em><b>Reproducer</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Reproducer</b></em>' attribute.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Reproducer</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reproducer</em>' attribute.
-	 * @see #setReproducer(String)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getFinding_Reproducer()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Reproducer</em>' attribute.
+   * @see #setReproducer(String)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getFinding_Reproducer()
+   * @model
+   * @generated
+   */
 	String getReproducer();
 
 	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Finding#getReproducer <em>Reproducer</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Finding#getReproducer <em>Reproducer</em>}' attribute.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Reproducer</em>' attribute.
-	 * @see #getReproducer()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Reproducer</em>' attribute.
+   * @see #getReproducer()
+   * @generated
+   */
 	void setReproducer(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Remediation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Remediation</b></em>' attribute.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Remediation</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Remediation</em>' attribute.
-	 * @see #setRemediation(String)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getFinding_Remediation()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Remediation</em>' attribute.
+   * @see #setRemediation(String)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getFinding_Remediation()
+   * @model
+   * @generated
+   */
 	String getRemediation();
 
 	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Finding#getRemediation <em>Remediation</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Finding#getRemediation <em>Remediation</em>}' attribute.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Remediation</em>' attribute.
-	 * @see #getRemediation()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Remediation</em>' attribute.
+   * @see #getRemediation()
+   * @generated
+   */
 	void setRemediation(String value);
 
 	/**
-	 * Returns the value of the '<em><b>References</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>References</b></em>' attribute.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>References</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>References</em>' attribute.
-	 * @see #setReferences(String)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getFinding_References()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>References</em>' attribute.
+   * @see #setReferences(String)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getFinding_References()
+   * @model
+   * @generated
+   */
 	String getReferences();
 
 	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Finding#getReferences <em>References</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Finding#getReferences <em>References</em>}' attribute.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>References</em>' attribute.
-	 * @see #getReferences()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>References</em>' attribute.
+   * @see #getReferences()
+   * @generated
+   */
 	void setReferences(String value);
+
+	/**
+   * Returns the value of the '<em><b>Affects</b></em>' reference list.
+   * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Node}.
+   * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Node#getFindings <em>Findings</em>}'.
+   * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Affects</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+   * @return the value of the '<em>Affects</em>' reference list.
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getFinding_Affects()
+   * @see io.opensemantics.semiotics.model.assessment.Node#getFindings
+   * @model opposite="findings"
+   * @generated
+   */
+	EList<Node> getAffects();
 
 } // Finding

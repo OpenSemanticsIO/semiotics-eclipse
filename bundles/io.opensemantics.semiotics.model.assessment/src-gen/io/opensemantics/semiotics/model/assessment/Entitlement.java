@@ -26,8 +26,8 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.Entitlement#getPrincipals <em>Principals</em>}</li>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.Entitlement#getApplication <em>Application</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.Entitlement#getAccounts <em>Accounts</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.Entitlement#getEntitlements <em>Entitlements</em>}</li>
  * </ul>
  *
  * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getEntitlement()
@@ -36,49 +36,49 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Entitlement extends Node {
 	/**
-	 * Returns the value of the '<em><b>Principals</b></em>' reference list.
-	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Account}.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Account#getEntitlements <em>Entitlements</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Accounts</b></em>' reference list.
+   * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Account}.
+   * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Account#getEntitlements <em>Entitlements</em>}'.
+   * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Principals</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Accounts</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Principals</em>' reference list.
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getEntitlement_Principals()
-	 * @see io.opensemantics.semiotics.model.assessment.Account#getEntitlements
-	 * @model opposite="entitlements"
-	 * @generated
-	 */
-	EList<Account> getPrincipals();
+   * @return the value of the '<em>Accounts</em>' reference list.
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getEntitlement_Accounts()
+   * @see io.opensemantics.semiotics.model.assessment.Account#getEntitlements
+   * @model opposite="entitlements"
+   * @generated
+   */
+	EList<Account> getAccounts();
 
 	/**
-	 * Returns the value of the '<em><b>Application</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Application#getEntitlements <em>Entitlements</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Entitlements</b></em>' container reference.
+   * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Entitlements#getEntitlements <em>Entitlements</em>}'.
+   * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Application</em>' container reference isn't clear,
+	 * If the meaning of the '<em>Entitlements</em>' container reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Application</em>' container reference.
-	 * @see #setApplication(Application)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getEntitlement_Application()
-	 * @see io.opensemantics.semiotics.model.assessment.Application#getEntitlements
-	 * @model opposite="entitlements" transient="false"
-	 * @generated
-	 */
-	Application getApplication();
+   * @return the value of the '<em>Entitlements</em>' container reference.
+   * @see #setEntitlements(Entitlements)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getEntitlement_Entitlements()
+   * @see io.opensemantics.semiotics.model.assessment.Entitlements#getEntitlements
+   * @model opposite="entitlements" transient="false"
+   * @generated
+   */
+	Entitlements getEntitlements();
 
 	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Entitlement#getApplication <em>Application</em>}' container reference.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Entitlement#getEntitlements <em>Entitlements</em>}' container reference.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Application</em>' container reference.
-	 * @see #getApplication()
-	 * @generated
-	 */
-	void setApplication(Application value);
+   * @param value the new value of the '<em>Entitlements</em>' container reference.
+   * @see #getEntitlements()
+   * @generated
+   */
+	void setEntitlements(Entitlements value);
 
 } // Entitlement

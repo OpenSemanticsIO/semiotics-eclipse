@@ -42,6 +42,8 @@
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference assessment.ecore#//Node/parent"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Node/refersTo"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Node/referredBy"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Node/tasks"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Node/findings"/>
     </genClasses>
     <genClasses image="false" ecoreClass="assessment.ecore#//Assessment">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Assessment/applications"/>
@@ -49,63 +51,56 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Assessment/tasks"/>
     </genClasses>
     <genClasses image="false" ecoreClass="assessment.ecore#//Application">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference assessment.ecore#//Application/assessment"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Application/accounts"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Application/entitlements"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Application/controllers"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Application/models"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Application/scm"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Application/libraries"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Application/views"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Application/sinks"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//Application/languages"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Application/resources"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Application/urls"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference assessment.ecore#//Application/applications"/>
     </genClasses>
     <genClasses image="false" ecoreClass="assessment.ecore#//Sink">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//Sink/cwes"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference assessment.ecore#//Sink/application"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference assessment.ecore#//Sink/sinks"/>
     </genClasses>
     <genClasses image="false" ecoreClass="assessment.ecore#//Controller">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference assessment.ecore#//Controller/application"/>
     </genClasses>
     <genClasses image="false" ecoreClass="assessment.ecore#//View">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference assessment.ecore#//View/application"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference assessment.ecore#//View/views"/>
     </genClasses>
     <genClasses image="false" ecoreClass="assessment.ecore#//Model">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference assessment.ecore#//Model/application"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference assessment.ecore#//Model/models"/>
     </genClasses>
     <genClasses image="false" ecoreClass="assessment.ecore#//Finding">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference assessment.ecore#//Finding/assessment"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//Finding/reproducer"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//Finding/remediation"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//Finding/references"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference assessment.ecore#//Finding/findings"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute assessment.ecore#//Finding/reproducer"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute assessment.ecore#//Finding/remediation"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute assessment.ecore#//Finding/references"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Finding/nodes"/>
     </genClasses>
     <genClasses image="false" ecoreClass="assessment.ecore#//Account">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference assessment.ecore#//Account/application"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference assessment.ecore#//Account/accounts"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Account/entitlements"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//Account/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//Account/email"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//Account/password"/>
     </genClasses>
     <genClasses image="false" ecoreClass="assessment.ecore#//Entitlement">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Entitlement/principals"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Entitlement/application"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Entitlement/accounts"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference assessment.ecore#//Entitlement/entitlements"/>
     </genClasses>
     <genClasses ecoreClass="assessment.ecore#//Task">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//Task/completed"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference assessment.ecore#//Task/assessment"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Task/nodes"/>
     </genClasses>
     <genClasses ecoreClass="assessment.ecore#//Scm">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//Scm/repository"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//Scm/branchTag"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference assessment.ecore#//Scm/application"/>
-    </genClasses>
-    <genClasses ecoreClass="assessment.ecore#//Library">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//Library/group"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//Library/artifact"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//Library/version"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference assessment.ecore#//Library/application"/>
     </genClasses>
     <genClasses image="false" ecoreClass="assessment.ecore#//Snippet">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute assessment.ecore#//Snippet/lineEnd"/>
@@ -126,7 +121,7 @@
     <genClasses image="false" ecoreClass="assessment.ecore#//GraphNode"/>
     <genClasses image="false" ecoreClass="assessment.ecore#//Control"/>
     <genClasses image="false" ecoreClass="assessment.ecore#//Resource">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Resource/application"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference assessment.ecore#//Resource/resources"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Resource/snippets"/>
     </genClasses>
     <genClasses image="false" ecoreClass="assessment.ecore#//Label">
@@ -137,6 +132,46 @@
     </genClasses>
     <genClasses image="false" ecoreClass="assessment.ecore#//Notes">
       <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute assessment.ecore#//Notes/notes"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="assessment.ecore#//Applications">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Applications/applications"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference assessment.ecore#//Applications/assessment"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="assessment.ecore#//Findings">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Findings/findings"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference assessment.ecore#//Findings/assessment"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="assessment.ecore#//Accounts">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Accounts/application"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Accounts/accounts"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="assessment.ecore#//Controllers">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Controllers/application"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Controllers/controllers"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="assessment.ecore#//Entitlements">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Entitlements/application"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Entitlements/entitlements"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="assessment.ecore#//Models">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference assessment.ecore#//Models/application"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Models/models"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="assessment.ecore#//Views">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference assessment.ecore#//Views/application"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Views/views"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="assessment.ecore#//Sinks">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference assessment.ecore#//Sinks/application"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Sinks/sinks"/>
+    </genClasses>
+    <genClasses ecoreClass="assessment.ecore#//Resources">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference assessment.ecore#//Resources/application"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Resources/resources"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="assessment.ecore#//Tasks">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference assessment.ecore#//Tasks/assessment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference assessment.ecore#//Tasks/tasks"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

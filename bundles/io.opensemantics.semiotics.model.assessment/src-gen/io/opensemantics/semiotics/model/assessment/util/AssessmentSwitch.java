@@ -37,624 +37,810 @@ import org.eclipse.emf.ecore.util.Switch;
  */
 public class AssessmentSwitch<T1> extends Switch<T1> {
 	/**
-	 * The cached model package
-	 * <!-- begin-user-doc -->
+   * The cached model package
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected static AssessmentPackage modelPackage;
 
 	/**
-	 * Creates an instance of the switch.
-	 * <!-- begin-user-doc -->
+   * Creates an instance of the switch.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public AssessmentSwitch() {
-		if (modelPackage == null) {
-			modelPackage = AssessmentPackage.eINSTANCE;
-		}
-	}
+    if (modelPackage == null) {
+      modelPackage = AssessmentPackage.eINSTANCE;
+    }
+  }
 
 	/**
-	 * Checks whether this is a switch for the given package.
-	 * <!-- begin-user-doc -->
+   * Checks whether this is a switch for the given package.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param ePackage the package in question.
-	 * @return whether this is a switch for the given package.
-	 * @generated
-	 */
+   * @param ePackage the package in question.
+   * @return whether this is a switch for the given package.
+   * @generated
+   */
 	@Override
 	protected boolean isSwitchFor(EPackage ePackage) {
-		return ePackage == modelPackage;
-	}
+    return ePackage == modelPackage;
+  }
 
 	/**
-	 * Calls <code>caseXXX</code> for each class of the model until one returns a non null result; it yields that result.
-	 * <!-- begin-user-doc -->
+   * Calls <code>caseXXX</code> for each class of the model until one returns a non null result; it yields that result.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the first non-null result returned by a <code>caseXXX</code> call.
-	 * @generated
-	 */
+   * @return the first non-null result returned by a <code>caseXXX</code> call.
+   * @generated
+   */
 	@Override
 	protected T1 doSwitch(int classifierID, EObject theEObject) {
-		switch (classifierID) {
-			case AssessmentPackage.HTTP: {
-				Http http = (Http)theEObject;
-				T1 result = caseHttp(http);
-				if (result == null) result = caseGraphNode(http);
-				if (result == null) result = caseNode(http);
-				if (result == null) result = caseLabel(http);
-				if (result == null) result = caseNotes(http);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AssessmentPackage.NODE: {
-				Node node = (Node)theEObject;
-				T1 result = caseNode(node);
-				if (result == null) result = caseLabel(node);
-				if (result == null) result = caseNotes(node);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AssessmentPackage.ASSESSMENT: {
-				Assessment assessment = (Assessment)theEObject;
-				T1 result = caseAssessment(assessment);
-				if (result == null) result = caseLabel(assessment);
-				if (result == null) result = caseNotes(assessment);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AssessmentPackage.APPLICATION: {
-				Application application = (Application)theEObject;
-				T1 result = caseApplication(application);
-				if (result == null) result = caseLabel(application);
-				if (result == null) result = caseNotes(application);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AssessmentPackage.SINK: {
-				Sink sink = (Sink)theEObject;
-				T1 result = caseSink(sink);
-				if (result == null) result = caseNode(sink);
-				if (result == null) result = caseLabel(sink);
-				if (result == null) result = caseNotes(sink);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AssessmentPackage.CONTROLLER: {
-				Controller controller = (Controller)theEObject;
-				T1 result = caseController(controller);
-				if (result == null) result = caseNode(controller);
-				if (result == null) result = caseLabel(controller);
-				if (result == null) result = caseNotes(controller);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AssessmentPackage.VIEW: {
-				View view = (View)theEObject;
-				T1 result = caseView(view);
-				if (result == null) result = caseNode(view);
-				if (result == null) result = caseLabel(view);
-				if (result == null) result = caseNotes(view);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AssessmentPackage.MODEL: {
-				Model model = (Model)theEObject;
-				T1 result = caseModel(model);
-				if (result == null) result = caseNode(model);
-				if (result == null) result = caseLabel(model);
-				if (result == null) result = caseNotes(model);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AssessmentPackage.FINDING: {
-				Finding finding = (Finding)theEObject;
-				T1 result = caseFinding(finding);
-				if (result == null) result = caseLabel(finding);
-				if (result == null) result = caseNotes(finding);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AssessmentPackage.ACCOUNT: {
-				Account account = (Account)theEObject;
-				T1 result = caseAccount(account);
-				if (result == null) result = caseNode(account);
-				if (result == null) result = caseLabel(account);
-				if (result == null) result = caseNotes(account);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AssessmentPackage.ENTITLEMENT: {
-				Entitlement entitlement = (Entitlement)theEObject;
-				T1 result = caseEntitlement(entitlement);
-				if (result == null) result = caseNode(entitlement);
-				if (result == null) result = caseLabel(entitlement);
-				if (result == null) result = caseNotes(entitlement);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AssessmentPackage.TASK: {
-				Task task = (Task)theEObject;
-				T1 result = caseTask(task);
-				if (result == null) result = caseNode(task);
-				if (result == null) result = caseLabel(task);
-				if (result == null) result = caseNotes(task);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AssessmentPackage.SCM: {
-				Scm scm = (Scm)theEObject;
-				T1 result = caseScm(scm);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AssessmentPackage.LIBRARY: {
-				Library library = (Library)theEObject;
-				T1 result = caseLibrary(library);
-				if (result == null) result = caseNode(library);
-				if (result == null) result = caseLabel(library);
-				if (result == null) result = caseNotes(library);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AssessmentPackage.SNIPPET: {
-				Snippet snippet = (Snippet)theEObject;
-				T1 result = caseSnippet(snippet);
-				if (result == null) result = caseGraphNode(snippet);
-				if (result == null) result = caseContents(snippet);
-				if (result == null) result = caseNode(snippet);
-				if (result == null) result = caseLabel(snippet);
-				if (result == null) result = caseNotes(snippet);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AssessmentPackage.URL: {
-				Url url = (Url)theEObject;
-				T1 result = caseUrl(url);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AssessmentPackage.GRAPH: {
-				Graph<?> graph = (Graph<?>)theEObject;
-				T1 result = caseGraph(graph);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AssessmentPackage.GENERIC: {
-				Generic generic = (Generic)theEObject;
-				T1 result = caseGeneric(generic);
-				if (result == null) result = caseGraphNode(generic);
-				if (result == null) result = caseNode(generic);
-				if (result == null) result = caseLabel(generic);
-				if (result == null) result = caseNotes(generic);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AssessmentPackage.GRAPH_NODE: {
-				GraphNode graphNode = (GraphNode)theEObject;
-				T1 result = caseGraphNode(graphNode);
-				if (result == null) result = caseNode(graphNode);
-				if (result == null) result = caseLabel(graphNode);
-				if (result == null) result = caseNotes(graphNode);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AssessmentPackage.CONTROL: {
-				Control control = (Control)theEObject;
-				T1 result = caseControl(control);
-				if (result == null) result = caseGraphNode(control);
-				if (result == null) result = caseNode(control);
-				if (result == null) result = caseLabel(control);
-				if (result == null) result = caseNotes(control);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AssessmentPackage.RESOURCE: {
-				Resource resource = (Resource)theEObject;
-				T1 result = caseResource(resource);
-				if (result == null) result = caseLabel(resource);
-				if (result == null) result = caseNotes(resource);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AssessmentPackage.LABEL: {
-				Label label = (Label)theEObject;
-				T1 result = caseLabel(label);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AssessmentPackage.CONTENTS: {
-				Contents contents = (Contents)theEObject;
-				T1 result = caseContents(contents);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case AssessmentPackage.NOTES: {
-				Notes notes = (Notes)theEObject;
-				T1 result = caseNotes(notes);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			default: return defaultCase(theEObject);
-		}
-	}
+    switch (classifierID) {
+      case AssessmentPackage.HTTP: {
+        Http http = (Http)theEObject;
+        T1 result = caseHttp(http);
+        if (result == null) result = caseGraphNode(http);
+        if (result == null) result = caseNode(http);
+        if (result == null) result = caseLabel(http);
+        if (result == null) result = caseNotes(http);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.NODE: {
+        Node node = (Node)theEObject;
+        T1 result = caseNode(node);
+        if (result == null) result = caseLabel(node);
+        if (result == null) result = caseNotes(node);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.ASSESSMENT: {
+        Assessment assessment = (Assessment)theEObject;
+        T1 result = caseAssessment(assessment);
+        if (result == null) result = caseLabel(assessment);
+        if (result == null) result = caseNotes(assessment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.APPLICATION: {
+        Application application = (Application)theEObject;
+        T1 result = caseApplication(application);
+        if (result == null) result = caseLabel(application);
+        if (result == null) result = caseNotes(application);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.SINK: {
+        Sink sink = (Sink)theEObject;
+        T1 result = caseSink(sink);
+        if (result == null) result = caseNode(sink);
+        if (result == null) result = caseLabel(sink);
+        if (result == null) result = caseNotes(sink);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.CONTROLLER: {
+        Controller controller = (Controller)theEObject;
+        T1 result = caseController(controller);
+        if (result == null) result = caseNode(controller);
+        if (result == null) result = caseLabel(controller);
+        if (result == null) result = caseNotes(controller);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.VIEW: {
+        View view = (View)theEObject;
+        T1 result = caseView(view);
+        if (result == null) result = caseNode(view);
+        if (result == null) result = caseLabel(view);
+        if (result == null) result = caseNotes(view);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.MODEL: {
+        Model model = (Model)theEObject;
+        T1 result = caseModel(model);
+        if (result == null) result = caseNode(model);
+        if (result == null) result = caseLabel(model);
+        if (result == null) result = caseNotes(model);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.FINDING: {
+        Finding finding = (Finding)theEObject;
+        T1 result = caseFinding(finding);
+        if (result == null) result = caseLabel(finding);
+        if (result == null) result = caseNotes(finding);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.ACCOUNT: {
+        Account account = (Account)theEObject;
+        T1 result = caseAccount(account);
+        if (result == null) result = caseNode(account);
+        if (result == null) result = caseLabel(account);
+        if (result == null) result = caseNotes(account);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.ENTITLEMENT: {
+        Entitlement entitlement = (Entitlement)theEObject;
+        T1 result = caseEntitlement(entitlement);
+        if (result == null) result = caseNode(entitlement);
+        if (result == null) result = caseLabel(entitlement);
+        if (result == null) result = caseNotes(entitlement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.TASK: {
+        Task task = (Task)theEObject;
+        T1 result = caseTask(task);
+        if (result == null) result = caseLabel(task);
+        if (result == null) result = caseNotes(task);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.SCM: {
+        Scm scm = (Scm)theEObject;
+        T1 result = caseScm(scm);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.SNIPPET: {
+        Snippet snippet = (Snippet)theEObject;
+        T1 result = caseSnippet(snippet);
+        if (result == null) result = caseGraphNode(snippet);
+        if (result == null) result = caseContents(snippet);
+        if (result == null) result = caseNode(snippet);
+        if (result == null) result = caseLabel(snippet);
+        if (result == null) result = caseNotes(snippet);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.URL: {
+        Url url = (Url)theEObject;
+        T1 result = caseUrl(url);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.GRAPH: {
+        Graph<?> graph = (Graph<?>)theEObject;
+        T1 result = caseGraph(graph);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.GENERIC: {
+        Generic generic = (Generic)theEObject;
+        T1 result = caseGeneric(generic);
+        if (result == null) result = caseGraphNode(generic);
+        if (result == null) result = caseNode(generic);
+        if (result == null) result = caseLabel(generic);
+        if (result == null) result = caseNotes(generic);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.GRAPH_NODE: {
+        GraphNode graphNode = (GraphNode)theEObject;
+        T1 result = caseGraphNode(graphNode);
+        if (result == null) result = caseNode(graphNode);
+        if (result == null) result = caseLabel(graphNode);
+        if (result == null) result = caseNotes(graphNode);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.CONTROL: {
+        Control control = (Control)theEObject;
+        T1 result = caseControl(control);
+        if (result == null) result = caseGraphNode(control);
+        if (result == null) result = caseNode(control);
+        if (result == null) result = caseLabel(control);
+        if (result == null) result = caseNotes(control);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.RESOURCE: {
+        Resource resource = (Resource)theEObject;
+        T1 result = caseResource(resource);
+        if (result == null) result = caseLabel(resource);
+        if (result == null) result = caseNotes(resource);
+        if (result == null) result = caseContents(resource);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.LABEL: {
+        Label label = (Label)theEObject;
+        T1 result = caseLabel(label);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.CONTENTS: {
+        Contents contents = (Contents)theEObject;
+        T1 result = caseContents(contents);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.NOTES: {
+        Notes notes = (Notes)theEObject;
+        T1 result = caseNotes(notes);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.APPLICATIONS: {
+        Applications applications = (Applications)theEObject;
+        T1 result = caseApplications(applications);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.FINDINGS: {
+        Findings findings = (Findings)theEObject;
+        T1 result = caseFindings(findings);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.ACCOUNTS: {
+        Accounts accounts = (Accounts)theEObject;
+        T1 result = caseAccounts(accounts);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.CONTROLLERS: {
+        Controllers controllers = (Controllers)theEObject;
+        T1 result = caseControllers(controllers);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.ENTITLEMENTS: {
+        Entitlements entitlements = (Entitlements)theEObject;
+        T1 result = caseEntitlements(entitlements);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.MODELS: {
+        Models models = (Models)theEObject;
+        T1 result = caseModels(models);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.VIEWS: {
+        Views views = (Views)theEObject;
+        T1 result = caseViews(views);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.SINKS: {
+        Sinks sinks = (Sinks)theEObject;
+        T1 result = caseSinks(sinks);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.RESOURCES: {
+        Resources resources = (Resources)theEObject;
+        T1 result = caseResources(resources);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case AssessmentPackage.TASKS: {
+        Tasks tasks = (Tasks)theEObject;
+        T1 result = caseTasks(tasks);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      default: return defaultCase(theEObject);
+    }
+  }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Http</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns the result of interpreting the object as an instance of '<em>Http</em>'.
+   * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Http</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Http</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
 	public T1 caseHttp(Http object) {
-		return null;
-	}
+    return null;
+  }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Node</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns the result of interpreting the object as an instance of '<em>Node</em>'.
+   * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Node</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Node</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
 	public T1 caseNode(Node object) {
-		return null;
-	}
+    return null;
+  }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Assessment</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns the result of interpreting the object as an instance of '<em>Assessment</em>'.
+   * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Assessment</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Assessment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
 	public T1 caseAssessment(Assessment object) {
-		return null;
-	}
+    return null;
+  }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Application</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns the result of interpreting the object as an instance of '<em>Application</em>'.
+   * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Application</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Application</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
 	public T1 caseApplication(Application object) {
-		return null;
-	}
+    return null;
+  }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Sink</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns the result of interpreting the object as an instance of '<em>Sink</em>'.
+   * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Sink</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Sink</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
 	public T1 caseSink(Sink object) {
-		return null;
-	}
+    return null;
+  }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Controller</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns the result of interpreting the object as an instance of '<em>Controller</em>'.
+   * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Controller</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Controller</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
 	public T1 caseController(Controller object) {
-		return null;
-	}
+    return null;
+  }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>View</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns the result of interpreting the object as an instance of '<em>View</em>'.
+   * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>View</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>View</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
 	public T1 caseView(View object) {
-		return null;
-	}
+    return null;
+  }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Model</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns the result of interpreting the object as an instance of '<em>Model</em>'.
+   * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Model</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Model</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
 	public T1 caseModel(Model object) {
-		return null;
-	}
+    return null;
+  }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Finding</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns the result of interpreting the object as an instance of '<em>Finding</em>'.
+   * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Finding</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Finding</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
 	public T1 caseFinding(Finding object) {
-		return null;
-	}
+    return null;
+  }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Account</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns the result of interpreting the object as an instance of '<em>Account</em>'.
+   * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Account</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Account</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
 	public T1 caseAccount(Account object) {
-		return null;
-	}
+    return null;
+  }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Entitlement</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns the result of interpreting the object as an instance of '<em>Entitlement</em>'.
+   * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Entitlement</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Entitlement</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
 	public T1 caseEntitlement(Entitlement object) {
-		return null;
-	}
+    return null;
+  }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Task</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns the result of interpreting the object as an instance of '<em>Task</em>'.
+   * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Task</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Task</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
 	public T1 caseTask(Task object) {
-		return null;
-	}
+    return null;
+  }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Scm</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns the result of interpreting the object as an instance of '<em>Scm</em>'.
+   * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Scm</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Scm</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
 	public T1 caseScm(Scm object) {
-		return null;
-	}
+    return null;
+  }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Library</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns the result of interpreting the object as an instance of '<em>Snippet</em>'.
+   * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Library</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T1 caseLibrary(Library object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Snippet</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Snippet</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Snippet</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
 	public T1 caseSnippet(Snippet object) {
-		return null;
-	}
+    return null;
+  }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Url</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns the result of interpreting the object as an instance of '<em>Url</em>'.
+   * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Url</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Url</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
 	public T1 caseUrl(Url object) {
-		return null;
-	}
+    return null;
+  }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Graph</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns the result of interpreting the object as an instance of '<em>Graph</em>'.
+   * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Graph</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Graph</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
 	public <T extends Node> T1 caseGraph(Graph<T> object) {
-		return null;
-	}
+    return null;
+  }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Generic</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns the result of interpreting the object as an instance of '<em>Generic</em>'.
+   * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Generic</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Generic</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
 	public T1 caseGeneric(Generic object) {
-		return null;
-	}
+    return null;
+  }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Graph Node</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns the result of interpreting the object as an instance of '<em>Graph Node</em>'.
+   * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Graph Node</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Graph Node</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
 	public T1 caseGraphNode(GraphNode object) {
-		return null;
-	}
+    return null;
+  }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Control</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns the result of interpreting the object as an instance of '<em>Control</em>'.
+   * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Control</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Control</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
 	public T1 caseControl(Control object) {
-		return null;
-	}
+    return null;
+  }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Resource</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns the result of interpreting the object as an instance of '<em>Resource</em>'.
+   * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Resource</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Resource</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
 	public T1 caseResource(Resource object) {
-		return null;
-	}
+    return null;
+  }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Label</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns the result of interpreting the object as an instance of '<em>Label</em>'.
+   * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Label</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Label</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
 	public T1 caseLabel(Label object) {
-		return null;
-	}
+    return null;
+  }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Contents</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns the result of interpreting the object as an instance of '<em>Contents</em>'.
+   * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Contents</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Contents</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
 	public T1 caseContents(Contents object) {
-		return null;
-	}
+    return null;
+  }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Notes</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns the result of interpreting the object as an instance of '<em>Notes</em>'.
+   * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Notes</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Notes</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
 	public T1 caseNotes(Notes object) {
-		return null;
-	}
+    return null;
+  }
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>EObject</em>'.
-	 * <!-- begin-user-doc -->
+   * Returns the result of interpreting the object as an instance of '<em>Applications</em>'.
+   * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Applications</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+	public T1 caseApplications(Applications object) {
+    return null;
+  }
+
+	/**
+   * Returns the result of interpreting the object as an instance of '<em>Findings</em>'.
+   * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Findings</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+	public T1 caseFindings(Findings object) {
+    return null;
+  }
+
+	/**
+   * Returns the result of interpreting the object as an instance of '<em>Accounts</em>'.
+   * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Accounts</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+	public T1 caseAccounts(Accounts object) {
+    return null;
+  }
+
+	/**
+   * Returns the result of interpreting the object as an instance of '<em>Controllers</em>'.
+   * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Controllers</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+	public T1 caseControllers(Controllers object) {
+    return null;
+  }
+
+	/**
+   * Returns the result of interpreting the object as an instance of '<em>Entitlements</em>'.
+   * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Entitlements</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+	public T1 caseEntitlements(Entitlements object) {
+    return null;
+  }
+
+	/**
+   * Returns the result of interpreting the object as an instance of '<em>Models</em>'.
+   * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Models</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+	public T1 caseModels(Models object) {
+    return null;
+  }
+
+	/**
+   * Returns the result of interpreting the object as an instance of '<em>Views</em>'.
+   * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Views</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+	public T1 caseViews(Views object) {
+    return null;
+  }
+
+	/**
+   * Returns the result of interpreting the object as an instance of '<em>Sinks</em>'.
+   * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Sinks</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+	public T1 caseSinks(Sinks object) {
+    return null;
+  }
+
+	/**
+   * Returns the result of interpreting the object as an instance of '<em>Resources</em>'.
+   * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Resources</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+	public T1 caseResources(Resources object) {
+    return null;
+  }
+
+	/**
+   * Returns the result of interpreting the object as an instance of '<em>Tasks</em>'.
+   * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Tasks</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+	public T1 caseTasks(Tasks object) {
+    return null;
+  }
+
+	/**
+   * Returns the result of interpreting the object as an instance of '<em>EObject</em>'.
+   * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch, but this is the last case anyway.
 	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EObject</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject)
-	 * @generated
-	 */
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>EObject</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject)
+   * @generated
+   */
 	@Override
 	public T1 defaultCase(EObject object) {
-		return null;
-	}
+    return null;
+  }
 
 } //AssessmentSwitch

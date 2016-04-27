@@ -36,75 +36,52 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  */
 public class EntitlementItemProvider extends NodeItemProvider {
 	/**
-	 * This constructs an instance from a factory and a notifier.
-	 * <!-- begin-user-doc -->
+   * This constructs an instance from a factory and a notifier.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public EntitlementItemProvider(AdapterFactory adapterFactory) {
-		super(adapterFactory);
-	}
+    super(adapterFactory);
+  }
 
 	/**
-	 * This returns the property descriptors for the adapted class.
-	 * <!-- begin-user-doc -->
+   * This returns the property descriptors for the adapted class.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
-			super.getPropertyDescriptors(object);
+    if (itemPropertyDescriptors == null) {
+      super.getPropertyDescriptors(object);
 
-			addPrincipalsPropertyDescriptor(object);
-			addApplicationPropertyDescriptor(object);
-		}
-		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Principals feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPrincipalsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Entitlement_principals_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Entitlement_principals_feature", "_UI_Entitlement_type"),
-				 AssessmentPackage.Literals.ENTITLEMENT__PRINCIPALS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
+      addAccountsPropertyDescriptor(object);
+    }
+    return itemPropertyDescriptors;
+  }
 
 	/**
-	 * This adds a property descriptor for the Application feature.
-	 * <!-- begin-user-doc -->
+   * This adds a property descriptor for the Accounts feature.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addApplicationPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Entitlement_application_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Entitlement_application_feature", "_UI_Entitlement_type"),
-				 AssessmentPackage.Literals.ENTITLEMENT__APPLICATION,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
+   * @generated
+   */
+	protected void addAccountsPropertyDescriptor(Object object) {
+    itemPropertyDescriptors.add
+      (createItemPropertyDescriptor
+        (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+         getResourceLocator(),
+         getString("_UI_Entitlement_accounts_feature"),
+         getString("_UI_PropertyDescriptor_description", "_UI_Entitlement_accounts_feature", "_UI_Entitlement_type"),
+         AssessmentPackage.Literals.ENTITLEMENT__ACCOUNTS,
+         true,
+         false,
+         true,
+         null,
+         null,
+         null));
+  }
 
 	/**
 	 * This returns Entitlement.gif.
@@ -126,33 +103,34 @@ public class EntitlementItemProvider extends NodeItemProvider {
 	@Override
 	public String getText(Object object) {
 		String label = ((Entitlement)object).getLabel();
-		return label == null || label.length() == 0 ? "" : label;
+		return label == null || label.length() == 0 ?
+			getString("_UI_Entitlement_type") : label;
 	}
 	
 
 	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update any cached
-	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
-	 * <!-- begin-user-doc -->
+   * This handles model notifications by calling {@link #updateChildren} to update any cached
+   * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public void notifyChanged(Notification notification) {
-		updateChildren(notification);
-		super.notifyChanged(notification);
-	}
+    updateChildren(notification);
+    super.notifyChanged(notification);
+  }
 
 	/**
-	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
-	 * that can be created under this object.
-	 * <!-- begin-user-doc -->
+   * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
+   * that can be created under this object.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
-		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
+    super.collectNewChildDescriptors(newChildDescriptors, object);
+  }
 
 }

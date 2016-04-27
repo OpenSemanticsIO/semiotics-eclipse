@@ -32,377 +32,377 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum HttpMethod implements Enumerator {
 	/**
-	 * The '<em><b>GET</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>GET</b></em>' literal object.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #GET_VALUE
-	 * @generated
-	 * @ordered
-	 */
+   * @see #GET_VALUE
+   * @generated
+   * @ordered
+   */
 	GET(0, "GET", "GET"),
 
 	/**
-	 * The '<em><b>HEAD</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>HEAD</b></em>' literal object.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #HEAD_VALUE
-	 * @generated
-	 * @ordered
-	 */
+   * @see #HEAD_VALUE
+   * @generated
+   * @ordered
+   */
 	HEAD(0, "HEAD", "HEAD"),
 
 	/**
-	 * The '<em><b>POST</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>POST</b></em>' literal object.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #POST_VALUE
-	 * @generated
-	 * @ordered
-	 */
+   * @see #POST_VALUE
+   * @generated
+   * @ordered
+   */
 	POST(0, "POST", "POST"),
 
 	/**
-	 * The '<em><b>PUT</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>PUT</b></em>' literal object.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #PUT_VALUE
-	 * @generated
-	 * @ordered
-	 */
+   * @see #PUT_VALUE
+   * @generated
+   * @ordered
+   */
 	PUT(0, "PUT", "PUT"),
 
 	/**
-	 * The '<em><b>DELETE</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>DELETE</b></em>' literal object.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #DELETE_VALUE
-	 * @generated
-	 * @ordered
-	 */
+   * @see #DELETE_VALUE
+   * @generated
+   * @ordered
+   */
 	DELETE(0, "DELETE", "DELETE"),
 
 	/**
-	 * The '<em><b>OPTIONS</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>OPTIONS</b></em>' literal object.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #OPTIONS_VALUE
-	 * @generated
-	 * @ordered
-	 */
+   * @see #OPTIONS_VALUE
+   * @generated
+   * @ordered
+   */
 	OPTIONS(0, "OPTIONS", "OPTIONS"),
 
 	/**
-	 * The '<em><b>TRACE</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>TRACE</b></em>' literal object.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #TRACE_VALUE
-	 * @generated
-	 * @ordered
-	 */
+   * @see #TRACE_VALUE
+   * @generated
+   * @ordered
+   */
 	TRACE(0, "TRACE", "TRACE"),
 
 	/**
-	 * The '<em><b>CONNECT</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>CONNECT</b></em>' literal object.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #CONNECT_VALUE
-	 * @generated
-	 * @ordered
-	 */
+   * @see #CONNECT_VALUE
+   * @generated
+   * @ordered
+   */
 	CONNECT(0, "CONNECT", "CONNECT"),
 
 	/**
-	 * The '<em><b>PATCH</b></em>' literal object.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>PATCH</b></em>' literal object.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #PATCH_VALUE
-	 * @generated
-	 * @ordered
-	 */
+   * @see #PATCH_VALUE
+   * @generated
+   * @ordered
+   */
 	PATCH(0, "PATCH", "PATCH");
 
 	/**
-	 * The '<em><b>GET</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>GET</b></em>' literal value.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>GET</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #GET
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
+   * @see #GET
+   * @model
+   * @generated
+   * @ordered
+   */
 	public static final int GET_VALUE = 0;
 
 	/**
-	 * The '<em><b>HEAD</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>HEAD</b></em>' literal value.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>HEAD</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #HEAD
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
+   * @see #HEAD
+   * @model
+   * @generated
+   * @ordered
+   */
 	public static final int HEAD_VALUE = 0;
 
 	/**
-	 * The '<em><b>POST</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>POST</b></em>' literal value.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>POST</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #POST
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
+   * @see #POST
+   * @model
+   * @generated
+   * @ordered
+   */
 	public static final int POST_VALUE = 0;
 
 	/**
-	 * The '<em><b>PUT</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>PUT</b></em>' literal value.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>PUT</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #PUT
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
+   * @see #PUT
+   * @model
+   * @generated
+   * @ordered
+   */
 	public static final int PUT_VALUE = 0;
 
 	/**
-	 * The '<em><b>DELETE</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>DELETE</b></em>' literal value.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>DELETE</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #DELETE
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
+   * @see #DELETE
+   * @model
+   * @generated
+   * @ordered
+   */
 	public static final int DELETE_VALUE = 0;
 
 	/**
-	 * The '<em><b>OPTIONS</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>OPTIONS</b></em>' literal value.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>OPTIONS</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #OPTIONS
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
+   * @see #OPTIONS
+   * @model
+   * @generated
+   * @ordered
+   */
 	public static final int OPTIONS_VALUE = 0;
 
 	/**
-	 * The '<em><b>TRACE</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>TRACE</b></em>' literal value.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>TRACE</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #TRACE
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
+   * @see #TRACE
+   * @model
+   * @generated
+   * @ordered
+   */
 	public static final int TRACE_VALUE = 0;
 
 	/**
-	 * The '<em><b>CONNECT</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>CONNECT</b></em>' literal value.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>CONNECT</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #CONNECT
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
+   * @see #CONNECT
+   * @model
+   * @generated
+   * @ordered
+   */
 	public static final int CONNECT_VALUE = 0;
 
 	/**
-	 * The '<em><b>PATCH</b></em>' literal value.
-	 * <!-- begin-user-doc -->
+   * The '<em><b>PATCH</b></em>' literal value.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>PATCH</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #PATCH
-	 * @model
-	 * @generated
-	 * @ordered
-	 */
+   * @see #PATCH
+   * @model
+   * @generated
+   * @ordered
+   */
 	public static final int PATCH_VALUE = 0;
 
 	/**
-	 * An array of all the '<em><b>Http Method</b></em>' enumerators.
-	 * <!-- begin-user-doc -->
+   * An array of all the '<em><b>Http Method</b></em>' enumerators.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	private static final HttpMethod[] VALUES_ARRAY =
 		new HttpMethod[] {
-			GET,
-			HEAD,
-			POST,
-			PUT,
-			DELETE,
-			OPTIONS,
-			TRACE,
-			CONNECT,
-			PATCH,
-		};
+      GET,
+      HEAD,
+      POST,
+      PUT,
+      DELETE,
+      OPTIONS,
+      TRACE,
+      CONNECT,
+      PATCH,
+    };
 
 	/**
-	 * A public read-only list of all the '<em><b>Http Method</b></em>' enumerators.
-	 * <!-- begin-user-doc -->
+   * A public read-only list of all the '<em><b>Http Method</b></em>' enumerators.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public static final List<HttpMethod> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Http Method</b></em>' literal with the specified literal value.
-	 * <!-- begin-user-doc -->
+   * Returns the '<em><b>Http Method</b></em>' literal with the specified literal value.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param literal the literal.
-	 * @return the matching enumerator or <code>null</code>.
-	 * @generated
-	 */
+   * @param literal the literal.
+   * @return the matching enumerator or <code>null</code>.
+   * @generated
+   */
 	public static HttpMethod get(String literal) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			HttpMethod result = VALUES_ARRAY[i];
-			if (result.toString().equals(literal)) {
-				return result;
-			}
-		}
-		return null;
-	}
+    for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+      HttpMethod result = VALUES_ARRAY[i];
+      if (result.toString().equals(literal)) {
+        return result;
+      }
+    }
+    return null;
+  }
 
 	/**
-	 * Returns the '<em><b>Http Method</b></em>' literal with the specified name.
-	 * <!-- begin-user-doc -->
+   * Returns the '<em><b>Http Method</b></em>' literal with the specified name.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param name the name.
-	 * @return the matching enumerator or <code>null</code>.
-	 * @generated
-	 */
+   * @param name the name.
+   * @return the matching enumerator or <code>null</code>.
+   * @generated
+   */
 	public static HttpMethod getByName(String name) {
-		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			HttpMethod result = VALUES_ARRAY[i];
-			if (result.getName().equals(name)) {
-				return result;
-			}
-		}
-		return null;
-	}
+    for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+      HttpMethod result = VALUES_ARRAY[i];
+      if (result.getName().equals(name)) {
+        return result;
+      }
+    }
+    return null;
+  }
 
 	/**
-	 * Returns the '<em><b>Http Method</b></em>' literal with the specified integer value.
-	 * <!-- begin-user-doc -->
+   * Returns the '<em><b>Http Method</b></em>' literal with the specified integer value.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the integer value.
-	 * @return the matching enumerator or <code>null</code>.
-	 * @generated
-	 */
+   * @param value the integer value.
+   * @return the matching enumerator or <code>null</code>.
+   * @generated
+   */
 	public static HttpMethod get(int value) {
-		switch (value) {
-			case GET_VALUE: return GET;
-		}
-		return null;
-	}
+    switch (value) {
+      case GET_VALUE: return GET;
+    }
+    return null;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	private final int value;
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	private final String name;
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	private final String literal;
 
 	/**
-	 * Only this class can construct instances.
-	 * <!-- begin-user-doc -->
+   * Only this class can construct instances.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	private HttpMethod(int value, String name, String literal) {
-		this.value = value;
-		this.name = name;
-		this.literal = literal;
-	}
+    this.value = value;
+    this.name = name;
+    this.literal = literal;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public int getValue() {
-	  return value;
-	}
+    return value;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public String getName() {
-	  return name;
-	}
+    return name;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public String getLiteral() {
-	  return literal;
-	}
+    return literal;
+  }
 
 	/**
-	 * Returns the literal value of the enumerator, which is its string representation.
-	 * <!-- begin-user-doc -->
+   * Returns the literal value of the enumerator, which is its string representation.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public String toString() {
-		return literal;
-	}
+    return literal;
+  }
 	
 } //HttpMethod

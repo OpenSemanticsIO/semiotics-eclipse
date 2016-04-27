@@ -19,12 +19,10 @@ import io.opensemantics.semiotics.model.assessment.Application;
 import io.opensemantics.semiotics.model.assessment.AssessmentPackage;
 import io.opensemantics.semiotics.model.assessment.Controller;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,165 +39,129 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  */
 public class ControllerImpl extends NodeImpl implements Controller {
 	/**
-	 * <!-- begin-user-doc -->
+   * The cached value of the '{@link #getApplication() <em>Application</em>}' reference.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ControllerImpl() {
-		super();
-	}
+   * @see #getApplication()
+   * @generated
+   * @ordered
+   */
+	protected Application application;
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
+	protected ControllerImpl() {
+    super();
+  }
+
+	/**
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
 	@Override
 	protected EClass eStaticClass() {
-		return AssessmentPackage.Literals.CONTROLLER;
-	}
+    return AssessmentPackage.Literals.CONTROLLER;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public Application getApplication() {
-		if (eContainerFeatureID() != AssessmentPackage.CONTROLLER__APPLICATION) return null;
-		return (Application)eInternalContainer();
-	}
+    if (application != null && application.eIsProxy()) {
+      InternalEObject oldApplication = (InternalEObject)application;
+      application = (Application)eResolveProxy(oldApplication);
+      if (application != oldApplication) {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, AssessmentPackage.CONTROLLER__APPLICATION, oldApplication, application));
+      }
+    }
+    return application;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetApplication(Application newApplication, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newApplication, AssessmentPackage.CONTROLLER__APPLICATION, msgs);
-		return msgs;
-	}
+   * @generated
+   */
+	public Application basicGetApplication() {
+    return application;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public void setApplication(Application newApplication) {
-		if (newApplication != eInternalContainer() || (eContainerFeatureID() != AssessmentPackage.CONTROLLER__APPLICATION && newApplication != null)) {
-			if (EcoreUtil.isAncestor(this, newApplication))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newApplication != null)
-				msgs = ((InternalEObject)newApplication).eInverseAdd(this, AssessmentPackage.APPLICATION__CONTROLLERS, Application.class, msgs);
-			msgs = basicSetApplication(newApplication, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.CONTROLLER__APPLICATION, newApplication, newApplication));
-	}
+    Application oldApplication = application;
+    application = newApplication;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.CONTROLLER__APPLICATION, oldApplication, application));
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case AssessmentPackage.CONTROLLER__APPLICATION:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetApplication((Application)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case AssessmentPackage.CONTROLLER__APPLICATION:
-				return basicSetApplication(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case AssessmentPackage.CONTROLLER__APPLICATION:
-				return eInternalContainer().eInverseRemove(this, AssessmentPackage.APPLICATION__CONTROLLERS, Application.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case AssessmentPackage.CONTROLLER__APPLICATION:
-				return getApplication();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
+    switch (featureID) {
+      case AssessmentPackage.CONTROLLER__APPLICATION:
+        if (resolve) return getApplication();
+        return basicGetApplication();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case AssessmentPackage.CONTROLLER__APPLICATION:
-				setApplication((Application)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
+    switch (featureID) {
+      case AssessmentPackage.CONTROLLER__APPLICATION:
+        setApplication((Application)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public void eUnset(int featureID) {
-		switch (featureID) {
-			case AssessmentPackage.CONTROLLER__APPLICATION:
-				setApplication((Application)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
+    switch (featureID) {
+      case AssessmentPackage.CONTROLLER__APPLICATION:
+        setApplication((Application)null);
+        return;
+    }
+    super.eUnset(featureID);
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case AssessmentPackage.CONTROLLER__APPLICATION:
-				return getApplication() != null;
-		}
-		return super.eIsSet(featureID);
-	}
+    switch (featureID) {
+      case AssessmentPackage.CONTROLLER__APPLICATION:
+        return application != null;
+    }
+    return super.eIsSet(featureID);
+  }
 
 } //ControllerImpl

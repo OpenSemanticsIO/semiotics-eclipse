@@ -33,31 +33,29 @@ package io.opensemantics.semiotics.model.assessment;
  */
 public interface Controller extends Node {
 	/**
-	 * Returns the value of the '<em><b>Application</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Application#getControllers <em>Controllers</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Application</b></em>' reference.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Application</em>' container reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Application</em>' container reference.
-	 * @see #setApplication(Application)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getController_Application()
-	 * @see io.opensemantics.semiotics.model.assessment.Application#getControllers
-	 * @model opposite="controllers" transient="false"
-	 * @generated
-	 */
+   * @return the value of the '<em>Application</em>' reference.
+   * @see #setApplication(Application)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getController_Application()
+   * @model
+   * @generated
+   */
 	Application getApplication();
 
 	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Controller#getApplication <em>Application</em>}' container reference.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Controller#getApplication <em>Application</em>}' reference.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Application</em>' container reference.
-	 * @see #getApplication()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Application</em>' reference.
+   * @see #getApplication()
+   * @generated
+   */
 	void setApplication(Application value);
 
 } // Controller

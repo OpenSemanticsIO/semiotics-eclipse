@@ -34,361 +34,484 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
  */
 public class AssessmentFactoryImpl extends EFactoryImpl implements AssessmentFactory {
 	/**
-	 * Creates the default factory implementation.
-	 * <!-- begin-user-doc -->
+   * Creates the default factory implementation.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public static AssessmentFactory init() {
-		try {
-			AssessmentFactory theAssessmentFactory = (AssessmentFactory)EPackage.Registry.INSTANCE.getEFactory(AssessmentPackage.eNS_URI);
-			if (theAssessmentFactory != null) {
-				return theAssessmentFactory;
-			}
-		}
-		catch (Exception exception) {
-			EcorePlugin.INSTANCE.log(exception);
-		}
-		return new AssessmentFactoryImpl();
-	}
+    try {
+      AssessmentFactory theAssessmentFactory = (AssessmentFactory)EPackage.Registry.INSTANCE.getEFactory(AssessmentPackage.eNS_URI);
+      if (theAssessmentFactory != null) {
+        return theAssessmentFactory;
+      }
+    }
+    catch (Exception exception) {
+      EcorePlugin.INSTANCE.log(exception);
+    }
+    return new AssessmentFactoryImpl();
+  }
 
 	/**
-	 * Creates an instance of the factory.
-	 * <!-- begin-user-doc -->
+   * Creates an instance of the factory.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public AssessmentFactoryImpl() {
-		super();
-	}
+    super();
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public EObject create(EClass eClass) {
-		switch (eClass.getClassifierID()) {
-			case AssessmentPackage.HTTP: return createHttp();
-			case AssessmentPackage.ASSESSMENT: return createAssessment();
-			case AssessmentPackage.APPLICATION: return createApplication();
-			case AssessmentPackage.SINK: return createSink();
-			case AssessmentPackage.CONTROLLER: return createController();
-			case AssessmentPackage.VIEW: return createView();
-			case AssessmentPackage.MODEL: return createModel();
-			case AssessmentPackage.FINDING: return createFinding();
-			case AssessmentPackage.ACCOUNT: return createAccount();
-			case AssessmentPackage.ENTITLEMENT: return createEntitlement();
-			case AssessmentPackage.TASK: return createTask();
-			case AssessmentPackage.SCM: return createScm();
-			case AssessmentPackage.LIBRARY: return createLibrary();
-			case AssessmentPackage.SNIPPET: return createSnippet();
-			case AssessmentPackage.URL: return createUrl();
-			case AssessmentPackage.GENERIC: return createGeneric();
-			case AssessmentPackage.CONTROL: return createControl();
-			case AssessmentPackage.RESOURCE: return createResource();
-			default:
-				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-		}
-	}
+    switch (eClass.getClassifierID()) {
+      case AssessmentPackage.HTTP: return createHttp();
+      case AssessmentPackage.ASSESSMENT: return createAssessment();
+      case AssessmentPackage.APPLICATION: return createApplication();
+      case AssessmentPackage.SINK: return createSink();
+      case AssessmentPackage.CONTROLLER: return createController();
+      case AssessmentPackage.VIEW: return createView();
+      case AssessmentPackage.MODEL: return createModel();
+      case AssessmentPackage.FINDING: return createFinding();
+      case AssessmentPackage.ACCOUNT: return createAccount();
+      case AssessmentPackage.ENTITLEMENT: return createEntitlement();
+      case AssessmentPackage.TASK: return createTask();
+      case AssessmentPackage.SCM: return createScm();
+      case AssessmentPackage.SNIPPET: return createSnippet();
+      case AssessmentPackage.URL: return createUrl();
+      case AssessmentPackage.GENERIC: return createGeneric();
+      case AssessmentPackage.CONTROL: return createControl();
+      case AssessmentPackage.RESOURCE: return createResource();
+      case AssessmentPackage.APPLICATIONS: return createApplications();
+      case AssessmentPackage.FINDINGS: return createFindings();
+      case AssessmentPackage.ACCOUNTS: return createAccounts();
+      case AssessmentPackage.CONTROLLERS: return createControllers();
+      case AssessmentPackage.ENTITLEMENTS: return createEntitlements();
+      case AssessmentPackage.MODELS: return createModels();
+      case AssessmentPackage.VIEWS: return createViews();
+      case AssessmentPackage.SINKS: return createSinks();
+      case AssessmentPackage.RESOURCES: return createResources();
+      case AssessmentPackage.TASKS: return createTasks();
+      default:
+        throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+    }
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
-		switch (eDataType.getClassifierID()) {
-			case AssessmentPackage.HTTP_METHOD:
-				return createHttpMethodFromString(eDataType, initialValue);
-			case AssessmentPackage.URL_PATTERN:
-				return createUrlPatternFromString(eDataType, initialValue);
-			case AssessmentPackage.LANGUAGE:
-				return createLanguageFromString(eDataType, initialValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-		}
-	}
+    switch (eDataType.getClassifierID()) {
+      case AssessmentPackage.HTTP_METHOD:
+        return createHttpMethodFromString(eDataType, initialValue);
+      case AssessmentPackage.URL_PATTERN:
+        return createUrlPatternFromString(eDataType, initialValue);
+      case AssessmentPackage.LANGUAGE:
+        return createLanguageFromString(eDataType, initialValue);
+      case AssessmentPackage.TASK_STATUS:
+        return createTaskStatusFromString(eDataType, initialValue);
+      default:
+        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+    }
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
-		switch (eDataType.getClassifierID()) {
-			case AssessmentPackage.HTTP_METHOD:
-				return convertHttpMethodToString(eDataType, instanceValue);
-			case AssessmentPackage.URL_PATTERN:
-				return convertUrlPatternToString(eDataType, instanceValue);
-			case AssessmentPackage.LANGUAGE:
-				return convertLanguageToString(eDataType, instanceValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-		}
-	}
+    switch (eDataType.getClassifierID()) {
+      case AssessmentPackage.HTTP_METHOD:
+        return convertHttpMethodToString(eDataType, instanceValue);
+      case AssessmentPackage.URL_PATTERN:
+        return convertUrlPatternToString(eDataType, instanceValue);
+      case AssessmentPackage.LANGUAGE:
+        return convertLanguageToString(eDataType, instanceValue);
+      case AssessmentPackage.TASK_STATUS:
+        return convertTaskStatusToString(eDataType, instanceValue);
+      default:
+        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+    }
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public Http createHttp() {
-		HttpImpl http = new HttpImpl();
-		return http;
-	}
+    HttpImpl http = new HttpImpl();
+    return http;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public Assessment createAssessment() {
-		AssessmentImpl assessment = new AssessmentImpl();
-		return assessment;
-	}
+    AssessmentImpl assessment = new AssessmentImpl();
+    return assessment;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public Application createApplication() {
-		ApplicationImpl application = new ApplicationImpl();
-		return application;
-	}
+    ApplicationImpl application = new ApplicationImpl();
+    return application;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public Sink createSink() {
-		SinkImpl sink = new SinkImpl();
-		return sink;
-	}
+    SinkImpl sink = new SinkImpl();
+    return sink;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public Controller createController() {
-		ControllerImpl controller = new ControllerImpl();
-		return controller;
-	}
+    ControllerImpl controller = new ControllerImpl();
+    return controller;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public View createView() {
-		ViewImpl view = new ViewImpl();
-		return view;
-	}
+    ViewImpl view = new ViewImpl();
+    return view;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public Model createModel() {
-		ModelImpl model = new ModelImpl();
-		return model;
-	}
+    ModelImpl model = new ModelImpl();
+    return model;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public Finding createFinding() {
-		FindingImpl finding = new FindingImpl();
-		return finding;
-	}
+    FindingImpl finding = new FindingImpl();
+    return finding;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public Account createAccount() {
-		AccountImpl account = new AccountImpl();
-		return account;
-	}
+    AccountImpl account = new AccountImpl();
+    return account;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public Entitlement createEntitlement() {
-		EntitlementImpl entitlement = new EntitlementImpl();
-		return entitlement;
-	}
+    EntitlementImpl entitlement = new EntitlementImpl();
+    return entitlement;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public Task createTask() {
-		TaskImpl task = new TaskImpl();
-		return task;
-	}
+    TaskImpl task = new TaskImpl();
+    return task;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public Scm createScm() {
-		ScmImpl scm = new ScmImpl();
-		return scm;
-	}
+    ScmImpl scm = new ScmImpl();
+    return scm;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Library createLibrary() {
-		LibraryImpl library = new LibraryImpl();
-		return library;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public Snippet createSnippet() {
-		SnippetImpl snippet = new SnippetImpl();
-		return snippet;
-	}
+    SnippetImpl snippet = new SnippetImpl();
+    return snippet;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public Url createUrl() {
-		UrlImpl url = new UrlImpl();
-		return url;
-	}
+    UrlImpl url = new UrlImpl();
+    return url;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public Generic createGeneric() {
-		GenericImpl generic = new GenericImpl();
-		return generic;
-	}
+    GenericImpl generic = new GenericImpl();
+    return generic;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public Control createControl() {
-		ControlImpl control = new ControlImpl();
-		return control;
-	}
+    ControlImpl control = new ControlImpl();
+    return control;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public Resource createResource() {
-		ResourceImpl resource = new ResourceImpl();
-		return resource;
-	}
+    ResourceImpl resource = new ResourceImpl();
+    return resource;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
+	public Applications createApplications() {
+    ApplicationsImpl applications = new ApplicationsImpl();
+    return applications;
+  }
+
+	/**
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	public Findings createFindings() {
+    FindingsImpl findings = new FindingsImpl();
+    return findings;
+  }
+
+	/**
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	public Accounts createAccounts() {
+    AccountsImpl accounts = new AccountsImpl();
+    return accounts;
+  }
+
+	/**
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	public Controllers createControllers() {
+    ControllersImpl controllers = new ControllersImpl();
+    return controllers;
+  }
+
+	/**
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	public Entitlements createEntitlements() {
+    EntitlementsImpl entitlements = new EntitlementsImpl();
+    return entitlements;
+  }
+
+	/**
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	public Models createModels() {
+    ModelsImpl models = new ModelsImpl();
+    return models;
+  }
+
+	/**
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	public Views createViews() {
+    ViewsImpl views = new ViewsImpl();
+    return views;
+  }
+
+	/**
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	public Sinks createSinks() {
+    SinksImpl sinks = new SinksImpl();
+    return sinks;
+  }
+
+	/**
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	public Resources createResources() {
+    ResourcesImpl resources = new ResourcesImpl();
+    return resources;
+  }
+
+	/**
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	public Tasks createTasks() {
+    TasksImpl tasks = new TasksImpl();
+    return tasks;
+  }
+
+	/**
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
 	public HttpMethod createHttpMethodFromString(EDataType eDataType, String initialValue) {
-		HttpMethod result = HttpMethod.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
+    HttpMethod result = HttpMethod.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public String convertHttpMethodToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
+    return instanceValue == null ? null : instanceValue.toString();
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public UrlPattern createUrlPatternFromString(EDataType eDataType, String initialValue) {
-		UrlPattern result = UrlPattern.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
+    UrlPattern result = UrlPattern.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public String convertUrlPatternToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
+    return instanceValue == null ? null : instanceValue.toString();
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public Language createLanguageFromString(EDataType eDataType, String initialValue) {
-		Language result = Language.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
+    Language result = Language.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	public String convertLanguageToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
+    return instanceValue == null ? null : instanceValue.toString();
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
+	public TaskStatus createTaskStatusFromString(EDataType eDataType, String initialValue) {
+    TaskStatus result = TaskStatus.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+	/**
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
+	public String convertTaskStatusToString(EDataType eDataType, Object instanceValue) {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+	/**
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @generated
+   */
 	public AssessmentPackage getAssessmentPackage() {
-		return (AssessmentPackage)getEPackage();
-	}
+    return (AssessmentPackage)getEPackage();
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @deprecated
-	 * @generated
-	 */
+   * @deprecated
+   * @generated
+   */
 	@Deprecated
 	public static AssessmentPackage getPackage() {
-		return AssessmentPackage.eINSTANCE;
-	}
+    return AssessmentPackage.eINSTANCE;
+  }
 
 } //AssessmentFactoryImpl

@@ -34,55 +34,55 @@ package io.opensemantics.semiotics.model.assessment;
  */
 public interface Http extends GraphNode {
 	/**
-	 * Returns the value of the '<em><b>Request</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Request</b></em>' attribute.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Request</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Request</em>' attribute.
-	 * @see #setRequest(String)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getHttp_Request()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Request</em>' attribute.
+   * @see #setRequest(String)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getHttp_Request()
+   * @model
+   * @generated
+   */
 	String getRequest();
 
 	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Http#getRequest <em>Request</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Http#getRequest <em>Request</em>}' attribute.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Request</em>' attribute.
-	 * @see #getRequest()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Request</em>' attribute.
+   * @see #getRequest()
+   * @generated
+   */
 	void setRequest(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Response</b></em>' attribute.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Response</b></em>' attribute.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Response</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Response</em>' attribute.
-	 * @see #setResponse(String)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getHttp_Response()
-	 * @model
-	 * @generated
-	 */
+   * @return the value of the '<em>Response</em>' attribute.
+   * @see #setResponse(String)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getHttp_Response()
+   * @model
+   * @generated
+   */
 	String getResponse();
 
 	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Http#getResponse <em>Response</em>}' attribute.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Http#getResponse <em>Response</em>}' attribute.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Response</em>' attribute.
-	 * @see #getResponse()
-	 * @generated
-	 */
+   * @param value the new value of the '<em>Response</em>' attribute.
+   * @see #getResponse()
+   * @generated
+   */
 	void setResponse(String value);
 
 } // Http

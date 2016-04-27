@@ -28,22 +28,22 @@ import org.eclipse.emf.ecore.EClass;
  */
 public class GenericImpl extends GraphNodeImpl implements Generic {
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	protected GenericImpl() {
-		super();
-	}
+    super();
+  }
 
 	/**
-	 * <!-- begin-user-doc -->
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+   * @generated
+   */
 	@Override
 	protected EClass eStaticClass() {
-		return AssessmentPackage.Literals.GENERIC;
-	}
+    return AssessmentPackage.Literals.GENERIC;
+  }
 
 } //GenericImpl

@@ -15,8 +15,6 @@
  */
 package io.opensemantics.semiotics.model.assessment;
 
-import org.eclipse.emf.common.util.EList;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Assessment</b></em>'.
@@ -37,57 +35,87 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Assessment extends Label, Notes {
 	/**
-	 * Returns the value of the '<em><b>Applications</b></em>' containment reference list.
-	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Application}.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Application#getAssessment <em>Assessment</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Applications</b></em>' containment reference.
+   * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Applications#getAssessment <em>Assessment</em>}'.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Applications</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Applications</em>' containment reference list.
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getAssessment_Applications()
-	 * @see io.opensemantics.semiotics.model.assessment.Application#getAssessment
-	 * @model opposite="assessment" containment="true"
-	 * @generated
-	 */
-	EList<Application> getApplications();
+   * @return the value of the '<em>Applications</em>' containment reference.
+   * @see #setApplications(Applications)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getAssessment_Applications()
+   * @see io.opensemantics.semiotics.model.assessment.Applications#getAssessment
+   * @model opposite="assessment" containment="true"
+   * @generated
+   */
+	Applications getApplications();
 
 	/**
-	 * Returns the value of the '<em><b>Findings</b></em>' containment reference list.
-	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Finding}.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Finding#getAssessment <em>Assessment</em>}'.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Assessment#getApplications <em>Applications</em>}' containment reference.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Applications</em>' containment reference.
+   * @see #getApplications()
+   * @generated
+   */
+	void setApplications(Applications value);
+
+	/**
+   * Returns the value of the '<em><b>Findings</b></em>' containment reference.
+   * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Findings#getAssessment <em>Assessment</em>}'.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Findings</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Findings</em>' containment reference list.
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getAssessment_Findings()
-	 * @see io.opensemantics.semiotics.model.assessment.Finding#getAssessment
-	 * @model opposite="assessment" containment="true"
-	 * @generated
-	 */
-	EList<Finding> getFindings();
+   * @return the value of the '<em>Findings</em>' containment reference.
+   * @see #setFindings(Findings)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getAssessment_Findings()
+   * @see io.opensemantics.semiotics.model.assessment.Findings#getAssessment
+   * @model opposite="assessment" containment="true"
+   * @generated
+   */
+	Findings getFindings();
 
 	/**
-	 * Returns the value of the '<em><b>Tasks</b></em>' containment reference list.
-	 * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Task}.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Task#getAssessment <em>Assessment</em>}'.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Assessment#getFindings <em>Findings</em>}' containment reference.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Findings</em>' containment reference.
+   * @see #getFindings()
+   * @generated
+   */
+	void setFindings(Findings value);
+
+	/**
+   * Returns the value of the '<em><b>Tasks</b></em>' containment reference.
+   * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Tasks#getAssessment <em>Assessment</em>}'.
+   * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Tasks</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tasks</em>' containment reference list.
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getAssessment_Tasks()
-	 * @see io.opensemantics.semiotics.model.assessment.Task#getAssessment
-	 * @model opposite="assessment" containment="true"
-	 * @generated
-	 */
-	EList<Task> getTasks();
+   * @return the value of the '<em>Tasks</em>' containment reference.
+   * @see #setTasks(Tasks)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getAssessment_Tasks()
+   * @see io.opensemantics.semiotics.model.assessment.Tasks#getAssessment
+   * @model opposite="assessment" containment="true"
+   * @generated
+   */
+	Tasks getTasks();
+
+	/**
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Assessment#getTasks <em>Tasks</em>}' containment reference.
+   * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Tasks</em>' containment reference.
+   * @see #getTasks()
+   * @generated
+   */
+	void setTasks(Tasks value);
 
 } // Assessment

@@ -24,7 +24,7 @@ package io.opensemantics.semiotics.model.assessment;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.View#getApplication <em>Application</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.View#getViews <em>Views</em>}</li>
  * </ul>
  *
  * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getView()
@@ -33,31 +33,31 @@ package io.opensemantics.semiotics.model.assessment;
  */
 public interface View extends Node {
 	/**
-	 * Returns the value of the '<em><b>Application</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Application#getViews <em>Views</em>}'.
-	 * <!-- begin-user-doc -->
+   * Returns the value of the '<em><b>Views</b></em>' container reference.
+   * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Views#getViews <em>Views</em>}'.
+   * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Application</em>' container reference isn't clear,
+	 * If the meaning of the '<em>Views</em>' container reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Application</em>' container reference.
-	 * @see #setApplication(Application)
-	 * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getView_Application()
-	 * @see io.opensemantics.semiotics.model.assessment.Application#getViews
-	 * @model opposite="views" transient="false"
-	 * @generated
-	 */
-	Application getApplication();
+   * @return the value of the '<em>Views</em>' container reference.
+   * @see #setViews(Views)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getView_Views()
+   * @see io.opensemantics.semiotics.model.assessment.Views#getViews
+   * @model opposite="views" transient="false"
+   * @generated
+   */
+	Views getViews();
 
 	/**
-	 * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.View#getApplication <em>Application</em>}' container reference.
-	 * <!-- begin-user-doc -->
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.View#getViews <em>Views</em>}' container reference.
+   * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Application</em>' container reference.
-	 * @see #getApplication()
-	 * @generated
-	 */
-	void setApplication(Application value);
+   * @param value the new value of the '<em>Views</em>' container reference.
+   * @see #getViews()
+   * @generated
+   */
+	void setViews(Views value);
 
 } // View
