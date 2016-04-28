@@ -14,7 +14,6 @@
     See the License for the specific language governing permissions and
     limitations under the License.
  -->
-
 <feature
       id="io.opensemantics.semiotics.app.dependencies.feature"
       label="Dependencies for Stand-alone Model App"
@@ -146,10 +145,6 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.emf.ecp.workspace.feature"
-         version="0.0.0"/>
-
-   <includes
          id="org.eclipse.emf.edit"
          version="0.0.0"/>
 
@@ -214,10 +209,6 @@
          version="0.0.0"/>
 
    <includes
-         id="org.eclipse.help"
-         version="0.0.0"/>
-
-   <includes
          id="org.eclipse.emf.ecp.view.model.controls.feature"
          version="0.0.0"/>
 
@@ -249,11 +240,43 @@
          id="org.eclipse.emf.emfstore.ecore.feature"
          version="0.0.0"/>
 
+   <includes
+         id="org.eclipse.emf.ecp.workspace.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.codegen.ecore"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.emf.codegen"
+         version="0.0.0"/>
+
    <plugin
          id="org.eclipse.equinox.concurrent"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jdt.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jdt.launching"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jdt.debug"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
 
 </feature>
