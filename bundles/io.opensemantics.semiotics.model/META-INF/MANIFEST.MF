@@ -9,3 +9,4 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Import-Package: org.osgi.framework
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.emf.ecp.core
+Export-Package: io.opensemantics.semiotics.model.assessment.edit

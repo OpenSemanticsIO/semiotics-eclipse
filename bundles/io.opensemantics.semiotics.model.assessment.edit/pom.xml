@@ -25,7 +25,6 @@
   <packaging>eclipse-plugin</packaging>
 
   <build>
-    <sourceDirectory>src-gen</sourceDirectory>
     <plugins>
       <plugin>
         <groupId>org.eclipse.tycho</groupId>

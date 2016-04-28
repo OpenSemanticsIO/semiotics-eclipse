@@ -36,6 +36,7 @@
     <module>
       ../../bundles/io.opensemantics.semiotics.model.assessment.viewmodels
     </module>
+    
   </modules>
 
   <build>
