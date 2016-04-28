@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.group.model="http://org/eclipse/emf/ecp/view/group/model" xmlns:org.eclipse.emf.ecp.view.horizontal.model="http://org/eclipse/emf/ecp/view/horizontal/model" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/170" xmlns:org.eclipse.emf.ecp.view.vertical.model="http://org/eclipse/emf/ecp/view/vertical/model" xmi:id="_JcP68A1ZEealapzrjXxIWQ" name="Sink" ecorePath="/io.opensemantics.semiotics.model.assessment/model/assessment.ecore">
+  <rootEClass href="http://io/opensemantics/semiotics/model/assessment#//Sink"/>
+  <children xsi:type="org.eclipse.emf.ecp.view.vertical.model:VerticalLayout" xmi:id="_Q2Vt8A1ZEealapzrjXxIWQ">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_JcRJEA1ZEealapzrjXxIWQ" name="Control label">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_JcRJEQ1ZEealapzrjXxIWQ">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://io/opensemantics/semiotics/model/assessment#//Label/label"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_UCA_wA1ZEealapzrjXxIWQ" name="CWEs" groupType="Collapsible" collapsed="true">
+      <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_JcRJIA1ZEealapzrjXxIWQ" name="Control cwes">
+        <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_JcRJIQ1ZEealapzrjXxIWQ">
+          <domainModelEFeature xsi:type="ecore:EAttribute" href="http://io/opensemantics/semiotics/model/assessment#//Sink/cwes"/>
+        </domainModelReference>
+      </children>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_JcRJEg1ZEealapzrjXxIWQ" name="Control notes">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_JcRJEw1ZEealapzrjXxIWQ">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="http://io/opensemantics/semiotics/model/assessment#//Notes/notes"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.horizontal.model:HorizontalLayout" xmi:id="_XK41MA1ZEealapzrjXxIWQ">
+      <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_XgVgwA1ZEealapzrjXxIWQ" name="Follow-up" groupType="Collapsible" collapsed="true">
+        <children xsi:type="org.eclipse.emf.ecp.view.horizontal.model:HorizontalLayout" xmi:id="_YSyRYA1ZEealapzrjXxIWQ">
+          <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_JcRJHA1ZEealapzrjXxIWQ" name="Control tasks">
+            <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_JcRJHQ1ZEealapzrjXxIWQ">
+              <domainModelEFeature xsi:type="ecore:EReference" href="http://io/opensemantics/semiotics/model/assessment#//Node/tasks"/>
+            </domainModelReference>
+          </children>
+          <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_JcRJHg1ZEealapzrjXxIWQ" name="Control findings">
+            <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_JcRJHw1ZEealapzrjXxIWQ">
+              <domainModelEFeature xsi:type="ecore:EReference" href="http://io/opensemantics/semiotics/model/assessment#//Node/findings"/>
+            </domainModelReference>
+          </children>
+        </children>
+      </children>
+      <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_X11PoA1ZEealapzrjXxIWQ" name="References" groupType="Collapsible" collapsed="true">
+        <children xsi:type="org.eclipse.emf.ecp.view.horizontal.model:HorizontalLayout" xmi:id="_YriIkA1ZEealapzrjXxIWQ">
+          <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_JcRJGA1ZEealapzrjXxIWQ" name="Control refersTo">
+            <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_JcRJGQ1ZEealapzrjXxIWQ">
+              <domainModelEFeature xsi:type="ecore:EReference" href="http://io/opensemantics/semiotics/model/assessment#//Node/refersTo"/>
+            </domainModelReference>
+          </children>
+          <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_JcRJGg1ZEealapzrjXxIWQ" name="Control referredBy">
+            <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_JcRJGw1ZEealapzrjXxIWQ">
+              <domainModelEFeature xsi:type="ecore:EReference" href="http://io/opensemantics/semiotics/model/assessment#//Node/referredBy"/>
+            </domainModelReference>
+          </children>
+        </children>
+      </children>
+    </children>
+  </children>
+</org.eclipse.emf.ecp.view.model:View>

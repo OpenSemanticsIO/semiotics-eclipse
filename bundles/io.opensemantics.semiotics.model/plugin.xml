@@ -22,10 +22,8 @@
 
 <plugin>
 
-   <extension
-         point="org.eclipse.emf.ecp.core.filters">
-      <FilterProvider
-            class="io.opensemantics.semiotics.model.ECPFilterProvider">
+   <extension point="org.eclipse.emf.ecp.core.filters">
+      <FilterProvider class="io.opensemantics.semiotics.model.ECPFilterProvider">
       </FilterProvider>
    </extension>
 

@@ -21,27 +21,19 @@ import io.opensemantics.semiotics.model.assessment.Applications;
 import io.opensemantics.semiotics.model.assessment.AssessmentPackage;
 import io.opensemantics.semiotics.model.assessment.Controllers;
 import io.opensemantics.semiotics.model.assessment.Entitlements;
-import io.opensemantics.semiotics.model.assessment.Language;
 import io.opensemantics.semiotics.model.assessment.Models;
 import io.opensemantics.semiotics.model.assessment.Notes;
 import io.opensemantics.semiotics.model.assessment.Resources;
 import io.opensemantics.semiotics.model.assessment.Scm;
 import io.opensemantics.semiotics.model.assessment.Sinks;
 import io.opensemantics.semiotics.model.assessment.Views;
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
@@ -61,7 +53,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.ApplicationImpl#getScm <em>Scm</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.ApplicationImpl#getViews <em>Views</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.ApplicationImpl#getSinks <em>Sinks</em>}</li>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.ApplicationImpl#getLanguages <em>Languages</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.ApplicationImpl#getResources <em>Resources</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.ApplicationImpl#getApplications <em>Applications</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.ApplicationImpl#getInternalURL <em>Internal URL</em>}</li>
@@ -180,16 +171,6 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
    * @ordered
    */
 	protected Sinks sinks;
-
-	/**
-   * The cached value of the '{@link #getLanguages() <em>Languages</em>}' attribute list.
-   * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-   * @see #getLanguages()
-   * @generated
-   * @ordered
-   */
-	protected EList<Language> languages;
 
 	/**
    * The cached value of the '{@link #getResources() <em>Resources</em>}' containment reference.
@@ -587,18 +568,6 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
 	 * <!-- end-user-doc -->
    * @generated
    */
-	public EList<Language> getLanguages() {
-    if (languages == null) {
-      languages = new EDataTypeUniqueEList<Language>(Language.class, this, AssessmentPackage.APPLICATION__LANGUAGES);
-    }
-    return languages;
-  }
-
-	/**
-   * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-   * @generated
-   */
 	public String getNotes() {
     return notes;
   }
@@ -848,8 +817,6 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
         return getViews();
       case AssessmentPackage.APPLICATION__SINKS:
         return getSinks();
-      case AssessmentPackage.APPLICATION__LANGUAGES:
-        return getLanguages();
       case AssessmentPackage.APPLICATION__RESOURCES:
         return getResources();
       case AssessmentPackage.APPLICATION__APPLICATIONS:
@@ -897,10 +864,6 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
         return;
       case AssessmentPackage.APPLICATION__SINKS:
         setSinks((Sinks)newValue);
-        return;
-      case AssessmentPackage.APPLICATION__LANGUAGES:
-        getLanguages().clear();
-        getLanguages().addAll((Collection<? extends Language>)newValue);
         return;
       case AssessmentPackage.APPLICATION__RESOURCES:
         setResources((Resources)newValue);
@@ -953,9 +916,6 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
       case AssessmentPackage.APPLICATION__SINKS:
         setSinks((Sinks)null);
         return;
-      case AssessmentPackage.APPLICATION__LANGUAGES:
-        getLanguages().clear();
-        return;
       case AssessmentPackage.APPLICATION__RESOURCES:
         setResources((Resources)null);
         return;
@@ -998,8 +958,6 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
         return views != null;
       case AssessmentPackage.APPLICATION__SINKS:
         return sinks != null;
-      case AssessmentPackage.APPLICATION__LANGUAGES:
-        return languages != null && !languages.isEmpty();
       case AssessmentPackage.APPLICATION__RESOURCES:
         return resources != null;
       case AssessmentPackage.APPLICATION__APPLICATIONS:
@@ -1058,8 +1016,6 @@ public class ApplicationImpl extends MinimalEObjectImpl.Container implements App
     result.append(label);
     result.append(", notes: ");
     result.append(notes);
-    result.append(", languages: ");
-    result.append(languages);
     result.append(", internalURL: ");
     result.append(internalURL);
     result.append(", externalURL: ");

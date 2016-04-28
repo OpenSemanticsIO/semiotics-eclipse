@@ -79,7 +79,6 @@ public class ApplicationItemProvider
       addLabelPropertyDescriptor(object);
       addNotesPropertyDescriptor(object);
       addScmPropertyDescriptor(object);
-      addLanguagesPropertyDescriptor(object);
       addInternalURLPropertyDescriptor(object);
       addExternalURLPropertyDescriptor(object);
     }
@@ -126,28 +125,6 @@ public class ApplicationItemProvider
          false,
          true,
          null,
-         null,
-         null));
-  }
-
-	/**
-   * This adds a property descriptor for the Languages feature.
-   * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-   * @generated
-   */
-	protected void addLanguagesPropertyDescriptor(Object object) {
-    itemPropertyDescriptors.add
-      (createItemPropertyDescriptor
-        (((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-         getResourceLocator(),
-         getString("_UI_Application_languages_feature"),
-         getString("_UI_PropertyDescriptor_description", "_UI_Application_languages_feature", "_UI_Application_type"),
-         AssessmentPackage.Literals.APPLICATION__LANGUAGES,
-         true,
-         false,
-         false,
-         ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
          null,
          null));
   }
@@ -293,7 +270,6 @@ public class ApplicationItemProvider
     switch (notification.getFeatureID(Application.class)) {
       case AssessmentPackage.APPLICATION__LABEL:
       case AssessmentPackage.APPLICATION__NOTES:
-      case AssessmentPackage.APPLICATION__LANGUAGES:
       case AssessmentPackage.APPLICATION__INTERNAL_URL:
       case AssessmentPackage.APPLICATION__EXTERNAL_URL:
         fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

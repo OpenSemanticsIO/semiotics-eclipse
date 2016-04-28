@@ -68,6 +68,7 @@ public interface Controllers extends EObject {
 	/**
    * Returns the value of the '<em><b>Controllers</b></em>' containment reference list.
    * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Controller}.
+   * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Controller#getControllers <em>Controllers</em>}'.
    * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Controllers</em>' containment reference list isn't clear,
@@ -76,7 +77,8 @@ public interface Controllers extends EObject {
 	 * <!-- end-user-doc -->
    * @return the value of the '<em>Controllers</em>' containment reference list.
    * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getControllers_Controllers()
-   * @model containment="true"
+   * @see io.opensemantics.semiotics.model.assessment.Controller#getControllers
+   * @model opposite="controllers" containment="true"
    * @generated
    */
 	EList<Controller> getControllers();

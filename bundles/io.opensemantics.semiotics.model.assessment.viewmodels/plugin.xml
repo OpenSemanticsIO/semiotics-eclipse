@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+    Copyright 2016 OpenSemantics.IO
+   
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+   
+        http://www.apache.org/licenses/LICENSE-2.0
+   
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+ -->
+
+<plugin>
+
+  <extension point="org.eclipse.emf.ecp.view.model.provider.xmi.file">
+<file filePath="viewmodels/Finding.view"/>
+
+<file filePath="viewmodels/Resource.view"/>
+
+<file filePath="viewmodels/Application.view"/>
+
+<file filePath="viewmodels/Task.view"/>
+
+<file filePath="viewmodels/Sink.view"/>
+
+<file filePath="viewmodels/View.view"/>
+
+<file filePath="viewmodels/Model.view"/>
+
+<file filePath="viewmodels/Entitlement.view"/>
+
+<file filePath="viewmodels/Controller.view"/>
+
+<file filePath="viewmodels/Control.view"/>
+
+<file filePath="viewmodels/Generic.view"/>
+
+<file filePath="viewmodels/Http.view"/>
+
+
+    <file filePath="viewmodels/Account.view"/>
+    <file filePath="viewmodels/Accounts_root.view">
+      <filter key="root" value="true"></filter>
+    </file>
+    <file filePath="viewmodels/Accounts.view"/>
+
+    <file filePath="viewmodels/Applications_root.view">
+      <filter key="root" value="true"></filter>
+    </file>
+    <file filePath="viewmodels/Applications.view"/>
+
+    <file filePath="viewmodels/Controllers_root.view">
+      <filter key="root" value="true"></filter>
+    </file>
+    <file filePath="viewmodels/Controllers.view"/>
+
+    <file filePath="viewmodels/Entitlements_root.view">
+      <filter key="root" value="true"></filter>
+    </file>
+    <file filePath="viewmodels/Entitlements.view"/>
+
+    <file filePath="viewmodels/Findings_root.view">
+      <filter key="root" value="true"></filter>
+    </file>
+    <file filePath="viewmodels/Findings.view"/>
+
+    <file filePath="viewmodels/Models_root.view">
+      <filter key="root" value="true"></filter>
+    </file>
+    <file filePath="viewmodels/Models.view"/>
+
+    <file filePath="viewmodels/Resources_root.view">
+      <filter key="root" value="true"></filter>
+    </file>
+    <file filePath="viewmodels/Resources.view"/>
+
+    <file filePath="viewmodels/Sinks_root.view">
+      <filter key="root" value="true"></filter>
+    </file>
+    <file filePath="viewmodels/Sinks.view"/>
+
+    <file filePath="viewmodels/Views_root.view">
+      <filter key="root" value="true"></filter>
+    </file>
+    <file filePath="viewmodels/Views.view"/>
+
+    <file filePath="viewmodels/Tasks_root.view">
+      <filter key="root" value="true"></filter>
+    </file>
+    <file filePath="viewmodels/Tasks.view"/>
+    <!--
+    <file filePath="viewmodels/NodeFooter.view">
+      <filter key="proxyId" value="node_footer">
+      </filter>
+    </file>
+    -->
+    <file filePath="viewmodels/Snippet.view"/>
+
+   </extension>
+
+</plugin>

@@ -15,8 +15,6 @@
  */
 package io.opensemantics.semiotics.model.assessment;
 
-import org.eclipse.emf.common.util.EList;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Application</b></em>'.
@@ -33,7 +31,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getScm <em>Scm</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getViews <em>Views</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getSinks <em>Sinks</em>}</li>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getLanguages <em>Languages</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getResources <em>Resources</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getApplications <em>Applications</em>}</li>
  *   <li>{@link io.opensemantics.semiotics.model.assessment.Application#getInternalURL <em>Internal URL</em>}</li>
@@ -234,24 +231,6 @@ public interface Application extends Label, Notes {
    * @generated
    */
 	void setSinks(Sinks value);
-
-	/**
-   * Returns the value of the '<em><b>Languages</b></em>' attribute list.
-   * The list contents are of type {@link io.opensemantics.semiotics.model.assessment.Language}.
-   * The literals are from the enumeration {@link io.opensemantics.semiotics.model.assessment.Language}.
-   * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Languages</em>' attribute list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-   * @return the value of the '<em>Languages</em>' attribute list.
-   * @see io.opensemantics.semiotics.model.assessment.Language
-   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getApplication_Languages()
-   * @model
-   * @generated
-   */
-	EList<Language> getLanguages();
 
 	/**
    * Returns the value of the '<em><b>Resources</b></em>' containment reference.

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/170" xmi:id="_HdP-cAznEealapzrjXxIWQ" name="Resources" ecorePath="/io.opensemantics.semiotics.model.assessment/model/assessment.ecore">
+  <rootEClass href="http://io/opensemantics/semiotics/model/assessment#//Resources"/>
+</org.eclipse.emf.ecp.view.model:View>

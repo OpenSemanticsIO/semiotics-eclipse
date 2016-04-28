@@ -33,6 +33,9 @@
     <module>../io.opensemantics.semiotics.model.feature</module>
     <module>../io.opensemantics.semiotics.app.dependencies.feature</module>
     <module>../io.opensemantics.semiotics.model.product</module>
+    <module>
+      ../../bundles/io.opensemantics.semiotics.model.assessment.viewmodels
+    </module>
   </modules>
 
   <build>

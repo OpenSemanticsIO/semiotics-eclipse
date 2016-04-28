@@ -690,22 +690,13 @@ public interface AssessmentPackage extends EPackage {
 	int APPLICATION__SINKS = LABEL_FEATURE_COUNT + 7;
 
 	/**
-   * The feature id for the '<em><b>Languages</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-	int APPLICATION__LANGUAGES = LABEL_FEATURE_COUNT + 8;
-
-	/**
    * The feature id for the '<em><b>Resources</b></em>' containment reference.
    * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-	int APPLICATION__RESOURCES = LABEL_FEATURE_COUNT + 9;
+	int APPLICATION__RESOURCES = LABEL_FEATURE_COUNT + 8;
 
 	/**
    * The feature id for the '<em><b>Applications</b></em>' container reference.
@@ -714,7 +705,7 @@ public interface AssessmentPackage extends EPackage {
    * @generated
    * @ordered
    */
-	int APPLICATION__APPLICATIONS = LABEL_FEATURE_COUNT + 10;
+	int APPLICATION__APPLICATIONS = LABEL_FEATURE_COUNT + 9;
 
 	/**
    * The feature id for the '<em><b>Internal URL</b></em>' attribute.
@@ -723,7 +714,7 @@ public interface AssessmentPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int APPLICATION__INTERNAL_URL = LABEL_FEATURE_COUNT + 11;
+  int APPLICATION__INTERNAL_URL = LABEL_FEATURE_COUNT + 10;
 
   /**
    * The feature id for the '<em><b>External URL</b></em>' attribute.
@@ -732,7 +723,7 @@ public interface AssessmentPackage extends EPackage {
    * @generated
    * @ordered
    */
-  int APPLICATION__EXTERNAL_URL = LABEL_FEATURE_COUNT + 12;
+  int APPLICATION__EXTERNAL_URL = LABEL_FEATURE_COUNT + 11;
 
   /**
    * The number of structural features of the '<em>Application</em>' class.
@@ -741,7 +732,7 @@ public interface AssessmentPackage extends EPackage {
    * @generated
    * @ordered
    */
-	int APPLICATION_FEATURE_COUNT = LABEL_FEATURE_COUNT + 13;
+	int APPLICATION_FEATURE_COUNT = LABEL_FEATURE_COUNT + 12;
 
 	/**
    * The number of operations of the '<em>Application</em>' class.
@@ -933,15 +924,15 @@ public interface AssessmentPackage extends EPackage {
 	int CONTROLLER__FINDINGS = NODE__FINDINGS;
 
 	/**
-   * The feature id for the '<em><b>Application</b></em>' reference.
+   * The feature id for the '<em><b>Controllers</b></em>' container reference.
    * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+   * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-	int CONTROLLER__APPLICATION = NODE_FEATURE_COUNT + 0;
+  int CONTROLLER__CONTROLLERS = NODE_FEATURE_COUNT + 0;
 
-	/**
+  /**
    * The number of structural features of the '<em>Controller</em>' class.
    * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2895,17 +2886,6 @@ public interface AssessmentPackage extends EPackage {
 	EReference getApplication_Sinks();
 
 	/**
-   * Returns the meta object for the attribute list '{@link io.opensemantics.semiotics.model.assessment.Application#getLanguages <em>Languages</em>}'.
-   * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Languages</em>'.
-   * @see io.opensemantics.semiotics.model.assessment.Application#getLanguages()
-   * @see #getApplication()
-   * @generated
-   */
-	EAttribute getApplication_Languages();
-
-	/**
    * Returns the meta object for the containment reference '{@link io.opensemantics.semiotics.model.assessment.Application#getResources <em>Resources</em>}'.
    * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2992,17 +2972,17 @@ public interface AssessmentPackage extends EPackage {
 	EClass getController();
 
 	/**
-   * Returns the meta object for the reference '{@link io.opensemantics.semiotics.model.assessment.Controller#getApplication <em>Application</em>}'.
+   * Returns the meta object for the container reference '{@link io.opensemantics.semiotics.model.assessment.Controller#getControllers <em>Controllers</em>}'.
    * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Application</em>'.
-   * @see io.opensemantics.semiotics.model.assessment.Controller#getApplication()
+   * <!-- end-user-doc -->
+   * @return the meta object for the container reference '<em>Controllers</em>'.
+   * @see io.opensemantics.semiotics.model.assessment.Controller#getControllers()
    * @see #getController()
    * @generated
    */
-	EReference getController_Application();
+  EReference getController_Controllers();
 
-	/**
+  /**
    * Returns the meta object for class '{@link io.opensemantics.semiotics.model.assessment.View <em>View</em>}'.
    * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4092,14 +4072,6 @@ public interface AssessmentPackage extends EPackage {
 		EReference APPLICATION__SINKS = eINSTANCE.getApplication_Sinks();
 
 		/**
-     * The meta object literal for the '<em><b>Languages</b></em>' attribute list feature.
-     * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-     * @generated
-     */
-		EAttribute APPLICATION__LANGUAGES = eINSTANCE.getApplication_Languages();
-
-		/**
      * The meta object literal for the '<em><b>Resources</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4168,14 +4140,14 @@ public interface AssessmentPackage extends EPackage {
 		EClass CONTROLLER = eINSTANCE.getController();
 
 		/**
-     * The meta object literal for the '<em><b>Application</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Controllers</b></em>' container reference feature.
      * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
-		EReference CONTROLLER__APPLICATION = eINSTANCE.getController_Application();
+    EReference CONTROLLER__CONTROLLERS = eINSTANCE.getController_Controllers();
 
-		/**
+    /**
      * The meta object literal for the '{@link io.opensemantics.semiotics.model.assessment.impl.ViewImpl <em>View</em>}' class.
      * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->

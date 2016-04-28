@@ -32,8 +32,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -129,7 +128,7 @@ public class ControllersImpl extends MinimalEObjectImpl.Container implements Con
    */
 	public EList<Controller> getControllers() {
     if (controllers == null) {
-      controllers = new EObjectContainmentEList<Controller>(Controller.class, this, AssessmentPackage.CONTROLLERS__CONTROLLERS);
+      controllers = new EObjectContainmentWithInverseEList<Controller>(Controller.class, this, AssessmentPackage.CONTROLLERS__CONTROLLERS, AssessmentPackage.CONTROLLER__CONTROLLERS);
     }
     return controllers;
   }
@@ -139,13 +138,16 @@ public class ControllersImpl extends MinimalEObjectImpl.Container implements Con
 	 * <!-- end-user-doc -->
    * @generated
    */
-	@Override
+	@SuppressWarnings("unchecked")
+  @Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
     switch (featureID) {
       case AssessmentPackage.CONTROLLERS__APPLICATION:
         if (eInternalContainer() != null)
           msgs = eBasicRemoveFromContainer(msgs);
         return basicSetApplication((Application)otherEnd, msgs);
+      case AssessmentPackage.CONTROLLERS__CONTROLLERS:
+        return ((InternalEList<InternalEObject>)(InternalEList<?>)getControllers()).basicAdd(otherEnd, msgs);
     }
     return super.eInverseAdd(otherEnd, featureID, msgs);
   }

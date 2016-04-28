@@ -24,7 +24,7 @@ package io.opensemantics.semiotics.model.assessment;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.Controller#getApplication <em>Application</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.Controller#getControllers <em>Controllers</em>}</li>
  * </ul>
  *
  * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getController()
@@ -33,29 +33,31 @@ package io.opensemantics.semiotics.model.assessment;
  */
 public interface Controller extends Node {
 	/**
-   * Returns the value of the '<em><b>Application</b></em>' reference.
+   * Returns the value of the '<em><b>Controllers</b></em>' container reference.
+   * It is bidirectional and its opposite is '{@link io.opensemantics.semiotics.model.assessment.Controllers#getControllers <em>Controllers</em>}'.
    * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Application</em>' container reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-   * @return the value of the '<em>Application</em>' reference.
-   * @see #setApplication(Application)
-   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getController_Application()
-   * @model
+   * <p>
+   * If the meaning of the '<em>Controllers</em>' container reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Controllers</em>' container reference.
+   * @see #setControllers(Controllers)
+   * @see io.opensemantics.semiotics.model.assessment.AssessmentPackage#getController_Controllers()
+   * @see io.opensemantics.semiotics.model.assessment.Controllers#getControllers
+   * @model opposite="controllers" transient="false"
    * @generated
    */
-	Application getApplication();
+  Controllers getControllers();
 
-	/**
-   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Controller#getApplication <em>Application</em>}' reference.
+  /**
+   * Sets the value of the '{@link io.opensemantics.semiotics.model.assessment.Controller#getControllers <em>Controllers</em>}' container reference.
    * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Application</em>' reference.
-   * @see #getApplication()
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Controllers</em>' container reference.
+   * @see #getControllers()
    * @generated
    */
-	void setApplication(Application value);
+  void setControllers(Controllers value);
 
 } // Controller

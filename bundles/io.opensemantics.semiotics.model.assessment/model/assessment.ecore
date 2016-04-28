@@ -42,8 +42,6 @@
         containment="true" eOpposite="#//Views/application"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sinks" eType="#//Sinks"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="languages" upperBound="-1"
-        eType="#//Language"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="resources" eType="#//Resources"
         containment="true" eOpposite="#//Resources/application"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="applications" eType="#//Applications"
@@ -57,7 +55,8 @@
         eOpposite="#//Sinks/sinks"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Controller" eSuperTypes="#//Node">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="application" eType="#//Application"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="controllers" eType="#//Controllers"
+        eOpposite="#//Controllers/controllers"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="View" eSuperTypes="#//Node">
     <eStructuralFeatures xsi:type="ecore:EReference" name="views" eType="#//Views"
@@ -186,7 +185,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="application" eType="#//Application"
         eOpposite="#//Application/controllers"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="controllers" upperBound="-1"
-        eType="#//Controller" containment="true"/>
+        eType="#//Controller" containment="true" eOpposite="#//Controller/controllers"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Entitlements">
     <eStructuralFeatures xsi:type="ecore:EReference" name="application" eType="#//Application"/>

@@ -595,17 +595,8 @@ public class AssessmentPackageImpl extends EPackageImpl implements AssessmentPac
 	 * <!-- end-user-doc -->
    * @generated
    */
-	public EAttribute getApplication_Languages() {
-    return (EAttribute)applicationEClass.getEStructuralFeatures().get(7);
-  }
-
-	/**
-   * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-   * @generated
-   */
 	public EReference getApplication_Resources() {
-    return (EReference)applicationEClass.getEStructuralFeatures().get(8);
+    return (EReference)applicationEClass.getEStructuralFeatures().get(7);
   }
 
 	/**
@@ -614,7 +605,7 @@ public class AssessmentPackageImpl extends EPackageImpl implements AssessmentPac
    * @generated
    */
 	public EReference getApplication_Applications() {
-    return (EReference)applicationEClass.getEStructuralFeatures().get(9);
+    return (EReference)applicationEClass.getEStructuralFeatures().get(8);
   }
 
 	/**
@@ -623,7 +614,7 @@ public class AssessmentPackageImpl extends EPackageImpl implements AssessmentPac
    * @generated
    */
   public EAttribute getApplication_InternalURL() {
-    return (EAttribute)applicationEClass.getEStructuralFeatures().get(10);
+    return (EAttribute)applicationEClass.getEStructuralFeatures().get(9);
   }
 
   /**
@@ -632,7 +623,7 @@ public class AssessmentPackageImpl extends EPackageImpl implements AssessmentPac
    * @generated
    */
   public EAttribute getApplication_ExternalURL() {
-    return (EAttribute)applicationEClass.getEStructuralFeatures().get(11);
+    return (EAttribute)applicationEClass.getEStructuralFeatures().get(10);
   }
 
   /**
@@ -673,14 +664,14 @@ public class AssessmentPackageImpl extends EPackageImpl implements AssessmentPac
 
 	/**
    * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+   * <!-- end-user-doc -->
    * @generated
    */
-	public EReference getController_Application() {
+  public EReference getController_Controllers() {
     return (EReference)controllerEClass.getEStructuralFeatures().get(0);
   }
 
-	/**
+  /**
    * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
    * @generated
@@ -1480,7 +1471,6 @@ public class AssessmentPackageImpl extends EPackageImpl implements AssessmentPac
     createEReference(applicationEClass, APPLICATION__SCM);
     createEReference(applicationEClass, APPLICATION__VIEWS);
     createEReference(applicationEClass, APPLICATION__SINKS);
-    createEAttribute(applicationEClass, APPLICATION__LANGUAGES);
     createEReference(applicationEClass, APPLICATION__RESOURCES);
     createEReference(applicationEClass, APPLICATION__APPLICATIONS);
     createEAttribute(applicationEClass, APPLICATION__INTERNAL_URL);
@@ -1491,7 +1481,7 @@ public class AssessmentPackageImpl extends EPackageImpl implements AssessmentPac
     createEReference(sinkEClass, SINK__SINKS);
 
     controllerEClass = createEClass(CONTROLLER);
-    createEReference(controllerEClass, CONTROLLER__APPLICATION);
+    createEReference(controllerEClass, CONTROLLER__CONTROLLERS);
 
     viewEClass = createEClass(VIEW);
     createEReference(viewEClass, VIEW__VIEWS);
@@ -1689,7 +1679,6 @@ public class AssessmentPackageImpl extends EPackageImpl implements AssessmentPac
     initEReference(getApplication_Scm(), this.getScm(), this.getScm_Application(), "scm", null, 0, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getApplication_Views(), this.getViews(), this.getViews_Application(), "views", null, 0, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getApplication_Sinks(), this.getSinks(), null, "sinks", null, 0, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getApplication_Languages(), this.getLanguage(), "languages", null, 0, -1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getApplication_Resources(), this.getResources(), this.getResources_Application(), "resources", null, 0, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getApplication_Applications(), this.getApplications(), this.getApplications_Applications(), "applications", null, 0, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getApplication_InternalURL(), ecorePackage.getEString(), "internalURL", null, 0, 1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1700,7 +1689,7 @@ public class AssessmentPackageImpl extends EPackageImpl implements AssessmentPac
     initEReference(getSink_Sinks(), this.getSinks(), this.getSinks_Sinks(), "sinks", null, 0, 1, Sink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(controllerEClass, Controller.class, "Controller", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getController_Application(), this.getApplication(), null, "application", null, 0, 1, Controller.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getController_Controllers(), this.getControllers(), this.getControllers_Controllers(), "controllers", null, 0, 1, Controller.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(viewEClass, View.class, "View", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getView_Views(), this.getViews(), this.getViews_Views(), "views", null, 0, 1, View.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1783,7 +1772,7 @@ public class AssessmentPackageImpl extends EPackageImpl implements AssessmentPac
 
     initEClass(controllersEClass, Controllers.class, "Controllers", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getControllers_Application(), this.getApplication(), this.getApplication_Controllers(), "application", null, 0, 1, Controllers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getControllers_Controllers(), this.getController(), null, "controllers", null, 0, -1, Controllers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getControllers_Controllers(), this.getController(), this.getController_Controllers(), "controllers", null, 0, -1, Controllers.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(entitlementsEClass, Entitlements.class, "Entitlements", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getEntitlements_Application(), this.getApplication(), null, "application", null, 0, 1, Entitlements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

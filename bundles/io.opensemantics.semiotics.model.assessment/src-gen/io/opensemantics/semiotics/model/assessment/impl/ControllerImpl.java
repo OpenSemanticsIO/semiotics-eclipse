@@ -15,14 +15,16 @@
  */
 package io.opensemantics.semiotics.model.assessment.impl;
 
-import io.opensemantics.semiotics.model.assessment.Application;
 import io.opensemantics.semiotics.model.assessment.AssessmentPackage;
 import io.opensemantics.semiotics.model.assessment.Controller;
+import io.opensemantics.semiotics.model.assessment.Controllers;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,22 +34,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.ControllerImpl#getApplication <em>Application</em>}</li>
+ *   <li>{@link io.opensemantics.semiotics.model.assessment.impl.ControllerImpl#getControllers <em>Controllers</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ControllerImpl extends NodeImpl implements Controller {
-	/**
-   * The cached value of the '{@link #getApplication() <em>Application</em>}' reference.
-   * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-   * @see #getApplication()
-   * @generated
-   * @ordered
-   */
-	protected Application application;
-
 	/**
    * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -69,43 +61,90 @@ public class ControllerImpl extends NodeImpl implements Controller {
 
 	/**
    * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+   * <!-- end-user-doc -->
    * @generated
    */
-	public Application getApplication() {
-    if (application != null && application.eIsProxy()) {
-      InternalEObject oldApplication = (InternalEObject)application;
-      application = (Application)eResolveProxy(oldApplication);
-      if (application != oldApplication) {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, AssessmentPackage.CONTROLLER__APPLICATION, oldApplication, application));
-      }
+  public Controllers getControllers() {
+    if (eContainerFeatureID() != AssessmentPackage.CONTROLLER__CONTROLLERS) return null;
+    return (Controllers)eInternalContainer();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetControllers(Controllers newControllers, NotificationChain msgs) {
+    msgs = eBasicSetContainer((InternalEObject)newControllers, AssessmentPackage.CONTROLLER__CONTROLLERS, msgs);
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setControllers(Controllers newControllers) {
+    if (newControllers != eInternalContainer() || (eContainerFeatureID() != AssessmentPackage.CONTROLLER__CONTROLLERS && newControllers != null)) {
+      if (EcoreUtil.isAncestor(this, newControllers))
+        throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+      NotificationChain msgs = null;
+      if (eInternalContainer() != null)
+        msgs = eBasicRemoveFromContainer(msgs);
+      if (newControllers != null)
+        msgs = ((InternalEObject)newControllers).eInverseAdd(this, AssessmentPackage.CONTROLLERS__CONTROLLERS, Controllers.class, msgs);
+      msgs = basicSetControllers(newControllers, msgs);
+      if (msgs != null) msgs.dispatch();
     }
-    return application;
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.CONTROLLER__CONTROLLERS, newControllers, newControllers));
   }
 
-	/**
+  /**
    * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+   * <!-- end-user-doc -->
    * @generated
    */
-	public Application basicGetApplication() {
-    return application;
+  @Override
+  public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    switch (featureID) {
+      case AssessmentPackage.CONTROLLER__CONTROLLERS:
+        if (eInternalContainer() != null)
+          msgs = eBasicRemoveFromContainer(msgs);
+        return basicSetControllers((Controllers)otherEnd, msgs);
+    }
+    return super.eInverseAdd(otherEnd, featureID, msgs);
   }
 
-	/**
+  /**
    * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+   * <!-- end-user-doc -->
    * @generated
    */
-	public void setApplication(Application newApplication) {
-    Application oldApplication = application;
-    application = newApplication;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, AssessmentPackage.CONTROLLER__APPLICATION, oldApplication, application));
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+    switch (featureID) {
+      case AssessmentPackage.CONTROLLER__CONTROLLERS:
+        return basicSetControllers(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
-	/**
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+    switch (eContainerFeatureID()) {
+      case AssessmentPackage.CONTROLLER__CONTROLLERS:
+        return eInternalContainer().eInverseRemove(this, AssessmentPackage.CONTROLLERS__CONTROLLERS, Controllers.class, msgs);
+    }
+    return super.eBasicRemoveFromContainerFeature(msgs);
+  }
+
+  /**
    * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
    * @generated
@@ -113,9 +152,8 @@ public class ControllerImpl extends NodeImpl implements Controller {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
     switch (featureID) {
-      case AssessmentPackage.CONTROLLER__APPLICATION:
-        if (resolve) return getApplication();
-        return basicGetApplication();
+      case AssessmentPackage.CONTROLLER__CONTROLLERS:
+        return getControllers();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -128,8 +166,8 @@ public class ControllerImpl extends NodeImpl implements Controller {
 	@Override
 	public void eSet(int featureID, Object newValue) {
     switch (featureID) {
-      case AssessmentPackage.CONTROLLER__APPLICATION:
-        setApplication((Application)newValue);
+      case AssessmentPackage.CONTROLLER__CONTROLLERS:
+        setControllers((Controllers)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -143,8 +181,8 @@ public class ControllerImpl extends NodeImpl implements Controller {
 	@Override
 	public void eUnset(int featureID) {
     switch (featureID) {
-      case AssessmentPackage.CONTROLLER__APPLICATION:
-        setApplication((Application)null);
+      case AssessmentPackage.CONTROLLER__CONTROLLERS:
+        setControllers((Controllers)null);
         return;
     }
     super.eUnset(featureID);
@@ -158,8 +196,8 @@ public class ControllerImpl extends NodeImpl implements Controller {
 	@Override
 	public boolean eIsSet(int featureID) {
     switch (featureID) {
-      case AssessmentPackage.CONTROLLER__APPLICATION:
-        return application != null;
+      case AssessmentPackage.CONTROLLER__CONTROLLERS:
+        return getControllers() != null;
     }
     return super.eIsSet(featureID);
   }
